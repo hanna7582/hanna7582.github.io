@@ -1,0 +1,536 @@
+@charset "UTF-8";
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+/*
+ * Nanum Gothic (Korean) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumGothic-Regular.eot);
+  src: url(../font/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic-Regular.woff2) format('woff2'),
+       url(../font/NanumGothic-Regular.woff) format('woff'),
+       url(../font/NanumGothic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NanumGothic-Bold.eot);
+  src: url(../font/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic-Bold.woff2) format('woff2'),
+       url(../font/NanumGothic-Bold.woff) format('woff'),
+       url(../font/NanumGothic-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/NanumGothic-ExtraBold.eot);
+  src: url(../font/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic-ExtraBold.woff2) format('woff2'),
+       url(../font/NanumGothic-ExtraBold.woff) format('woff'),
+       url(../font/NanumGothic-ExtraBold.ttf) format('truetype');
+}
+
+*{margin:0; padding:0;}
+a{text-decoration: none;color:#000;}
+::before, ::after{
+  display: inline-block;
+  font-family: FontAwesome;
+}
+.skip{
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -999px;
+}
+img{}
+li{list-style: none;}
+input[type='checkbox']{display: none;}
+body{
+  position: relative;
+  font-family: "Nanum Gothic", sans-serif;
+  width:1040px;
+  margin:0 auto;
+}
+header{
+  position: fixed;
+  width:200px;
+  height:100%;
+  background: #533638;
+  z-index: 3;
+}
+header h1{
+  text-align: center;
+  line-height: 100px;
+}
+header label{
+  position: absolute;
+  right:0;
+  display: inline-block;
+  background: #ffcd00;
+  font-size: 16px;
+  font-weight: bold;
+  color:#3c1e1e;
+  width:80px;
+  height:40px;
+  padding-left:20px;
+  line-height: 40px;
+  cursor: pointer;
+}
+header label::after{
+  content: "\f078";
+  font-size: 16px;
+  color:#fff;
+  padding-left:10px;
+}
+header #service:checked ~ nav.service_menu{
+  height:464px;
+  box-shadow: 0px 4px 5px rgba(0,0,0,.5);
+}
+header #service:checked ~ label::after{
+  content:"\f077";
+}
+header #service:checked ~ .bg{
+  opacity: 1;
+  visibility: visible;
+}
+header nav.service_menu{
+  position: relative;
+  left: 200px;
+  width: 840px;
+  height:0;
+  background: #fff;
+  background: url(../images/bg_service_bar.png) repeat;
+  overflow: hidden;
+  transition: all .5s;
+  z-index: 1;
+}
+.bg{
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  width: 840px;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  margin-left: 200px;
+  transition: all .5s;
+}
+header nav.service_menu ul li{
+  float: left;
+  height: 116px;
+  width: 120px;
+}
+header nav.service_menu ul li a{
+  display: block;
+  height: 116px;
+  width: 120px;
+  background: url(../images/ko_img_gnb.png) no-repeat left top;
+  z-index: 10;
+}
+header nav.service_menu ul li.talk a {background-position: 0 0}
+header nav.service_menu ul li.story a {background-position: -120px 0}
+header nav.service_menu ul li.taxi a {background-position: -240px 0}
+header nav.service_menu ul li.brunch a {background-position: -1080px -116px}
+header nav.service_menu ul li.plain a {background-position: -1080px 0}
+header nav.service_menu ul li.api a {background-position: -960px -116px}
+header nav.service_menu ul li.group a {background-position: -480px 0}
+header nav.service_menu ul li.pick a {background-position: -720px 0}
+header nav.service_menu ul li.music a {background-position: -840px 0}
+header nav.service_menu ul li.style a {background-position: 0 -116px}
+header nav.service_menu ul li.home a {background-position: -120px -116px}
+header nav.service_menu ul li.page a {background-position: -240px -116px}
+header nav.service_menu ul li.album a {background-position: -480px -116px}
+header nav.service_menu ul li.agit a {background-position: -600px -116px}
+header nav.service_menu ul li.game a {background-position: -720px -116px}
+header nav.service_menu ul li.account a {background-position: -840px -116px}
+header nav.service_menu ul li.kakaotv a {background-position: -960px 0}
+header nav.service_menu ul li.navi a {background-position: -1320px 0}
+header nav.service_menu ul li.together a {background-position: -1320px -116px}
+header nav.service_menu ul li.stock a {background-position: -1440px 0}
+header nav.service_menu ul li.bus a {background-position: -1440px -116px}
+header nav.service_menu ul li.driver a {background-position: -1560px -116px}
+header nav.service_menu ul li.metro a {background-position: -1680px 0}
+header nav.service_menu ul li.hairshop a {background-position: -1680px -116px}
+header nav.service_menu ul li.map a {background-position: -1800px 0}
+
+header nav.service_menu ul li.talk a:hover {background-position: 0 -232px}
+header nav.service_menu ul li.story a:hover {background-position: -120px -232px}
+header nav.service_menu ul li.taxi a:hover {background-position: -240px -232px}
+header nav.service_menu ul li.place a {background-position: -1200px -116px}
+header nav.service_menu ul li.place a:hover {background-position: -1200px -347px}
+header nav.service_menu ul li.brunch a:hover {background-position: -1080px -348px}
+header nav.service_menu ul li.plain a:hover {background-position: -1080px -232px}
+header nav.service_menu ul li.api a:hover {background-position: -960px -348px}
+header nav.service_menu ul li.group a:hover {background-position: -480px -232px}
+header nav.service_menu ul li.pick a:hover {background-position: -720px -232px}
+header nav.service_menu ul li.music a:hover {background-position: -840px -232px}
+header nav.service_menu ul li.style a:hover {background-position: 0 -348px}
+header nav.service_menu ul li.home a:hover {background-position: -120px -348px}
+header nav.service_menu ul li.page a:hover {background-position: -240px -348px}
+header nav.service_menu ul li.album a:hover {background-position: -480px -348px}
+header nav.service_menu ul li.agit a:hover {background-position: -600px -348px}
+header nav.service_menu ul li.game a:hover {background-position: -720px -348px}
+header nav.service_menu ul li.account a:hover {background-position: -840px -348px}
+header nav.service_menu ul li.kakaotv a:hover {background-position: -960px -232px}
+header nav.service_menu ul li.navi a:hover {background-position: -1320px -232px}
+header nav.service_menu ul li.together a:hover {background-position: -1320px -348px}
+header nav.service_menu ul li.stock a:hover {background-position: -1440px -232px}
+header nav.service_menu ul li.bus a:hover {background-position: -1440px -348px}
+header nav.service_menu ul li.driver a:hover {background-position: -1560px -348px}
+header nav.service_menu ul li.metro a:hover {background-position: -1680px -232px}
+header nav.service_menu ul li.hairshop a:hover {background-position: -1680px -348px}
+header nav.service_menu ul li.map a:hover {background-position: -1800px -232px}
+header nav.service_menu ul li a span{
+  font-size: 0;
+  text-indent: -999px;
+}
+header .menu{
+  position: absolute;
+  top:140px;
+  right:0;
+}
+header .menu li a{
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color:#fff;
+  width:80px;
+  height:40px;
+  padding-left:20px;
+  line-height: 40px;
+}
+header .menu li.lang{
+  overflow: hidden;
+  padding-left: 18px;
+}
+header .menu li.lang a{
+  float: left;
+  width: auto;
+  height: 10px;
+  font-size: 10px;
+  color: #bebebe;
+  line-height: 10px;
+  padding: 0px 5px;
+  margin-top: 10px;
+}
+header .menu li.lang a:first-child{
+  border-right:1px solid #bebebe;
+}
+header footer{
+  position: absolute;
+  width: 100%;
+  bottom:10px;
+  color: #bebebe;
+  font-size: 10px;
+  text-align: center;
+  line-height: 16px;
+}
+header footer a{
+  color: #bebebe;
+}
+header footer select{
+  width:180px;
+  height:40px;
+  line-height: 40px;
+  text-indent: 10px;
+  border-radius: 5px;
+  margin-top:20px;
+}
+
+/* section */
+section{
+  position: absolute;
+  left:200px;
+  width: 840px;
+}
+
+/* title */
+section .title{
+  position: relative;
+  height: 100px;
+  background: #fff;
+}
+section .title h1{
+  position: relative;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+section .title h1 img{
+  display: block;
+}
+section .title .search{
+  position: absolute;
+  right:20px;
+  top: 30px;
+}
+section .title .search input{
+  width:140px;
+  height:36px;
+  border:2px solid #ccc;
+  border-radius: 20px;
+  padding:0 40px 0 20px;
+  background: #fff;
+  transition: all .5s;
+  outline: none;
+}
+section .title .search input:focus{
+  background: #ffcd00;
+  border: 2px solid #533638;
+  color:#533638;
+}
+section .title .search button{
+  position: absolute;
+  right:0;
+  top:0;
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  background: #533638;
+  border:0;
+  font-size: 0;
+  cursor: pointer;
+}
+section .title .search button::before{
+  content: "\f002";
+  font-size: 16px;
+  color:#fff;
+}
+
+/* main */
+section article.main{
+  position: relative;
+  background: url(../images/main1.png) no-repeat right top;
+  width:100%;
+  height:290px;
+  background-size: cover;
+}
+section article.main .text_box{
+  padding:20px;
+}
+section article.main .text_box h2{
+  font-size: 36px;
+  padding-bottom:30px;
+}
+section article.main .text_box p{
+  font-size:18px;
+}
+section article.main .text_box label{
+  position: absolute;
+  bottom:30px;
+  display: inline-block;
+  width:150px;
+  height:50px;
+  line-height: 50px;
+  padding-left:20px;
+  background: #533638;
+  color:#fff;
+  cursor: pointer;
+  font-size:18px;
+  border-radius: 5px;
+}
+section article.main .text_box label::after{
+  content: "\f078";
+  color:#fff;
+  padding-left:15px;
+}
+section article.main .text_box #download:checked ~ nav.download_menu{
+  height: 182px;
+}
+section article.main .text_box #download:checked ~ label::after{
+  content: "\f077";
+}
+section article.main .text_box nav.download_menu{
+  position: absolute;
+  top: 256px;
+  width:170px;
+  height:0;
+  overflow: hidden;
+  background: #533638;
+  transition: all 0.5s;
+  z-index: 2;
+}
+section article.main .text_box nav.download_menu li{
+  color: #f7c817;
+  font-size:16px;
+  line-height: 30px;
+}
+section article.main .text_box nav.download_menu ul li a{
+  display: block;
+  color: #fff;
+  padding-left:32px;
+}
+section article.main .text_box nav.download_menu ul li a:hover{
+  text-decoration: underline;
+}
+section article.main .text_box nav.download_menu li.mobile::before{
+  content:"\f10b";
+  padding:0 10px;
+  font-size: 30px;
+  vertical-align: middle;
+}
+section article.main .text_box nav.download_menu li.pc::before{
+  content:"\f26c";
+  padding:0 7px;
+}
+
+/* kakaotalk menu */
+section article.kakaotalk_menu{
+  position: relative;
+}
+section article.kakaotalk_menu nav{
+  background:#241212;
+  height:60px;
+}
+section article.kakaotalk_menu nav .wrap{
+  width:680px;
+  height:100%;
+  margin:0 auto;
+  overflow: hidden;
+}
+section article.kakaotalk_menu nav .wrap ul{
+  width:1020px;
+  height:100%;
+  position: relative;
+}
+section article.kakaotalk_menu nav .wrap ul:after{
+  content: '';
+  display: block;
+  overflow: hidden;
+}
+section article.kakaotalk_menu nav .wrap ul li{
+  float: left;
+}
+section article.kakaotalk_menu nav .wrap ul li a{
+  position: relative;
+  color:#fff;
+  margin: 10px 22px;
+  padding-bottom: 8px;
+  line-height: 60px;
+}
+section article.kakaotalk_menu nav .wrap ul li a::after{
+  content: '';
+  display: inline-block;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all .5s;
+}
+section article.kakaotalk_menu nav .wrap ul li.active a{
+  color:#ffcd00;
+}
+section article.kakaotalk_menu nav .wrap ul li.active a::after{
+  width: 100%;
+}
+section article.kakaotalk_menu nav > a span{
+  font-size: 0;
+}
+section article.kakaotalk_menu nav > a::before{
+  color:#ffcd00;
+  position: absolute;
+  top:16px;
+  font-size: 30px;
+}
+section article.kakaotalk_menu nav .prev::before{
+  content: "\f053";
+  left:20px;
+}
+section article.kakaotalk_menu nav .next::before{
+  content:"\f054";
+  right:20px;
+}
+
+/* slide */
+section article.kakaotalk_menu .slide{
+  position: relative;
+}
+section article.kakaotalk_menu .slide .slide_contents{
+  width:700px;
+  height:400px;
+  margin: 0 auto;
+  position: relative;
+}
+section article.kakaotalk_menu .slide .slide_contents .wrap{
+  position: absolute;
+  width: 100%;
+  left:0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+section article.kakaotalk_menu .slide .slide_contents .wrap.active{
+  display: block;
+  z-index: 1;
+}
+section article.kakaotalk_menu .slide .slide_contents .wrap .img_box{
+  width:300px;
+  height:300px;
+  text-align: center;
+}
+section article.kakaotalk_menu .slide .slide_contents .wrap .img_box img{
+  height: 100%;
+}
+section article.kakaotalk_menu .slide .slide_contents .wrap .text_box{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:330px;
+  padding: 50px 0px;
+}
+section article.kakaotalk_menu .slide .slide_contents .wrap .text_box h3{
+  font-weight: normal;
+  font-size: 30px;
+  padding-bottom:20px;
+}
+section article.kakaotalk_menu .slide .slide_contents .wrap .text_box p{
+  font-size: 14px;
+  color:#787878;
+}
+section article.kakaotalk_menu .slide .slide_contents .wrap .text_box a{
+  position: absolute;
+  bottom: 50px;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  background: #533638;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 25px;
+}
+section article.kakaotalk_menu .slide .slide_contents .wrap .text_box a::after {
+    content: "\f054";
+    color: #fff;
+    padding-left: 15px;
+}
+section article.kakaotalk_menu .slide > a span{
+  font-size: 0;
+}
+section article.kakaotalk_menu .slide > a::before{
+  color:#ccc;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+section article.kakaotalk_menu .slide > a:hover::before{
+  color:#ffcd00;
+}
+section article.kakaotalk_menu .slide .prev::before{
+  content: "\f053";
+  left:20px;
+}
+section article.kakaotalk_menu .slide .next::before{
+  content:"\f054";
+  right:20px;
+}

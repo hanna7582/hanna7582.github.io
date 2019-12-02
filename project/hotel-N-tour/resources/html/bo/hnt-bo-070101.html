@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../css/hnt-bo.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/hnt-bo.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script>
+      $(function(){
+        var index;
+        $('.btn-danger').on('click',function(){
+          index=$(this).parents('li').index();
+          console.log(index);
+        })
+        $('.modal .btn').on('click',function(){
+          $('.star-list li').eq(index).slideUp(function(){
+            $(this).remove();
+          });
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1><a href="hnt-bo-000001.html">Hotel n Tour</a></h1>
+      <div class="user-info">
+        안녕하세요 <b>관리자님</b>
+        <button class="btn btn-default btn-sm" onclick="location.href='hnt-bo-000000.html'">로그아웃</button>
+      </div>
+      <nav class="gnb-nav">
+        <ul>
+          <li><a href="hnt-bo-010100.html">일반회원관리</a></li>
+          <li><a href="hnt-bo-020100.html">파트너회원관리</a></li>
+          <li><a href="hnt-bo-030100.html">상품관리</a></li>
+          <li><a href="hnt-bo-040100.html">예약관리</a></li>
+          <li><a href="hnt-bo-050100.html">매출관리</a></li>
+          <li><a href="hnt-bo-060100.html">게시판관리</a></li>
+          <li class="active"><a href="hnt-bo-070100.html">상품후기관리</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="snb-nav">
+      <h2>상품후기관리</h2>
+      <nav>
+        <ul>
+          <li class="active"><a href="#">호텔</a></li>
+          <li><a href="#">투어</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contents">
+      <div class="top">
+        <ol class="breadcrumb">
+          <li><a href="#">상품후기관리</a></li>
+          <li><a href="#">호텔</a></li>
+          <li class="active">상세화면</li>
+        </ol>
+      </div>
+      <section>
+        <table class="table table-bordered">
+          <caption>상품정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="width:300px">
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>판매파트너</th>
+              <td>00투어</td>
+              <th>카테고리</th>
+              <td>하와이 > 오아후</td>
+            </tr>
+            <tr>
+              <th>상품번호</th>
+              <td>HIH001102017</td>
+              <th>상품명</th>
+              <td>왕복교통편, 가이드팁, 디너크루즈 승선료, 항만세, 엔터테인먼트 쇼, 3코스 테이블 디너, 세금포함</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <form action="">
+          <div class="form-group form-inline text-right">
+            <label for="search" class="skip">이메일 또는 내용</label>
+            <input type="text" class="form-control w300" id="search" placeholder="이메일 또는 내용">
+            <button class="btn btn-primary">검색</button>
+          </div>
+        </form>
+
+        <div class="star-total mb10">
+          <b>5.0</b><span class="star"><em class="star100"><span class="star_num">5</span></em></span>
+          <span>전체 <span>100</span>건</span>
+        </div>
+        <ul class="star-list">
+          <li>
+            <div class="row1">
+              <div class="star"><em class="star100"><span class="star_num">5</span></em></div>
+              <div class="user">goldens***</div>
+              <div class="date">2017.12.06. 04:19:45</div>
+              <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal">
+                <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+                <span class="skip">삭제</span>
+              </button>
+            </div>
+            <div class="row2">
+              하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.
+            </div>
+          </li>
+          <li>
+            <div class="row1">
+              <div class="star"><em class="star90"><span class="star_num">4.5</span></em></div>
+              <div class="user">goldens***</div>
+              <div class="date">2017.12.06. 04:19:45</div>
+              <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal">
+                <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+                <span class="skip">삭제</span>
+              </button>
+            </div>
+            <div class="row2">
+              하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.
+            </div>
+          </li>
+          <li>
+            <div class="row1">
+              <div class="star"><em class="star80"><span class="star_num">4</span></em></div>
+              <div class="user">goldens***</div>
+              <div class="date">2017.12.06. 04:19:45</div>
+              <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal">
+                <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+                <span class="skip">삭제</span>
+              </button>
+            </div>
+            <div class="row2">
+              하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.
+            </div>
+          </li>
+          <li>
+            <div class="row1">
+              <div class="star"><em class="star70"><span class="star_num">3.5</span></em></div>
+              <div class="user">goldens***</div>
+              <div class="date">2017.12.06. 04:19:45</div>
+              <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal">
+                <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+                <span class="skip">삭제</span>
+              </button>
+            </div>
+            <div class="row2">
+              하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.
+            </div>
+          </li>
+          <li>
+            <div class="row1">
+              <div class="star"><em class="star60"><span class="star_num">3</span></em></div>
+              <div class="user">goldens***</div>
+              <div class="date">2017.12.06. 04:19:45</div>
+              <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal">
+                <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+                <span class="skip">삭제</span>
+              </button>
+            </div>
+            <div class="row2">
+              하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.
+            </div>
+          </li>
+          <li>
+            <div class="row1">
+              <div class="star"><em class="star50"><span class="star_num">2.5</span></em></div>
+              <div class="user">goldens***</div>
+              <div class="date">2017.12.06. 04:19:45</div>
+              <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal">
+                <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+                <span class="skip">삭제</span>
+              </button>
+            </div>
+            <div class="row2">
+              하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.
+            </div>
+          </li>
+          <li>
+            <div class="row1">
+              <div class="star"><em class="star40"><span class="star_num">2</span></em></div>
+              <div class="user">goldens***</div>
+              <div class="date">2017.12.06. 04:19:45</div>
+              <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal">
+                <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+                <span class="skip">삭제</span>
+              </button>
+            </div>
+            <div class="row2">
+              하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.
+            </div>
+          </li>
+          <li>
+            <div class="row1">
+              <div class="star"><em class="star30"><span class="star_num">1.5</span></em></div>
+              <div class="user">goldens***</div>
+              <div class="date">2017.12.06. 04:19:45</div>
+              <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal">
+                <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+                <span class="skip">삭제</span>
+              </button>
+            </div>
+            <div class="row2">
+              하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.
+            </div>
+          </li>
+          <li>
+            <div class="row1">
+              <div class="star"><em class="star20"><span class="star_num">1</span></em></div>
+              <div class="user">goldens***</div>
+              <div class="date">2017.12.06. 04:19:45</div>
+              <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal">
+                <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+                <span class="skip">삭제</span>
+              </button>
+            </div>
+            <div class="row2">
+              하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.
+            </div>
+          </li>
+          <li>
+            <div class="row1">
+              <div class="star"><em class="star10"><span class="star_num">0.5</span></em></div>
+              <div class="user">goldens***</div>
+              <div class="date">2017.12.06. 04:19:45</div>
+              <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal">
+                <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+                <span class="skip">삭제</span>
+              </button>
+            </div>
+            <div class="row2">
+              하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.
+            </div>
+          </li>
+        </ul>
+
+        <ul class="pagination">
+          <li><a href="#" aria-label="Previous"><span aria-hidden="true">&#60;&#60;</span></a></li>
+          <li><a href="#" aria-label="Previous"><span aria-hidden="true">&#60;</span></a></li>
+          <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">10</a></li>
+          <li><a href="#" aria-label="Next"><span aria-hidden="true">&#62;</span></a></li>
+          <li><a href="#" aria-label="Next"><span aria-hidden="true">&#62;&#62;</span></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="modal fade" id="modal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">삭제사유 입력</h4>
+          </div>
+          <div class="modal-body">
+            <div>작성자 : goldens***</div>
+            <textarea name="" class="form-control h100" placeholder=""></textarea>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </body>
+</html>

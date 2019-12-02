@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../css/hnt-bo.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/hnt-bo.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <h1><a href="hnt-bo-000001.html">Hotel n Tour</a></h1>
+      <div class="user-info">
+        안녕하세요 <b>관리자님</b>
+        <button class="btn btn-default btn-sm" onclick="location.href='hnt-bo-000000.html'">로그아웃</button>
+      </div>
+      <nav class="gnb-nav">
+        <ul>
+          <li><a href="hnt-bo-010100.html">일반회원관리</a></li>
+          <li><a href="hnt-bo-020100.html">파트너회원관리</a></li>
+          <li><a href="hnt-bo-030100.html">상품관리</a></li>
+          <li class="active"><a href="hnt-bo-040100.html">예약관리</a></li>
+          <li><a href="hnt-bo-050100.html">매출관리</a></li>
+          <li><a href="hnt-bo-060100.html">게시판관리</a></li>
+          <li><a href="hnt-bo-070100.html">상품후기관리</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="snb-nav">
+      <h2>예약관리</h2>
+      <nav>
+        <ul>
+          <li class="active"><a href="#">호텔</a></li>
+          <li><a href="#">투어</a></li>
+          <li><a href="#">렌트카</a></li>
+          <li><a href="#">여행자보험</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contents">
+      <div class="top">
+        <ol class="breadcrumb">
+          <li><a href="#">예약관리</a></li>
+          <li><a href="#">호텔</a></li>
+          <li class="active">상세화면</li>
+        </ol>
+      <section>
+        <div class="title">
+          <h5>주문자정보</h5>
+          <button class="btn btn-success po-right w100">출력</button>
+        </div>
+        <table class="table table-bordered">
+          <caption>주문자정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="width:300px">
+            <col style="width:140px">
+            <col style="width:300px">
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>이름</th>
+              <td>홍길동</td>
+              <th>이메일</th>
+              <td>hong112@naver.com</td>
+              <th>휴대폰번호</th>
+              <td>01045674545</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="title">
+          <h5>주문정보</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>주문정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="width:200px">
+            <col style="width:200px">
+            <col style="width:140px">
+            <col style="">
+            <col style="">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>지역</th>
+              <td colspan="2">하와이 > 오아후</td>
+              <th>판매 파트너</th>
+              <td colspan="3">00투어</td>
+            </tr>
+            <tr>
+              <th>상품번호</th>
+              <td colspan="2">HIT001102017</td>
+              <th>주문일시</th>
+              <td colspan="3">2017-04-01 11:17:54</td>
+            </tr>
+            <tr>
+              <th>상품명</th>
+              <td colspan="2">더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]</td>
+              <th>주문상태</th>
+              <td colspan="3">입금대기</td>
+            </tr>
+            <tr>
+              <th>여행일자</th>
+              <td colspan="2">2017-12-20 ~ 2017-12-23</td>
+              <th>예약수(룸)</th>
+              <td colspan="3">3</td>
+            </tr>
+            <!-- 주문상태가 입금대기일경우 -->
+            <!-- <tr>
+              <th rowspan="4">예약상세 내역 </th>
+              <td rowspan="4" class="text-right">
+                2017.12.20 x 2객실<br>
+                2017.12.21 x 2객실<br>
+                2017.12.22 x 2객실<br>
+                2017.12.23 x 2객실<br>
+                세금<br>
+                봉사료
+              </td>
+              <td rowspan="4">
+                &#92;430,810<br>
+                &#92;430,810<br>
+                &#92;430,810<br>
+                &#92;430,810<br>
+                &#92;172,300<br>
+                &#92;172,300
+              </td>
+              <th rowspan="4">결제내역</th>
+              <td class="bg-gray">총합계</td>
+              <td colspan="2" class="bg-gray">&#92;1,895,540</td>
+            </tr>
+            <tr>
+              <td>선결제</td>
+              <td>&#92;400,000</td>
+              <td>완료</td>
+            </tr>
+            <tr>
+              <td>잔금결제</td>
+              <td rowspan="2">&#92;1,495,540</td>
+              <td rowspan="2">결제대기중</td>
+            </tr>
+            <tr>
+              <td>17.11.31.까지</td>
+            </tr> -->
+            <!-- 주문상태가 입금대기일경우 -->
+
+            <!-- 주문상태가 예약확정일경우 -->
+            <tr>
+              <th rowspan="2">상세 결제내역</th>
+              <td colspan="2" class="text-right">
+                2017.12.20 x 성인2인<br>2017.12.20 x 아동2인
+              </td>
+              <td colspan="4">
+                <div>
+                  <span class="inline-block w150">&#92;430,810</span>
+                  <span>$423</span>
+                </div>
+                <div>
+                  <span class="inline-block w150">&#92;430,810</span>
+                  <span>$423</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="f20 bg-gray fb">
+              <td colspan="2" class="text-right">총합계</td>
+              <td colspan="4">
+                <span class="inline-block w150">&#92;170,000</span>
+                <span>$170</span>
+              </td>
+            </tr>
+            <!-- 주문상태가 예약확정일경우 -->
+          </tbody>
+        </table>
+
+        <div class="title">
+          <h5>결제정보</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>주문정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="width:200px">
+            <col style="width:200px">
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>결제방법</th>
+              <td>카카오페이</td>
+              <td>신용/체크카드</td>
+              <th>현금영수증 신청</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>결제기기</th>
+              <td colspan="2">PC</td>
+              <th rowspan="2">결제정보</th>
+              <td rowspan="2">신한은행<br>예금주명 : 홍길동<br>계좌번호 : 123123123</td>
+            </tr>
+            <tr>
+              <th>마지막 결제일시</th>
+              <td colspan="2">2017-04-01 11:17:54</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="title">
+          <h5>취소 신청 정보</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>취소 신청 정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="width:200px">
+            <col style="width:200px">
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>취소신청사유</th>
+              <td colspan="4">상품을 잘못 주문했습니다.</td>
+            </tr>
+            <tr>
+              <th>환불 계좌</th>
+              <td colspan="2">
+                예금주 : 홍길동<br>
+                은행 : 길동은행<br>
+                계좌번호 : 12356789123456
+              </td>
+              <th>환불예정금액</th>
+              <td>&#92;1,895,540</td>
+            </tr>
+            <tr>
+              <th>취소 처리</th>
+              <td colspan="3">
+                <select class="form-control w200">
+                  <option>선택</option>
+                </select>
+              </td>
+              <td rowspan="2" class="text-center">
+                <button class="btn btn-info w100">반영</button>
+              </td>
+            </tr>
+            <tr>
+              <th>처리 사유</th>
+              <td colspan="3">
+                <input type="text" class="form-control" placeholder="처리 사유를 작성해주세요.">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="title">
+          <h5>정산 정보</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>취소 신청 정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="">
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>상품번호</th>
+              <td>HIH001102017</td>
+              <th>주문번호</th>
+              <td>B-HIH2017010100001</td>
+            </tr>
+            <tr>
+              <th>상품명</th>
+              <td>더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort</td>
+              <th>판매파트너</th>
+              <td>가가투어</td>
+            </tr>
+            <tr>
+              <th>지역</th>
+              <td>하와이 > 오하후</td>
+              <th>구매고객</th>
+              <td>김가가(neomill2@naver.com)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table text-center table-bordered">
+          <caption>결제정보</caption>
+          <colgroup>
+            <col style="width:20%">
+            <col style="width:20%">
+            <col style="width:20%">
+            <col style="width:20%">
+            <col style="width:20%">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th colspan="2">결제방법</th>
+              <th>결제금액</th>
+              <th>수수료 제외 입금 금액</th>
+              <th>결제일시</th>
+            </tr>
+            <tr>
+              <td>카카오 페이</td>
+              <td>신용.체크카드</td>
+              <td>&#92;400,000</td>
+              <td>&#92;389,000</td>
+              <td>2017-04-02 11:12:00</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>무통장입금(가상계좌)</td>
+              <td>&#92;1,495,540</td>
+              <td>&#92;1,432,000</td>
+              <td>2017-04-02 11:12:00</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table text-center table-bordered">
+          <caption>결제정보</caption>
+          <colgroup>
+            <col style="width:15%">
+            <col style="width:15%">
+            <col style="width:15%">
+            <col style="width:15%">
+            <col style="width:40%">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>결제금액총액</th>
+              <th>수수료제외금액 총액</th>
+              <th>정산요청금액</th>
+              <th>정산 처리 후 잔액(매출)</th>
+              <th>정산 처리여부</th>
+            </tr>
+            <tr>
+              <td>&#92;1,895,540</td>
+              <td>&#92;1,821,000</td>
+              <td>&#92;1,700,000</td>
+              <td>&#92;121,000</td>
+              <td class="form-inline">
+                <select class="form-control w200">
+                  <option>정산대기</option>
+                </select>
+                <button class="btn btn-info w100" data-toggle="modal" data-target="#modal">반영</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="btn-area text-center mb20">
+          <button class="btn btn-primary w100">목록</button>
+        </div>
+
+        <table class="table text-center table-bordered">
+          <caption>수정내역</caption>
+          <colgroup>
+            <col style="">
+            <col style="">
+            <col style="">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>수정일시</th>
+              <th>수정내용</th>
+              <th>수정자</th>
+              <th>IP</th>
+            </tr>
+            <tr>
+              <td>2017-04-19 19:16:22</td>
+              <td class="text-left">주문상태가 입금완료로 수정 되었습니다.</td>
+              <td>Hnt02</td>
+              <td>123.123.123.12</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <div class="modal fade" id="modal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">반려사유 입력</h4>
+          </div>
+          <div class="modal-body">
+            <textarea name="" class="form-control h100" placeholder=""></textarea>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </body>
+</html>

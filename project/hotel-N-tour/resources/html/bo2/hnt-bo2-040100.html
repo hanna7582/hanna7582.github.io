@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../css/hnt-bo2.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/hnt-bo2.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script>
+      $(function(){
+        fn_datepicker('#datepicker1');
+        fn_datepicker('#datepicker2');
+      })
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1><a href="hnt-bo2-000001.html">Hotel n Tour</a></h1>
+      <div class="user-info">
+        안녕하세요 <b>관리자님</b>
+        <button class="btn btn-default btn-sm" onclick="location.href='hnt-bo2-000000.html'">로그아웃</button>
+      </div>
+      <nav class="gnb-nav">
+        <ul>
+          <li><a href="hnt-bo2-010100.html">회원정보</a></li>
+          <li><a href="hnt-bo2-020100.html">상품관리</a></li>
+          <li><a href="hnt-bo2-030100.html">예약관리</a></li>
+          <li class="active"><a href="hnt-bo2-040100.html">취소관리</a></li>
+          <li><a href="hnt-bo2-050100.html">정산관리</a></li>
+          <li><a href="hnt-bo2-060100.html">매출관리</a></li>
+          <li><a href="hnt-bo2-070100.html">게시판관리</a></li>
+          <li><a href="hnt-bo2-080100.html">쿠폰관리</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="snb-nav">
+      <h2>취소관리</h2>
+      <nav>
+        <ul>
+          <li class="active"><a href="#">호텔취소관리</a></li>
+          <li><a href="#">투어취소관리</a></li>
+          <li><a href="#">렌트카취소관리</a></li>
+          <li><a href="#">여행자보험취소관리</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contents">
+      <div class="top">
+        <ol class="breadcrumb">
+          <li><a href="#">취소관리</a></li>
+          <li class="active">호텔취소관리</li>
+        </ol>
+      </div>
+      <section>
+        <div class="search-form mb20">
+          <form>
+            <div class="form-inline mb10">
+              <label for="">지역</label>
+              <select class="form-control w200">
+                <option>전체</option>
+              </select>
+              <label for="">세부지역</label>
+              <select class="form-control w200">
+                <option>전체</option>
+              </select>
+              <label for="">결제기기</label>
+              <select class="form-control w200">
+                <option>전체</option>
+              </select>
+              <label for="">결제방법</label>
+              <select class="form-control w200">
+                <option>전체</option>
+              </select>
+            </div>
+            <div class="form-inline mb10">
+              <label for="">예약취소 여부</label>
+              <select class="form-control w150">
+                <option>전체</option>
+              </select>
+              <label for="">주문날짜</label>
+              <input type="text" name="" id="datepicker1" class="w120 form-control" readonly>
+              <span class="text">~</span>
+              <input type="text" name="" id="datepicker2" class="w120 form-control" readonly>
+              <button class="btn btn-info">1개월</button>
+              <button class="btn btn-info">3개월</button>
+              <button class="btn btn-info">6개월</button>
+              <button class="btn btn-info">전체</button>
+            </div>
+            <div class="form-inline">
+              <div class="form-group">
+                <label for="search" class="skip">상품명/주문번호</label>
+                <input type="text" class="form-control w300" id="search" placeholder="상품명 또는 주문번호">
+                <button class="btn btn-primary">검색</button>
+              </div>
+            </div>
+          </form>
+          <div class="total">검색 결과 : <span>100</span>건</div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table text-center table-bordered">
+            <caption>예약관리 호텔목록</caption>
+            <colgroup>
+              <col style="">
+            </colgroup>
+            <thead>
+              <tr class="primary">
+                <th><input type="checkbox"></th>
+                <th>번호</th>
+                <th colspan="2">지역</th>
+                <th>결제기기</th>
+                <th colspan="2">결제방법</th>
+                <th>상품명</th>
+                <th>주문번호</th>
+                <th>주문자</th>
+                <th>결제금액</th>
+                <th>환불금액</th>
+                <th>주문일시</th>
+                <th>취소상태</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>10</td>
+                <td>하와이</td>
+                <td>오아후</td>
+                <td>Mobile</td>
+                <td>카카오페이</td>
+                <td>신용/체크카드</td>
+                <td class="text-left">더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]</td>
+                <td>B-HIT2017010100001</td>
+                <td>김가가(neomill2@naver.com)</td>
+                <td>180,000원</td>
+                <td>140,000원</td>
+                <td>2016-01-25 12:41:22</td>
+                <td>대기중</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>9</td>
+                <td>하와이</td>
+                <td>오아후</td>
+                <td>PC</td>
+                <td></td>
+                <td>무통장입금(가상계좌)</td>
+                <td class="text-left">더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]</td>
+                <td>B-HIT2017010100001</td>
+                <td>김가가(neomill2@naver.com)</td>
+                <td>180,000원</td>
+                <td>140,000원</td>
+                <td>2016-01-25 12:41:22</td>
+                <td>환불완료</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="pagination">
+          <li><a href="#" aria-label="Previous"><span aria-hidden="true">&#60;&#60;</span></a></li>
+          <li><a href="#" aria-label="Previous"><span aria-hidden="true">&#60;</span></a></li>
+          <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">10</a></li>
+          <li><a href="#" aria-label="Next"><span aria-hidden="true">&#62;</span></a></li>
+          <li><a href="#" aria-label="Next"><span aria-hidden="true">&#62;&#62;</span></a></li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

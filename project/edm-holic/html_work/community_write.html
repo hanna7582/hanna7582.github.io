@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>EDM HOLIC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimun-scale=1, maximun-scale=1, user-scalable=no" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+    
+    <!-- jquery -->
+    <script src="../js/jquery-1.11.2.min.js"></script>
+	<script src="../js/swiper.jquery.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+	
+    <!-- javascript -->
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="../js/main.js"></script>
+</head>
+<body>
+<!-- 헤더 -->
+<header class="navbar" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="toggle_left navbar-toggle" onclick="javascript:location.href='community.html'">
+            <span class="sr-only">뒤로가기</span>
+            <span class="btn_prev"></span>
+        </button>
+        <button type="button" class="toggle_right navbar-toggle" data-toggle="collapse" data-target=".navbar-ex2-collapse">
+            <span class="sr-only">검색</span>
+            <span class="btn_search"></span>
+        </button>
+        <a class="navbar-brand" href="#">작성하기</a>
+    </div>
+    <!-- 검색 -->
+    <div class="collapse navbar-collapse navbar-ex2-collapse">
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="검색어를 입력하세요.">
+            </div>
+            <button type="submit" class="btn"></button>
+        </form>
+		<div class="list none">
+			<ul>
+				<li>최근검색어<button class="del">x</button></li>
+				<li>DJ <button class="del">x</button></li>
+				<li>박명수 <button class="del">x</button></li>
+				<li>edm <button class="del">x</button></li>
+				<li>공연 <button class="del">x</button></li>
+			</ul>
+		</div>
+    </div>
+</header>   
+
+<!-- 매거진 내용 -->
+<section class="community">
+	<div class="write_area">
+		<div class="title">의견작성</div>
+		<div class="form">
+			<table>
+				<colgroup>
+					<col width="50px;"></col>
+					<col width="120px;"></col>
+					<col width="*"></col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th><label for="name">이름</label></th>
+						<td colspan="2"><input type="text" class="input_01" id="name"></td>
+					</tr>
+					<tr>
+						<th><label for="title">제목</label></th>
+						<td>
+							<div class="form-select">
+								<select class="input_02">
+									<option value="">선택</option>
+									<option value="">공연 관련</option>
+									<option value="">DJ 관련</option>
+									<option value="">클럽 관련</option>
+									<option value="">기타</option>
+								</select>	
+							</div>
+						</td>	
+						<td>	
+							<input type="text" class="input_03">
+						</td>
+					</tr>
+					<tr>
+						<th class="text_top" rowspan="2"><label for="contents">내용</label></th>
+						<td colspan="2"><textarea class="textarea_01" id="contents"></textarea></td>
+					</tr>
+					<tr>
+						<td class="flie_area">
+							<div class="file-upload">
+								<span></span>
+								<input type="file" class="upload">
+							</div>
+						</td>
+						<td class="text_count">0/1000</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="btn_area">
+			<button class="btn_confirm" onclick="javascript:location.href='community.html';"></button>
+		</div>
+	</div>
+</section>
+</body>
+</html>

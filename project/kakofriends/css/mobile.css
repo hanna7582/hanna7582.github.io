@@ -1,0 +1,318 @@
+@charset "UTF-8";
+
+/* reset, common */
+.alert{min-width: 80%; font-size: 12px; box-sizing: border-box;}
+
+/* intro ===================================================================*/
+.intro ul{position: relative; left:auto; top:auto; transform: none; width: 100%;}
+.intro ul li{width: 50%;}
+.intro ul li:nth-child(5){animation: logo 0.5s forwards;}
+.intro ul li .wrap{margin: 0;}
+.intro ul li.logo{position: relative; width: 100%;}
+.intro ul li.logo .wrap{position: absolute; left:50%; top:50%; transform: translate(-50%, -50%); width: 70%;}
+
+@keyframes logo {
+  0%{opacity: 0; visibility: hidden;}
+  100%{opacity: 1; visibility: visible;}
+}
+
+/* sprite ===================================================================*/
+.icon{
+  display: inline-block;
+  background-image: url(../img/sprite_m.png);
+  background-repeat: no-repeat;
+  background-size: 550px 500px;
+}
+.icon-mypage{width: 30px; height: 30px; background-position: 0 0;}
+.icon-mypage.login{background-position: -100px -15px;}
+.icon-search{width: 30px; height: 30px; background-position: -35px 0;}
+.icon-search2{width: 30px; height: 30px; background-position: -200px -100px;}
+.icon-menu{width: 30px; height: 30px; background-position: -70px 0;}
+.icon-logo{width: 152px; height: 15px; background-position: -100px 0; }
+.icon-ryan{width: 50px; height: 50px; background-position: 0 -150px;}
+.icon-apeach{width: 50px; height: 50px; background-position: -50px -150px;}
+.icon-frodo{width: 50px; height: 50px; background-position: -100px -150px;}
+.icon-neo{width: 50px; height: 50px; background-position: -150px -150px;}
+.icon-muzi{width: 50px; height: 50px; background-position: -200px -150px;}
+.icon-con{width: 50px; height: 50px; background-position: -250px -150px;}
+.icon-tube{width: 50px; height: 50px; background-position: -300px -150px;}
+.icon-jayg{width: 50px; height: 50px; background-position: -350px -150px;}
+.icon-niniz{width: 50px; height: 50px; background-position: -400px -150px;}
+.icon-sale{width: 33px; height: 33px; background-position: -300px 0;}
+.icon-wish{width: 25px; height: 25px; background-position: -350px 0;}
+.icon-cart{width: 25px; height: 25px; background-position: -375px 0;}
+.icon-notice{width: 20px; height: 20px; background-position: -400px 0;}
+.icon-w{width: 50px; height: 50px; background-position: -200px -50px;}
+.icon-v{width: 50px; height: 50px; background-position: -250px -50px;}
+.icon-s{width: 50px; height: 50px; background-position: -300px -50px;}
+.icon-i{width: 50px; height: 50px; background-position: -350px -50px;}
+.icon-ss{width: 50px; height: 50px; background-position: -400px -50px;}
+.icon-facebook{width: 25px; height: 25px; background-position: 0 -100px;}
+.icon-instargram{width: 25px; height: 25px; background-position: 0 -125px;}
+.icon-close{width: 50px; height: 50px; background-position: -450px 0;}
+.icon-filter{width: 30px; height: 30px; background-position: -300px -100px;}
+.icon-select{width: 24px; height: 35px; background-position: -350px -100px;}
+.icon-check{width: 15px; height: 15px; background-position: -250px -100px;}
+
+.icon-kakaofriends-ryan{width: 113px; height: 108px; background-position: 0 -210px;}
+.icon-kakaofriends-apeach{width: 76px; height: 102px; background-position: -150px -210px;}
+.icon-kakaofriends-frodo{width: 120px; height: 117px; background-position: -250px -210px;}
+.icon-kakaofriends-neo{width: 101px; height: 117px; background-position: -375px -210px;}
+.icon-kakaofriends-muzi{width: 117px; height: 121px; background-position: 0px -340px;}
+.icon-kakaofriends-con{width: 39px; height: 42px; background-position: -150px -340px;}
+.icon-kakaofriends-tube{width: 86px; height: 119px; background-position: -200px -340px;}
+.icon-kakaofriends-jayg{width: 115px; height: 74px; background-position: -300px -340px;}
+.icon-kakaofriends-niniz{width: 127px; height: 73px; background-position: -300px -425px;}
+
+/* header ===================================================================*/
+header{height: 50px;}
+header.on{background: #fc0;}
+header h1 a{margin: 18px 0 0 20px;}
+header nav{
+  position: absolute;
+  right:10px; top:10px;
+}
+header nav ul li{float: left;}
+header ul li a:hover .icon-mypage{background-position: 0 -70px;}
+header ul li a:hover .icon-mypage.login{background-position: -160px -15px;}
+header ul li a:hover .icon-search{background-position: -35px -70px;}
+header ul li a:hover .icon-menu{background-position: -70px -70px;}
+header.on nav ul li a:hover .icon-mypage{background-position: 0 -35px;}
+header.on nav ul li a:hover .icon-mypage.login{background-position: -130px -15px;}
+header.on nav ul li a:hover .icon-search{background-position: -35px -35px;}
+header.on nav ul li a:hover .icon-menu{background-position: -70px -35px;}
+
+.quick-nav{position: fixed; top:auto; bottom:0; transform: none; width: 100%; height: 50px; box-shadow: 0 0 5px 2px;}
+.quick-nav button{display: inline-block; height: 50px;}
+.quick-nav .btn-top{position: absolute; right:0; bottom:0;}
+.quick-nav .icon{width: 50px; height: 50px;}
+.quick-nav .icon-wish{background-position: -450px -100px;}
+.quick-nav .icon-cart{background-position: -450px -150px;}
+.quick-nav .icon-up{background-position: -500px -50px;}
+.quick-nav .on .icon-wish{background-position: -500px -100px;}
+.quick-nav .on .icon-cart{background-position: -500px -150px;}
+.quick-nav .on .total{left: auto; right:0; bottom:auto; top:10px; width: 10px; text-align: left; font-size: 12px;}
+
+/* section ===================================================================*/
+section{margin-top: 50px;}
+
+/* character */
+.character{position: relative; top:0; left:0%; transform: none; width: 100%;}
+.character ul{width: 400px;}
+.character ul li{width: 50px;}
+.character ul li:hover{margin-top:0;}
+.character ul li a{width: 50px; height: 73px;}
+.character ul li:nth-child(even) a{background-position: -150px -50px;}
+.character ul li:nth-child(odd) a{background-position: -100px -50px;}
+.character ul li a i{margin-left: -5px;}
+.character ul li a span{font-size: 10px; bottom:10px;}
+
+/* main slide */
+.main-slide{margin-top: -10px;}
+.main-slide .swiper-container{height: auto;}
+.main-slide .swiper-pagination{bottom:15px;}
+.main-slide .swiper-pagination-bullet{width: 10px; height: 10px; border-radius: 5px; margin: 0 5px !important;}
+.main-slide .swiper-pagination-bullet-active{width: 35px;}
+.main-slide button{display: none;}
+.main-slide img{display: block; width: 100%; position: static; transform: none;}
+.main-slide .text-box{display: none;}
+
+/* theme */
+.theme.center{padding:0;}
+.theme .tab-nav{height: 40px; margin-bottom: 10px;}
+.theme .tab-nav ul{display: block;}
+.theme .tab-nav ul li{width: 20%; margin: 0;}
+.theme .tab-nav ul li a{display: block; height: 40px; line-height: 40px; font-size: 15px; box-sizing: border-box;}
+.theme .tab-contents > div{display: none;}
+.theme .tab-contents ul{overflow: visible; display: flex;}
+.theme .tab-contents .wrap{margin: 0 5px 10px;}
+
+.theme .style1 ul li{width: 96%;}
+.theme .style1 .wrap{margin: 0; }
+
+.theme .style2 ul li{width: 48%;}
+.theme .style2 .img-box{position: relative; border-bottom:1px solid #000;}
+.theme .style2 .img-box .icon-sale{
+  position: absolute; right:0; top:0;
+  text-align: center; line-height: 30px;
+  font-size: 10px;
+}
+.theme .style2 .text-box{height: 40px;}
+.theme .style2 .text-box a{font-size: 12px;padding: 4px 0 0;}
+.theme .style2 .text-box span{font-size: 15px;}
+.theme .style2 .text-box del{font-size: 12px; padding-left:5px;}
+.theme .style2 .text-box .btn-group .icon-wish.on{background-position: -350px -25px;}
+.theme .style2 .text-box .btn-group .icon-cart.on{background-position: -375px -25px;}
+
+/* notice & museum */
+.notice{height: auto; font-size: 12px; background: none;}
+.notice .left{position: relative; float: none; width: 100%; height: 50px; background: #f7f7f7; padding-top: 15px; box-sizing: border-box;}
+.notice .left > *{float: none;}
+.notice .left i{margin: 0px 0 0 10px; position: absolute;}
+.notice .left .rolling{margin: 0 50px 0 35px; height: 20px;}
+.notice .left ul li{position: relative; height: 25px;}
+.notice .left ul li a{padding-right: 60px; box-sizing: border-box;width: 100%; line-height: 20px;}
+.notice .left ul li a strong{line-height: 20px; margin-right: 5px; padding: 0 5px; height: 20px; }
+.notice .left ul li span{position: absolute; right:0; top:0; display: inline-block; width: 60px; line-height: 20px; float:right; text-align: right;}
+.notice .right{position: relative; float: none; width: 100%; height: 50px; background: #666;}
+.notice button{
+  width: 25px; height: 25px; margin: 0;
+  position: absolute; right: 10px; top: 14px;
+}
+.notice .icon-more{ background-position: -500px 0;}
+.notice .icon-more2{ background-position: -525px 0;}
+.notice .right a{line-height: 50px;}
+.notice .right a label{padding: 0 15px 0 10px;}
+
+/* kakaofriends */
+.kakaofriends{padding: 50px 0;}
+.kakaofriends h2{font-size: 24px;margin-bottom: 20px;}
+.kakaofriends .wrap .swiper-container{margin: 0 20px;}
+.kakaofriends .top{height: 120px;}
+.kakaofriends .top > i{left:10px;}
+.kakaofriends .top .text-box{bottom:10px; right:10px;}
+.kakaofriends .top .text-box strong{font-size: 20px;margin-bottom: 10px;}
+.kakaofriends .top .text-box a{font-size: 12px;}
+.kakaofriends .top .text-box a i{width: 16px; height: 16px; background-position: -425px 0;}
+.kakaofriends .content{ height: auto; border:3px solid #000; border-radius: 10px; padding: 20px;}
+.kakaofriends .content strong{font-size: 14px;}
+.kakaofriends .content p{font-size: 12px; line-height: 18px;}
+.kakaofriends .wrap button{display: none; }
+.kakaofriends .swiper-pagination{
+  opacity: 1; visibility: visible;
+  top:initial; bottom:20px; left:20px; right:20px;
+  height: 15px; background: #fff; border-radius: 8px;
+  overflow: hidden; border: 3px solid #fff; box-sizing: border-box;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  background: #fc0;
+}
+
+/* parallax */
+#parallax{
+  display: none;
+}
+
+/* kakaostory */
+.kakaostory{background: #fc0; text-align:center; padding-bottom: 20px;}
+.kakaostory h2{padding: 45px 0 25px; font-size: 24px;}
+.kakaostory .filter-nav ul li{float: left; margin: 0 5px; height: 20px; line-height: 20px;}
+.kakaostory .filter-nav ul li a{font-size: 15px;}
+.kakaostory .filter-nav ul li a .small{display: block;}
+.kakaostory .filter-nav ul li a .original{display: none;}
+.kakaostory .filter-nav ul li a.on .small{display: none;}
+.kakaostory .filter-nav ul li a.on .original{display: block;}
+
+.kakaostory .filter-list{padding: 20px 0;}
+.kakaostory .filter-list ul{margin: 0 20px;}
+.kakaostory .filter-list ul li{width: 100%; margin-bottom: 0;}
+.kakaostory .filter-list ul li a{margin: 0;}
+.kakaostory .filter-list ul li a span{font-size: 24px;}
+.kakaostory .filter-list ul li a .hidden{display: none;}
+.kakaostory .icon-more{width: 40px; height: 40px; background-position: -450px -50px;}
+
+/* event */
+.event{position: relative;}
+.event .swiper-slide{width: 96%;}
+.event img{display: block; width: 100%; position: static; transform: none;}
+.event .control{display: none;}
+
+/* footer ===================================================================*/
+footer{height: auto; padding: 0 0 60px;}
+footer .etc-wrap a{position: relative; display: block; background: #666; color:#fff; line-height: 40px; height: 40px; font-size: 12px; padding: 0 10px;}
+footer .etc-wrap a i{position: absolute; right:10px; top:10px; transition: 0.3s;}
+footer .etc-wrap > a.active i{transform: rotate(180deg);}
+footer .etc-wrap a i.icon-next{width: 20px; height: 20px; background-position: -400px -100px;}
+footer .etc-wrap a i.icon-down{width: 20px; height: 20px; background-position: -425px -100px;}
+footer .etc-nav{display: none; padding: 0;}
+footer .etc-nav li{float: none; margin-right: 0; border-right:0; border-bottom:1px solid #ccc;}
+footer .etc-nav li a{padding: 0 10px; font-size: 12px; color:#666; background: #fff; line-height: 40px; height: 40px;}
+footer .etc-nav li a:hover, footer .etc-nav li.on a{color:#666; background: #fc0;}
+
+footer .sns{position: relative; top:0; right:0; text-align: center; margin: 15px 0;}
+footer .sns li{display: inline-block; float: none; margin: 0 15px; text-align: center;}
+footer .sns li a:hover .icon-facebook{width: 25px; height: 25px; background-position: 0 -100px;}
+footer .sns li a:hover .icon-instargram{width: 25px; height: 25px; background-position: 0 -125px;}
+footer .sns li .tooltip{
+  display: block;
+  position: relative; top:auto; left:auto; transform: translateX(0);
+  white-space: nowrap; padding: 0;
+  height: auto; border:none;
+  line-height: normal; text-align: center;
+  font-size: 10px; font-weight: normal; color:#ccc; background: none;
+  transition: 0.2s;
+  opacity: 1; visibility:visible;
+}
+footer .sns li .tooltip::after{display: none;}
+
+footer address{text-align: center; line-height: 12px; font-size: 10px;}
+footer address .on{padding: 10px 0 0;}
+footer address .on:last-child{padding: 0;}
+footer small{position: relative; font-size: 10px; color:#666; display: block; text-align: center; padding-top: 10px;}
+
+/* popup ===================================================================*/
+.popup{border:2px solid #000; z-index: 100;}
+.popup .line{width: 100%; height: 2px; background: #333;}
+.popup input[type=checkbox]:checked + i{background-position: -275px -100px;}
+.popup .popup-body.center{padding: 0 10px; box-sizing: border-box;}
+
+.popup-login h2{font-size: 24px;}
+.popup-login .popup-body{width: 100%;}
+.popup-login .row{margin-bottom:15px;}
+.popup-login .row input{
+  height: 35px; line-height: 35px; border-bottom:2px solid #333;
+  font-size: 18px; padding: 0 10px; 
+}
+.popup-login .checkbox{font-size: 14px;}
+.popup-login .btn-login{height: 40px; font-size: 18px;margin: 15px 0;}
+.popup-login .bottom a{font-size: 14px;}
+
+.popup-mypage ul li a{font-size: 30px; line-height: 45px;}
+
+.popup-menu .gnb-nav > li > a{font-size: 30px; line-height: 45px;}
+.popup-menu .depth2{border-top:2px solid #333;}
+.popup-menu .depth2 > li{padding: 3px 0;}
+.popup-menu .depth2 > li > a{font-size: 14px; line-height: 25px; padding: 0 7px;}
+.popup-menu .depth3{border-top:2px solid #ccc; padding: 5px 0;}
+.popup-menu .depth3 li a{font-size: 14px; line-height: 23px; margin: 0 7px; border-bottom:2px solid transparent;}
+.popup-menu .depth3 li a:hover{border-bottom:2px solid #fc0;}
+
+.popup-search .popup-body.center{top: 8px;}
+.popup-search .title{height: 40px; border-bottom:2px solid #333; margin-bottom: 15px;}
+.popup-search .title h2{font-size: 24px; line-height: 40px;}
+.popup-search .title a{right:35px; top:3px;}
+.popup-search .select-control{height: 35px; margin: 0;}
+.popup-search .select-control .col{width: 100%; margin-bottom: 15px;}
+.popup-search .select{margin: 0 10px; height: 35px;}
+.popup-search .select > a{line-height: 35px; padding-right: 20px; font-size: 18px; border-bottom:1px solid #333;}
+.popup-search .select ul{top:35px; border:1px solid #333;}
+.popup-search .select ul li a{font-size: 14px; line-height: 30px;padding: 0 5px;}
+.popup-search .search-control{margin: 15px 10px 30px;}
+.popup-search .search-control input{width: 100%; height: 35px; line-height: 35px; font-size: 18px; border-bottom:1px solid #333;}
+.popup-search .search-control button{bottom:-1px;}
+.popup-search .popular-list h3{font-size: 20px;}
+.popup-search .popular-list h3 span{padding: 0 17px; }
+.popup-search .popular-list h3::after{top:10px; height: 1px;}
+
+.popup-filter .popup-body.center{top: 8px;}
+.popup-filter .title{height: 40px; border-bottom:2px solid #333; margin-bottom: 10px;}
+.popup-filter .title h2{font-size: 24px; line-height: 40px;}
+.popup-filter .checkbox-wrap{margin-bottom: 12px;border-bottom: 2px solid #333;}
+.popup-filter .checkbox-control{margin-bottom: 10px;}
+.popup-filter .checkbox-control .group-name{top: 6px; font-size: 13px;}
+.popup-filter .checkbox-control .checkbox-group{text-align: left; margin-left: 80px;}
+.popup-filter .checkbox-control .checkbox-group label{height:25px; line-height: 25px; margin-right: 10px;}
+.popup-filter .checkbox-control .checkbox-group label span{font-size: 13px; margin-left: 5px;}
+.popup-filter button[type="submit"]{border:2px solid #333;font-size: 18px; width: 100px; height: 40px;}
+
+.popup-shopping{width: 100%;}
+.popup-shopping .tab-nav{margin-bottom: 10px;}
+.popup-shopping .tab-nav ul{display: block; overflow: hidden;}
+.popup-shopping .tab-nav ul li a{border-bottom:3px solid transparent; font-size: 24px;}
+.popup-shopping .tab-nav ul li a.on{border-bottom:3px solid #fc0;}
+.popup-shopping .tab-contents ul{height: calc(100vh - 235px);}
+
+@keyframes popup-shopping{
+  0%{right:-100%;}
+  100%{right:0;}
+}

@@ -1,0 +1,274 @@
+*{margin:0; padding:0;}
+caption{display: none;}
+li{list-style: none;}
+textarea{resize:none;}
+table{width:100%;}
+.ml5{margin-left:5px !important;}
+.ml10{margin-left:10px !important;}
+.ml15{margin-left:15px !important;}
+.ml20{margin-left:20px !important;}
+.mr25{margin-left:25px !important;}
+.mr5{margin-right:5px !important;}
+.mr10{margin-right:10px !important;}
+.mr15{margin-right:15px !important;}
+.mr20{margin-right:20px !important;}
+.mr25{margin-right:25px !important;}
+.mt5{margin-top:5px !important;}
+.mt10{margin-top:10px !important;}
+.mt15{margin-top:15px !important;}
+.mt20{margin-top:20px !important;}
+.mt25{margin-top:25px !important;}
+.mb5{margin-bottom:5px !important;}
+.mb10{margin-bottom:10px !important;}
+.mb15{margin-bottom:15px !important;}
+.mb20{margin-bottom:20px !important;}
+.mb25{margin-bottom:25px !important;}
+
+.w50{width:50px !important;}
+.w60{width:60px !important;}
+.w70{width:70px !important;}
+.w80{width:80px !important;}
+.w90{width:90px !important;}
+.w100{width:100px !important;}
+.w110{width:110px !important;}
+.w120{width:120px !important;}
+.w130{width:130px !important;}
+.w140{width:140px !important;}
+.w150{width:150px !important;}
+.w160{width:160px !important;}
+.w170{width:170px !important;}
+.w180{width:180px !important;}
+.w195{width:195px !important;}
+.w200{width:200px !important;}
+.w300{width:300px !important;}
+.w634{width:634px !important;}
+
+.wp10{width:10% !important;}
+.wp20{width:20% !important;}
+.wp30{width:30% !important;}
+.wp33{width:33% !important;}
+.wp40{width:40% !important;}
+.wp50{width:50% !important;}
+.wp60{width:60% !important;}
+.wp70{width:70% !important;}
+.wp80{width:80% !important;}
+.wp90{width:90% !important;}
+.wp100{width:100% !important;}
+
+.b{font-weight: bold !important;}
+.ac{text-align:center !important;}
+.ar{text-align:right !important;}
+.al{text-align:left !important;}
+.di{display:inline-block !important; vertical-align: middle;}
+.fr{float: right !important;}
+.fl{float: left !important;}
+.pr{position:relative !important;}
+.pa{position:absolute !important;}
+
+.container {
+  width: 1280px;
+  max-width: none !important;
+}
+
+/* login */
+.login{
+  width:600px;
+  border: 1px solid #9d9d9d;
+  background: #eee;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin: -100px 0 0 -300px;
+}
+.login h2{margin-bottom: 30px;}
+.login .control-label {
+    padding-top: 7px;
+    text-align: right;
+}
+.login .btn{width:100%; height:82px;}
+
+/* main */
+.wrap{
+  position: relative;
+}
+.wrap:after{
+  content:""; display:block; clear:both;
+}
+header{
+  margin:30px 0 20px 0;
+  border-bottom: 2px solid #999;
+}
+header .info{
+  position: absolute;
+  right:0;
+  bottom: 10px;
+}
+aside{
+  float: left;
+  width:200px;
+}
+aside .list-group a.on {
+  text-decoration: underline;
+}
+section{
+  float:left;
+  width:1050px;
+  padding-left: 20px;
+}
+.title_area{
+  margin-bottom:30px;
+}
+.title_area h4{
+  margin-bottom:0;
+  color: #337AB7;
+  font-weight: bold;
+  font-size: 24px;
+}
+.title_area .location{
+  position:absolute;
+  top:10px;
+  right:0;
+  color: #777;
+  margin-bottom: 20px;
+}
+.search{
+  background: #eee;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+}
+.img_list{
+  margin:-5px;
+}
+.img_list label{
+  display: block;
+  margin:5px 0;
+}
+.img_list a{
+  display: block;
+  text-decoration: none;
+  color:#555;
+  padding: 5px;
+}
+.img_list li{
+  float: left;
+  width:20%;
+  list-style: none;
+}
+.img_list li img{
+  width:100%;
+  height:150px;
+  background: #EEEEEE;
+}
+.img_list li dl dt{
+  font-size:20px;
+  color:#337AB7;
+}
+.img_list li dl dt,
+.img_list li dl dd.of{
+  display:block;
+  width:194px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.form_list .col-xs-10 input[type="text"]{
+  display: inline-block;
+  width:749px;
+  vertical-align: middle;
+}
+.form_list .col-xs-10 button{
+  width:100px;
+}
+.form_list .col-xs-10 p{
+  margin:0;
+}
+.list_detail h5{
+  font-weight: bold;
+  margin-top:20px;
+}
+.list_detail .col-xs-4 img{
+  width:100%;
+  height:200px;
+  background: #eee;
+}
+.list_detail table tr{
+  line-height: 33px;
+}
+.list_detail .col-xs-8 button{
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+}
+.list_detail .col-xs-6{
+  overflow-y: auto;
+  overflow-x: inherit;
+  height: 250px;
+  border: 1px solid #CCCCCC;
+}
+.list_detail .col-xs-6 h6{
+  color: #337AB7;
+  font-size: 15px;
+}
+.list_detail .col-xs-6 ul{
+  padding-left:20px;
+}
+.list_detail .col-xs-6 ul li a{
+  color: #777;
+}
+.list_detail .col-xs-6 img{
+  width:300px;
+  height:200px;
+  margin:20px;
+  background: #eee;
+}
+.table tr th{
+  vertical-align: middle !important;
+  text-align: center;
+  background:#EEEEEE;
+}
+.table tr td{
+  vertical-align: middle !important;
+}
+
+.btn_area{
+  float: right;
+  margin:20px 0;
+}
+.btn_area button{
+  width:100px;
+}
+
+footer{
+  text-align: right;
+  border-top: 1px solid #999999;
+  padding: 10px 0;
+}
+/* bootstrap.css */
+.ui-datepicker-trigger{
+  cursor: pointer;
+}
+.form_list .ui-datepicker-trigger{
+  border: 1px solid #CCCCCC;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  border: 1px solid #337ab7;
+  background: #337ab7 repeat-x;
+  color: #FFFFFF;
+}
+.ui-widget-header {
+  background: #337ab7;
+  color: #FFFFFF;
+}
+
+
+/* 파일업로드 */
+.file-upload {
+  position: absolute;
+  left: -9999px;
+}
+
+label[for="file-upload"] {
+  cursor: pointer;
+}

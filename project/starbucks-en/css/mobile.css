@@ -1,0 +1,306 @@
+@charset "UTF-8";
+/* common ================================================================================= */
+h3{
+   margin-bottom:20px;
+   font-size: 18px;   
+}
+
+/* sprites ============================================================================= */
+.sp{background-image: url(../img/sprites-m.png); background-size: 350px 150px;}
+.sp-logo{width: 40px; height: 40px; background-position: 0 0;}
+.sp-logo-text{width: 159px; height: 15px; background-position: -150px -50px;}
+.sp-map{width: 30px; height: 30px; background-position: -50px 0;}
+.sp-star{width: 30px; height: 30px; background-position: -80px 0;}
+.sp-menu{width: 30px; height: 30px; background-position: -110px 0;}
+.sp-close{width: 30px; height: 30px; background-position: -150px -70px;}
+.sp-search{width: 30px; height: 30px; background-position: -150px 0;}
+.sp-facebook{width: 30px; height: 30px; background-position: -200px 0;}
+.sp-pinterest{width: 30px; height: 30px; background-position: -250px 0;}
+.sp-twitter{width: 30px; height: 30px; background-position: -300px 0;}
+.sp-appstore{width: 115px; height: 35px; background-position: 0 -50px;}
+.sp-googleplay{width: 115px; height: 35px; background-position: 0 -100px;}
+ 
+/* header ============================================================================= */
+header{
+   position: fixed;
+   height: 50px; width: 100%; z-index: 100;
+}
+h1{
+   text-align: center;
+   float: none;
+   padding: 5px 0;   
+}
+.btn-store{
+   position: absolute;
+   right: 45px; top:10px;
+   width: 30px; height: 30px;
+   margin: 0;
+   border:none;
+   background:none;     
+   font-size: 0;
+}
+.login-group{
+   position: absolute;
+   top:10px; right:15px;    
+}
+.login-group [class^=btn]{
+   display: none;
+}
+.sp-star{
+   display: block;
+}
+
+/* gnb ============================================================================= */
+.gnb{
+   left:10px; top:10px; 
+   width: 30px; height: 30px;   
+   border:0;
+}
+.gnb .gnb-popup.open{      
+   left:0; top:0; bottom:0; right:0;
+   border-left:0; 
+}
+.gnb .gnb-popup ul li a{   
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 60px;
+}
+
+/* slide ============================================================================= */
+section{padding-top: 50px;}
+.slide{
+   background: #f3efec;
+}
+.slide .container{overflow: hidden;}
+.slide .swiper-container{
+   height: 590px;
+   margin: 0;
+   text-align: center;
+}
+.slide .swiper-slide > span{
+   padding-top: 40px;
+   font-size: 12px;   
+}
+.slide .swiper-slide b{   
+   padding: 50px 0;   
+   font-size: 24px;
+}
+.slide .swiper-slide p{
+   padding-bottom: 25px;
+   font-size: 10px;
+   line-height: 15px;
+}
+.slide .swiper-slide button{
+   width: 110px;
+   height: 30px;   
+   font-size: 10px;   
+}
+.slide img{   
+   position: absolute;
+   right:50%;
+   transform: translateX(50%);
+   width: 80%;
+   bottom: -65px;
+}
+.slide .pagination{
+   bottom:20px;
+   left: 50px;
+   right: 50px;
+}
+.slide .pagination .page{
+   display: none;
+}
+.slide .swiper-pagination{
+   width: 100%;
+   height: 5px;
+   margin: 0;
+   background: #fff;
+}
+.slide .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+   background: #004d33;
+}
+.slide .controls{
+   display: none;
+}
+
+/* service ============================================================================= */
+.service{
+   padding: 15px 0 75px;
+}
+.service .col{
+   width: 100%;
+}
+.service .col .wrap{
+   margin: 0 20px;
+} 
+.service .col .wrap a{
+   margin-bottom: 20px; 
+}
+.service .inner-col2 img{
+   padding-right: 10px;
+}
+.service .inner-col3 img{
+   padding-left: 10px;
+}
+
+/* store ============================================================================= */
+.store{
+   padding-bottom:0; 
+}
+.store .row{
+   height: auto;
+   margin: 0;   
+}
+.store .find-store{
+   float: none;
+   width: 100%;
+   height: auto;
+}
+.store .find-store form{    
+   height: auto;
+   padding: 15px;
+}
+.store .find-store form label{
+   display: none;
+}
+.store .find-store form input{
+   height: 30px;
+   padding: 0 40px 0 10px;
+   font-size: 15px;
+}
+.store .store-list{
+   height: 225px;   
+}
+.store .store-list li{
+   height: 45px;
+   padding: 10px 15px;
+   border-bottom:1px solid rgba(255,255,255,0.2);
+   box-sizing: border-box;   
+}
+.store .store-list li a b{
+   display: block;
+   padding-bottom: 0;
+   font-size: 12px;
+}
+.store .store-list li a span{
+   font-size: 10px;
+}
+.store #map{
+   width: 100%;
+   height: 225px;   
+   background: #fff;
+}
+
+/* offers ============================================================================= */
+.offers h3{padding-top: 50px;}
+.offers .bg{
+   position: absolute;
+   z-index: -1;
+   transform: none;   
+   height: 180px;
+   background: #555;
+}
+.offers .row li{
+   width: 50%;      
+}
+.offers .row li a{
+   margin: 0;
+   padding-bottom: 30px; 
+}
+.offers .row li span{
+   padding-top: 10px;
+   font-size: 10px;
+}
+.offers .row li strong{   
+   font-size: 12px;
+   padding: 10px 0 20px;
+}
+.offers .row li b{   
+   font-size: 12px;
+}
+
+/* rewards ============================================================================= */
+.rewards{  
+   position: relative; 
+   padding: 70px 0 50px;   
+   background: url(../img/bg-star.png) no-repeat right 15px;
+   background-size: auto 330px;
+}
+.rewards .img-box{
+   position: absolute;
+   bottom:0;   
+   float: none;
+   width: 100%;
+}
+.rewards .img-box img{
+   display: none;
+}
+.rewards .img-box .btn-group button{
+   margin:0 10px;
+}
+.rewards .text-box{
+   float: none;
+   padding-left: 25px;
+   padding-bottom: 85px;
+}
+.rewards .text-box h4{   
+   margin-bottom:15px;   
+   font-size: 18px;   
+   text-align: center;
+} 
+.rewards .text-box h4 sup{
+   font-size: 10px;
+}
+.rewards .text-box ul{
+   width: 300px;
+   margin: 0 auto 25px;
+}
+.rewards .text-box ul li{   
+   font-size: 12px;
+   line-height: 30px;
+}
+.rewards .text-box ul li sup{
+   font-size: 10px;
+}
+.rewards .text-box ul li .step i{
+   width: 12px;
+   height: 12px;
+   margin:0 10px 0 5px;
+   line-height: 12px;
+   font-style:normal;
+   font-size:10px;
+}
+.rewards .text-box .link{text-align: center;}
+.rewards .text-box .link a{     
+   font-size: 10px;   
+}
+.rewards .text-box > a sup{
+   font-size:5px;
+}
+
+/* footer ============================================================================= */
+footer{
+   padding: 50px 0;
+   text-align: center;
+}
+footer h2{
+   position: static;   
+   transform: none;
+}
+footer .sns{   
+   right:50%;
+   top:40px;
+   transform: translateX(50%);
+}
+footer .sns li{
+   float: left; margin:0 5px;
+}
+footer .etc{padding-left: 0; margin: 70px 0 20px;}
+footer .etc li{float: left; width: 50%; text-align: center;}
+footer .etc li a{
+   font-size: 12px;
+   line-height: 30px;
+}
+footer small{
+   position: static;   
+}

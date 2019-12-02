@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/hnt-bo.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/hnt-bo.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <h1><a href="hnt-bo-000001.html">Hotel n Tour</a></h1>
+      <div class="user-info">
+        안녕하세요 <b>관리자님</b>
+        <button class="btn btn-default btn-sm" onclick="location.href='hnt-bo-000000.html'">로그아웃</button>
+      </div>
+      <nav class="gnb-nav">
+        <ul>
+          <li class="active"><a href="hnt-bo-010100.html">일반회원관리</a></li>
+          <li><a href="hnt-bo-020100.html">파트너회원관리</a></li>
+          <li><a href="hnt-bo-030100.html">상품관리</a></li>
+          <li><a href="hnt-bo-040100.html">예약관리</a></li>
+          <li><a href="hnt-bo-050100.html">매출관리</a></li>
+          <li><a href="hnt-bo-060100.html">게시판관리</a></li>
+          <li><a href="hnt-bo-070100.html">상품후기관리</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="snb-nav">
+      <h2>일반회원관리</h2>
+      <nav>
+        <ul>
+          <li class="active"><a href="#">가입회원</a></li>
+          <li><a href="#">탈퇴회원</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contents">
+      <div class="top">
+        <ol class="breadcrumb">
+          <li><a href="#">일반회원관리</a></li>
+          <li><a href="#">가입회원</a></li>
+          <li class="active">상세화면</li>
+        </ol>
+      </div>
+      <section>
+        <div class="title">
+          <h5>기본정보</h5>
+        </div>
+
+        <table class="table table-bordered">
+          <caption>기본정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="width:400px">
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>아이디</th>
+              <td>test@naver.com</td>
+              <th>이름</th>
+              <td>홍길동</td>
+            </tr>
+            <tr>
+              <th>핸드폰번호</th>
+              <td>01012341234</td>
+              <th>가입구분</th>
+              <td>카카오톡</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table text-center table-bordered">
+          <caption>환불계좌</caption>
+          <colgroup>
+            <col style="width:33.33%">
+            <col style="width:33.33%">
+            <col style="width:33.33%">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="colgroup" colspan="3">환불계좌</th>
+            </tr>
+            <tr>
+              <th>예금주</th>
+              <th>은행</th>
+              <th>계좌</th>
+            </tr>
+            <tr>
+              <td>홍길동</td>
+              <td>길동은행</td>
+              <td>12345677889</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="title">
+          <h5>관심지역</h5>
+        </div>
+        <div class="box1 mb20">
+          하와이> 오아후 / 태국 몰디브
+        </div>
+
+        <div class="title">
+          <h5>회원 구매 내역 [총 <span class="c-red">2</span>건]</h5>
+          <b class="po-right lh30">정산완료 주문금액 합계 : 315,000원</b>
+        </div>
+
+        <table class="table text-center table-bordered">
+          <caption>회원 구매 내역</caption>
+          <colgroup>
+            <col style="width:70px">
+            <col style="width:100px">
+            <col style="width:">
+            <col style="width:">
+            <col style="width:70px">
+            <col style="width:120px">
+            <col style="width:120px">
+            <col style="width:100px">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>상품유형</th>
+              <th>지역</th>
+              <th>상품명</th>
+              <th>상품번호</th>
+              <th>주문상태</th>
+              <th>결제방법</th>
+              <th>결제금액</th>
+              <th>주문일시</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>투어</td>
+              <td>하와이</td>
+              <td class="text-left">하와이에서 낭만을 만끽해보세요!! 스타오브호놀룰루 디너크루즈 3스타 [왕복 교통편 포함]</td>
+              <td>HIT001102017</td>
+              <td>정산완료</td>
+              <td>무통장입금</td>
+              <td class="text-right">315,000원</td>
+              <td>2017-04-05 12:12:22</td>
+            </tr>
+            <tr>
+              <td>호텔</td>
+              <td>하와이</td>
+              <td class="text-left">더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]</td>
+              <td>HIT001102017</td>
+              <td>입금대기</td>
+              <td>신용/체크카드 [네이버 페이]</td>
+              <td class="text-right">2,200,000원</td>
+              <td>2017-04-05 12:12:22</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="btn-area text-center">
+          <button class="btn btn-primary w100">목록</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

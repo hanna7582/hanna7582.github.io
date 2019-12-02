@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* rewards ============================================================================= */
+.rewards{  
+   position: relative; 
+   padding: 70px 0 50px;   
+   background: url(../img/bg-star.png) no-repeat right 15px;
+   background-size: auto 500px;
+}
+.rewards .img-box{
+   position: absolute;
+   bottom:0;   
+   float: none;
+   width: 100%;
+}
+.rewards .img-box img{
+   display: none;
+}
+.rewards .img-box .btn-group button{
+   margin:0 10px;
+}
+.rewards .text-box{
+   float: none;
+   padding-left: 0;
+   padding-bottom: 85px;
+}
+.rewards .text-box h4{   
+   text-align: center;
+} 
+.rewards .text-box h4 sup{
+   font-size: 10px;
+}
+.rewards .text-box ul{
+   width: 500px;
+   margin: 0 auto 25px;
+}
+.rewards .text-box .link{text-align: center;}

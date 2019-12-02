@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>EDM HOLIC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimun-scale=1, maximun-scale=1, user-scalable=no" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+    
+    <!-- jquery & javascript-->
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../js/swiper.jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+<!-- 헤더 -->
+<header class="navbar" role="navigation">
+    <div class="navbar-header">
+        <button type="button" id="btn_menu" class="toggle_left navbar-toggle" onclick="javascript:menu();">
+            <span class="sr-only">메인메뉴</span>
+            <span class="btn_menu"></span>
+        </button>
+        <button type="button" class="toggle_right navbar-toggle" data-toggle="collapse" data-target=".navbar-ex2-collapse">
+            <span class="sr-only">검색</span>
+            <span class="btn_search"></span>
+        </button>
+        <a class="navbar-brand eng" href="#">Video</a>
+    </div>
+    <!-- 검색 -->
+    <div class="collapse navbar-collapse navbar-ex2-collapse">
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="검색어를 입력하세요.">
+            </div>
+            <button type="submit" class="btn"></button>
+        </form>
+		<div class="list none">
+			<ul>
+				<li>최근검색어<button class="del">x</button></li>
+				<li>DJ <button class="del">x</button></li>
+				<li>박명수 <button class="del">x</button></li>
+				<li>edm <button class="del">x</button></li>
+				<li>공연 <button class="del">x</button></li>
+			</ul>
+		</div>
+    </div>
+</header> 
+       
+<!-- 메뉴 -->
+<nav id="menu" class="none">
+	<div class="menu-logo"><a href="main.html">edm holic</a></div>
+    <div class="menu-login">로그인 하세요<button class="btn_logout" onclick="javascript:location.href='login.html'"></button></div>
+    <ul class="manu-contents">
+        <li class="menu-item">
+            <a href="main.html">Home</a>
+        </li>
+        <li class="menu-item">
+            <a href="streaming.html">Streaming</a>
+        </li>
+        <li class="menu-item">
+            <a>Information</a>
+            <ul>
+                <li><a href="edmchart.html" class="menu_link">edm차트</a></li>
+                <li><a href="schedule.html" class="menu_link">스케줄</a></li>
+                <li><a href="dj.html" class="menu_link">Dj</a></li>
+                <li><a href="club.html" class="menu_link">Club</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a>Magazine</a>
+            <ul>
+                <li><a href="magazine.html" class="menu_link">매거진</a></li>
+                <li><a href="master.html" class="menu_link">전문가 칼럼</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a>Live</a>
+            <ul>
+                <li><a href="photo.html" class="menu_link">포토</a></li>
+                <li><a href="video.html" class="menu_link">비디오</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="community.html">Community</a>
+        </li>
+        <li class="menu-item">
+            <a href="news.html">News</a>
+        </li>
+        <li class="menu-item">
+            <a href="event.html">Event</a>
+        </li>
+        <li class="menu-item">
+            <a href="setting.html">Setting</a>
+        </li>
+    </ul>
+</nav>
+<div id="shadow" class="none"></div>
+
+<!-- 탭 -->
+<div class="schedule_tab">
+	<ul class="nav nav-tabs">
+	    <li class="active"><a href="#tab1" data-toggle="tab">라이브영상</a></li>
+	    <li><a href="#tab2" data-toggle="tab">뮤직비디오</a></li>
+	</ul>
+</div> 
+
+<!-- video 내용 -->
+<section class="video">
+   	<!-- 탭 내용 시작 -->
+    <div class="tab-content">
+    
+	    <!-- 라이브영상 -->
+	    <div class="tab-pane active" id="tab1">
+	    	<div class="title_area">
+	    		<div class="title">최신 영상</div>
+	    	</div>
+	    	<div class="wrap">
+		    	<!-- 슬라이드 동영상 -->
+		    	<div class="swiper-container swiper1">
+		           <div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="form">
+								<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+								<div class="text_box">▶ 2:35</div>									
+								<dl>
+									<dt>Calvin Harris Feat. Ellie Goulding</dt>
+									<dd>조회수<span>847</span></dd>
+								</dl>
+								<a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" class="link"></a>
+							</div>
+							<div class="form">
+								<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+								<div class="text_box">▶ 2:35</div>									
+								<dl>
+									<dt>Calvin Harris Feat. Ellie Goulding</dt>
+									<dd>조회수<span>847</span></dd>
+								</dl>
+								<a href="http://www.youtube.com/embed/_B789lus-JE?autoplay=1" class="link"></a>
+							</div>   
+						</div>
+						<div class="swiper-slide">
+							<div class="form">
+								<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+								<div class="text_box">▶ 2:35</div>									
+								<dl>
+									<dt>Calvin Harris Feat. Ellie Goulding</dt>
+									<dd>조회수<span>847</span></dd>
+								</dl>
+								<a href="http://www.youtube.com/embed/_B789lus-JE?autoplay=1" class="link"></a>
+							</div>
+							<div class="form">
+								<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+								<div class="text_box">▶ 2:35</div>									
+								<dl>
+									<dt>Calvin Harris Feat. Ellie Goulding</dt>
+									<dd>조회수<span>847</span></dd>
+								</dl>
+								<a href="http://www.youtube.com/embed/_B789lus-JE?autoplay=1" class="link"></a>
+							</div>   
+						</div>
+						<div class="swiper-slide">
+							<div class="form">
+								<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+								<div class="text_box">▶ 2:35</div>									
+								<dl>
+									<dt>Calvin Harris Feat. Ellie Goulding</dt>
+									<dd>조회수<span>847</span></dd>
+								</dl>
+								<a href="http://www.youtube.com/embed/_B789lus-JE?autoplay=1" class="link"></a>
+							</div>
+							<div class="form">
+								<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+								<div class="text_box">▶ 2:35</div>									
+								<dl>
+									<dt>Calvin Harris Feat. Ellie Goulding</dt>
+									<dd>조회수<span>847</span></dd>
+								</dl>
+								<a href="http://www.youtube.com/embed/_B789lus-JE?autoplay=1" class="link"></a>
+							</div>   
+						</div>
+					</div>
+					<div class="swiper-pagination-1"></div>
+				</div>	
+				
+				<!-- 리스트 동영상 -->
+			<div class="list">
+				<ul>
+					<li>
+						<div class="video_form">
+							<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+							<div class="text_box">▶ 2:35</div>	
+						</div>									
+						<dl>
+							<dt>Calvin Harris Feat. Ellie Goulding</dt>
+							<dd>조회수<span>847</span></dd>
+						</dl>
+						<a href="http://www.youtube.com/embed/_B789lus-JE?autoplay=1" class="link"></a>
+					</li>
+					<li>
+						<div class="video_form">
+							<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+							<div class="text_box">▶ 2:35</div>	
+						</div>								
+						<dl>
+							<dt>Calvin Harris Feat. Ellie Goulding</dt>
+							<dd>조회수<span>847</span></dd>
+						</dl>
+						<a class="link" onclick="javascript:video_view();"></a>
+					</li>
+					<li>
+						<div class="video_form">
+							<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+							<div class="text_box">▶ 2:35</div>	
+						</div>								
+						<dl>
+							<dt>Calvin Harris Feat. Ellie Goulding</dt>
+							<dd>조회수<span>847</span></dd>
+						</dl>
+						<a class="link" onclick="javascript:video_view();"></a>
+					</li>
+					<li>
+						<div class="video_form">
+							<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+							<div class="text_box">▶ 2:35</div>	
+						</div>								
+						<dl>
+							<dt>Calvin Harris Feat. Ellie Goulding</dt>
+							<dd>조회수<span>847</span></dd>
+						</dl>
+						<a class="link" onclick="javascript:video_view();"></a>
+					</li>
+					<li>
+						<div class="video_form">
+							<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+							<div class="text_box">▶ 2:35</div>	
+						</div>							
+						<dl>
+							<dt>Calvin Harris Feat. Ellie Goulding</dt>
+							<dd>조회수<span>847</span></dd>
+						</dl>
+						<a class="link" onclick="javascript:video_view();"></a>
+					</li>
+				</ul>
+			</div>
+			</div>	
+		</div>
+   		<!-- 라이브영상 끝-->
+    
+	    <!-- 뮤직비디오 -->
+	    <div class="tab-pane" id="tab2">		
+			<div class="title_area">
+	    		<div class="title">최신 영상</div>
+	    	</div>
+	    	<div class="wrap">
+		    	<!-- 슬라이드 동영상 -->
+		    	<div class="swiper-container swiper2">
+		           <div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="form">
+								<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+								<div class="text_box">▶ 2:35</div>									
+								<dl>
+									<dt>Calvin Harris Feat. Ellie Goulding</dt>
+									<dd>조회수<span>847</span></dd>
+								</dl>
+								<a class="link" onclick="javascript:video_view();"></a>
+							</div>
+							<div class="form">
+								<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+								<div class="text_box">▶ 2:35</div>									
+								<dl>
+									<dt>Calvin Harris Feat. Ellie Goulding</dt>
+									<dd>조회수<span>847</span></dd>
+								</dl>
+								<a class="link" onclick="javascript:video_view();"></a>
+							</div>   
+						</div>
+						<div class="swiper-slide">
+							<div class="form">
+								<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+								<div class="text_box">▶ 2:35</div>									
+								<dl>
+									<dt>Calvin Harris Feat. Ellie Goulding</dt>
+									<dd>조회수<span>847</span></dd>
+								</dl>
+								<a class="link" onclick="javascript:video_view();"></a>
+							</div>
+							<div class="form">
+								<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+								<div class="text_box">▶ 2:35</div>									
+								<dl>
+									<dt>Calvin Harris Feat. Ellie Goulding</dt>
+									<dd>조회수<span>847</span></dd>
+								</dl>
+								<a class="link" onclick="javascript:video_view();"></a>
+							</div>   
+						</div>
+						<div class="swiper-slide">
+							<div class="form">
+								<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+								<div class="text_box">▶ 2:35</div>									
+								<dl>
+									<dt>Calvin Harris Feat. Ellie Goulding</dt>
+									<dd>조회수<span>847</span></dd>
+								</dl>
+								<a class="link" onclick="javascript:video_view();"></a>
+							</div>
+							<div class="form">
+								<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+								<div class="text_box">▶ 2:35</div>									
+								<dl>
+									<dt>Calvin Harris Feat. Ellie Goulding</dt>
+									<dd>조회수<span>847</span></dd>
+								</dl>
+								<a class="link" onclick="javascript:video_view();"></a>
+							</div>   
+						</div>
+					</div>
+					<div class="swiper-pagination-2 "></div>
+				</div>	
+				
+				<!-- 리스트 동영상 -->
+				<div class="list">
+				<ul>
+					<li>
+						<div class="video_form">
+							<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+							<div class="text_box">▶ 2:35</div>	
+						</div>						
+						<dl>
+							<dt>Calvin Harris Feat. Ellie Goulding</dt>
+							<dd>조회수<span>847</span></dd>
+						</dl>
+						<a class="link" onclick="javascript:video_view();"></a>
+					</li>
+					<li>
+						<div class="video_form">
+							<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+							<div class="text_box">▶ 2:35</div>	
+						</div>								
+						<dl>
+							<dt>Calvin Harris Feat. Ellie Goulding</dt>
+							<dd>조회수<span>847</span></dd>
+						</dl>
+						<a class="link" onclick="javascript:video_view();"></a>
+					</li>
+					<li>
+						<div class="video_form">
+							<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+							<div class="text_box">▶ 2:35</div>	
+						</div>							
+						<dl>
+							<dt>Calvin Harris Feat. Ellie Goulding</dt>
+							<dd>조회수<span>847</span></dd>
+						</dl>
+						<a class="link" onclick="javascript:video_view();"></a>
+					</li>
+					<li>
+						<div class="video_form">
+							<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+							<div class="text_box">▶ 2:35</div>	
+						</div>								
+						<dl>
+							<dt>Calvin Harris Feat. Ellie Goulding</dt>
+							<dd>조회수<span>847</span></dd>
+						</dl>
+						<a class="link" onclick="javascript:video_view();"></a>
+					</li>
+					<li>
+						<div class="video_form">
+							<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+							<div class="text_box">▶ 2:35</div>	
+						</div>							
+						<dl>
+							<dt>Calvin Harris Feat. Ellie Goulding</dt>
+							<dd>조회수<span>847</span></dd>
+						</dl>
+						<a class="link" onclick="javascript:video_view();"></a>
+					</li>
+					<li>
+						<div class="video_form">
+							<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+							<div class="text_box">▶ 2:35</div>	
+						</div>							
+						<dl>
+							<dt>Calvin Harris Feat. Ellie Goulding</dt>
+							<dd>조회수<span>847</span></dd>
+						</dl>
+						<a class="link" onclick="javascript:video_view();"></a>
+					</li>
+					<li>
+						<div class="video_form">
+							<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">
+							<div class="text_box">▶ 2:35</div>	
+						</div>								
+						<dl>
+							<dt>Calvin Harris Feat. Ellie Goulding</dt>
+							<dd>조회수<span>847</span></dd>
+						</dl>
+						<a class="link" onclick="javascript:video_view();"></a>
+					</li>
+				</ul>
+			</div>
+	    	</div>
+	    </div>
+	    <!-- 뮤직비디오 끝-->
+	    
+	</div>    
+   <!-- 탭 내용 끝 -->
+</section>
+</body>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper1', {
+    	pagination: '.swiper-pagination-1',
+        paginationClickable: true
+    });
+    var swiper = new Swiper('.swiper2', {
+    	pagination: '.swiper-pagination-2',
+        paginationClickable: true
+    });
+</script>
+</html>

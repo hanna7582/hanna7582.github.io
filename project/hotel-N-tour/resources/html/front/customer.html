@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hotel N Tour</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/hnt-front.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <script src="../../js/hnt-front.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <a href="#contents" class="skip-menu">본문바로가기</a>
+    <header class="center border-bottom">
+      <h1><a href="index.html"><img src="../../images/front/logo.png" alt="hotel N Tour logo"></a></h1>
+      <ul class="lnb-nav">
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="signup.html">회원가입</a></li>
+        <li><a href="#">여행자보험</a></li>
+        <li class="mypage">
+          <a href="mypage.html">
+            <img src="../../images/front/profile.png" alt="프로필이미지">
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <section id="contents">
+      <article class="tab-area">
+        <h1>호텔엔투어 고객센터</h1>
+
+        <div class="about">
+          <div class="img-box">
+            <img src="../../images/front/info.jpg" alt="">
+          </div>
+          <div class="list-box">고객센터 운영시간 : 09:00~19:00</div>
+          <div class="list-box">전화 문의 : 02-6672-2700</div>
+          <div class="list-box mb20">이메일 문의 : help@hotelntour.co.kr</div>
+          <p class="message">호텔 또는 투어상품에 대한 문의는 <b>각 상품의 상세페이지내에<br>
+            1:1 카카오톡상담</b>을 이용 하시기바랍니다.</p>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <div class="center">
+        <ul class="app-download">
+          <li><a href="#" class="icon icon-appstore"><span class="skip">app store</span></a></li>
+          <li><a href="#" class="icon icon-googleplay"><span class="skip">google play</span></a></li>
+        </ul>
+        <ul class="info">
+          <li>
+            <h2>호텔 엔 투어</h2>
+            <ul>
+              <li><a href="about-us.html">회사소개</a></li>
+              <li><a href="#">보도자료</a></li>
+              <li><a href="customer.html">고객센터</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>정책안내</h2>
+            <ul>
+              <li><a href="policy.html">이용약관</a></li>
+              <li><a href="#">개인정보 취급방침</a></li>
+              <li><a href="#">취소/환불 규정</a></li>
+              <li><a href="#">저작권 안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>파트너 되기</h2>
+            <ul>
+              <li><a href="#">파트너 안내</a></li>
+              <li><a href="#">파트너 문의</a></li>
+              <li><a href="#">파트너 신청</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sns">
+          <li><a href="#" class="icon icon-facebook"><span class="skip">facebook</span></a></li>
+          <li><a href="#" class="icon icon-instagram"><span class="skip">instagram</span></a></li>
+          <li><a href="#" class="icon icon-youtube"><span class="skip">youtube</span></a></li>
+        </ul>
+        <small>COPYRIGHT © HOTEL N TOUR ALL RIGHTS RESERVED.</small>
+        <address>
+          <ul>
+            <li>서울특별시 강남구 도산대로 506, 재정빌딩 2층 (주)호텔엔투어 대표 : 유태선</li>
+            <li>| 사업자등록번호 : 762-88-00877 | 통신판매업신고번호 : 2018-서울강남-01061 |</li>
+            <li>개인정보관리책입자 : webmaster@hotelntour.co.kr   대표번호 : 02 548 2222</li>
+            <li>자사는 서울특별시관광협회 공제영업보증보험에 가입이 되어 있습니다.</li>
+            <li>호텔엔투어는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 호텔엔투어는 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.</li>
+          </ul>
+        </address>
+      </div>
+    </footer>
+
+    <script>
+      // 탭메뉴
+      $('.tab-menu li a').on('click',function(e){
+        e.preventDefault();
+        $('.tab-menu li').removeClass('active');
+        $(this).parent().addClass('active');
+        var tabIndex=$(this).parent().index();
+        $('.tab-contents .contents').hide();
+        $('.tab-contents .contents').eq(tabIndex).show();
+      });
+
+      //더보기
+      $('.btn-more').on('click',function(e){
+        e.preventDefault();
+        $(this).toggleClass('icon-more3 icon-more-close');
+      });
+
+      $('.accordion-header').on('click',function(e){
+        $(this).parents('.accordion').find('.wrap').removeClass('active');
+        $(this).parent().addClass('active');
+        $(this).parents('.accordion').find('.accordion-body').stop().slideUp();
+        $(this).next().stop().slideDown();
+      });
+    </script>
+  </body>
+</html>

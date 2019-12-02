@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/hnt-mobile.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <script src="../../js/hnt-mobile.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <h1><img src="../../images/front/logo.png" alt="hotel N Tour logo"></h1>
+        <button class="btn-menu icon icon-menu"><span class="skip">menu</span></button>
+        <nav>
+          <div class="top">
+            <img src="../../images/front/logo.png" alt="hotel N Tour logo">
+            <button class="btn-close icon icon-close"><span class="skip">close</span></button>
+          </div>
+          <ul class="gnb-nav">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+            <li><a href="#">메뉴6</a></li>
+            <li><a href="#">메뉴7</a></li>
+            <li><a href="#">메뉴8</a></li>
+            <li><a href="#">메뉴9</a></li>
+            <li><a href="#">메뉴10</a></li>
+            <li><a href="#">메뉴11</a></li>
+            <li><a href="#">메뉴12</a></li>
+            <li><a href="#">메뉴13</a></li>
+          </ul>
+          <div class="bottom">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+          </div>
+        </nav>
+        <button class="btn-user">
+          <img src="../../images/mobile/profile.png" alt="프로필이미지">
+          <span class="skip">user</span>
+        </button>
+      </div>
+    </header>
+
+    <section>
+      <article class="login">
+        <h1>로그인</h1>
+        <h2>이메일 주소로 로그인</h2>
+        <form action="#">
+          <input type="email" class="input mb10" placeholder="이메일">
+          <input type="password" class="input mb10" placeholder="비밀번호">
+          <button type="submit" class="btn btn-login mb10 icon">이메일로 로그인</button>
+          <div class="po-relative">
+            <label><input type="checkbox"><i class="icon icon-check"></i><span>로그인 상태 유지</span></label>
+            <a href="#" class="btn btn-border">비밀번호 찾기</a>
+          </div>
+        </form>
+
+        <h2>SNS계정으로 로그인</h2>
+        <div class="p10 border-bottom">
+          <button type="button" class="btn btn-facebook mb10">페이스북 로그인</button>
+          <button type="button" class="btn btn-kakao mb10">카카오톡 로그인</button>
+          <button type="button" class="btn btn-naver">네이버 로그인</button>
+        </div>
+        <div class="sign">
+          아직 회원가입을 하지 않으셨나요?
+          <a href="#">회원가입</a>
+        </div>
+        <div class="box1 text-center">
+          <a href="#popup-partner" id="btn-partner" data-target="#popup-partner">파트너 등록 문의</a> |
+          <a href="#">파트너 회원 로그인</a>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <ul class="info">
+        <li>
+          <h2><a href="javascript:void(0);">호텔 엔 투어</a></h2>
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">보도자료</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </li>
+        <li>
+          <h2><a href="javascript:void(0);">정책안내</a></h2>
+          <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 취급방침</a></li>
+            <li><a href="#">취소/환불 규정</a></li>
+            <li><a href="#">저작권 안내</a></li>
+          </ul>
+        </li>
+        <li>
+          <h2><a href="javascript:void(0);">파트너 되기</a></h2>
+          <ul>
+            <li><a href="#">파트너 안내</a></li>
+            <li><a href="#">파트너 문의</a></li>
+            <li><a href="#">파트너 신청</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <address>
+        <ul>
+          <li>서울특별시 강남구 도산대로 506, 재정빌딩 2층</li>
+          <li>(주)호텔엔투어 대표 : 유태선</li>
+          <li>사업자등록번호 : 762-88-00877</li>
+          <li>통신판매업신고번호 : 2018-서울강남-01061</li>
+          <li>개인정보관리책입자 : webmaster@hotelntour.co.kr</li>
+          <li>대표번호 : 02 548 2222 </li>
+        </ul>
+      </address>
+      <small>Copyright © Hotel n Tour All rights reserved. </small>
+    </footer>
+
+    <a href="#top" class="btn-top icon icon-top"><span class="skip">위로가기</span></a>
+
+    <!-- 파트너 등록 문의 팝업 -->
+    <div id="popup-partner" class="popup popup-partner">
+      <div class="popup-header">
+        <h1>파트너 등록문의</h1>
+        <button class="icon icon-close btn-close"><span class="skip">닫기</span></button>
+      </div>
+      <div class="popup-body">
+        <textarea placeholder="문의내용 입력"></textarea>
+        <p>답변 받으실 메일을 입력해주세요.</p>
+        <input type="text" class="input mb10" placeholder="이메일">
+        <button class="btn btn-primary">문의 하기</button>
+      </div>
+    </div>
+
+    <script>
+      $('#btn-email, #btn-partner').on('click',function(e){
+        e.preventDefault();
+        var target=$(this).attr('data-target');
+        $(target).show();
+      })
+    </script>
+  </body>
+</html>

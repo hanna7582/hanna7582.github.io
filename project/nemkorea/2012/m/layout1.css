@@ -1,0 +1,175 @@
+﻿@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		2;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+.gridContainer {
+	width: 100%;
+}
+#top {
+	clear: both;
+	float: left;
+	width: 100%;
+	display: block;
+	background-color:#f5f5f5;
+	line-height: 50px;
+	height: 50px;
+	border-bottom:1px solid black;
+}	
+#logo{
+	float: left;
+	width: 150px;
+	padding-left:10px;
+}
+#language{
+	float:right;
+	padding-right:40px;
+}
+#kor{
+	float: left;
+	width: 50px;
+}
+#eng{
+	float: left;
+	width: 50px;
+}
+/*퀵*/	
+#top > a, #top > label {
+   display: block;
+   height: 32px;
+   position: absolute;
+}
+#top > label.right {
+    width: 30px; 
+    right: 5px;
+}
+/*메뉴*/	
+#menu {
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	float: left;
+	width: 100%;
+	background-image: url(image/menu_bg1.png);
+	color: #FFF;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+}
+#center {
+	clear: both;
+	float: left;
+	width: 100%;
+	display: block;
+	text-align: center;
+	vertical-align: top;
+}
+#ad3{
+	text-align: center;
+	font-size: 1em;
+	background-image: url(image/bg.jpg);
+	color: #666;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #000;
+	padding: 5px;
+	height: 50px;
+	line-height: 50px;
+}
+#ad2{
+	text-align:center;
+	height:150px;
+	padding-top:10px;
+	background:white;
+	padding-right:5px;
+	padding-left:5px;
+}
+#footer {
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	background-color: #000;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #666;
+	color: #999;
+	text-align: center;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-size: 1em;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+}
+#ad3{
+	height: 100px;
+	line-height: 100px;
+}	
+#top {
+	line-height: 80px;
+	height: 80px;
+}	
+#logo{
+	width: 200px;
+}
+#language{
+	padding-right:60px;
+}
+#kor{
+	width: 80px;
+}
+#eng{
+	width: 80px;
+}
+#top > label.right {
+    width: 50px; 
+    right: 5px;
+}
+#menu {
+	background-image: url(image/menu_bg2.png);
+	font-size: 2em;
+	height: 80px;
+	line-height: 80px;
+}
+#footer {
+	font-size: 1.5em;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+}
+}

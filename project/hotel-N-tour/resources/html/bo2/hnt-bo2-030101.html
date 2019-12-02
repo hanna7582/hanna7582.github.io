@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../css/hnt-bo2.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/hnt-bo2.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <h1><a href="hnt-bo2-000001.html">Hotel n Tour</a></h1>
+      <div class="user-info">
+        안녕하세요 <b>관리자님</b>
+        <button class="btn btn-default btn-sm" onclick="location.href='hnt-bo2-000000.html'">로그아웃</button>
+      </div>
+      <nav class="gnb-nav">
+        <ul>
+          <li><a href="hnt-bo2-010100.html">회원정보</a></li>
+          <li><a href="hnt-bo2-020100.html">상품관리</a></li>
+          <li class="active"><a href="hnt-bo2-030100.html">예약관리</a></li>
+          <li><a href="hnt-bo2-040100.html">취소관리</a></li>
+          <li><a href="hnt-bo2-050100.html">정산관리</a></li>
+          <li><a href="hnt-bo2-060100.html">매출관리</a></li>
+          <li><a href="hnt-bo2-070100.html">게시판관리</a></li>
+          <li><a href="hnt-bo2-080100.html">쿠폰관리</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="snb-nav">
+      <h2>예약관리</h2>
+      <nav>
+        <ul>
+          <li class="active"><a href="hnt-bo2-030100.html">호텔예약관리</a></li>
+          <li><a href="hnt-bo2-030200.html">투어예약관리</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contents">
+      <div class="top">
+        <ol class="breadcrumb">
+          <li><a href="#">예약관리</a></li>
+          <li><a href="#">호텔예약관리</a></li>
+          <li class="active">상세화면</li>
+        </ol>
+      <section>
+        <div class="title">
+          <h5>주문자정보</h5>
+          <button class="btn btn-success po-right w100">출력</button>
+        </div>
+        <table class="table table-bordered">
+          <caption>주문자정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="width:300px">
+            <col style="width:140px">
+            <col style="width:300px">
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>이름</th>
+              <td>홍길동</td>
+              <th>이메일</th>
+              <td>hong112@naver.com</td>
+              <th>휴대폰번호</th>
+              <td>01045674545</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="title">
+          <h5>투숙객 정보</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>투숙객 정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>객실1</th>
+              <td>
+                <ul class="mb0">
+                  <li>성인 홍길동 / Hong gil dong</li>
+                  <li>성인 홍길동 / Hong gil dong</li>
+                  <li>소아 홍나나 / Hong na na(4세)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>객실2</th>
+              <td>
+                <ul class="mb0">
+                  <li>성인 홍길동 / Hong gil dong</li>
+                  <li>성인 홍길동 / Hong gil dong</li>
+                  <li>소아 홍나나 / Hong na na(10세)</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="title">
+          <h5>예약자 정보</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>예약자 정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>예약자</th>
+              <td>
+                <ul class="mb0">
+                  <li>이름 : 홍길동 / Hong gil dong</li>
+                  <li>이메일 : neomill2@naver.com</li>
+                  <li>핸드폰 번호 : 82-01045674545</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="title">
+          <h5>대표 투숙객 정보</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>대표 투숙객 정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>예약자</th>
+              <td>
+                <ul class="mb0">
+                  <li>이름 : 홍길동 / Hong gil dong</li>
+                  <li>이메일 : neomill2@naver.com</li>
+                  <li>핸드폰 번호 : 82-01045674545</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="title">
+          <h5>고객 요청사항</h5>
+        </div>
+        <textarea name="" class="form-control h100"></textarea>
+
+        <div class="title">
+          <h5>도착 공항 및 항공편 정보 입력</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>도착 공항 및 항공편 정보 입력</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="width:300px">
+            <col style="width:140px">
+            <col style="width:300px">
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>도착공항</th>
+              <td>000공항</td>
+              <th>항공편</th>
+              <td>A235</td>
+              <th>도착시간</th>
+              <td>18 : 25</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="title">
+          <h5>주문정보</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>주문정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="width:400px">
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>지역</th>
+              <td>하와이 > 오아후</td>
+              <th>판매 파트너</th>
+              <td>00투어</td>
+            </tr>
+            <tr>
+              <th>상품번호</th>
+              <td>HIT001102017</td>
+              <th rowspan="2">주문일시</th>
+              <td rowspan="2">2017-04-01 11:17:54</td>
+            </tr>
+            <tr>
+              <th>주문번호</th>
+              <td>B-HIT2017010100001</td>
+            </tr>
+            <tr>
+              <th>상품명</th>
+              <td>더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]</td>
+              <th>주문상태</th>
+              <td>입금대기 <button class="btn btn-info">예약 대기중</button></td>
+            </tr>
+            <tr>
+              <th>여행일자</th>
+              <td>2017-12-20 ~ 2017-12-23</td>
+              <th>예약수(룸)</th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <th rowspan="2">결제상세내역</th>
+              <td class="text-right">
+                <ul>
+                  <li>2017.12.20 x 2객실</li>
+                  <li>2017.12.21 x 2객실</li>
+                  <li>2017.12.22 x 2객실</li>
+                  <li>2017.12.23 x 2객실</li>
+                  <li>세금</li>
+                  <li>봉사료</li>
+                </ul>
+              </td>
+              <td colspan="2">
+                <ul>
+                  <li>
+                    <span class="inline-block w150">&#92;430,810</span>
+                    <span>$423</span>
+                  </li>
+                  <li>
+                    <span class="inline-block w150">&#92;430,810</span>
+                    <span>$423</span>
+                  </li>
+                  <li>
+                    <span class="inline-block w150">&#92;430,810</span>
+                    <span>$423</span>
+                  </li>
+                  <li>
+                    <span class="inline-block w150">&#92;430,810</span>
+                    <span>$423</span>
+                  </li>
+                  <li>
+                    <span class="inline-block w150">&#92;430,810</span>
+                    <span>$423</span>
+                  </li>
+                  <li>
+                    <span class="inline-block w150">&#92;430,810</span>
+                    <span>$423</span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="f20 bg-gray fb">
+              <td class="text-right">총합계</td>
+              <td colspan="2">
+                <span class="inline-block w150">&#92;2,067,840</span>
+                <span>$2,022</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="title">
+          <h5>결제정보</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>결제정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="width:200px">
+            <col style="width:200px">
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>결제방법</th>
+              <td>카카오페이</td>
+              <td>신용/체크카드</td>
+              <th rowspan="3">결제 정보</th>
+              <td rowspan="3">
+                <ul>
+                  <li>신한은행</li>
+                  <li>예금주명 : 홍길동</li>
+                  <li>계좌번호 : 123123123</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>결제기기</th>
+              <td colspan="2">PC</td>
+            </tr>
+            <tr>
+              <th>마지막 결제일시</th>
+              <td colspan="2">2017-04-01 11:17:54</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="title">
+          <h5>예약 확정서 입력</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>예약 확정서 입력</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>Confirmation No <span class="c-red">*</span></th>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+              <th>Hotel</th>
+              <td>앰배서더 호텔 와이키키 (Ambassador Hotel Waikiki)</td>
+            </tr>
+            <tr>
+              <th>Hotel address <span class="c-red">*</span></th>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+              <th>Check in<br>/ Check out</th>
+              <td>
+                <ul class="mb0">
+                  <li>Check in : 2017-12-20  15:00</li>
+                  <li>Check out : 2017-12-23  12:00</li>
+                  <li>3Nights</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Number of room</th>
+              <td>2 room</td>
+            </tr>
+            <tr>
+              <th>대표 투숙객</th>
+              <td>
+                <ul class="mb0">
+                  <li>Name : 홍길동 / hong gil dong</li>
+                  <li>MP : 010 1234 1234</li>
+                  <li>E mail : honggd@naver.com</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="2">Room 1</th>
+              <td><b>카이울라니 룸 [Kaiulani Room]</b></td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Adult1 : Hong gildong</li>
+                  <li>Child1 : Hong nana ( Data of birth - 2010.03.23 )</li>
+                  <li>Child2 : Hong nara ( Data of birth - 2012.05.13 )</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="2">Room 2</th>
+              <td><b>카이울라니 룸 [Kaiulani Room]</b></td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Adult1 : Hong gildong</li>
+                  <li>Child1 : Hong nana ( Data of birth - 2010.03.23 )</li>
+                  <li>Child2 : Hong nara ( Data of birth - 2012.05.13 )</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="4">Required<br>(고객요청사항)</th>
+              <td><p class="message">※ 요청하신 내용은 호텔 사정에 의해 변경 될 수 있으며, 확정되지 않습니다.</p></td>
+            </tr>
+            <tr>
+              <td>금연실(non-Smoking), 허니문(Honeymooners), 더블베드(Double bed)</td>
+            </tr>
+            <tr>
+              <td style="background:#f6f6f6;">기타요청사항</td>
+            </tr>
+            <tr>
+              <td>ㅇㅇㅇ 요청 드립니다.</td>
+            </tr>
+            <tr>
+              <th>Remarks <span class="c-red">*</span><br>(비고)</th>
+              <td><textarea class="form-control h100"></textarea></td>
+            </tr>
+            <tr>
+              <th>Customer Notice<br>(고객 안내사항)</th>
+              <td><textarea class="form-control h100"></textarea></td>
+            </tr>
+            <tr>
+              <th>비상연락처 <span class="c-red">*</span></th>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <img src="../../images/logo.png" alt="">
+                <ul class="mb0">
+                  <li>주소 : [07299] 서울시 영등포구 경인로775 (문래동3가, 에이스하이테크시티) 3동 301호</li>
+                  <li>대표번호 : 070-4888-3141</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <ul class="mb0">
+                  <li>주문일시 : 2018-06-11 16:36:52</li>
+                  <li>주문번호 : ord20180611162856_0</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-right">
+          <button type="button" class="btn btn-info">예약 확정</button>
+        </div>
+
+        <div class="title">
+          <h5>예약 불가 입력</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>예약 불가 입력</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>예약 불가 안내<span class="c-red">*</span></th>
+              <td><textarea name="" class="form-control h100"></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-right">
+          <button type="button" class="btn btn-info">예약 불가</button>
+        </div>
+
+        <div class="title">
+          <h5>고객 상담</h5>
+        </div>
+        <table class="table text-center table-bordered">
+          <caption>공지사항목록</caption>
+          <colgroup>
+            <col style="width:70px">
+            <col style="width:200px">
+            <col style="">
+            <col style="width:100px">
+            <col style="width:150px">
+          </colgroup>
+          <thead>
+            <tr class="primary">
+              <th>번호</th>
+              <th>등록일시</th>
+              <th>내용</th>
+              <th colspan="2">작성자</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10</td>
+              <td>2016-01-25 12:41:22</td>
+              <td></td>
+              <td>지역전체</td>
+              <td>hong123@naver.com</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>2016-01-25 12:41:22</td>
+              <td></td>
+              <td>관리자</td>
+              <td>hong123@naver.com</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <textarea name="" class="form-control h100 mb10"></textarea>
+
+        <div class="btn-area text-center">
+          <button type="button" class="btn btn-primary">목록</button>
+          <div class="po-right">
+            <button type="button" class="btn btn-info">등록</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

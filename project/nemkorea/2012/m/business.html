@@ -1,0 +1,146 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<link href="layout2.css" rel="stylesheet" type="text/css">
+<style>
+img, a{border:0;selector-dummy:expression(this.hideFocus=true);}
+.blue {
+	color:#2471AE;
+}
+	a:link {
+	text-decoration: none;
+	color: #FFF;
+}
+a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a:hover {
+	text-decoration: none;
+	color: #FFF;
+}
+a:active {
+	text-decoration: none;
+	color: #FFF;
+}
+</style>
+<link href="SpryAssets/SpryTabbedPanels2.css" rel="stylesheet" type="text/css">
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="respond.min.js"></script>
+<script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="gridContainer clearfix">
+    <div id="top">
+    <div id="logo"><a href="index.html"><img src="image/logo.png"></a>
+    </div>
+    <div id="language">
+    <div id="kor">
+	<a href="index.html"><img src="image/b_kor_on.png"></a>
+    </div>
+    <div id="eng">
+    <a href="index.html"><img src="image/b_eng_off.png"></a>
+    </div>
+    </div>
+    <div id="pc">
+    <a href="../pc.html"><img src="image/b_pc.png"></a>
+    </div>
+  </div>
+    <div id="menu">
+        <table border="0" align="center" cellpadding="0" cellspacing="0">
+ 	<tr>
+    <th width="10%" scope="col"><a href="intro.html">소개</a></th>
+    <th width="5%" scope="col"><img src="image/bar.jpg" width="2px"></th>
+    <th width="10%" class="blue" scope="col">사업</th>
+    <th width="5%" scope="col"><img src="image/bar.jpg" width="2px"></th>
+    <th width="10%" scope="col"><a href="product.html">제품</a></th>
+    <th width="5%" scope="col"><img src="image/bar.jpg" width="2px"></th>
+    <th width="10%" scope="col"><a href="request.html">문의</a></th>
+    <th width="5%" scope="col"><img src="image/bar.jpg" width="2px"></th>
+    <th width="10%" scope="col"><a href="recruit.html">채용</a></th>
+  	</tr>
+	</table>
+    </div>
+  <div id="center">
+    <div id="TabbedPanels1" class="TabbedPanels">
+      <ul class="TabbedPanelsTabGroup">
+        <li class="TabbedPanelsTab" tabindex="0">소프트웨어</li>
+        <li class="TabbedPanelsTab" tabindex="0">하드웨어</li>
+        <li class="TabbedPanelsTab" tabindex="0">엔지니어링</li>
+        <li class="TabbedPanelsTab" tabindex="0">디자인</li>
+</ul>
+      <div class="TabbedPanelsContentGroup">
+        <div class="TabbedPanelsContent">
+        <div id="space">
+        <p> IEC61850, IEC60870, DNP(KDNP) 등의 전력기반 Protocol을 기본으로 Gateway, HMI, SCADA, SA System을 개발하는 전력 IT 전문 업체입니다.
+ 한전과 현대 중공업을 주 고객으로 하고 있으며 다수의 개발 프로젝트를 수행하고 있습니다.</p>
+		<h3 class="blue">▶ Web Application</h3>
+        <img src="image/software1.png">
+        <h3 class="blue">▶ Process</h3>
+        <img src="image/software2.png">
+        </div>
+        </div>
+        <div class="TabbedPanelsContent">
+        <div id="space">
+        <p>Linux 기반의 Embeded Power를 개발하며 Firmware, 그리고 IEC61850 통신 Module, IEC60870 101, 104, DNP 등이 탑재된 Linux Board를 개발 생산하고 있습니다.</p>
+        <h3 class="blue">▶ 상품기획</h3>
+        <p> 신제품제안, 디자인, Mock up, 품평회</p>
+		<h3 class="blue">▶ 설계(ES)</h3>
+        <p> 설계기준과 구성도, 단계별 품질평가, 안전성검토, 체크리스트, 회로검토, 회로설계, 원가검토, PCB설계, 부품발주, 품평회</p>
+        <h3 class="blue">▶ 기술(PILOT)</h3>
+        <p> 부품규격화, 안정시험, 제작, 부품개발, 안전인증 신청, 판촉활동회</p>
+        <h3 class="blue">▶ 양산</h3>
+        <ol>
+          <li>PP: PCB 금형개발, 품평회, 평가 </li>
+          <li>MP: 생산이관 </li>
+        </ol>
+        <h3 class="blue">▶ 기타</h3>
+        <p>  커널(Linux, WinCE), Device Driver, 펌웨어(ARM) 성능개선 이력관리(SVN) 및 이슈지원</p>
+        </div>
+        </div>
+        <div class="TabbedPanelsContent">
+        <div id="space">
+        <p> 오랜 현장 경험과 중동, 산청, 신울산, 동두천, 포천, 성산 변전소 등에서 IEC61850을 기반으로 한 Digital 변전소 Engineering 경험을 바탕으로 최선의 현장 Engineering 서비스를 제공하고있습니다.</p>
+        <p><img src="image/engineering.png"></p>
+        </div>
+        </div>
+        <div class="TabbedPanelsContent">
+        <div id="space">
+        <p>오랜 경험과 전문성을 바탕으로 크게 Product, GUI, Graphic 분야에서 체계적인 프로세스를 가지고 사용자 중심의 디자인을 적용하여 완성도 높은 제품을 만들어 가고 있습니다.</p>
+        <h3 class="blue">▶ Design Area</h3>
+        <p><img src="image/design1.png"></p>
+        <h3 class="blue">▶ Design Process</h3>
+        <p><img src="image/design2.png"></p>
+        </div>
+        </div>
+		</div>
+    </div>
+  </div>
+  <div id="footer">Copyright(C)NEMKOREA.All Rights Reserved.</div>
+</div>
+<script type="text/javascript">
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+</script>
+</body>
+</html>

@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hotel N Tour</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/hnt-front.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <script src="../../js/hnt-front.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <a href="#contents" class="skip-menu">본문바로가기</a>
+    <header class="center border-bottom">
+      <h1><a href="index.html"><img src="../../images/front/logo.png" alt="hotel N Tour logo"></a></h1>
+      <ul class="lnb-nav">
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="signup.html">회원가입</a></li>
+        <li><a href="#">여행자보험</a></li>
+        <li class="mypage">
+          <a href="mypage.html">
+            <img src="../../images/front/profile.png" alt="프로필이미지">
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <section id="contents">
+      <!-- 공지사항 -->
+      <article class="notice center">
+        <h1><a href="#">하와이 고객센터</a></h1>
+        <ul>
+          <li><a href="#" class="text-overflow">하와이 공지사항입니다.</a></li>
+          <li><a href="#" class="text-overflow">하와이 공지사항입니다.</a></li>
+        </ul>
+        <a href="#" class="icon icon-more"><span class="skip">더보기</span></a>
+      </article>
+
+      <!-- 배너 -->
+      <article class="banner center">
+        <div class="swiper-container banner-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <span class="label">EVENT</span>
+              <a href="#"><img src="../../images/front/event1.jpg" alt="발권 수수료 무료+카드 무이자 할부, 오픈기념 이벤트!"></a>
+            </div>
+            <div class="swiper-slide">
+              <span class="label">EVENT</span>
+              <a href="#"><img src="../../images/front/event2.jpg" alt="발권 수수료 무료+카드 무이자 할부, 오픈기념 이벤트!"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="../../images/front/event1.jpg" alt="발권 수수료 무료+카드 무이자 할부, 오픈기념 이벤트!"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="../../images/front/event1.jpg" alt="발권 수수료 무료+카드 무이자 할부, 오픈기념 이벤트!"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="../../images/front/event1.jpg" alt="발권 수수료 무료+카드 무이자 할부, 오픈기념 이벤트!"></a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </article>
+
+      <!-- 투어상세 -->
+      <article class="hotel-result center tour">
+        <div>
+          <ul class="tab-menu">
+            <li><a href="#">HOTEL</a></li>
+            <li class="active"><a href="#">TOUR</a></li>
+          </ul>
+          <div class="tab-menu-line"></div>
+          <form action="#" class="form-center">
+            <input type="text" class="search1 select1 select-check" id="tour-check" placeholder="투어명으로 검색">
+            <input type="text" class="datepicker2" readonly id="tour-date" placeholder="투어날짜">
+            <button type="submit" class="icon icon-search"><span class="skip">검색</span></button>
+          </form>
+
+          <!-- 여행지,투어검색 -->
+          <div id="popup-tour" class="popup-hotel popup-hotel-form2">
+            <ul>
+              <li>
+                <a href="#">하와이</a>
+                <ul>
+                  <li><a href="#">오하우</a></li>
+                  <li><a href="#">마우이</a></li>
+                  <li><a href="#">코라나</a></li>
+                  <li><a href="#">이카우아이</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">태국</a>
+                <ul>
+                  <li><a href="#">방콕</a></li>
+                  <li><a href="#">푸켓</a></li>
+                  <li><a href="#">코사무이</a></li>
+                  <li><a href="#">크라비</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">필리핀</a>
+                <ul>
+                  <li><a href="#">마닐라</a></li>
+                  <li><a href="#">세부</a></li>
+                  <li><a href="#">보홀</a></li>
+                  <li><a href="#">보라카이</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">인도네시아</a>
+                <ul>
+                  <li><a href="#">발리</a></li>
+                  <li><a href="#">롬복</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">몰디브</a>
+              </li>
+              <li>
+                <a href="#">호주</a>
+                <ul>
+                  <li><a href="#">시드니</a></li>
+                  <li><a href="#">골드코스트</a></li>
+                  <li><a href="#">케언즈</a></li>
+                  <li><a href="#">멜버른</a></li>
+                  <li><a href="#">시드니</a></li>
+                  <li><a href="#">골드코스트</a></li>
+                  <li><a href="#">케언즈</a></li>
+                  <li><a href="#">멜버른</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 달력 -->
+          <div id="tour-datepicker" class="popup-datepicker popup-datepicker-form5">
+            <div class="popup-header">
+              <h1>여행날짜</h1>
+              <button class="icon icon-close"><span class="skip">닫기</span></button>
+            </div>
+            <div class="popup-body">
+              <button class="icon icon-prev"><span class="skip">이전달</span></button>
+              <button class="icon icon-next"><span class="skip">다음달</span></button>
+              <div class="date">2018.2</div>
+              <table>
+                <thead>
+                  <tr>
+                    <th class="sun">일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th class="sat">토</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="no"><a href="javascript:void(0);">1</a></td>
+                    <td class="no"><a href="javascript:void(0);">2</a></td>
+                    <td class="no"><a href="javascript:void(0);">3</a></td>
+                  </tr>
+                  <tr>
+                    <td class="no"><a href="javascript:void(0);">4</a></td>
+                    <td class="no"><a href="javascript:void(0);">5</a></td>
+                    <td class="no"><a href="javascript:void(0);">6</a></td>
+                    <td class="no"><a href="javascript:void(0);">7</a></td>
+                    <td class="no"><a href="javascript:void(0);">8</a></td>
+                    <td class="no"><a href="javascript:void(0);">9</a></td>
+                    <td class="no"><a href="javascript:void(0);">10</a></td>
+                  </tr>
+                  <tr>
+                    <td class="no"><a href="javascript:void(0);">11</a></td>
+                    <td class="no"><a href="javascript:void(0);">12</a></td>
+                    <td class="no"><a href="javascript:void(0);">13</a></td>
+                    <td class="no"><a href="javascript:void(0);">14</a></td>
+                    <td class="no"><a href="javascript:void(0);">15</a></td>
+                    <td class="no"><a href="javascript:void(0);">16</a></td>
+                    <td class="today"><a href="javascript:void(0);">17</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:void(0);">18</a></td>
+                    <td><a href="javascript:void(0);">19</a></td>
+                    <td><a href="javascript:void(0);">20</a></td>
+                    <td><a href="javascript:void(0);">21</a></td>
+                    <td><a href="javascript:void(0);">22</a></td>
+                    <td><a href="javascript:void(0);">23</a></td>
+                    <td><a href="javascript:void(0);">24</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:void(0);">25</a></td>
+                    <td><a href="javascript:void(0);">26</a></td>
+                    <td><a href="javascript:void(0);">27</a></td>
+                    <td><a href="javascript:void(0);">28</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- 투어 상세 -->
+        <div class="tour-detail">
+          <div class="title">
+            <h1>하와이에서 낭만을 만끽해보세요!! 스타오브호놀룰루 디너크루즈 3스타 [왕복 교통편 포함]</h1>
+            <div class="star">
+              <em><span class="wp80"></span></em>
+              <span class="num">12건 후기</span>
+            </div>
+          </div>
+          <span class="item-number">상품번호 : HIH0001102017</span>
+          <div class="detail-info border-b0" style="margin-bottom:60px;">
+            <div class="left">
+              <div class="gallery-box">
+                <div class="big">
+                  <img src="../../images/front/gallery1.png" alt="더 카할라 호텔 & 리조트1">
+                  <i class="icon icon-heart-big"><span class="skip">좋아요</span></i>
+                  <p>더 카할라 호텔 & 리조트1</p>
+                </div>
+                <div class="thumbnail">
+                  <img src="../../images/front/gallery1.png" alt="더 카할라 호텔 & 리조트1">
+                  <img src="../../images/front/gallery2.png" alt="더 카할라 호텔 & 리조트2">
+                  <img src="../../images/front/gallery3.png" alt="더 카할라 호텔 & 리조트3">
+                  <img src="../../images/front/gallery4.png" alt="더 카할라 호텔 & 리조트4">
+                  <img src="../../images/front/gallery5.png" alt="더 카할라 호텔 & 리조트5">
+                  <img src="../../images/front/gallery6.png" alt="더 카할라 호텔 & 리조트6">
+                  <img src="../../images/front/gallery7.png" alt="더 카할라 호텔 & 리조트7">
+                  <img src="../../images/front/gallery8.png" alt="더 카할라 호텔 & 리조트8">
+                  <img src="../../images/front/gallery9.png" alt="더 카할라 호텔 & 리조트9">
+                  <img src="../../images/front/gallery10.png" alt="더 카할라 호텔 & 리조트10">
+                  <img src="../../images/front/gallery2.png" alt="더 카할라 호텔 & 리조트2">
+                  <img src="../../images/front/gallery1.png" alt="더 카할라 호텔 & 리조트1">
+                  <img src="../../images/front/gallery4.png" alt="더 카할라 호텔 & 리조트4">
+                  <img src="../../images/front/gallery3.png" alt="더 카할라 호텔 & 리조트3">
+                  <img src="../../images/front/gallery6.png" alt="더 카할라 호텔 & 리조트6">
+                  <img src="../../images/front/gallery5.png" alt="더 카할라 호텔 & 리조트5">
+                  <img src="../../images/front/gallery8.png" alt="더 카할라 호텔 & 리조트8">
+                  <img src="../../images/front/gallery7.png" alt="더 카할라 호텔 & 리조트7">
+                  <img src="../../images/front/gallery9.png" alt="더 카할라 호텔 & 리조트9">
+                  <img src="../../images/front/gallery1.png" alt="더 카할라 호텔 & 리조트1">
+                  <img src="../../images/front/gallery10.png" alt="더 카할라 호텔 & 리조트10">
+                  <img src="../../images/front/gallery2.png" alt="더 카할라 호텔 & 리조트2">
+                  <img src="../../images/front/gallery4.png" alt="더 카할라 호텔 & 리조트4">
+                  <img src="../../images/front/gallery3.png" alt="더 카할라 호텔 & 리조트3">
+                  <img src="../../images/front/gallery5.png" alt="더 카할라 호텔 & 리조트5">
+                  <img src="../../images/front/gallery7.png" alt="더 카할라 호텔 & 리조트7">
+                  <img src="../../images/front/gallery6.png" alt="더 카할라 호텔 & 리조트6">
+                  <img src="../../images/front/gallery9.png" alt="더 카할라 호텔 & 리조트9">
+                  <img src="../../images/front/gallery8.png" alt="더 카할라 호텔 & 리조트8">
+                  <img src="../../images/front/gallery4.png" alt="더 카할라 호텔 & 리조트4">
+                  <img src="../../images/front/gallery1.png" alt="더 카할라 호텔 & 리조트1">
+                  <img src="../../images/front/gallery10.png" alt="더 카할라 호텔 & 리조트10">
+                  <img src="../../images/front/gallery2.png" alt="더 카할라 호텔 & 리조트2">
+                  <img src="../../images/front/gallery5.png" alt="더 카할라 호텔 & 리조트5">
+                  <img src="../../images/front/gallery3.png" alt="더 카할라 호텔 & 리조트3">
+                  <img src="../../images/front/gallery6.png" alt="더 카할라 호텔 & 리조트6">
+                  <img src="../../images/front/gallery7.png" alt="더 카할라 호텔 & 리조트7">
+                  <img src="../../images/front/gallery9.png" alt="더 카할라 호텔 & 리조트9">
+                  <img src="../../images/front/gallery8.png" alt="더 카할라 호텔 & 리조트8">
+                  <img src="../../images/front/gallery10.png" alt="더 카할라 호텔 & 리조트10">
+                </div>
+              </div>
+              <a href="#" id="btn-thumbnail" class="icon icon-more3"><span class="skip">더보기</span></a>
+              <div class="map">
+                <div id="map"></div>
+                <p>Address : 5000 Kahala Ave Honolulu HI US</p>
+              </div>
+
+              <div class="service">
+                <div class="course">
+                  <div class="top">
+                    <h2>코스 소개</h2>
+                    <a href="#" id="btn-course-more">더보기</a>
+                  </div>
+                  <div class="accordion">
+                    <ul>
+                      <li>
+                        <div class="title">
+                          <span class="left"><i class="icon icon-bullet"></i>1일차 오후 3:00</span>
+                          <span class="right">| 투어 시작</span>
+                          <i class="icon icon-map"><span class="skip">지도</span></i>
+                        </div>
+                        <div class="content">
+                          <div class="row">
+                            <div class="left">
+                              <span>알로하 타워 마켓 플레이스에서 출항</span>
+                              <img src="../../images/front/tour-photo1.png" alt="">
+                            </div>
+                            <div class="right">
+                              <span>투어시작 장소</span>
+                              <img src="../../images/front/tour-photo2.png" alt="">
+                            </div>
+                          </div>
+                          <p>하와이 최고의 인기 디너크루즈 스타오브호놀룰루에서 잊지 못할 여행의 추억을…
+                          4층 갑판, 1500명 수용의 하와이의 가장 크고 럭셔리한 크루즈인 스타 오브 호놀룰루에서
+                          연인들이 가장 맞이 찾는 고급 등급의 3스타 크루즈입니다.
+                          </p>
+                          <i class="icon icon-arrow-bottom"></i>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="title">
+                          <span class="left"><i class="icon icon-bullet"></i>2일차 오후 3:00 – 오후3:20</span>
+                          <span class="right">| 와이키키 내 호텔에서 출발</span>
+                          <i class="icon icon-map"><span class="skip">지도</span></i>
+                        </div>
+                        <div class="content">
+                          <div class="row">
+                            <div class="left">
+                              <span>알로하 타워 마켓 플레이스에서 출항</span>
+                              <img src="../../images/front/tour-photo1.png" alt="">
+                            </div>
+                            <div class="right">
+                              <p>하와이 최고의 인기 디너크루즈 스타오브호놀룰루에서 잊지 못할 여행의 추억을…
+                              4층 갑판, 1500명 수용의 하와이의 가장 크고 럭셔리한 크루즈인 스타 오브 호놀룰루에서
+                              연인들이 가장 맞이 찾는 고급 등급의 3스타 크루즈입니다.
+                              </p>
+                            </div>
+                          </div>
+                          <i class="icon icon-arrow-bottom"></i>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="title">
+                          <span class="left"><i class="icon icon-bullet"></i>3일차 오후 3:00 – 오후3:20</span>
+                          <span class="right">| 와이키키 내 호텔에서 출발</span>
+                          <i class="icon icon-map"><span class="skip">지도</span></i>
+                        </div>
+                        <div class="content">
+                          <div class="row">
+                            <div class="left">
+                              <span>알로하 타워 마켓 플레이스에서 출항</span>
+                              <img src="../../images/front/tour-photo2.png" alt="">
+                            </div>
+                            <div class="right">
+                              <p>하와이 최고의 인기 디너크루즈 스타오브호놀룰루에서 잊지 못할 여행의 추억을…
+                              4층 갑판, 1500명 수용의 하와이의 가장 크고 럭셔리한 크루즈인 스타 오브 호놀룰루에서
+                              연인들이 가장 맞이 찾는 고급 등급의 3스타 크루즈입니다.
+                              </p>
+                            </div>
+                          </div>
+                          <i class="icon icon-arrow-bottom"></i>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="title">
+                          <span class="left"><i class="icon icon-bullet"></i>4일차 오후 3:00 – 오후3:20</span>
+                          <span class="right">|  와이키키 내 호텔에서 출발</span>
+                          <i class="icon icon-map"><span class="skip">지도</span></i>
+                        </div>
+                        <div class="content">
+                          <p>하와이 최고의 인기 디너크루즈 스타오브호놀룰루에서 잊지 못할 여행의 추억을…
+                          4층 갑판, 1500명 수용의 하와이의 가장 크고 럭셔리한 크루즈인 스타 오브 호놀룰루에서
+                          연인들이 가장 맞이 찾는 고급 등급의 3스타 크루즈입니다.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- map 고정 끝 -->
+                <div id="map-fixed-end"></div>
+
+                <div class="box type2">
+                  <div class="left">
+                    <h2>포함사항</h2>
+                  </div>
+                  <div class="right">
+                    <ul>
+                      <li>체크인 15:00 이후, 체크아웃 12:00 이전</li>
+                      <li>반려동물 동반불가</li>
+                      <li>18세 이하 어린이 단독 투숙 불가</li>
+                      <li>호텔 결제 시, 아래의 신용카드 사용가능:</li>
+                      <li>호텔 결제 시, 아래의 신용카드 사용가능:</li>
+                      <li>호텔 결제 시, 아래의 신용카드 사용가능:</li>
+                      <li>호텔 결제 시, 아래의 신용카드 사용가능:</li>
+                      <li>호텔 결제 시, 아래의 신용카드 사용가능:</li>
+                      <li>호텔 결제 시, 아래의 신용카드 사용가능:</li>
+                      <li>호텔 결제 시, 아래의 신용카드 사용가능:</li>
+                    </ul>
+                  </div>
+                  <a href="#" class="icon icon-more3"><span class="skip">더보기</span></a>
+                </div>
+                <!-- /.box -->
+                <div class="box type2">
+                  <div class="left">
+                    <h2>불포함 사항</h2>
+                  </div>
+                  <div class="right">
+                    <ul>
+                      <li>133개의 콘도</li>
+                      <li>해변에 위치</li>
+                      <li>야외 수영장</li>
+                      <li>피트니스 센터</li>
+                      <li>공항 셔틀</li>
+                    </ul>
+                  </div>
+                  <a href="#" class="icon icon-more3"><span class="skip">더보기</span></a>
+                </div>
+                <!-- /.box -->
+
+                <div class="po-relative">
+                  <table class="reservation-table wp100 mb20 table">
+                    <colgroup>
+                      <col style="width:15%;">
+                      <col style="width:15%;">
+                      <col style="width:20%;">
+                      <col style="width:15%;">
+                      <col style="width:25%;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>예약가능 날짜</th>
+                        <th>예약가능<br>(최소예약)</th>
+                        <th>1인가격</th>
+                        <th>예약 인원</th>
+                        <th>금액</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="text" class="datepicker2" readonly id="reservation-date" placeholder="2017.12.18"></td>
+                        <td>10명<br>(3명)</td>
+                        <td>
+                          <div class="mb20">성인<br>&#92; 45,000</div>
+                          <div>아동<br>&#92; 45,000</div>
+                        </td>
+                        <td>
+                          <div class="select select5 w70 mb20">
+                            <a href="#" class="select-check">성인</a>
+                            <ul>
+                              <li><a href="#">성인</a></li>
+                              <li><a href="#">1</a></li>
+                            </ul>
+                            <select>
+                              <option value="">성인</option>
+                              <option value="">1</option>
+                            </select>
+                          </div>
+                          <div class="select select5 w70">
+                            <a href="#" class="select-check">아동</a>
+                            <ul>
+                              <li><a href="#">아동</a></li>
+                              <li><a href="#">1</a></li>
+                            </ul>
+                            <select>
+                              <option value="">아동</option>
+                              <option value="">1</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td>
+                          <b>&#92; 135,000</b>
+                          <a href="#" class="btn-border">예약</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <!-- 예약달력 -->
+                  <div id="reservation-datepicker" class="popup-datepicker popup-datepicker-form6">
+                    <div class="popup-header">
+                      <h1>예약가능날짜</h1>
+                      <button class="icon icon-close"><span class="skip">닫기</span></button>
+                    </div>
+                    <div class="popup-body">
+                      <button class="icon icon-prev"><span class="skip">이전달</span></button>
+                      <button class="icon icon-next"><span class="skip">다음달</span></button>
+                      <div class="date">2018.2</div>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th class="sun">일</th>
+                            <th>월</th>
+                            <th>화</th>
+                            <th>수</th>
+                            <th>목</th>
+                            <th>금</th>
+                            <th class="sat">토</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="no"><a href="javascript:void(0);">1</a></td>
+                            <td class="no"><a href="javascript:void(0);">2</a></td>
+                            <td class="no"><a href="javascript:void(0);">3</a></td>
+                          </tr>
+                          <tr>
+                            <td class="no"><a href="javascript:void(0);">4</a></td>
+                            <td class="no"><a href="javascript:void(0);">5</a></td>
+                            <td class="no"><a href="javascript:void(0);">6</a></td>
+                            <td class="no"><a href="javascript:void(0);">7</a></td>
+                            <td class="no"><a href="javascript:void(0);">8</a></td>
+                            <td class="no"><a href="javascript:void(0);">9</a></td>
+                            <td class="no"><a href="javascript:void(0);">10</a></td>
+                          </tr>
+                          <tr>
+                            <td class="no"><a href="javascript:void(0);">11</a></td>
+                            <td class="no"><a href="javascript:void(0);">12</a></td>
+                            <td class="no"><a href="javascript:void(0);">13</a></td>
+                            <td class="no"><a href="javascript:void(0);">14</a></td>
+                            <td class="no"><a href="javascript:void(0);">15</a></td>
+                            <td class="no"><a href="javascript:void(0);">16</a></td>
+                            <td class="today"><a href="javascript:void(0);">17</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="javascript:void(0);">18</a></td>
+                            <td><a href="javascript:void(0);">19</a></td>
+                            <td><a href="javascript:void(0);">20</a></td>
+                            <td><a href="javascript:void(0);">21</a></td>
+                            <td><a href="javascript:void(0);">22</a></td>
+                            <td><a href="javascript:void(0);">23</a></td>
+                            <td><a href="javascript:void(0);">24</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="javascript:void(0);">25</a></td>
+                            <td><a href="javascript:void(0);">26</a></td>
+                            <td><a href="javascript:void(0);">27</a></td>
+                            <td><a href="javascript:void(0);">28</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <table class="reservation-table wp100 mb15 table style2">
+                  <colgroup>
+                    <col style="width:218px;">
+                  </colgroup>
+                  <tr>
+                    <th>참여자 필수조건</th>
+                    <td>13세 이상만 가능하며, 미성년자에게는 주류 제공 불가능 합니다.</td>
+                  </tr>
+                </table>
+
+                <!-- 테이블구조로 변경
+                <div class="box type3 mb15">
+                  <div class="left">
+                    <h2>참여자 필수조건</h2>
+                  </div>
+                  <div class="right">
+                    <ul>
+                      <li>13세 이상만 가능하며, 미성년자에게는 주류 제공 불가능 합니다.</li>
+                    </ul>
+                  </div>
+                </div> -->
+
+                <div class="manager">
+                  <div class="text-right mb30">
+                    <span class="img"><img src="../../images/front/kakaotalk.png" alt="kakaotalk logo"></span>
+                    <a href="#">카카오톡 1:1상담</a>
+                  </div>
+                  <div class="top">
+                    <p>안녕하세요! 000 투어 000매니저 입니다. 럭셔리한 크루즈인 스타 오브 호놀룰루를 경험해 보세요!</p>
+                  </div>
+                  <div class="body">
+                    <p>4층 갑판, 1500명 수용의 하와이의 가장 크고 럭셔리한 크루즈인 스타 오브 호놀룰루에서
+                    연인들이 가장 맞이 찾는 고급 등급의 3스타 크루즈입니다. 코스요리가 시작되기 전 다양한
+                    종류의 치즈와 과일, 크래커 등의 에피타이저를 뷔페 형식으로 즐길 수 있으며 랍스타, 스테이
+                    크, 디저트의 코스 디너는 친절한 승무원들이 서빙해드립니다. 음료는 삼페인과 프리미엄
+                    칵테일 티켓 2장이 기본으로 제공되며 고급 수준의 크루징을 즐기실 수 있습니다.</p>
+                  </div>
+                  <div class="contact">
+                    <span>대표전화 : 0701231234</span>
+                    <span>대표 이메일 : hong1234@naver.com</span>
+                  </div>
+                </div>
+              </div>
+              <!-- /.service -->
+            </div>
+            <!-- /.left -->
+            <div class="right fixed-menu">
+              <div class="price">1인 : &#92;45,000</div>
+              <h2>만나는 시간 오후 3:00 | 예상소요시간 : 4시간</h2>
+              <div class="special">
+                <i class="icon icon-special on"></i><span>특가 20% (2018.08.12~2018.09.23)</span>
+              </div>
+              <ul class="service-icon-form">
+                <li><img src="../../images/hotel/h_parkingfree.png" alt=""><span>무료주차</span></li>
+                <li><img src="../../images/hotel/h_babycare.png" alt=""><span>유료탁아</span></li>
+                <li><img src="../../images/hotel/h_pool.png" alt=""><span>수영장</span></li>
+                <li><img src="../../images/hotel/h_restaurant.png" alt=""></i><span>조식가능</span></li>
+                <li><img src="../../images/hotel/h_parkingfree.png" alt=""><span>무료주차</span></li>
+                <li><img src="../../images/hotel/h_babycare.png" alt=""><span>유료탁아</span></li>
+                <li><img src="../../images/hotel/h_pool.png" alt=""><span>수영장</span></li>
+                <li><img src="../../images/hotel/h_restaurant.png" alt=""></i><span>조식가능</span></li>
+              </ul>
+              <h2>필수안내</h2>
+              <ul class="list mb35">
+                <li>-금요일에 크루즈를 이용하시는 고객님들을 위한 중요 참고사항</li>
+                <li>-날씨 및 현지 사정으로 인해 불꽃놀이가 당일 취소될수 있음.</li>
+                <li>-불꽃놀이가취소 될경우 디너크루즈는 그대로 연장하여 진행됨</li>
+              </ul>
+
+              <h2 class="mb10">누적 인원에 따른 가격</h2>
+              <table class="wp100 mb20 table">
+                <thead>
+                  <tr>
+                    <th>인원</th>
+                    <th>1인 가격</th>
+                    <th>아동</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1인 ~ 3인</td>
+                    <td>&#92; 45,000</td>
+                    <td>&#92; 42,000</td>
+                  </tr>
+                  <tr>
+                    <td>4인 ~ 6인</td>
+                    <td>&#92; 42,000</td>
+                    <td>&#92; 40,000</td>
+                  </tr>
+                  <tr>
+                    <td>7인 ~ 10인</td>
+                    <td>&#92; 38,000</td>
+                    <td>&#92; 35,000</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="#" class="btn-border" id="btn-reservation">예약</a>
+            </div>
+            <!-- /.right -->
+          </div>
+          <!-- /.detail-info -->
+        </div>
+        <!-- /.hotel-detail -->
+
+        <div class="video-comment">
+          <div class="hotel-video">
+            <h2>투어 소개 영상</h2>
+            <div class="video-form">
+              <iframe src="https://www.youtube.com/embed/setAz1aUn5M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="comment">
+            <div class="star">
+              <em><span class="wp80"></span></em>
+              <span class="num">4.0</span>
+              <span>123건 후기</span>
+            </div>
+
+            <ul class="comment-list">
+              <li>
+                <div class="title">
+                  <div class="star">
+                    <em><span class="wp40"></span></em>
+                  </div>
+                  <span class="user-id">goldens***</span>
+                  <span class="date">*2017.12.06. 04:19:45</span>
+                </div>
+                <p>하얏트 처음 이용했는데 만족스러웠습니다. 하얏트 처음 이용했는데 만족스러웠습니다. 하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.</p>
+              </li>
+              <li>
+                <div class="title">
+                  <div class="star">
+                    <em><span class="wp40"></span></em>
+                  </div>
+                  <span class="user-id">goldens***</span>
+                  <span class="date">*2017.12.06. 04:19:45</span>
+                </div>
+                <p>하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.</p>
+              </li>
+              <li>
+                <div class="title">
+                  <div class="star">
+                    <em><span class="wp40"></span></em>
+                  </div>
+                  <span class="user-id">goldens***</span>
+                  <span class="date">*2017.12.06. 04:19:45</span>
+                </div>
+                <p>하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.</p>
+              </li>
+              <li>
+                <div class="title">
+                  <div class="star">
+                    <em><span class="wp40"></span></em>
+                  </div>
+                  <span class="user-id">goldens***</span>
+                  <span class="date">*2017.12.06. 04:19:45</span>
+                </div>
+                <p>하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.</p>
+              </li>
+              <li>
+                <div class="title">
+                  <div class="star">
+                    <em><span class="wp40"></span></em>
+                  </div>
+                  <span class="user-id">goldens***</span>
+                  <span class="date">*2017.12.06. 04:19:45</span>
+                </div>
+                <p>하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.</p>
+              </li>
+            </ul>
+            <div class="btn-area text-center">
+              <a href="#" id="btn-comment-more" class="icon icon-more3"><span class="skip">더보기</span></a>
+              <a href="#" id="btn-comment-write" class="btn-border po-right">후기 작성</a>
+            </div>
+            <div class="comment-write">
+              <form action="#" class="comment-form">
+                <div class="row">
+                  <label for="point" class="point">평점</label>
+                  <div class="right">
+                    <div class="select select5">
+                      <a href="#" class="select-check">5.0</a>
+                      <ul>
+                        <li><a href="#">5.0</a></li>
+                        <li><a href="#">4.0</a></li>
+                        <li><a href="#">3.0</a></li>
+                        <li><a href="#">2.0</a></li>
+                        <li><a href="#">1.0</a></li>
+                      </ul>
+                      <select>
+                        <option value="">5.0</option>
+                        <option value="">4.0</option>
+                        <option value="">3.0</option>
+                        <option value="">2.0</option>
+                        <option value="">1.0</option>
+                      </select>
+                    </div>
+                  </div>
+                  <button type="button">작성시 주의사항 보기</button>
+                </div>
+                <div class="row">
+                  <label for="content" class="content">내용</label>
+                  <div class="right textarea">
+                    <textarea name="name" id="content"></textarea>
+                  </div>
+                </div>
+              </form>
+              <div class="btn-area">
+                <div class="center">
+                  <a href="#" class="btn-border">취소</a>
+                  <a href="#" class="btn-primary">등록</a>
+                </div>
+              </div>
+            </div>
+            <div class="btn-area text-right">
+              <a href="#" class="btn-border">목록</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="hotel-result tour-more">
+        <div class="hotel-list">
+          <h2>이런 투어 어때요?</h2>
+          <ul class="photo-list">
+            <li>
+              <div class="img-wrap">
+                <img src="../../images/front/photo1.png" alt="">
+                <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                <i class="icon icon-map"><span class="skip">지도</span></i>
+              </div>
+              <div class="local">하와이 | 오하우</div>
+              <div class="type">다이빙</div>
+              <div class="name"><a href="#">발리 고래상어 투어＋투말록 폭포 스노주저리 주저리</a></div>
+              <div class="price">&#92; 430,810</div>
+              <div class="star">
+                <em><span class="wp80"></span></em>
+                <span class="num">12</span>
+              </div>
+            </li>
+            <li>
+              <div class="img-wrap">
+                <img src="../../images/front/photo2.png" alt="">
+                <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                <i class="icon icon-map"><span class="skip">지도</span></i>
+              </div>
+              <div class="local">하와이 | 오하우</div>
+              <div class="type">다이빙</div>
+              <div class="name"><a href="#">발리 고래상어 투어＋투말록 폭포 스노주저리 주저리</a></div>
+              <div class="price">&#92; 430,810</div>
+              <div class="star">
+                <em><span class="wp100"></span></em>
+                <span class="num">332</span>
+              </div>
+            </li>
+            <li>
+              <div class="img-wrap">
+                <img src="../../images/front/photo2.png" alt="">
+                <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                <i class="icon icon-map"><span class="skip">지도</span></i>
+              </div>
+              <div class="local">하와이 | 오하우</div>
+              <div class="type">다이빙</div>
+              <div class="name"><a href="#">발리 고래상어 투어＋투말록 폭포 스노주저리 주저리</a></div>
+              <div class="price">&#92; 430,810</div>
+              <div class="star">
+                <em><span class="wp20"></span></em>
+                <span class="num">332</span>
+              </div>
+            </li>
+            <li>
+              <div class="img-wrap">
+                <img src="../../images/front/photo2.png" alt="">
+                <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                <i class="icon icon-map"><span class="skip">지도</span></i>
+              </div>
+              <div class="local">하와이 | 오하우</div>
+              <div class="type">다이빙</div>
+              <div class="name"><a href="#">발리 고래상어 투어＋투말록 폭포 스노주저리 주저리</a></div>
+              <div class="price">&#92; 430,810</div>
+              <div class="star">
+                <em><span class="wp40"></span></em>
+                <span class="num">332</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <div class="center">
+        <ul class="app-download">
+          <li><a href="#" class="icon icon-appstore"><span class="skip">app store</span></a></li>
+          <li><a href="#" class="icon icon-googleplay"><span class="skip">google play</span></a></li>
+        </ul>
+        <ul class="info">
+          <li>
+            <h2>호텔 엔 투어</h2>
+            <ul>
+              <li><a href="about-us.html">회사소개</a></li>
+              <li><a href="#">보도자료</a></li>
+              <li><a href="customer.html">고객센터</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>정책안내</h2>
+            <ul>
+              <li><a href="policy.html">이용약관</a></li>
+              <li><a href="#">개인정보 취급방침</a></li>
+              <li><a href="#">취소/환불 규정</a></li>
+              <li><a href="#">저작권 안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>파트너 되기</h2>
+            <ul>
+              <li><a href="#">파트너 안내</a></li>
+              <li><a href="#">파트너 문의</a></li>
+              <li><a href="#">파트너 신청</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sns">
+          <li><a href="#" class="icon icon-facebook"><span class="skip">facebook</span></a></li>
+          <li><a href="#" class="icon icon-instagram"><span class="skip">instagram</span></a></li>
+          <li><a href="#" class="icon icon-youtube"><span class="skip">youtube</span></a></li>
+        </ul>
+        <small>Copyright © Hotel n Tour All rights reserved. </small>
+      </div>
+    </footer>
+
+    <div class="popup popup-gallery">
+      <div class="popup-header">
+        <button class="icon icon-close2 close"><span class="skip">닫기</span></button>
+      </div>
+      <div class="popup-body">
+        <div class="big">
+          <!-- <img src="../../images/front/room1.png" alt="room1"> -->
+          <img src="../../images/front/no-img.png" alt="이미지없음">
+        </div>
+        <div class="small">
+          <div class="wrap">
+            <!-- <div class="on"><img src="../../images/front/room1.png" alt="room1"><span></span></div>
+            <div><img src="../../images/front/room2.png" alt="room2"><span></span></div>
+            <div><img src="../../images/front/room3.png" alt="room3"><span></span></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var bannerSwiper = new Swiper('.banner-swiper', {
+        pagination: {
+          el: '.banner-swiper .swiper-pagination',
+          clickable: true,
+        },
+        slidesPerView: 2,
+        spaceBetween: 20,
+      });
+
+      var roomSwiper = new Swiper('.room-swiper', {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+      });
+
+      //오른쪽 메뉴 고정
+      var fixedMenu=$('.fixed-menu').offset().top;
+      var map=$('#map').offset().top;
+      $(window).scroll(function(){
+        var windowWidth=$(document).width();
+        var windowTop=$(window).scrollTop();
+        var videoCommentHeight=$('.video-comment').outerHeight(true);
+        var tourMoreHeight=$('.tour-more').outerHeight(true);
+        var footer=$('footer').outerHeight(true);
+        var bottom=videoCommentHeight+tourMoreHeight+footer;
+
+        if(windowWidth<=1200){
+          $('.fixed-menu').css({
+  					left:681-$(document).scrollLeft(),
+            marginLeft:0
+  				});
+        }else{
+          $('.fixed-menu').css({
+            left:'50%',
+            marginLeft:'80px'
+          })
+        }
+
+        if(windowTop>fixedMenu){
+          $('.fixed-menu').addClass('fixed');
+        }else{
+          $('.fixed-menu').removeClass('fixed').css({
+            left:0,
+            marginLeft:0
+          });
+        }
+
+        if(windowTop > $(document).height() - $(window).height() - bottom){
+          $('.fixed-menu').removeClass('fixed').addClass('bottom').css({left:''});
+        }else{
+          $('.fixed-menu').removeClass('bottom');
+        }
+
+        //지도 고정,제거
+        var mapfixedend = $('#map-fixed-end').offset().top-200;
+        if(windowTop > map && windowTop < mapfixedend){
+          $('.detail-info .left').addClass('fixed');
+        }else{
+          $('.detail-info .left').removeClass('fixed');
+        }
+      });
+
+      //리사이징시 고정메뉴 위치
+      $(window).resize(function(){
+        var windowWidth=$(document).width();
+        if(windowWidth<=1200){
+          if($('.fixed-menu').hasClass('fixed')){
+            $('.fixed-menu').css({
+    					left:681-$(document).scrollLeft(),
+              marginLeft:0
+    				});
+          }else{
+            $('.fixed-menu').css({
+    					left:'',
+              marginLeft:0
+    				});
+          }
+        }else{
+          if($('.fixed-menu').hasClass('fixed')){
+            $('.fixed-menu').css({
+              left:'50%',
+              marginLeft:'80px'
+            })
+          }
+        }
+      })
+
+      //왼쪽에서 예약하기 누르면 스크롤 이동
+      $('#btn-reservation').on('click',function(e){
+        e.preventDefault();
+        $('html, body').stop().animate({
+          scrollTop:$('.reservation-table').offset().top
+        })
+      })
+
+      //투어명검색
+      $('#tour-check').on('click',function(){
+        $('#popup-tour').slideDown();
+      })
+      $('#popup-tour a').on('click',function(e){
+        e.preventDefault();
+        name=$(this).text();
+        $('#tour-check').val(name);
+        $('#popup-tour').slideUp();
+      })
+
+      //검색 영역 외의 것 클릭시 닫기
+      $('html').click(function(e) {
+        if(!$(e.target).hasClass("select-check")){
+          $('.popup-hotel').slideUp();
+        }
+      });
+
+      // 썸네일 클릭시 이미지 변경
+      $('.thumbnail img').on('click',function(){
+        var src=$(this).attr('src');
+        var alt=$(this).attr('alt');
+        $(this).parents('.gallery-box').find('.big img').attr({
+          src:src,
+          alt:alt
+        })
+        $(this).parents('.gallery-box').find('.big p').text(alt);
+      });
+
+      // 썸네일 더보기
+      $('#btn-thumbnail').on('click',function(e){
+        e.preventDefault();
+        $('.thumbnail').toggleClass('open');
+        var icon=$(this).hasClass('icon-more-close');
+        if(icon){
+          $(this).find('span').text('더보기');
+        }else{
+          $(this).find('span').text('닫기');
+        }
+        $(this).toggleClass('icon-more3 icon-more-close');
+      });
+
+      //서비스항목 더보기
+      $('.service .box a').on('click',function(e){
+        e.preventDefault();
+        var icon=$(this).hasClass('icon-more-close');
+        if(icon){
+          $(this).prev().height('');
+          $(this).find('span').text('더보기');
+        }else{
+          var h=$(this).prev().find('ul').height()+30;
+          $(this).prev().height(h);
+          $(this).find('span').text('닫기');
+        }
+        $(this).toggleClass('icon-more3 icon-more-close');
+      });
+
+      //댓글 더보기
+      $('#btn-comment-more').on('click',function(e){
+        e.preventDefault();
+        $(this).toggleClass('icon-more3 icon-more-close');
+      });
+
+      //댓글 작성
+      $('#btn-comment-write').on('click',function(e){
+        e.preventDefault();
+        $('.comment-write').toggle();
+      });
+
+      //아코디언
+      $('#btn-course-more').on('click',function(e){
+        e.preventDefault();
+        $('.accordion .content').slideToggle();
+        if($(this).text()=='더보기'){
+          $(this).text('닫기');
+        }else{
+          $(this).text('더보기');
+        }
+      });
+
+      //좋아요, 지도마커
+      $('.icon-heart, .icon-heart-big, .icon-map').on('click',function(){
+        $(this).toggleClass('on');
+      });
+
+      //예약가능날짜
+      $('#reservation-date').on('click',function(){
+        $('.select ul').slideUp('fast');
+        $('#reservation-datepicker').slideDown();
+      })
+      $('#reservation-datepicker a').on('click',function(){
+        if(!$(this).parent().hasClass('no')){
+          var date=$(this).text();
+          var yearmonth=$(this).parents('#reservation-datepicker').find('.date').text();
+          $('#reservation-date').val(yearmonth+'.'+date);
+          $('#reservation-datepicker').slideUp();
+        }else{
+          alert('선택이 불가합니다.')
+        }
+      })
+
+    </script>
+  </body>
+</html>

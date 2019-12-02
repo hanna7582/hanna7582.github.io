@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* main slide */
+.main-slide .swiper-container{height: auto;}
+.main-slide .text-box h2{font-size: 24px}
+.main-slide .text-box p{font-size: 40px;}
+
+/* theme */
+.theme .tab-contents .wrap{margin: 0 10px 10px;}
+.theme .style1 .wrap{margin: 0 10px 20px;}
+.theme .style2 ul li{width: 50%;}
+
+/* notice & museum */
+.notice{height: auto; font-size: 24px; background: none;}
+.notice .left{position: relative; float: none; width: 100%; height: 100px; background: #f7f7f7; padding-top: 30px; box-sizing: border-box;}
+.notice .left > *{float: none;}
+.notice .left i{margin: 0px 0 0 20px; position: absolute;}
+.notice .left .rolling{margin: 0 100px 0 70px; height: 40px;}
+.notice .left ul li{position: relative; height: 50px;}
+.notice .left ul li a{padding-right: 100px; box-sizing: border-box;width: 100%; line-height: 40px;}
+.notice .left ul li a strong{line-height: 40px; margin-right: 10px; padding: 0 10px; height: 40px; }
+.notice .left ul li span{position: absolute; right:0; top:0; display: inline-block; width: 100px; line-height: 40px; float:right; text-align: right;}
+.notice .right{position: relative; float: none; width: 100%; height: 100px; background: #666;}
+.notice button{position: absolute; right: 0; top: 0; font-size: 40px; margin: 30px 30px 0 0;}
+
+/* parallax */
+#parallax > div{      
+   background-size: 150%;
+}
+
+/* kakaostory */
+.kakaostory .filter-nav ul li{margin:0 5px;}
+.kakaostory .filter-list ul li{width: 50%;}
+
+/* event */
+.event img{width: 100%;}
+.event .center{position: static; transform: none;}
+
+/* footer ===================================================================*/
+footer{padding: 0 50px;}
+
+/* popup ===================================================================*/
+.popup .popup-body.center{margin: 0 20px; padding-top: 50px;}
+.popup-shopping .popup-body.center{padding: 20px; margin: 0;}
+
+.popup .popup-body.vertical{padding-top: 0;}
+.popup-mypage ul li a{font-size: 40px; line-height: 70px;}
+
+.popup-menu .gnb-nav > li > a{font-size: 40px; line-height: 70px;}
+
+.popup-search .select-control{height: 122px;}
+.popup-search .select-control .col{width: 50%;}
+.popup-search .select > a,
+.popup-search .search-control input{font-size: 20px;}
+
+.popup-filter .checkbox-wrap{height: calc(100vh - 250px);}

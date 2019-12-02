@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>starbucks</title>
+	<meta charset="utf-8">
+	<meta name="description" content="starbucks"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<h1 class="logo"><a href="#"><img src="img/logo.png" alt="starbucks"/></a></h1>
+			<nav>
+				<ul>
+					<li><a href="#">COFFEE</a></li>
+					<li><a href="#">MENU</a></li>
+					<li><a href="#">STORE</a></li>
+					<li><a href="#">RESPONSIBILITY</a></li>
+					<li><a href="#">MY STARBUCKS REWARDS</a></li>
+					<li><a href="#">WHAT'S NEW</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header><!-- End Header -->
+
+	<section class="billboard">
+		<h3 class="skip">메인광고</h3>
+		<div class="caption">
+			<p class="cap_title">Introducing the Starbucks Rewards™ Visa® Card</p>
+			<p class="cap_desc">Enjoy more of what you love. Earn Stars — that add up to food and drink Rewards — everywhere you make purchases.</p>
+			<a href="#">LEARN MORE<i></i></a>
+		</div>
+	</section><!-- End billboard -->
+
+	<section class="video wrapper">
+		<h3>STARBUCKS RESERVE</h3>
+		<p>세계 최고급 커피 상위 3% 이내의 원두를 찾기 위한<br> 스타벅스의 커피 전문가들의 이야기를 지금 영상으로 확인하세요.</p>
+		<div class="ex_video">
+			<video src="source/starbuck_reserve.mp4" muted>
+				video를 지원하지 않는 브라우저입니다.
+			</video>
+			<div id="player-control">
+				<button id="btn-play-pause" title="재생"><i class="material-icons">play_arrow</i><span class="skip">재생/일시정지</span></button>
+				<button id="btn-replay" title="다시재생"><i class="material-icons">replay</i><span class="skip">다시재생</span></button>
+				<button id="btn-volume" title="음소거"><i class="material-icons">volume_up</i><span class="skip">음소거</span></button>
+				<button id="btn-fullscreen" title="전체화면"><i class="material-icons">fullscreen</i><span class="skip">전체화면</span></button>
+			</div>
+		</div>
+	</section>	<!-- End video -->
+
+
+	<section class="recent_work wrapper">
+		<h3 class="S_title">New Drink</h3>
+		<div class="work">
+			<a href="#">
+				<span class="work_img">
+					<img src="img/coffee1.jpg" alt="" title=""/>
+				</span>
+				<span class="work_title">
+					Nitro Cold Brew
+					<i></i>
+				</span>
+			</a>
+		</div>
+		<div class="work">
+			<a href="#">
+				<span class="work_img">
+					<img src="img/coffee2.jpg" alt="" title=""/>
+				</span>
+				<span class="work_title">
+					Vanilla Cream Cold Brew
+					<i></i>
+				</span>
+			</a>
+		</div>
+		<div class="work">
+			<a href="#">
+				<span class="work_img">
+					<img src="img/coffee3.jpg" alt="" title=""/>
+				</span>
+				<span class="work_title">
+					Cold Brew
+					<i></i>
+				</span>
+			</a>
+		</div>
+		<div class="work">
+			<a href="#">
+				<span class="work_img">
+					<img src="img/coffee4.jpg" alt="" title=""/>
+				</span>
+				<span class="work_title">
+					Cold Brew Latte
+					<i></i>
+				</span>
+			</a>
+		</div>
+	</section><!-- End recent_work -->
+
+	<section class="subscription">
+		<h3 class="skip">회원가입</h3>
+		<div class="wrapper">
+			<p class="title">스타벅스에 가입하세요.</p>
+			<p class="desc">가입을 통해 리워드 혜택을 즐세요.</p>
+			<a href="#" class="start_btn">SIGN IN</a>
+		</div>
+	</section><!-- End subscription -->
+
+	<section class="social">
+		<h3 class="skip">social</h3>
+		<a href="http://facebook.com/pixelhint" target="_blank" class="fb"><span class="skip">facebook</span></a>
+		<a href="http://twitter.com/pixelhint" target="_blank" class="t"><span class="skip">twitter</span></a>
+		<a href="http://dribbble.com/pixelhint" target="_blank" class="d"><span class="skip">dribbble</span></a>
+		<a href="#" target="_blank" class="g"><span class="skip">google blogger</span></a>
+	</section><!-- End social -->
+
+	<footer>
+		<div class="wrapper">
+			<p>사업자등록번호 201-81-21515 (주)스타벅스커피 코리아 대표이사 이석구 TEL : 02) 3015-1100 / FAX : 02) 3015-1106 개인정보 책임자 : 강기원</p>
+			<small>ⓒ 2015 Starbucks Coffee Company. All Rights Reserved.</small>
+		</div>
+	</footer><!-- End footer -->
+
+	<div id="lightbox"></div>
+	<div id="box">
+		<a href="#" class="close"><span class="skip">닫기</span></a>
+		<form method="post" action="#">
+			<input type="text" id="email" placeholder="Email" title="email"/>
+			<input type="text" id="name" placeholder="Name" title="name"/>
+			<input type="submit" id="submit" value="SIGN IN"/>
+			<a href="#">JOIN NOW</a>
+		</form>
+	</div>
+</body>

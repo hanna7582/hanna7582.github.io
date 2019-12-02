@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../css/jquery.scrollbar.css">
+    <link rel="stylesheet" href="../../css/hnt-mobile.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/jquery/jquery.scrollbar.min.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <script src="../../js/hnt-mobile.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <h1><img src="../../images/front/logo.png" alt="hotel N Tour logo"></h1>
+        <button class="btn-menu icon icon-menu"><span class="skip">menu</span></button>
+        <nav>
+          <div class="top">
+            <img src="../../images/front/logo.png" alt="hotel N Tour logo">
+            <button class="btn-close icon icon-close"><span class="skip">close</span></button>
+          </div>
+          <ul class="gnb-nav">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+            <li><a href="#">메뉴6</a></li>
+            <li><a href="#">메뉴7</a></li>
+            <li><a href="#">메뉴8</a></li>
+            <li><a href="#">메뉴9</a></li>
+            <li><a href="#">메뉴10</a></li>
+            <li><a href="#">메뉴11</a></li>
+            <li><a href="#">메뉴12</a></li>
+            <li><a href="#">메뉴13</a></li>
+          </ul>
+          <div class="bottom">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+          </div>
+        </nav>
+        <button class="btn-user">
+          <img src="../../images/mobile/profile.png" alt="프로필이미지">
+          <span class="skip">user</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="main">
+      <article class="tab">
+        <ul class="tab-menu tab1 col2">
+          <li class="active"><a href="#tab1">HOTEL</a></li>
+          <li><a href="#tab2">TOUR</a></li>
+        </ul>
+        <div class="tab-menu-line"></div>
+
+        <div class="tab-contents">
+          <div class="swiper-container main-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+            </div>
+          </div>
+          <div id="tab1" class="contents active">
+            <form action="#">
+              <div class="row mb20">
+                <input type="text" class="wp100 select select1" id="hotel-search" placeholder="여행지,호텔명으로 검색">
+              </div>
+              <div class="row mb20">
+                <div class="wp50 col1">
+                  <input type="text" class="wp100 datepicker" readonly id="check-in" placeholder="체크인">
+                </div>
+                <div class="wp50 col2">
+                  <input type="text" class="wp100 datepicker" readonly id="check-out" placeholder="체크아웃">
+                </div>
+              </div>
+              <div class="row">
+                <div class="wp50 col1">
+                  <select class="wp100 select select1">
+                    <option value="">성인1</option>
+                    <option value="">성인2</option>
+                  </select>
+                </div>
+                <div class="wp50 col2">
+                  <select class="wp100 select select1">
+                    <option value="">소아1</option>
+                    <option value="">소아2</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn-search icon icon-search"><span class="skip">검색</span></button>
+            </form>
+          </div>
+          <div id="tab2" class="contents">
+            <form action="#">
+              <div class="row mb20">
+                <input type="text" class="wp100 select select1" id="tour-check" placeholder="여행지,투어명으로 검색">
+              </div>
+              <div class="row">
+                <input type="text" class="wp100 datepicker" readonly id="tour-date" placeholder="여행 날짜">
+              </div>
+              <button type="submit" class="btn-search icon icon-search"><span class="skip">검색</span></button>
+            </form>
+          </div>
+        </div>
+      </article>
+
+      <!-- 공지사항 -->
+      <article class="notice-slide">
+        <div class="swiper-container notice-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#">호텔앤투어 사이트 공지 입니다.</a></div>
+            <div class="swiper-slide"><a href="#">호텔앤투어 사이트 공지 입니다.</a></div>
+            <div class="swiper-slide"><a href="#">호텔앤투어 사이트 공지 입니다.</a></div>
+          </div>
+        </div>
+        <a href="#" class="icon icon-more"><span class="skip">더보기</span></a>
+      </article>
+
+      <!-- 배너 -->
+      <article class="banner-slide center">
+        <div class="swiper-container banner-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">
+                <span class="label">EVENT</span>
+                <img src="../../images/front/event1.jpg" alt="발권 수수료 무료+카드 무이자 할부, 오픈기념 이벤트!">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <span class="label">EVENT</span>
+                <img src="../../images/front/event2.jpg" alt="발권 수수료 무료+카드 무이자 할부, 오픈기념 이벤트!">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="../../images/front/event1.jpg" alt="발권 수수료 무료+카드 무이자 할부, 오픈기념 이벤트!"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="../../images/front/event1.jpg" alt="발권 수수료 무료+카드 무이자 할부, 오픈기념 이벤트!"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="../../images/front/event1.jpg" alt="발권 수수료 무료+카드 무이자 할부, 오픈기념 이벤트!"></a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </article>
+
+      <!-- 여행지 -->
+      <article class="trip-menu">
+        <div class="swiper-container trip-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="hotel.html" class="depth1">호주</a>
+              <ul class="depth2 scrollbar-inner">
+                <li><a href="#">시드니</a></li>
+                <li><a href="#">골드코스트</a></li>
+                <li><a href="#">케언즈</a></li>
+                <li><a href="#">멜버른</a></li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="depth1">하와이</a>
+              <ul class="depth2 scrollbar-inner">
+                <li><a href="#">오하우</a></li>
+                <li><a href="#">마우이</a></li>
+                <li><a href="#">코나</a></li>
+                <li><a href="#">라나이</a></li>
+                <li><a href="#">카우아이</a></li>
+                <li><a href="#">오하우</a></li>
+                <li><a href="#">마우이</a></li>
+                <li><a href="#">코나</a></li>
+                <li><a href="#">라나이</a></li>
+                <li><a href="#">카우아이</a></li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="depth1">태국</a>
+              <ul class="depth2 scrollbar-inner">
+                <li><a href="#">코사무이</a></li>
+                <li><a href="#">푸켓</a></li>
+                <li><a href="#">크라비</a></li>
+                <li><a href="#">방콕</a></li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="depth1">필리핀</a>
+              <ul class="depth2 scrollbar-inner">
+                <li><a href="#">마닐라</a></li>
+                <li><a href="#">세부</a></li>
+                <li><a href="#">보홀</a></li>
+                <li><a href="#">보라카이</a></li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="depth1">인도네시아</a>
+              <ul class="depth2 scrollbar-inner">
+                <li><a href="#">발리</a></li>
+                <li><a href="#">롬복</a></li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="depth1">몰디브</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="depth1">괌</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="depth1">사이판</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 호텔엔투어 인기여행 -->
+      <article class="popular">
+        <h1>호텔엔투어 인기여행지</h1>
+        <div class="swiper-container popular-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">
+                <h2>푸켓</h2>
+                <div class="wrap">
+                  <img src="../../images/front/popular1.jpg" alt="">
+                  <div>
+                    <h3>완벽한 자유, 평화!</h3>
+                    <p>우아한 리조트 & 풀빌라에서 따뜻한 미소와 친절한 서비스를 느껴 보는 것은 어떨까요.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <h2>코사무이</h2>
+                <div class="wrap">
+                  <img src="../../images/front/popular1.jpg" alt="">
+                  <div>
+                    <h3>시간이 멈춘 남국의 낙원 !</h3>
+                    <p>고객의 마음을 사로잡는 매력적인 리조트에서 당신을 기다립니다.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <h2>코사무이</h2>
+                <div class="wrap">
+                  <img src="../../images/front/popular1.jpg" alt="">
+                  <div>
+                    <h3>우리가 함께 간다 !</h3>
+                    <p>에메랄드 빛 바다에 누워 강력한 햇살과 바람을 즐겨 보세요.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <h2>발리</h2>
+                <div class="wrap">
+                  <img src="../../images/front/popular1.jpg" alt="">
+                  <div>
+                    <h3>일상에 지친 영혼의 안식처 !</h3>
+                    <p>"천국의 첫 번째 정원"에서 편안한 힐링과 특별한 문화을 만끽하세요.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <h2>괌</h2>
+                <div class="wrap">
+                  <img src="../../images/front/popular1.jpg" alt="">
+                  <div>
+                    <h3>스릴 넘치는 해양스포츠 !</h3>
+                    <p>쇼핑과 다양한 먹거리를 갖춘 최적의 휴양지에서 휴식을 취할 수 있습니다.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <h2>사이판</h2>
+                <div class="wrap">
+                  <img src="../../images/front/popular1.jpg" alt="">
+                  <div>
+                    <h3>스릴 넘치는 해양스포츠 !</h3>
+                    <p>쇼핑과 다양한 먹거리를 갖춘 최적의 휴양지에서 휴식을 취할 수 있습니다.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <h2>호주</h2>
+                <div class="wrap">
+                  <img src="../../images/front/popular1.jpg" alt="">
+                  <div>
+                    <h3>스릴 넘치는 해양스포츠 !</h3>
+                    <p>쇼핑과 다양한 먹거리를 갖춘 최적의 휴양지에서 휴식을 취할 수 있습니다.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <h2>칸쿤</h2>
+                <div class="wrap">
+                  <img src="../../images/front/popular1.jpg" alt="">
+                  <div>
+                    <h3>스릴 넘치는 해양스포츠 !</h3>
+                    <p>쇼핑과 다양한 먹거리를 갖춘 최적의 휴양지에서 휴식을 취할 수 있습니다.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <h2>하와이</h2>
+                <div class="wrap">
+                  <img src="../../images/front/popular1.jpg" alt="">
+                  <div>
+                    <h3>스릴 넘치는 해양스포츠 !</h3>
+                    <p>쇼핑과 다양한 먹거리를 갖춘 최적의 휴양지에서 휴식을 취할 수 있습니다.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 이벤트 -->
+      <!-- <article class="main-event">
+        <h1><img src="../../images/mobile/hotelntourevent.png" alt="hotel n tour event"></h1>
+        <div class="swiper-container event-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="wrap">
+                <h2>몰디브 호텔특가 이벤트 ! </h2>
+                <p>한줄 메세지로 몰디브 여행의 기회잡으세요.</p>
+                <a href="#" class="icon icon-more2"><span class="skip">자세히보기</span></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="wrap">
+                <h2>하와이 럭셔리 컬렉션 </h2>
+                <p>전문가가 엄선한 하와이 최고의 호텔을 만나실 수 있습니다.</p>
+                <a href="#" class="icon icon-more2"><span class="skip">자세히보기</span></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="wrap">
+                <h2>푸켓 인기리조트</h2>
+                <p>아시아의 진주 속 진짜 진추를 찾고 싶으신가요?<br>푸켓파통 / 카론 / 카타 비치의 인기 리조트를 소개합니다.</p>
+                <a href="#" class="icon icon-more2"><span class="skip">자세히보기</span></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="wrap">
+                <h2>화이트 비치의 낭만 보라카이</h2>
+                <p>에메랄드빛 바다와 반짝이는 하얀모래위에서 편안한 휴식을 취하며 보라카이의 낭만을 느껴보세요.</p>
+                <a href="#" class="icon icon-more2"><span class="skip">자세히보기</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article> -->
+
+      <article class="video">
+        <img src="../../images/mobile/videobg.jpg" alt="">
+        <button id="btn-video"><span class="skip">play</span></button>
+      </article>
+
+      <article class="main-service center">
+        <div class="swiper-container service-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div>
+                <img src="../../images/hotel/h_pool.png" alt="">
+                <strong>최고의 호텔, 누구보다 저렴하게</strong>
+                <p>호텔엔투어는 해외 현지에 거주 중인<br>
+        여행 전문가가 호텔의 상태를 꼼꼼히 점검하며,<br>
+        리뷰와 댓글로 고객과 실시간 소통하여<br>
+        호텔 서비스의 품질을 높이겠습니다.또한,<br>
+        소비자가 선택한 최고의 호텔을 전 세계<br>
+        최저가로 제공함을 약속드립니다.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <img src="../../images/hotel/h_pool.png" alt="">
+                <strong>진짜 여행, 투어는 내 입맛에 맞게</strong>
+                <p>쉽고 편하게 준비하며, 한정된 예산으로<br>
+        여행 만족도를 극대화할 수 있는 “진짜 여행”을<br>
+        만들겠습니다. 투어 예약 시, 문제없이 소통할 수<br>
+        있는 ‘1:1 맞춤 예약서비스’로 고객 만족을<br>
+        실현하겠습니다.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <img src="../../images/hotel/h_pool.png" alt="">
+                <strong>최고의 여행서비스를 정확하게</strong>
+                <p>해외여행 시 갑자기 발생하는 ‘추가 경비,<br>
+        가이드 팁’을 배제하여 불만 사항을 없애겠습니다.<br>
+        호텔엔투어의 글로벌 파트너사 중 고객 만족<br>
+        기여도가 낮을 경우, 즉각 퇴출 조치하여 만족도<br>
+        높은 여행 인프라를 구축하겠습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 파트너 -->
+      <article class="partners center">
+        <h1><img src="../../images/mobile/hotelntourpartners.png" alt="hotel n tour partners"></h1>
+        <div class="swiper-container partners-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <ul>
+                <li><img src="../../images/partner/partner1.jpg" alt="outrigger hotels and resorts"></li>
+                <li><img src="../../images/partner/partner2.jpg" alt="kensington resort"></li>
+                <li><img src="../../images/partner/partner3.jpg" alt="hilton"></li>
+                <li><img src="../../images/partner/partner4.jpg" alt="hyatt"></li>
+                <li><img src="../../images/partner/partner5.jpg" alt="four seasons"></li>
+                <li><img src="../../images/partner/partner6.jpg" alt="starwood hotels & resorts"></li>
+                <li><img src="../../images/partner/partner7.jpg" alt="aqua aston hotels for all"></li>
+                <li><img src="../../images/partner/partner8.jpg" alt="ramada"></li>
+                <li><img src="../../images/partner/partner9.jpg" alt="oakwood premier"></li>
+                <li><img src="../../images/partner/partner10.jpg" alt="marriott"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <ul class="info">
+        <li>
+          <h2><a href="javascript:void(0);">호텔 엔 투어</a></h2>
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">보도자료</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </li>
+        <li>
+          <h2><a href="javascript:void(0);">정책안내</a></h2>
+          <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 취급방침</a></li>
+            <li><a href="#">취소/환불 규정</a></li>
+            <li><a href="#">저작권 안내</a></li>
+          </ul>
+        </li>
+        <li>
+          <h2><a href="javascript:void(0);">파트너 되기</a></h2>
+          <ul>
+            <li><a href="#">파트너 안내</a></li>
+            <li><a href="#">파트너 문의</a></li>
+            <li><a href="#">파트너 신청</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="sns">
+        <ul>
+          <li><a href="#" class="icon icon-sns-facebook"><span class="skip">facebook</span></a></li>
+          <li><a href="#" class="icon icon-sns-naver"><span class="skip">naver</span></a></li>
+          <li><a href="#" class="icon icon-sns-youtube"><span class="skip">youtube</span></a></li>
+          <li><a href="#" class="icon icon-sns-instar"><span class="skip">instar</span></a></li>
+        </ul>
+      </div>
+
+      <div class="app-download">
+        <h1><img src="../../images/mobile/hotelntourapp.png" alt="hotel n tour app"></h1>
+        <ul>
+          <li><a href="#"><img src="../../images/mobile/google-play.png" alt="google play"></a></li>
+          <li><a href="#"><img src="../../images/mobile/app-store.png" alt="app store"></a></li>
+        </ul>
+      </div>
+
+      <address>
+        <ul>
+          <li>서울특별시 강남구 도산대로 506, 재정빌딩 2층</li>
+          <li>(주)호텔엔투어 대표 : 유태선</li>
+          <li>사업자등록번호 : 762-88-00877</li>
+          <li>통신판매업신고번호 : 2018-서울강남-01061</li>
+          <li>개인정보관리책입자 : webmaster@hotelntour.co.kr</li>
+          <li>대표번호 : 02 548 2222 </li>
+        </ul>
+      </address>
+      <p>자사는 서울특별시관광협회 공제영업보증보험에 가입이 되어 있습니다.
+        호텔엔투어는 통신판매중개자이며 통신판매의 당사자가 아닙니다.
+        따라서 호텔엔투어는 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.</p>
+      <small>Copyright © Hotel n Tour All rights reserved. </small>
+    </footer>
+
+    <a href="#top" class="btn-top icon icon-top"><span class="skip">위로가기</span></a>
+
+    <!-- 검색 -->
+    <div id="search" class="popup popup-hotel">
+      <div class="search-form">
+        <input type="text" id="search-input" placeholder="여행지, 호텔명으로 검색">
+        <span class="icon icon-search2"></span>
+        <button class="icon icon-close2 btn-close"></button>
+      </div>
+      <ul class="search-list">
+        <li>
+          <a href="#">하와이</a>
+          <ul>
+            <li><a href="#">오하우</a></li>
+            <li><a href="#">마우이</a></li>
+            <li><a href="#">코라나</a></li>
+            <li><a href="#">이카우아이</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">태국</a>
+          <ul>
+            <li><a href="#">방콕</a></li>
+            <li><a href="#">푸켓</a></li>
+            <li><a href="#">코사무이</a></li>
+            <li><a href="#">크라비</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">필리핀</a>
+          <ul>
+            <li><a href="#">마닐라</a></li>
+            <li><a href="#">세부</a></li>
+            <li><a href="#">보홀</a></li>
+            <li><a href="#">보라카이</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">인도네시아</a>
+          <ul>
+            <li><a href="#">발리</a></li>
+            <li><a href="#">롬복</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">몰디브</a>
+        </li>
+        <li>
+          <a href="#">호주</a>
+          <ul>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">호주</a>
+          <ul>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">호주</a>
+          <ul>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">호주</a>
+          <ul>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">호주</a>
+          <ul>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">호주</a>
+          <ul>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">호주</a>
+          <ul>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+            <li><a href="#">시드니</a></li>
+            <li><a href="#">골드코스트</a></li>
+            <li><a href="#">케언즈</a></li>
+            <li><a href="#">멜버른</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 달력 -->
+    <div id="datepicker" class="popup popup-datepicker">
+      <div class="popup-header">
+        <h1>달력</h1>
+        <button class="btn-close icon icon-close"><span class="skip">닫기</span></button>
+      </div>
+      <div class="popup-body">
+        <div class="search-form">
+          <input type="text" placeholder="호텔명으로 검색">
+          <span class="icon icon-search2"></span>
+          <button class="icon icon-close2 btn-close"></button>
+        </div>
+        <div class="date-info active" id="hotel-info">
+          <div class="left check-date">
+            <label>체크인</label>
+            <input type="text" value="2018.2.20">
+          </div>
+          <span class="icon icon-next"></span>
+          <div class="right check-date">
+            <label>체크아웃</label>
+            <input type="text" value="2018.2.23">
+          </div>
+        </div>
+
+        <div class="date-info" id="tour-info">
+          <div class="check-date">
+            <label>여행날짜</label>
+            <input type="text" value="2018.2.20">
+          </div>
+        </div>
+
+        <div class="date-form">
+          <div class="date">2018.2</div>
+          <table>
+            <thead>
+              <tr>
+                <th class="sun">일</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+                <th class="sat">토</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="no"><a href="javascript:void(0);">1</a></td>
+                <td class="no"><a href="javascript:void(0);">2</a></td>
+                <td class="no"><a href="javascript:void(0);">3</a></td>
+              </tr>
+              <tr>
+                <td class="no"><a href="javascript:void(0);">4</a></td>
+                <td class="no"><a href="javascript:void(0);">5</a></td>
+                <td class="no"><a href="javascript:void(0);">6</a></td>
+                <td class="no"><a href="javascript:void(0);">7</a></td>
+                <td class="no"><a href="javascript:void(0);">8</a></td>
+                <td class="no"><a href="javascript:void(0);">9</a></td>
+                <td class="no"><a href="javascript:void(0);">10</a></td>
+              </tr>
+              <tr>
+                <td class="no"><a href="javascript:void(0);">11</a></td>
+                <td class="no"><a href="javascript:void(0);">12</a></td>
+                <td class="no"><a href="javascript:void(0);">13</a></td>
+                <td class="no"><a href="javascript:void(0);">14</a></td>
+                <td class="no"><a href="javascript:void(0);">15</a></td>
+                <td class="no"><a href="javascript:void(0);">16</a></td>
+                <td><a href="javascript:void(0);">17</a></td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);">18</a></td>
+                <td><a href="javascript:void(0);">19</a></td>
+                <td class="check-inout"><a href="javascript:void(0);">20</a></td>
+                <td class="check-day"><a href="javascript:void(0);">21</a></td>
+                <td class="check-day"><a href="javascript:void(0);">22</a></td>
+                <td class="check-inout"><a href="javascript:void(0);">23</a></td>
+                <td><a href="javascript:void(0);">24</a></td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);">25</a></td>
+                <td><a href="javascript:void(0);">26</a></td>
+                <td><a href="javascript:void(0);">27</a></td>
+                <td><a href="javascript:void(0);">28</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="date-form copy">
+          <div class="date">2018.3</div>
+          <table>
+            <thead>
+              <tr>
+                <th class="sun">일</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+                <th class="sat">토</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a href="javascript:void(0);">1</a></td>
+                <td><a href="javascript:void(0);">2</a></td>
+                <td><a href="javascript:void(0);">3</a></td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);">4</a></td>
+                <td><a href="javascript:void(0);">5</a></td>
+                <td><a href="javascript:void(0);">6</a></td>
+                <td><a href="javascript:void(0);">7</a></td>
+                <td><a href="javascript:void(0);">8</a></td>
+                <td><a href="javascript:void(0);">9</a></td>
+                <td><a href="javascript:void(0);">10</a></td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);">11</a></td>
+                <td><a href="javascript:void(0);">12</a></td>
+                <td><a href="javascript:void(0);">13</a></td>
+                <td><a href="javascript:void(0);">14</a></td>
+                <td><a href="javascript:void(0);">15</a></td>
+                <td><a href="javascript:void(0);">16</a></td>
+                <td><a href="javascript:void(0);">17</a></td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);">18</a></td>
+                <td><a href="javascript:void(0);">19</a></td>
+                <td><a href="javascript:void(0);">20</a></td>
+                <td><a href="javascript:void(0);">21</a></td>
+                <td><a href="javascript:void(0);">22</a></td>
+                <td><a href="javascript:void(0);">23</a></td>
+                <td><a href="javascript:void(0);">24</a></td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);">25</a></td>
+                <td><a href="javascript:void(0);">26</a></td>
+                <td><a href="javascript:void(0);">27</a></td>
+                <td><a href="javascript:void(0);">28</a></td>
+                <td><a href="javascript:void(0);">29</a></td>
+                <td><a href="javascript:void(0);">30</a></td>
+                <td><a href="javascript:void(0);">31</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="data-form">
+          <div class="data">
+            성인<span>2</span>
+          </div>
+          <button class="btn-minus icon icon-minus"></button>
+          <button class="btn-plus icon icon-plus"></button>
+        </div>
+        <div class="data-form">
+          <div class="data">
+            아동<span>2</span>
+          </div>
+          <button class="btn-minus icon icon-minus"></button>
+          <button class="btn-plus icon icon-plus"></button>
+        </div>
+        <button class="btn-border">완료</button>
+      </div>
+    </div>
+
+    <!-- video popup -->
+    <div id="popup-video" class="popup popup-video">
+      <div class="popup-header">
+        <button class="icon icon-close btn-close"><span class="skip">닫기</span></button>
+      </div>
+      <div class="popup-body">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/xRbPAVnqtcs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <script>
+      //호텔검색
+      $('#hotel-search').on('click',function(){
+        $('#search').show();
+      })
+
+      //달력창
+      var datepickerBodyH=$('.popup-datepicker').height()-110;
+      var datepickerBodyOriginalH=$('.popup-datepicker .popup-body').height();
+      $('.popup-datepicker .popup-body').height(datepickerBodyH);
+
+      //스크롤시 달력 생성
+      //달력 폼 저장
+      var elem = $(".copy");
+      $('.popup-datepicker .popup-body').scroll(function(){
+        //달력 영역 전체 높이
+        var body = $(".popup-datepicker .popup-body");
+  			if(body[0].scrollHeight - body.scrollTop() == body.outerHeight()){
+          //새로운 달력 추가
+          console.log(body[0].scrollHeight,body.scrollTop(), body.outerHeight() )
+  				$(elem).clone().appendTo(".popup-datepicker .popup-body");
+  			}
+      });
+
+      var mainSwiper = new Swiper('.main-swiper',{
+        autoplay: {
+          delay: 3000,
+        },
+      });
+
+      var mainSwiperBg=['../../images/mobile/main-bg.png',
+                        '../../images/mobile/main-bg.png',
+                        '../../images/mobile/main-bg.png'];
+      for(var i=0; i<mainSwiperBg.length; i++){
+        $('.main-swiper .swiper-slide').eq(i).css('background-image','url('+mainSwiperBg[i]+')');
+      }
+
+      $('.tab-menu li a').on('click',function(e){
+        e.preventDefault();
+        $('.tab-menu li').removeClass('active');
+        $(this).parent().addClass('active');
+        var tabIndex=$(this).parent().index();
+        $('.tab-contents .contents').removeClass('active');
+        $('.tab-contents .contents').eq(tabIndex).addClass('active');
+      })
+
+      //공지사항 슬라이드
+      var noticeSwiper = new Swiper('.notice-swiper',{
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+      });
+
+      //배너 슬라이드
+      var bannerSwiper = new Swiper('.banner-swiper',{
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        pagination: {
+          el: '.banner-swiper .swiper-pagination',
+          clickable: true,
+        },
+      });
+      var bannerH=$('.banner-swiper img').height();
+      $('.banner-swiper').height(bannerH+30);
+
+      //여행지 슬라이드
+      var tripSwiper = new Swiper('.trip-swiper', {
+        slidesPerView: 'auto',
+      });
+      var tripSwiperBg=['../../images/mobile/menu-bg1.png',
+                        '../../images/mobile/menu-bg2.png',
+                        '../../images/mobile/menu-bg1.png',
+                        '../../images/mobile/menu-bg2.png',
+                        '../../images/mobile/menu-bg1.png',
+                        '../../images/mobile/menu-bg2.png',
+                        '../../images/mobile/menu-bg1.png',
+                        '../../images/mobile/menu-bg2.png'];
+      for(var i=0; i<tripSwiperBg.length; i++){
+        $('.trip-swiper .swiper-slide').eq(i).css('background-image','url('+tripSwiperBg[i]+')');
+      }
+      var tripSwiperW=$('.trip-menu .swiper-slide').width();
+      $('.trip-menu .swiper-slide').height(tripSwiperW);
+      $('.scrollbar-inner').scrollbar();
+      $('.trip-menu .swiper-slide .scroll-wrapper').height(tripSwiperW-42);
+
+      var popularSwiper = new Swiper('.popular-swiper', {
+        slidesPerView: 'auto',
+      });
+
+      //이벤트 슬라이드
+      var eventSwiper = new Swiper('.event-swiper',{
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+      });
+
+      var eventSwiperBg=['../../images/mobile/event-bg1.png',
+                        '../../images/mobile/event-bg2.png',
+                        '../../images/mobile/event-bg3.png',
+                        '../../images/mobile/event-bg4.png'];
+      for(var i=0; i<tripSwiperBg.length; i++){
+        $('.event-swiper .swiper-slide').eq(i).children().css('background-image','url('+eventSwiperBg[i]+')');
+      }
+
+      //파트너 슬라이드
+      var partnersSwiper = new Swiper('.partners-swiper', {
+        direction: 'horizontal',
+        slidesPerView: 'auto',
+        freeMode: true
+      });
+
+      var serviceSwiper = new Swiper('.service-swiper', {
+        slidesPerView: 'auto',
+        freeMode: true
+      });
+
+      //비디오 팝업
+      $(window).resize(function(){
+        var videoBodyH=$('#popup-video').height()-45;
+        $('#popup-video .popup-body').height(videoBodyH);
+      }).resize();
+
+      $('#btn-video').click(function() {
+        $('#popup-video').show();
+        $('html, body').css({'overflow': 'hidden'});
+      })
+
+      var availableTags = [
+            "ActionScript ActionScript ActionScript ActionScript ActionScript ActionScript  ActionScript ActionScript",
+            "AppleScript",
+            "Asp",
+            "BASIC",
+            "C",
+            "C++",
+            "Clojure",
+            "COBOL",
+            "ColdFusion",
+            "Erlang",
+            "Fortran",
+            "Groovy",
+            "Haskell",
+            "Java",
+            "JavaScript",
+            "Lisp",
+            "Perl",
+            "PHP",
+            "Python",
+            "Ruby",
+            "Scala",
+            "Scheme"
+          ];
+          $( "#search-input" ).autocomplete({
+            source: availableTags
+          });
+
+          jQuery.ui.autocomplete.prototype._resizeMenu = function () {
+            var ul = this.menu.element;
+            ul.outerWidth(this.element.outerWidth());
+          }
+          $('#search .btn-close').click(function(){
+            $('#search-input').val('');
+          })
+    </script>
+  </body>
+</html>

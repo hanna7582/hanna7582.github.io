@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/hnt-bo.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/hnt-bo.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <h1><a href="hnt-bo-000001.html">Hotel n Tour</a></h1>
+      <div class="user-info">
+        안녕하세요 <b>관리자님</b>
+        <button class="btn btn-default btn-sm" onclick="location.href='hnt-bo-000000.html'">로그아웃</button>
+      </div>
+      <nav class="gnb-nav">
+        <ul>
+          <li><a href="hnt-bo-010100.html">일반회원관리</a></li>
+          <li class="active"><a href="hnt-bo-020100.html">파트너회원관리</a></li>
+          <li><a href="hnt-bo-030100.html">상품관리</a></li>
+          <li><a href="hnt-bo-040100.html">예약관리</a></li>
+          <li><a href="hnt-bo-050100.html">매출관리</a></li>
+          <li><a href="hnt-bo-060100.html">게시판관리</a></li>
+          <li><a href="hnt-bo-070100.html">상품후기관리</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="snb-nav">
+      <h2>파트너회원관리</h2>
+      <nav>
+        <ul>
+          <li><a href="#">지역생성관리</a></li>
+          <li><a href="#">파트너사 등록</a></li>
+          <li><a href="#">파트너회원 가입신청</a></li>
+          <li class="active"><a href="#">파트너회원</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contents">
+      <div class="top">
+        <ol class="breadcrumb">
+          <li><a href="#">파트너회원관리</a></li>
+          <li class="active">파트너회원</li>
+        </ol>
+      </div>
+      <section>
+        <div class="search-form mb20">
+          <form class="form-inline">
+            <select class="form-control w100">
+              <option>전체</option>
+              <option>아이디</option>
+              <option>이메일</option>
+              <option>이름</option>
+              <option>핸드폰 번호</option>
+              <option>회사명</option>
+            </select>
+            <div class="form-group">
+              <label for="search" class="skip">검색어</label>
+              <input type="text" class="form-control w300" id="search" placeholder="검색어">
+              <button class="btn btn-primary">검색</button>
+            </div>
+          </form>
+          <div class="total">검색 결과 : <span>100</span>건</div>
+        </div>
+
+        <table class="table text-center table-bordered">
+          <caption>파트너회원 가입신청 목록</caption>
+          <colgroup>
+            <col style="width:70px">
+            <col style="">
+            <col style="">
+            <col style="">
+            <col style="">
+            <col style="">
+            <col style="">
+          </colgroup>
+          <thead>
+            <tr class="primary">
+              <th>번호</th>
+              <th>회사명</th>
+              <th>담당자</th>
+              <th>아이디</th>
+              <th>이메일</th>
+              <th>전화번호</th>
+              <th>신청일시</th>
+              <th>사용여부</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10</td>
+              <td><a href="">00투어</a></td>
+              <td>홍길동</td>
+              <td>hong1234</td>
+              <td>ABC@naver.com</td>
+              <td>01012345678</td>
+              <td>2016-01-25 12:41:22</td>
+              <td>Y</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td><a href="">00투어</a></td>
+              <td>홍길동</td>
+              <td>hong1234</td>
+              <td>ABC@naver.com</td>
+              <td>01012345678</td>
+              <td>2016-01-25 12:41:22</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="pagination">
+          <li><a href="#" aria-label="Previous"><span aria-hidden="true">&#60;&#60;</span></a></li>
+          <li><a href="#" aria-label="Previous"><span aria-hidden="true">&#60;</span></a></li>
+          <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">10</a></li>
+          <li><a href="#" aria-label="Next"><span aria-hidden="true">&#62;</span></a></li>
+          <li><a href="#" aria-label="Next"><span aria-hidden="true">&#62;&#62;</span></a></li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>EDM HOLIC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimun-scale=1, maximun-scale=1, user-scalable=no" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+    
+    <!-- jquery -->
+    <script src="../js/jquery-1.11.2.min.js"></script>
+	<script src="../js/swiper.jquery.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+	
+    <!-- javascript -->
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="../js/main.js"></script>
+</head>
+<body>
+<!-- 헤더 -->
+<header class="navbar" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="toggle_left navbar-toggle" onclick="javascript:location.href='magazine.html'">
+            <span class="sr-only">뒤로가기</span>
+            <span class="btn_prev"></span>
+        </button>
+        <button type="button" class="toggle_right navbar-toggle" data-toggle="collapse" data-target=".navbar-ex2-collapse">
+            <span class="sr-only">검색</span>
+            <span class="btn_search"></span>
+        </button>
+        <a class="navbar-brand" href="#">상세보기</a>
+    </div>
+    <!-- 검색 -->
+    <div class="collapse navbar-collapse navbar-ex2-collapse">
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="검색어를 입력하세요.">
+            </div>
+            <button type="submit" class="btn"></button>
+        </form>
+		<div class="list none">
+			<ul>
+				<li>최근검색어<button class="del">x</button></li>
+				<li>DJ <button class="del">x</button></li>
+				<li>박명수 <button class="del">x</button></li>
+				<li>edm <button class="del">x</button></li>
+				<li>공연 <button class="del">x</button></li>
+			</ul>
+		</div>
+    </div>
+</header>   
+       
+<!-- 매거진상세 -->
+<section class="magazine">
+   	<div class="wrap2">
+   	
+	    <!-- 이미지 -->
+	    <div class="img_area">
+	    	<div class="form">
+	        	<img src="../images/img/magazine_01.png">
+		        <div class="hit"><button class="icon_like" onclick="toast_message('좋아요');"></button><span class="like_num">124</span></div>
+	        </div>
+	    </div>
+	    
+	    <!-- 타이틀 -->
+	    <div class="title_area">    
+	        <dl>
+	            <dt>현실이 아닌 그 어딘가. 내일의 음악을 만날 수 있는 곳.</dt>
+	            <dd>15.03.05</dd>
+	        </dl> 
+	    </div>
+	    
+	    <!-- 텍스트박스 -->
+	    <div class="text_box">
+	    	EDM HOLIC이 자신있게 추천하는 EDM FESTIVAL 그 첫번째, 바로TOMORROWLAND FESTIVAL입니다.
+			TOMORROWLAND FESTIVAL은 2005년 개최되어, 현재는 세계 최대 음악 축제로 자리매김하였습니다.
+			메인 페스티벌은 매년 벨기에 안트베르펜 주에서 열리는 TOMORROWLAND FESTIVAL IN BELGIUM으로 유럽인은 물론 전 세계 EDM HOLIC들이 모여 교류하고 공감하는 소통의 장이 되고 있습니다.
+		</div>
+	    
+	    <!-- 동영상 -->
+	    <div class="sub_title"><span>2013년 tomorrowland 현장</span></div>
+	    <div class="video_area">     
+	        <div class="video" onclick="javascript:location.href=''">
+				<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">	        	
+				<img src="../images/common/icon_play.png">
+	        </div> 
+	    </div>
+	    
+	    <div class="sub_title"><span>2013년 tomorrowland 현장</span></div>
+	    <div class="video_area">    
+	        <div class="video" onclick="javascript:location.href=''">
+				<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">	        	
+				<img src="../images/common/icon_play.png">
+	        </div> 
+	    </div>
+	    
+	    <div class="sub_title"><span>2013년 tomorrowland 현장</span></div>
+	    <div class="video_area" onclick="javascript:location.href=''">
+	        <div class="video">
+				<img src="https://img.youtube.com/vi/MCNtUXcO_-o/0.jpg">	        	
+				<img src="../images/common/icon_play.png">
+	        </div> 
+	    </div>
+	    
+	    <!-- 버튼 -->
+	    <div class="btn_area">
+	    	<ul>
+	    		<li><a href="magazine_opinion.html">의견나누기 (23)</a></li>
+	    	</ul> 
+	    	<ul>
+	    		<li><a href="#"><span class="icon_prev"></span>이전</a></li>
+	    		<li><a href="#">다음<span class="icon_next"></span></a></li>
+	    	</ul> 
+	    </div>
+	    
+    </div>
+</section>
+</body>
+</html>

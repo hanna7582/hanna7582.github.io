@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>EDM HOLIC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimun-scale=1, maximun-scale=1, user-scalable=no" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+    
+    <!-- jquery -->
+    <script src="../js/jquery-1.11.2.min.js"></script>
+	<script src="../js/swiper.jquery.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>	
+
+    <!-- javascript -->
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="../js/main.js"></script>
+</head>
+<body>
+<!-- 헤더 -->
+<header class="navbar" role="navigation">
+    <div class="navbar-header">
+        <button type="button" id="btn_menu" class="toggle_left navbar-toggle" onclick="javascript:menu();">
+            <span class="sr-only">메인메뉴</span>
+            <span class="btn_menu"></span>
+        </button>
+        <button type="button" class="toggle_right navbar-toggle" data-toggle="collapse" data-target=".navbar-ex2-collapse">
+            <span class="sr-only">검색</span>
+            <span class="btn_search"></span>
+        </button>
+        <a class="navbar-brand eng" href="#">News</a>
+    </div>
+    <!-- 검색 -->
+    <div class="collapse navbar-collapse navbar-ex2-collapse">
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="검색어를 입력하세요.">
+            </div>
+            <button type="submit" class="btn"></button>
+        </form>
+		<div class="list none">
+			<ul>
+				<li>최근검색어<button class="del">x</button></li>
+				<li>DJ <button class="del">x</button></li>
+				<li>박명수 <button class="del">x</button></li>
+				<li>edm <button class="del">x</button></li>
+				<li>공연 <button class="del">x</button></li>
+			</ul>
+		</div>
+    </div>
+</header>
+       
+<!-- 메뉴 -->
+<nav id="menu" class="none">
+	<div class="menu-logo"><a href="main.html">edm holic</a></div>
+    <div class="menu-login">로그인 하세요<button class="btn_logout" onclick="javascript:location.href='login.html'"></button></div>
+    <ul class="manu-contents">
+        <li class="menu-item">
+            <a href="main.html">Home</a>
+        </li>
+        <li class="menu-item">
+            <a href="streaming.html">Streaming</a>
+        </li>
+        <li class="menu-item">
+            <a>Information</a>
+            <ul>
+                <li><a href="edmchart.html" class="menu_link">edm차트</a></li>
+                <li><a href="schedule.html" class="menu_link">스케줄</a></li>
+                <li><a href="dj.html" class="menu_link">Dj</a></li>
+                <li><a href="club.html" class="menu_link">Club</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a>Magazine</a>
+            <ul>
+                <li><a href="magazine.html" class="menu_link">매거진</a></li>
+                <li><a href="master.html" class="menu_link">전문가 칼럼</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a>Live</a>
+            <ul>
+                <li><a href="photo.html" class="menu_link">포토</a></li>
+                <li><a href="video.html" class="menu_link">비디오</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="community.html">Community</a>
+        </li>
+        <li class="menu-item">
+            <a href="news.html">News</a>
+        </li>
+        <li class="menu-item">
+            <a href="event.html">Event</a>
+        </li>
+        <li class="menu-item">
+            <a href="setting.html">Setting</a>
+        </li>
+    </ul>
+</nav>
+<div id="shadow" class="none"></div>
+
+<section class="news">
+	<!-- 리스트 -->
+	<div class="wrap">
+		<ul>
+			<li class="sub_menu">
+				<a href="#" class="bg_off">
+					<dl>
+						<dt>EDM홀릭 리뉴얼 안내</dt>
+						<dd>15.03.15</dd>
+					</dl>
+					<i class="down"></i>
+				</a>
+				<div class="text_box">
+					EDM홀릭 리뉴얼을 기다려주셔서 감사합니다.<Br>
+					더 나은 서비스로 보답하겠습니다.<Br>
+					이벤트도 많이 참여해 주세요. 감사합니다.
+				</div>
+			</li>
+			<li class="sub_menu">
+				<a href="#" class="bg_off">
+					<dl>
+						<dt>EDM홀릭 리뉴얼 안내</dt>
+						<dd>15.03.15</dd>
+					</dl>
+					<i class="down"></i>
+				</a>
+				<div class="text_box">
+					EDM홀릭 리뉴얼을 기다려주셔서 감사합니다.<Br>
+					더 나은 서비스로 보답하겠습니다.<Br>
+					이벤트도 많이 참여해 주세요. 감사합니다.
+				</div>
+			</li>
+			<li class="sub_menu">
+				<a href="#" class="bg_off">
+					<dl>
+						<dt>EDM홀릭 리뉴얼 안내</dt>
+						<dd>15.03.15</dd>
+					</dl>
+					<i class="down"></i>
+				</a>
+				<div class="text_box">
+					EDM홀릭 리뉴얼을 기다려주셔서 감사합니다.<Br>
+					더 나은 서비스로 보답하겠습니다.<Br>
+					이벤트도 많이 참여해 주세요. 감사합니다.
+				</div>
+			</li>
+			<li class="sub_menu">
+				<a href="#" class="bg_off">
+					<dl>
+						<dt>EDM홀릭 리뉴얼 안내</dt>
+						<dd>15.03.15</dd>
+					</dl>
+					<i class="down"></i>
+				</a>
+				<div class="text_box">
+					EDM홀릭 리뉴얼을 기다려주셔서 감사합니다.<Br>
+					더 나은 서비스로 보답하겠습니다.<Br>
+					이벤트도 많이 참여해 주세요. 감사합니다.
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- list 끝 -->
+</section>
+<!-- player -->
+<div class="player none">
+	<div class="photo">
+		<img src="../images/common/player.png"/>
+		<div class="ring"></div>
+		<div class="spin" onclick="javascript:location.href='streaming_now.html'"></div>
+	</div>
+	<ul>
+		<li>
+			<div class="title">Magnetic(Remix)</div>
+			<div class="name">Manufactured Superstars</div>
+		</li>
+		<li>
+			<button class="play glyphicon glyphicon-play"></button>
+			<button class="next glyphicon glyphicon-forward"></button>
+		</li>
+	</ul>
+</div>
+<!-- player 끝--> 
+</body>
+</html>

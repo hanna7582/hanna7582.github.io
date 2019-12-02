@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../css/hnt-bo2.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/hnt-bo2.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <h1><a href="hnt-bo2-000001.html">Hotel n Tour</a></h1>
+      <div class="user-info">
+        안녕하세요 <b>관리자님</b>
+        <button class="btn btn-default btn-sm" onclick="location.href='hnt-bo2-000000.html'">로그아웃</button>
+      </div>
+      <nav class="gnb-nav">
+        <ul>
+          <li><a href="hnt-bo2-010100.html">회원정보</a></li>
+          <li><a href="hnt-bo2-020100.html">상품관리</a></li>
+          <li><a href="hnt-bo2-030100.html">예약관리</a></li>
+          <li><a href="hnt-bo2-040100.html">취소관리</a></li>
+          <li class="active"><a href="hnt-bo2-050100.html">정산관리</a></li>
+          <li><a href="hnt-bo2-060100.html">매출관리</a></li>
+          <li><a href="hnt-bo2-070100.html">게시판관리</a></li>
+          <li><a href="hnt-bo2-080100.html">쿠폰관리</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="snb-nav">
+      <h2>정산관리</h2>
+      <nav>
+        <ul>
+          <li class="active"><a href="#">호텔정산관리</a></li>
+          <li><a href="#">투어정산관리</a></li>
+          <li><a href="#">렌트카정산관리</a></li>
+          <li><a href="#">여행자보험정산관리</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contents">
+      <div class="top">
+        <ol class="breadcrumb">
+          <li><a href="#">정산관리</a></li>
+          <li><a href="#">호텔정산관리</a></li>
+          <li class="active">상세화면</li>
+        </ol>
+      </div>
+      <section>
+        <div class="title">
+          <h5>정산 정보</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>정산 정보</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="width:500px">
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>상품번호</th>
+              <td>HIH001102017</td>
+              <th>주문번호</th>
+              <td>B-HIH2017010100001</td>
+            </tr>
+            <tr>
+              <th>상품명</th>
+              <td>더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort</td>
+              <th>판매파트너</th>
+              <td>가가투어</td>
+            </tr>
+            <tr>
+              <th>지역</th>
+              <td>하와이 > 오하후</td>
+              <th>구매고객</th>
+              <td>김가가(neomill2@naver.com)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table text-center table-bordered">
+          <caption>결제정보</caption>
+          <colgroup>
+            <col style="">
+            <col style="">
+            <col style="">
+            <col style="">
+            <col style="">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>결제정보</th>
+              <th>결제금액총액</th>
+              <th>수수료제외금액</th>
+              <th>정산요청금액 (매출)</th>
+              <th>정산 처리 후 잔액</th>
+              <th>정산 처리여부</th>
+            </tr>
+            <tr>
+              <td>2017-04-02 11:12:00</td>
+              <td rowspan="3">&#92;1,895,540</td>
+              <td rowspan="3">&#92;1,821,000</td>
+              <td rowspan="3" class="text-left">
+                <p title="금액이 잘못 입력 되었으니 수정 해주시기 바랍니다.">정산요청이 반려되었습니다.</p>
+                <div class="form-inline">
+                  <input type="text" class="form-control" placeholder="금액입력">
+                  <button class="btn btn-info">요청/수정</button>
+                </div>
+              </td>
+              <td rowspan="3">&#92;121,000</td>
+              <td rowspan="3">정산 대기</td>
+            </tr>
+            <tr>
+              <td>카카오 페이</td>
+            </tr>
+            <tr>
+              <td>신용.체크카드</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="btn-area text-center mb20">
+          <button class="btn btn-primary w100">목록</button>
+        </div>
+
+        <table class="table text-center table-bordered">
+          <caption>수정내역</caption>
+          <colgroup>
+            <col style="">
+            <col style="">
+            <col style="">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>수정일시</th>
+              <th>수정내용</th>
+              <th>수정자</th>
+              <th>IP</th>
+            </tr>
+            <tr>
+              <td>2017-04-19 19:16:22</td>
+              <td class="text-left">정산 요청 되었습니다.</td>
+              <td>hntmaster01</td>
+              <td>123.123.123.12</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>

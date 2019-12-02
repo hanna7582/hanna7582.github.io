@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/hnt-bo.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/hnt-bo.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <h1><a href="hnt-bo-000001.html">Hotel n Tour</a></h1>
+      <div class="user-info">
+        안녕하세요 <b>관리자님</b>
+        <button class="btn btn-default btn-sm" onclick="location.href='hnt-bo-000000.html'">로그아웃</button>
+      </div>
+      <nav class="gnb-nav">
+        <ul>
+          <li><a href="hnt-bo-010100.html">일반회원관리</a></li>
+          <li class="active"><a href="hnt-bo-020100.html">파트너회원관리</a></li>
+          <li><a href="hnt-bo-030100.html">상품관리</a></li>
+          <li><a href="hnt-bo-040100.html">예약관리</a></li>
+          <li><a href="hnt-bo-050100.html">매출관리</a></li>
+          <li><a href="hnt-bo-060100.html">게시판관리</a></li>
+          <li><a href="hnt-bo-070100.html">상품후기관리</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="snb-nav">
+      <h2>파트너회원관리</h2>
+      <nav>
+        <ul>
+          <li class="active"><a href="#">지역생성관리</a></li>
+          <li><a href="#">파트너사 등록</a></li>
+          <li><a href="#">파트너회원 가입신청</a></li>
+          <li><a href="#">파트너회원</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contents">
+      <div class="top">
+        <ol class="breadcrumb">
+          <li><a href="#">파트너회원관리</a></li>
+          <li><a href="#">지역생성관리</a></li>
+          <li class="active">상세화면</li>
+        </ol>
+      </div>
+      <section>
+        <table class="table table-bordered">
+          <caption>지역생성</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>지역명<span class="c-red">*</span></th>
+              <td>
+                <div class="form-inline">
+                  <div class="form-group">
+                    <input type="text" class="form-control w300" placeholder="지역명을 입력해주세요.">
+                    <input type="text" class="form-control w300" placeholder="코드명(영문)을 입력해 주세요">
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>세부지역</th>
+              <td>
+                <button class="btn btn-info mb10" id="btn-local-add">추가</button>
+                <div class="form-inline">
+                  <div class="form-group mb10">
+                    <input type="text" class="form-control w300" placeholder="세부 지역명을 입력해주세요.">
+                    <input type="text" class="form-control w300" placeholder="코드명(영문)을 입력해 주세요">
+                    <button class="btn btn-danger"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i><span class="skip">삭제</span></button>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control w300" placeholder="세부 지역명을 입력해주세요.">
+                    <input type="text" class="form-control w300" placeholder="코드명(영문)을 입력해 주세요">
+                    <button class="btn btn-danger"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i><span class="skip">삭제</span></button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>대표이미지 등록<span class="c-red">*</span></th>
+              <td>
+                <p>※ 각 이미지 노출시간  5초</p>
+                <div class="file-upload mb10">
+                  <label>
+                    <input type="file" name="" value="" class="skip">
+                    <span class="btn btn-info">이미지등록</span>
+                    <span class="text file-name">선택된 파일 없음</span>
+                  </label>
+                  <span class="po-right">* 이미지 사이즈 : ???*??? px (웹/모바일 공통)</span>
+                </div>
+                <div class="file-upload mb10">
+                  <label>
+                    <input type="file" name="" value="" class="skip">
+                    <span class="btn btn-info">이미지등록</span>
+                    <span class="text file-name">선택된 파일 없음</span>
+                  </label>
+                  <span class="po-right">* 이미지 사이즈 : ???*??? px (웹/모바일 공통)</span>
+                </div>
+                <div class="file-upload mb10">
+                  <label>
+                    <input type="file" name="" value="" class="skip">
+                    <span class="btn btn-info">이미지등록</span>
+                    <span class="text file-name">선택된 파일 없음</span>
+                  </label>
+                  <span class="po-right">* 이미지 사이즈 : ???*??? px (웹/모바일 공통)</span>
+                </div>
+                <div class="file-upload mb10">
+                  <label>
+                    <input type="file" name="" value="" class="skip">
+                    <span class="btn btn-info">이미지등록</span>
+                    <span class="text file-name">선택된 파일 없음</span>
+                  </label>
+                  <span class="po-right">* 이미지 사이즈 : ???*??? px (웹/모바일 공통)</span>
+                </div>
+                <div class="file-upload">
+                  <label>
+                    <input type="file" name="" value="" class="skip">
+                    <span class="btn btn-info">이미지등록</span>
+                    <span class="text file-name">선택된 파일 없음</span>
+                  </label>
+                  <span class="po-right">* 이미지 사이즈 : ???*??? px (웹/모바일 공통)</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>사용여부</th>
+              <td>
+                <label class="radio-inline">
+                  <input type="radio" name="radio1" id="" checked> 사용
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="radio1" id=""> 미사용
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="btn-area text-center mb20">
+          <button class="btn btn-primary w100">목록</button>
+          <div class="po-right">
+            <button class="btn btn-danger w100">삭제</button>
+            <button class="btn btn-success w100">등록/수정</button>
+          </div>
+        </div>
+
+        <table class="table text-center table-bordered">
+          <caption>수정내역</caption>
+          <colgroup>
+            <col style="">
+            <col style="">
+            <col style="">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>수정일시</th>
+              <th>수정내용</th>
+              <th>수정자</th>
+              <th>IP</th>
+            </tr>
+            <tr>
+              <td>2017-04-19 19:16:22</td>
+              <td class="text-left">세부지역 000이 추가 되었습니다.</td>
+              <td>Hnt02</td>
+              <td>123.123.123.12</td>
+            </tr>
+            <tr>
+              <td>2017-04-19 19:16:22</td>
+              <td class="text-left">지역이 신규 등록 되었습니다.</td>
+              <td>Hnt02</td>
+              <td>123.123.123.12</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>

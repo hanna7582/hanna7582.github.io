@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../css/hnt-bo.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/hnt-bo.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script>
+      $(function(){
+        fn_datepicker('#datepicker1');
+        fn_datepicker('#datepicker2');
+      })
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1><a href="hnt-bo-000001.html">Hotel n Tour</a></h1>
+      <div class="user-info">
+        안녕하세요 <b>관리자님</b>
+        <button class="btn btn-default btn-sm" onclick="location.href='hnt-bo-000000.html'">로그아웃</button>
+      </div>
+      <nav class="gnb-nav">
+        <ul>
+          <li><a href="hnt-bo-010100.html">일반회원관리</a></li>
+          <li><a href="hnt-bo-020100.html">파트너회원관리</a></li>
+          <li><a href="hnt-bo-030100.html">상품관리</a></li>
+          <li><a href="hnt-bo-040100.html">예약관리</a></li>
+          <li><a href="hnt-bo-050100.html">매출관리</a></li>
+          <li class="active"><a href="hnt-bo-060100.html">게시판관리</a></li>
+          <li><a href="hnt-bo-070100.html">상품후기관리</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="snb-nav">
+      <h2>게시판관리</h2>
+      <nav>
+        <ul>
+          <li class="active"><a href="#">공지사항관리</a></li>
+          <li><a href="#">파트너문의</a></li>
+          <li><a href="#">보도자료</a></li>
+          <li><a href="#">지역별 1:1여행상담</a></li>
+          <li><a href="#">자주묻는 질문</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contents">
+      <div class="top">
+        <ol class="breadcrumb">
+          <li><a href="#">게시판관리</a></li>
+          <li><a href="#">공지사항관리</a></li>
+          <li class="active">공지사항등록</li>
+        </ol>
+      </div>
+      <section>
+        <table class="table table-bordered">
+          <caption>공지사항등록</caption>
+          <colgroup>
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>대상 게시판 선택</th>
+              <td>
+                <select class="form-control w200">
+                  <option>선택</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>제목<span class="c-red">*</span></th>
+              <td>
+                <input type="text" class="form-control" placeholder="30자 이내로 작성해주세요.">
+              </td>
+            </tr>
+            <tr>
+              <th>내용<span class="c-red">*</span></th>
+              <td>
+                <p class="info">
+                  * 기본 이미지 사이즈 : ???*??? px (웹/모바일 공통)<br>
+                  * HTML 태그를 통해 이미지의 사이즈는 %로 적용해야 합니다.
+                </p>
+                <textarea name="" class="form-control h200"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <th>메인노출 기간설정<span class="c-red">*</span></th>
+              <td class="form-inline">
+                <input type="text" name="" id="datepicker1" class="w120 form-control" readonly>
+                <span class="text">~</span>
+                <input type="text" name="" id="datepicker2" class="w120 form-control" readonly>
+              </td>
+            </tr>
+            <tr>
+              <th>노출여부</th>
+              <td>
+                <label class="radio-inline">
+                  <input type="radio" name="radio1" id="" checked> 노출
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="radio1" id=""> 미노출
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <th>메인노출여부</th>
+              <td>
+                <label class="radio-inline">
+                  <input type="radio" name="radio2" id="" checked> 노출
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="radio2" id=""> 미노출
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="btn-area text-center mb20">
+          <button class="btn btn-primary w100">목록</button>
+          <div class="po-right">
+            <button class="btn btn-danger w100">삭제</button>
+            <button class="btn btn-success w100">등록/수정</button>
+          </div>
+        </div>
+
+        <table class="table text-center table-bordered">
+          <caption>수정내역</caption>
+          <colgroup>
+            <col style="">
+            <col style="">
+            <col style="">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>수정일시</th>
+              <th>수정내용</th>
+              <th>수정자</th>
+              <th>IP</th>
+            </tr>
+            <tr>
+              <td>2017-04-19 19:16:22</td>
+              <td class="text-left">수정 되었습니다.</td>
+              <td>Hnt02</td>
+              <td>123.123.123.12</td>
+            </tr>
+            <tr>
+              <td>2017-04-19 19:16:22</td>
+              <td class="text-left">공지사항 신규 등록 되었습니다.</td>
+              <td>Hnt02</td>
+              <td>123.123.123.12</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>

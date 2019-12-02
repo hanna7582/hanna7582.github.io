@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hotel N Tour</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/hnt-front.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <script src="../../js/hnt-front.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <a href="#contents" class="skip-menu">본문바로가기</a>
+    <header class="center border-bottom">
+      <h1><a href="index.html"><img src="../../images/front/logo.png" alt="hotel N Tour logo"></a></h1>
+      <ul class="lnb-nav">
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="signup.html">회원가입</a></li>
+        <li><a href="#">여행자보험</a></li>
+        <li class="mypage">
+          <a href="mypage.html">
+            <img src="../../images/front/profile.png" alt="프로필이미지">
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <section id="contents">
+      <!-- 호텔예약상세 -->
+      <article class="reservation">
+        <h1>상세 예약정보 입력</h1>
+        <div class="reservation-info">
+          <div class="image-box">
+            <img src="../../images/front/reservation-photo.png" alt="">
+          </div>
+          <div class="info">
+            <h2>더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]</h2>
+            <span class="item-number">상품번호 : HIH0001102017</span>
+            <div class="row">
+              <div class="check-in">
+                <span class="title">체크인</span>
+                <span class="year">2017</span>
+                <span class="date">12.20</span>
+                <span class="time">14:00부터</span>
+              </div>
+              <i class="icon icon-swiper-next"></i>
+              <div class="check-out">
+                <span class="title">체크아웃</span>
+                <span class="year">2017</span>
+                <span class="date">12.25</span>
+                <span class="time">12:00까지</span>
+              </div>
+              <div class="day">
+                <span>4박</span>
+                <a href="#" class="btn-border">변경</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 룸정보 -->
+        <!-- 소아 추가시 문구 노출함 -->
+        <!-- <p class="message">※ 소아 선택 시 호텔에 따라 추가 요금이 발생 할 수 있습니다.</p> -->
+        <div class="room-info mb20">
+          <div class="title-box">
+            <b>Resort Suite Fusion Suites Ocean View</b>
+            <span>| 조식포함 | 59.4 ㎡ |</span>
+            <div class="form-inline">
+              <span>객실수</span>
+              <div class="select select2">
+                <a href="#" class="select-check">1</a>
+                <ul>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                </ul>
+                <select>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 객실1 -->
+          <div class="row border-bottom2">
+            <span class="title2">객실 1</span>
+            <div class="right">
+              <div class="form-inline">
+                <span>성인</span>
+                <div class="select select2">
+                  <a href="#" class="select-check">1</a>
+                  <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                  </ul>
+                  <select>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="pl40 form-inline">
+                <span>소아</span>
+                <div class="select select2">
+                  <a href="#" class="select-check">1</a>
+                  <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                  </ul>
+                  <select>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row border-bottom2">
+            <div class="box">
+              <div class="form-group">
+                <div class="form-inline">
+                  <span>성인</span>
+                  <input type="text" class="mr10" placeholder="성 (영문)">
+                  <input type="text" placeholder="이름 (영문)">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-inline">
+                  <span>성인</span>
+                  <input type="text" class="mr10" placeholder="성 (영문)">
+                  <input type="text" placeholder="이름 (영문)">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-inline">
+                  <span>소아</span>
+                  <input type="text" class="mr10" placeholder="성 (영문)">
+                  <input type="text" placeholder="이름 (영문)">
+                </div>
+              </div>
+              <div class="form-group mb0">
+                <div class="form-inline">
+                  <span class="text text-right" style="width: 155px; padding-right: 20px;">생년월일</span>
+                  <input type="text" class="mr10" placeholder="YYYY" style="width: 145px;">
+                  <input type="text" class="mr10" placeholder="MM" style="width: 80px;">
+                  <input type="text" placeholder="DD" style="width: 80px;">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 객실2 -->
+          <div class="row border-bottom2">
+            <span class="title2">객실 2</span>
+            <div class="right">
+              <div class="form-inline">
+                <span>성인</span>
+                <div class="select select2">
+                  <a href="#" class="select-check">1</a>
+                  <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                  </ul>
+                  <select>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="pl40 form-inline">
+                <span>소아</span>
+                <div class="select select2">
+                  <a href="#" class="select-check">1</a>
+                  <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                  </ul>
+                  <select>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row border-bottom2">
+            <div class="box">
+              <div class="form-group">
+                <div class="form-inline">
+                  <span>성인</span>
+                  <input type="text" class="mr10" placeholder="성 (영문)">
+                  <input type="text" placeholder="이름 (영문)">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-inline">
+                  <span>성인</span>
+                  <input type="text" class="mr10" placeholder="성 (영문)">
+                  <input type="text" placeholder="이름 (영문)">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-inline">
+                  <span>소아</span>
+                  <input type="text" class="mr10" placeholder="성 (영문)">
+                  <input type="text" placeholder="이름 (영문)">
+                </div>
+              </div>
+              <div class="form-group mb0">
+                <div class="form-inline">
+                  <span class="text text-right" style="width: 155px; padding-right: 20px;">생년월일</span>
+                  <input type="text" class="mr10" placeholder="YYYY" style="width: 145px;">
+                  <input type="text" class="mr10" placeholder="MM" style="width: 80px;">
+                  <input type="text" placeholder="DD" style="width: 80px;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="message">※ 영문 성함 및 아동 생년월일은 여권상 영문명과 동일하게 입력해 주세요.</p>
+        </div>
+        <!-- /.room-info -->
+
+        <div class="title-box">
+          <h3>예약자 정보</h3>
+        </div>
+        <div class="box booker">
+          <div class="big-text">
+            <span>이름 : 홍길동</span>
+            <span>이메일 : hong1234 @ naver.com</span>
+          </div>
+          <div class="row">
+            <p>인증된 핸드폰 번호가 없습니다.<br>예약진행상황 등 안내를 위해 핸드폰번호 인증이 필요 합니다.</p>
+            <a href="#" class="btn-border">휴대폰 인증</a>
+          </div>
+          <div class="form-group mb0">
+            <div class="form-inline">
+              <input type="text" class="mr10" placeholder="성 (영문)">
+              <input type="text" placeholder="이름 (영문)">
+            </div>
+          </div>
+          <p class="message">※ 영문 성함은 여권상 영문명과 동일하게 입력해 주세요.</p>
+        </div>
+
+        <div class="title-box">
+          <h3>대표 투숙객 연락처</h3>
+          <label><span>예약자와 동일</span><input type="checkbox"><i class="icon icon-check"></i></label>
+        </div>
+        <div class="box">
+          <div class="form-group">
+            <div class="form-inline">
+              <input type="text" class="mr35" placeholder="성/이름 (한글)">
+              <input type="text" class="mr10" placeholder="성 (영문)">
+              <input type="text" placeholder="이름 (영문)">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-inline">
+              <input type="text">
+              <span class="text">@</span>
+              <input type="text" class="mr10">
+              <div class="select select2" style="width: 218px;">
+                <a href="#" class="select-check">직접입력</a>
+                <ul>
+                  <li><a href="#">직접입력</a></li>
+                  <li><a href="#">naver.com</a></li>
+                  <li><a href="#">gmail.com</a></li>
+                </ul>
+                <select>
+                  <option value="">직접입력</option>
+                  <option value="">naver.com</option>
+                  <option value="">gmail.com</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group mb0">
+            <div class="form-inline">
+              <div class="select select2 mr35" style="width: 218px;">
+                <a href="#" class="select-check">선택</a>
+                <ul>
+                  <li><a href="#">82</a></li>
+                  <li><a href="#">83</a></li>
+                  <li><a href="#">84</a></li>
+                </ul>
+                <select>
+                  <option value="">82</option>
+                  <option value="">83</option>
+                  <option value="">84</option>
+                </select>
+              </div>
+              <input type="text" placeholder="'-' 없이 입력해 주세요." style="width: 446px;">
+            </div>
+          </div>
+          <p class="message">※ 영문 성함은 여권상 영문명과 동일하게 입력해 주세요.</p>
+        </div>
+
+        <div class="title-box">
+          <h3>요청사항</h3>
+        </div>
+        <div class="box">
+          <div class="row">
+            <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>금연실</span></label>
+            <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>흡연실</span></label>
+            <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>인접룸</span></label>
+            <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>고층</span></label>
+            <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>트윈베드</span></label>
+            <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>더블베드</span></label>
+            <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>커넥팅룸</span></label>
+            <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>허니문</span></label>
+            <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>21:00이후 체크인</span></label>
+            <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>자정 이후 체크인</span></label>
+          </div>
+          <h4>기타요청사항</h4>
+          <textarea></textarea>
+          <p class="message">※ 요청사항은 호텔사정에 의해 변경될 수 있으며, 확정되지 않습니다.</p>
+        </div>
+
+        <div class="title-box">
+          <h3>도착 공항 및 항공편 정보입력</h3>
+        </div>
+        <div class="box">
+          <div class="form-group">
+            <div class="form-inline wp100">
+              <input type="text" class="wp100" placeholder="도착공항">
+            </div>
+          </div>
+          <div class="form-group mb0">
+            <div class="form-inline">
+              <input type="text" class="mr10" placeholder="항공편" style="width:400px;">
+              <div class="select select2 mr10" style="width:140px;">
+                <a href="#" class="select-check">시</a>
+                <ul>
+                  <li><a href="#">시</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">9</a></li>
+                  <li><a href="#">10</a></li>
+                </ul>
+                <select>
+                  <option value="">시</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                  <option value="">6</option>
+                  <option value="">7</option>
+                  <option value="">8</option>
+                  <option value="">9</option>
+                  <option value="">10</option>
+                </select>
+              </div>
+              <div class="select select2" style="width:140px;">
+                <a href="#" class="select-check">분</a>
+                <ul>
+                  <li><a href="#">분</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">9</a></li>
+                  <li><a href="#">10</a></li>
+                </ul>
+                <select>
+                  <option value="">분</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                  <option value="">6</option>
+                  <option value="">7</option>
+                  <option value="">8</option>
+                  <option value="">9</option>
+                  <option value="">10</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="title-box">
+          <h3>포함사항</h3>
+        </div>
+        <div class="box">
+          <ul>
+            <li>휴식 - 객실 내 마사지 이용 가능인터넷 - 무료 WiFi 및 유선 인터넷 제공</li>
+            <li>엔터테인먼트 - 위성 채널 및 유료 영화 시청이 가능한 40인치 평면 TV</li>
+            <li>식음료 - 냉장고, 커피/티 메이커 및 무료 생수</li>
+            <li>편안한 잠자리 - 고급 침구 및 암막 커튼</li>
+            <li>욕실 - 전용 욕실, 전신 욕조 및 별도의 샤워실</li>
+            <li>기타 편의 시설 - 금고 및 다리미/다리미판(요청 시)</li>
+            <li>편의 시설 - 에어컨 및 하우스키핑(매일)흡연</li>
+          </ul>
+        </div>
+
+        <div class="title-box">
+          <h3>체크사항</h3>
+        </div>
+        <div class="box">
+          <span>출발 전 알아둘 사항</span>
+          <p>만 12 세 이하 어린이 1명은 부모나 보호자와 같은 객실에서 침구를 추가하지 않고 이용할
+          경우 무료로 숙박할 수 있습니다. 일본후생노동성은 외국인이 여관, 호텔, 모텔 등을
+          포함하는 모든 종류의 숙박 시설에 접수할 때 여권번호와 국적을 제시하도록 의무화하고
+          있습니다. 또한, 숙박 시설의 소유주는 자신의 시설에 접수하는 모든 외국인의 여권을
+          복사하고 해당 복사본을 정리하여 보관해야 합니다.</p>
+        </div>
+
+        <div class="title-box">
+          <h3>취소 및 환불 정책</h3>
+        </div>
+        <div class="box">
+          <p>취소 및 환불 정책취소 및 환불 정책취소 및 환불 정책취소 및 환불 정책취소 및 환불 정책취소 및 환불 정책취소 및 환불 정책취소 및 환불 정책</p>
+        </div>
+
+        <!-- 금액 -->
+        <div class="price">
+          <ul>
+            <li><span>2017.12.20 x 2객실</span><b>&#92; 430,810</b></li>
+            <li><span>2017.12.20 x 2객실</span><b>&#92; 430,810</b></li>
+            <li><span>2017.12.20 x 2객실</span><b>&#92; 430,810</b></li>
+            <li><span>2017.12.20 x 2객실</span><b>&#92; 430,810</b></li>
+            <li><span>부가세 및 수수료</span><b>&#92; 106,840</b></li>
+            <li><span>리조트피</span><b>&#92; 172,300</b></li>
+            <li><span>봉사료</span><b>&#92; 172,300</b></li>
+            <li class="total"><span>신용카드/현금카드</span><b>&#92; 2,174,680</b></li>
+          </ul>
+          <ul>
+            <li><span>2017.12.20 x 2객실</span><b>&#92; 430,810</b></li>
+            <li><span>2017.12.20 x 2객실</span><b>&#92; 430,810</b></li>
+            <li><span>2017.12.20 x 2객실</span><b>&#92; 430,810</b></li>
+            <li><span>2017.12.20 x 2객실</span><b>&#92; 430,810</b></li>
+            <li><span>부가세 및 수수료</span><b>&#92; 82,715</b></li>
+            <li><span>리조트피</span><b>&#92; 172,300</b></li>
+            <li><span>봉사료</span><b>&#92; 172,300</b></li>
+            <li class="total"><span>실시간계좌이체</span><b>&#92; 2,150,555</b></li>
+          </ul>
+        </div>
+        <p class="message border-bottom2">※ 예약 확정은 12시간이 내에 진행 되며, 현지사정에 의해 예약 불가 처리될 경우 즉시 환불됩니다.</p>
+        <div class="row pay-check">
+          <!-- <label><input type="checkbox"><i class="icon icon-check"></i><span>네이버페이</span></label>
+          <label><input type="checkbox"><i class="icon icon-check"></i><span>신용카드 / 현금카드</span></label>
+          <label><input type="checkbox"><i class="icon icon-check"></i><span>계좌이체</span></label> -->
+          <label><input type="radio" name="check" checked><i class="icon icon-radio2"></i><span>신용카드 / 현금카드</span></label>
+          <label><input type="radio" name="check"><i class="icon icon-radio2"></i><span>실시간계좌이체</span></label>
+        </div>
+
+        <div class="pay">
+          <strong>&#92; 1,895,540</strong>
+          <a href="#" class="btn-primary" id="btn-pay">결제하기</a>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <div class="center">
+        <ul class="app-download">
+          <li><a href="#" class="icon icon-appstore"><span class="skip">app store</span></a></li>
+          <li><a href="#" class="icon icon-googleplay"><span class="skip">google play</span></a></li>
+        </ul>
+        <ul class="info">
+          <li>
+            <h2>호텔 엔 투어</h2>
+            <ul>
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">보도자료</a></li>
+              <li><a href="#">고객센터</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>정책안내</h2>
+            <ul>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보 취급방침</a></li>
+              <li><a href="#">취소/환불 규정</a></li>
+              <li><a href="#">저작권 안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>파트너 되기</h2>
+            <ul>
+              <li><a href="#">파트너 안내</a></li>
+              <li><a href="#">파트너 문의</a></li>
+              <li><a href="#">파트너 신청</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sns">
+          <li><a href="#" class="icon icon-facebook"><span class="skip">facebook</span></a></li>
+          <li><a href="#" class="icon icon-instagram"><span class="skip">instagram</span></a></li>
+          <li><a href="#" class="icon icon-youtube"><span class="skip">youtube</span></a></li>
+        </ul>
+        <small>Copyright © Hotel n Tour All rights reserved. </small>
+      </div>
+    </footer>
+
+    <!-- 아동추가 안내 팝업 -->
+    <div class="popup popup-child">
+      <div class="popup-header">
+        <h1>아동추가 안내</h1>
+        <button class="icon icon-close close"><span class="skip">닫기</span></button>
+      </div>
+      <div class="popup-body">
+        <p>결제하실 금액은 아동 비용이 추가된 금액이 아니며, 호텔 규정에 따라 추가 비용이 발생될 수 있습니다.</p>
+        <p>결제 후 마이페이지의 예약상품에 상품상담 안내내용에 따라 추가 하실 수 있습니다.</p>
+      </div>
+      <div class="popup-footer">
+        <button class="btn-border">확인</button>
+      </div>
+    </div>
+
+    <script>
+      $('#btn-pay').on('click',function(e){
+        e.preventDefault();
+        $('.popup-child').slideDown();
+        $('body').append('<div class="popup-bg"></div>');
+      })
+    </script>
+  </body>
+</html>

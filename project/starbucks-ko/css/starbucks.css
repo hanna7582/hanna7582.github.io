@@ -1,0 +1,318 @@
+@charset "UTF-8";
+/* 웹폰트 연결 */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+ 
+/* reset, common ============================================================================== */
+*{margin: 0; padding: 0;}
+body{font-family: 'Open Sans', sans-serif;}
+a{text-decoration: none; display: inline-block; color:#000;}
+button{border:0; background: none; outline: none; cursor: pointer;}
+input{border:0; box-sizing: border-box;}
+li{list-style: none;}
+em{font-style: normal; font-weight: bold;}
+img{max-width: 100%;}
+label, span{display: inline-block;}
+[type="checkbox"]{display: none;}
+.blind{font-size: 0; position: absolute; left:-9999px;}
+.container{position: relative; max-width: 1100px; margin: auto;}
+ 
+/* 모바일 기준으로 작업 후 태블릿 이상은 재정의 */
+/* header ============================================================================== */
+header{
+    position: fixed; 
+    width: 100%;
+    height: 70px; 
+    background: #007042;
+    z-index: 100;
+}
+header .title h1{
+    color:#fff; 
+    text-align: center;
+    line-height: 70px;
+    font-size: 1.5em;         
+}
+
+/* nav ===================================== */
+/* search */
+form{
+    padding: 20px; 
+    border-bottom:1px solid #3e3e3e;
+}
+form input{
+    float: left;
+    width: 180px; 
+    height: 30px; 
+    padding: 0 10px;
+}
+form button{
+    width: 30px; 
+    height: 30px; 
+    background: #007042; 
+    color:#fff;
+}
+form button::after{
+    font-family: 'Font Awesome 5 Free'; 
+    font-weight: 900;
+    content: '\f002';
+}
+
+/* gnb */
+/* 1depth */
+.gnb>li{position: relative;}
+.gnb>li>a{
+    position: relative; 
+    display: block; 
+    padding-left: 20px;
+    color:#eee;
+    line-height: 60px;
+}
+.gnb>li>a::after{
+    content: '\f078';
+    position: absolute; right:20px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+.gnb>li:hover>a{background: #000;}
+.gnb>li:hover>a::after{content: '\f2d1';}
+
+/* 2depth */
+.gnb ul{overflow: hidden;height: 0;transition: height 0.5s;}
+.gnb ul li a{
+    display: block; height: 40px; 
+    padding-left: 20px;
+    border:1px solid transparent;
+    color:#aaa; 
+    line-height: 40px; 
+}
+.gnb ul li a:hover{border-bottom:1px solid #fff;}
+.gnb ul li a.sup{line-height: 34px;}
+.gnb ul li a sup{font-size: 10px;}
+.gnb>li:nth-child(1):hover ul{height: 120px;}
+.gnb>li:nth-child(2):hover ul{height: 160px;}
+.gnb>li:nth-child(3):hover ul{height: 120px;}
+.gnb>li:nth-child(4):hover ul{height: 80px;}
+
+/* util */
+.util li a{
+    display: block;
+    padding: 10px;
+    color:#a5a5a5;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+/* member */ 
+.btn-member{
+    position: absolute;
+    top:20px; right:20px;
+    z-index: 1; 
+    color:#fff; 
+}
+.btn-member::after{
+    content: '\f005';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    font-size: 25px;
+}
+#btn-member:checked + label::after{font-weight: 900;}
+#btn-member:checked ~ .member{height: 326px;}
+
+.member{
+    position: absolute;
+    width: 100%; 
+    height: 0; 
+    background: #111; 
+    color:#fff;
+    transition: height 0.5s;
+}
+
+.member .wrap{
+    max-width: 350px;
+    margin: auto; 
+    padding: 20px 0;
+}
+.member > div:nth-child(1) .wrap{border-bottom:1px solid #fff;}
+.member .wrap img{width: 85px;}
+.member .wrap .box{padding: 0 10px;}
+.member .wrap .box p{font-size: 12px;}
+.member .wrap .box p strong{display: block;}
+.member .wrap .box .btn-group{margin-top: 20px;}
+.member .wrap .box .btn-group button{
+    border:1px solid #fff; 
+    padding: 10px;
+    background: transparent; 
+    color:#fff;
+    transition: background-color 0.5s;
+}
+.member .wrap .box .btn-group button:hover{background: #fff; color:#111;}
+
+.member .wrap > div:nth-child(1){text-align: center;}
+.member > div:nth-child(2) img{padding-top: 30px;}
+
+/* section ============================================================================== */
+section{padding-top: 70px;}
+
+/* 신제품광고 */
+.main-ad{background: #ebebca;}
+.main-ad .emblem{
+    max-width: 300px;
+    margin: auto;
+    padding: 20px; 
+    text-align: center;
+}
+.main-ad .emblem a{
+    height: 34px; 
+    padding: 0 10px; margin-top: 20px;
+    border:2px solid #829816;
+    border-radius: 3px;
+    color:#829816;
+    line-height: 34px; 
+    text-align: center; 
+}
+.main-ad .emblem a:hover{background:#829816; color:#fff;}
+.main-ad .flavor{max-width: 500px; margin: auto; text-align: center;}
+.main-ad .flavor .flavor1-img{margin-left: -55px;}
+.main-ad .flavor .flavor1-text{padding: 20px;}
+
+/* 제품소개 */
+.product{
+    background: url(../img/main2.jpg) no-repeat right bottom fixed;
+    background-size: cover;
+}
+
+.product .product-info{
+    padding: 50px 0;    
+}
+.product .product-info .wrap{
+   text-align: right;
+   margin-right:10px;   
+}
+.product .product-info .text-box{color:#fff;}
+.product .product-info .text-box strong{font-size: 24px;}
+.product .product-info .text-box strong span{display: block;}
+.product .product-info .text-box p{color:#aaa; font-size: 13px;}
+.product .product-info .text-box p em{color:#fff;}
+.product .product-info a{
+    margin-top:10px;
+    padding: 10px; 
+    border:2px solid #fff; 
+    border-radius: 3px; color:#fff;
+}
+.product .product-info a:hover{
+    background: #fff;
+    color:#000;
+}
+.product .product-info .bg{
+    display: none;
+    height: 400px;
+    background: url(../img/fav_prod_img.png) no-repeat center;
+    background-size: 400px;
+}
+
+.product .product-list{padding: 50px 0;background: rgba(255,255,255,0.2);}
+.product .product-list h3{
+    padding-bottom:20px;
+    color:#fff; 
+    font-size: 2em; 
+    text-align: center; 
+    text-shadow: 0 0 5px #fff;
+}
+.product .product-list .wrap{
+    overflow: hidden;
+    position: relative; 
+    margin: 5px; 
+}
+.product .product-list .wrap img{width: 100%; display: block;}
+
+.product .product-list .wrap a{
+    position: absolute;
+    bottom:-54px;
+    width: 100%; 
+    padding: 10px 25px 10px 10px; 
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.8); 
+    color:#fff;
+    font-size: 12px;
+    transition: 0.5s;
+}
+.product .product-list .wrap:hover a{bottom:0;}
+.product .product-list .wrap a dl dt,
+.product .product-list .wrap a dl dd{
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.product .product-list .wrap a i{
+    position: absolute; right:10px; top:50%; transform: translateY(-50%);
+}
+.product .product-list .wrap a i::after{content: '\f054';}
+
+/* 리저브 */
+.reserve{
+    background: url(../img/main3.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+.reserve h2{
+    padding-top:50px;
+    color:#fff; 
+    font-size: 2em; 
+    text-align: center; 
+    text-shadow: 0 0 5px #fff;
+}
+.reserve h2 sup{font-size: 0.5em;}
+
+.reserve-info{padding: 20px 0;}
+.reserve-info ul li .wrap{margin: 20px; text-align: center;}
+.reserve-info ul li .wrap span{
+    display: block; 
+    color:#fff; 
+    text-transform: uppercase;
+}
+
+.reserve-store{position: relative; height: 400px;}
+.reserve-store .rotate{    
+    position: absolute; 
+    top:50%; left:50%; 
+    transform: translate(-50%, -50%);
+    width: 334px; height: 334px;
+    perspective: 500px;
+}
+.reserve-store .rotate img{
+    max-width: initial;
+}
+.reserve-store .rotate > *{
+    visibility: hidden;
+    /* transform-style: preserve-3d;
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+    transition: 0.5s; */
+}
+.reserve-store .rotate .active{visibility: visible;}
+/* .reserve-store .rotate .front{transform: translate(-50%, -50%) rotateY(0deg);}
+.reserve-store .rotate .back{transform: translate(-50%, -50%) rotateY(-180deg);}
+.reserve-store .rotate:hover .front{transform: translate(-50%, -50%) rotateY(-180deg);}
+.reserve-store .rotate:hover .back{transform: translate(-50%, -50%) rotateY(0deg);} */
+.reserve-store .rotate .back a{
+    position: absolute; left:50%; transform: translateX(-50%);
+    bottom:50px;
+    padding: 10px 20px;
+    border:1px solid #a26e49; 
+    border-radius: 3px;
+    color:#a26e49; 
+}
+.reserve-store .rotate .back a:hover{background: #a26e49; color:#fff;}
+
+.rotatejs{width: 100px; height: 100px;}
+.rotatejs .front{background: red;}
+.rotatejs .back{background: blue;}
+
+/* footer ============================================================================== */
+footer{
+    padding: 20px 0; 
+    background: #282828; 
+    color:#fff; 
+    font-size: 0.8em;
+    text-align: center;
+}
+footer .info{padding: 20px 0;}
+

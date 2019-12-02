@@ -1,0 +1,113 @@
+@charset "UTF-8";
+header{ 
+   position: relative;
+   height: 170px;
+   background: #f6f5ef;
+}
+header .title{   
+   padding: 20px;
+}
+header .title h1{
+   color:#007042; 
+   text-align: left;
+   line-height: normal;
+}
+header .title h1::before{
+   content: '';
+   display: inline-block;
+   width: 70px; height: 70px;
+   margin-right:10px;
+   background: url(../img/logo.png) no-repeat;
+   vertical-align: middle;
+}
+ 
+.btn-menu{display: none;}
+
+/* search */
+form{
+   position: absolute;
+   z-index: 1;
+   top: 40px;
+   left: 50%;
+   transform: translateX(-50%);
+   padding: 0;
+   border:0;
+}
+form input{background: #007042; color:#fff;}
+
+/* gnb */
+/* 1depth */
+.gnb>li{float: left; width: 25%;}
+.gnb>li>a{background: #007042;}
+/* 2depth */
+.gnb ul{
+   position: absolute;    
+   width: 100%;
+   background: #f6f5ef;      
+}
+.gnb ul li a{color:#000; border:0;}
+.gnb ul li a:hover{color:#007042; border:0;}
+header::before{
+   content: '';
+   position: absolute;
+   left:0; bottom:0; 
+   width: 100%;
+   height: 60px;
+   background:#007042;
+}
+
+/* util */
+.util{
+   z-index: 1;
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+.util li{float: left;}
+
+/* member */
+.btn-member{top:45px; color:#007042;}
+#btn-member:checked ~ .member{height: 175px;}
+.member .wrap{max-width: 100%; padding: 20px;}
+.member > div:nth-child(1) .wrap{border:0;border-right: 1px solid #fff;}
+
+/* section ============================================================================== */
+section{padding-top: 0;}
+
+/* 신제품 광고 */
+.main-ad{overflow: hidden;}
+.main-ad .container{height: 500px; }
+.main-ad .emblem{
+   margin: 0; text-align: left;   
+   animation: left 2s;
+}
+.main-ad .flavor{
+   position: absolute; right:0; top:-54px;
+   margin: 0;
+   animation: right 2s;
+}
+.main-ad .flavor .flavor1-img{margin: 0;}
+.main-ad .flavor1-text{
+   position: absolute; bottom:0; right:250px;
+}
+
+@keyframes left{
+   0%{transform: translateX(-100px); opacity: 0;}
+   100%{transform: translateX(0);  opacity: 1;}
+}
+
+@keyframes right{
+   0%{transform: translateX(100px); opacity: 0;}
+   100%{transform: translateX(0); opacity: 1;}
+}
+
+/* product */
+.product .product-info .bg{display: block;}
+
+/* footer */
+footer .banner .wrap{max-width: 800px; margin: auto;}
+footer .banner label{display: none;}
+footer .banner .wrap ul{overflow: hidden;}
+footer .banner .wrap ul li{float: left; width: 33.33%;}
+footer .banner .wrap ul li:nth-child(6) ~ li{display: none;}
+

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HANNAZ - Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+    <script src="js/works.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body data-spy="scroll" data-offset="73" data-target="#nav" id="home">
+    <!-- 상단영역 -->
+    <div class="container-fluid">
+      <section class="row content">
+        <!-- 네비게이션 -->
+        <nav class="col-sm-3 col-lg-2" id="nav">
+          <div class="wrap">
+            <h1><a href="#home">HANNAZ</a></h1>
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#home"><i class="fas fa-home"></i><span>Home</span></a></li>
+              <li><a href="#profile"><i class="fas fa-comment"></i><span>Profile</span></a></li>
+              <li><a href="#works"><i class="fas fa-desktop"></i><span>Works</span></a></li>
+            </ul>
+            <!-- 검색창 -->
+            <div class="search-form">
+              <div class="count text-right">총 <span class="total"></span>/<span class="search"></span>개</div>
+              <div class="input-group">
+                <input type="text" class="form-control quicksearch" placeholder="검색어">
+                <span class="input-group-btn">
+                  <button class="btn btn-primary" type="button">
+                      <span class="glyphicon glyphicon-search">
+                          <span class="sr-only">검색</span>
+                      </span>
+                  </button>
+                </span>
+              </div>
+            </div><!-- //search-form -->
+          </div>
+        </nav>
+        <!-- 컨텐츠 -->
+        <div class="col-sm-9 col-lg-10" id="contents">
+          <article id="slide">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.shinsegae.com/culture/academylecture/aca_index.jsp" target="_blank"><img src="images/works/shinsegae.jpg" alt="신세계 아카데미"></a></div>
+                <div class="swiper-slide"><a href="http://www.kopis.or.kr" target="_blank"><img src="images/works/kopis.jpg" alt="kopis 공연예술통합전산망"></a></div>
+                <div class="swiper-slide"><a href="project/kakaofriends/index.html" target="_blank"><img src="images/works/kakaofriends.jpg" alt="kakaofrends"></a></div>
+                <div class="swiper-slide"><a href="project/hotelNtour/html/front/index.html" target="_blank"><img src="images/works/hotelntour.jpg" alt="호텔엔투어"></a></div>
+              </div>
+              <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
+              <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <button class="btn-play-control">
+              <i class="fa fa-stop"></i><span class="blind">정지</span>
+            </button>
+          </article>
+
+          <!-- profile -->
+          <article id="profile">
+            <div class="row">
+              <div class="col-lg-6">
+                <h2>About</h2>
+                <hr>
+                <strong>귀한시간 - 나에게 주어진 시간을 귀하게 쓰자</strong>
+                <p>
+                    제품디자이너로 일을 시작하였지만 항상 현실에 안주하지 않고 새로운 것을 접하기 위해 노력하였습니다. 
+                    처음에는 웹디자인과 퍼블리싱을 독학으로 배우고 이후 웹이 구동되는 원리를 깨우치고 직접 구현해보기 위해 백엔드도 함께 공부하게 되었습니다. 
+                    백엔드와 프론트엔드는 회사에서 일을 하면서 모두 경험해보았지만 시각적으로 보이는 부분을 컨트롤하는 프론트엔드가 저의 적성에 맞다고 판단하였고 
+                    제가 공부한 방법을 다른 사람들에게 나누고자 프로그래밍 강사로도 일을 하고 있습니다.
+                </p>
+                <strong>정리정돈은 나의 즐거움이다</strong>
+                <p>
+                    정리정돈이 몸에 배어 있어서 주변 정리정돈뿐만 아니라 일을 함에 있어서도 중요도에 따라 시간을 효율적으로 배분하고 사용할 줄 압니다.
+                </p>
+                <strong>차분한 성격이지만 행동은 적극적이다</strong>
+                <p>
+                    성격은 차분한 편이며 사람을 사귐에 있어서 낯가림이 없이 다가갈 수 있는 사람입니다.
+                    꼼꼼하고 집중력이 좋아서 일을 진행함에 부족함이 없으며 평소에 가만히 있기보다는 제가 할 일을 먼저 찾아서 하는 것을 좋아합니다.
+                    협업 시 열려있는 자세로 사람들과 소통하고 공유합니다.
+                </p>
+                <strong>전체적인 프로세스를 인지하고 프로그램을 만들자</strong>
+                <p>
+                    좋은 프로그래머가 되기 위해서 더 좋은 방향으로 발전시키기 위해 꾸준히 노력해야합니다.
+                    그러기위해서는 아는 언어에만 안주하지 않고 새로운 언어나 툴이 나오면 다음 프로젝트에 조금씩 적용해봄으로써 뒤처지지 않도록 끊임없이 연구해야합니다.
+                    <br>
+                    프로그램 언어를 공부하고 프로젝트를 경험하면서 중요하게 생각한 것은 
+                    전체적인 프로세스를 잘 인지하고 이를 프로젝트에 잘 응용하고 적용할 줄 알아야 한다는 점이었습니다. 
+                    내가 맡은 분야만 하는 것이 아니라 다방면으로 연결된 여러 프로그래밍 언어와 툴을 이해하고 서로 소통해야 더 좋은 프로그램을 만들 수 있으며 
+                    이는 웹, 앱 개발을 진행할 때 강점으로 작용하는 부분이라고 확신합니다.
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <h2>Skills</h2>
+                <hr>
+                <dl>
+                  <dt>HTML5</dt>
+                  <dd>HTML5, XHTML 하드코딩</dd>
+                  <dd>웹표준</dd>
+                  <dd>웹접근성</dd>
+                </dl>
+                <dl>
+                  <dt>CSS3</dt>
+                  <dd>반응형 레이아웃</dd>
+                  <dd>애니메이션</dd>
+                  <dd>템플릿제작</dd>
+                </dl>
+                <dl>
+                  <dt>JavaScript</dt>
+                  <dd>jQuery/Ajax</dd>
+                  <dd>컴포넌트 제작</dd>
+                  <dd>플러그인 활용 및 제작</dd>
+                </dl>
+                <dl>
+                  <dt>Framework</dt>
+                  <dd>Bootstrap / Materialize</dd>
+                  <dd>Wordpress / WebSquare</dd>
+                  <dd>Vue.js / Angular</dd>
+                </dl>
+                <dl>
+                  <dt>Java / JSP / Spring / Android</dt>
+                  <dd>웹 애플리케이션 개발</dd>
+                  <dd>하이드리드 앱 개발</dd>
+                  <dd>이클립스 SVN/GIT연동</dd>
+                </dl>
+                <dl>
+                  <dt>Oracle/MySQL</dt>
+                  <dd>CRUD</dd>
+                  <dd>프로시져 / 백업</dd>
+                  <dd>쿼리문 작성</dd>
+                </dl>
+                <dl>
+                  <dt>Rhino / Keyshot / AutoCAD</dt>
+                  <dd>제품모델링</dd>
+                  <dd>제품렌더링</dd>
+                  <dd>제품/인테리어 도면</dd>
+                </dl>
+                <dl>
+                  <dt>Photoshop / Illustrator</dt>
+                  <dd>웹 디자인</dd>
+                  <dd>UI / UX 디자인</dd>
+                  <dd>2D / 3D제품 리터칭</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <h2>강의</h2>
+                <table class="table">
+                  <tr>
+                    <th>기간</th>
+                    <th>교육기관</th>
+                    <th>교육내용</th>
+                  </tr>
+                  <tr>
+                    <td>2019.03 ~ 현재</td>
+                    <td>더조은 컴퓨터 아트학원(신촌)</td>
+                    <td>기획, 설계, 디자인, 퍼블리싱, Angular 교육</td>
+                  </tr>
+                  <tr>
+                    <td>2018.10 ~ 2019.02</td>
+                    <td>더조은 IT 아카데미(강남)</td>
+                    <td>디자인, 퍼블리싱 교육</td>
+                  </tr>
+                  <tr>
+                    <td>2018.04 ~ 2018.09</td>
+                    <td>더조은 컴퓨터 아트학원(종로)</td>
+                    <td>기획, 설계, 디자인, 퍼블리싱 교육</td>
+                  </tr>
+                  <tr>
+                    <td>2017.12 ~ 2018.01</td>
+                    <td>더조은 컴퓨터 아트학원(신촌)</td>
+                    <td>JAVA 교육</td>
+                  </tr>
+                  <tr>
+                    <td>2017.12 ~ 2018.03</td>
+                    <td>더조은 IT 아카데미(신촌)</td>
+                    <td>기획, 설계, 디자인, 퍼블리싱 교육</td>
+                  </tr>
+                  <tr>
+                    <td>2017.05 ~ 2017.11</td>
+                    <td>더조은 IT 아카데미(종각)</td>
+                    <td>퍼블리싱, JAVA, JSP, Oracle, MySQL, Spring, Android 교육</td>
+                  </tr>
+                  <tr>
+                    <td>2017.03 ~ 2017.05</td>
+                    <td>더조은 컴퓨터 아트학원(일산)</td>
+                    <td>퍼블리싱 교육</td>
+                  </tr>
+                  <tr>
+                    <td>2017.01 ~ 2017.03</td>
+                    <td>더조은 컴퓨터 아트학원(일산)</td>
+                    <td>디자인, 퍼블리싱 교육</td>
+                  </tr>
+                  <tr>
+                    <td>2017.10 ~ 2017.11</td>
+                    <td>비트교육센터(신촌)</td>
+                    <td>JAVA 교육</td>
+                  </tr>
+                  <tr>
+                    <td>2016.08 ~ 2017.09</td>
+                    <td>한빛교육센터(신촌)</td>
+                    <td>JAVA, JSP, DB (Oracle, MySQL) 교육</td>
+                  </tr>
+                  <tr>
+                    <td>2015.01 ~ 2015.02</td>
+                    <td>개별 맞춤 교육</td>
+                    <td>Rhinoceros Tool 교육</td>
+                  </tr>
+                  <tr>
+                    <td>2014.11 ~ 2014.12</td>
+                    <td>아이티뱅크(세종시)</td>
+                    <td>Wordpress 교육</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-lg-6">
+                <h2>프로젝트</h2>
+                <table class="table">
+                  <tr>
+                    <th>기간</th>
+                    <th>발주처</th>
+                    <th>상세내용</th>
+                  </tr>
+                  <tr>
+                    <td>2018.11 ~ 2018.12</td>
+                    <td>모젼스랩</td>
+                    <td>DMC INOVATION CAMP 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>2018.11 ~ 2018.12</td>
+                    <td>모젼스랩</td>
+                    <td>DMC GOVERNANCE 반응형 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>2018.01 ~ 2018.07</td>
+                    <td>호텔엔투어</td>
+                    <td>호텔엔투어 포털(웹&모바일)/관리자 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>2017.06 ~ 2017.08</td>
+                    <td>인천경제산업정보 테크노파크</td>
+                    <td>SMART MICE 조성사업 웹 & 모바일 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>2017.01 ~ 2017.01</td>
+                    <td>모젼스랩</td>
+                    <td>앱스토어 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>2015.03 ~ 2017.05</td>
+                    <td>예술경영지원센터</td>
+                    <td>공연예술통합전산망 고도화 백엔드개발, 프론트엔드개발, 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>2016.01 ~ 2016.02</td>
+                    <td>모젼스랩</td>
+                    <td>CMS 가상화 관리 시스템 디자인, 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>2016.01 ~ 2016.02</td>
+                    <td>한화S&C</td>
+                    <td>COEX MICE 전시회입장관리 Hybrid App GUI 디자인, 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>2015.08 ~ 2016.03</td>
+                    <td>신세계아이앤씨</td>
+                    <td>
+                      <ul>
+                        <li>신세계아카데미 구축 (관리자 시스템, Portal Web, Mobile) / 백엔드개발, 프론트엔드개발, 퍼블리싱</li>
+                        <li>신세계 서비스 스테이션 / 퍼블리싱</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2015.05 ~ 2015.07</td>
+                    <td>모젼스랩</td>
+                    <td>EDM Holic Hybrid Web App 프론트엔드개발, 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>2015.05</td>
+                    <td>에잇프레임</td>
+                    <td>한방두방세방(부동산 매칭 서비스) 반응형 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>2015.01 ~ 2015.01</td>
+                    <td>알엠테크</td>
+                    <td>와우키즈 App 디자인</td>
+                  </tr>
+                  <tr>
+                    <td>2012.05 ~ 2014.05</td>
+                    <td>엔이엠코리아</td>
+                    <td>사내 홈페이지 구축 및 운영, 유지보수</td>
+                  </tr>
+                  <tr>
+                    <td>2010.11 ~ 2012.01</td>
+                    <td>한정테크</td>
+                    <td>사내 홈페이지 기획 및 운영</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <h2>교육이수</h2>
+                <table class="table">
+                  <tr>
+                    <th>기간</th>
+                    <th>교육기관</th>
+                    <th>교육명</th>
+                  </tr>
+                  <tr>
+                    <td>2018.12.17 ~ 2019.01.20</td>
+                    <td>한국기술교육대학교</td>
+                    <td>파이썬프로그래밍</td>
+                  </tr>
+                  <tr>
+                    <td>2018.12.17 ~ 2019.01.20</td>
+                    <td>한국기술교육대학교</td>
+                    <td>웹표준에 맞는 HTML5 프로그래밍</td>
+                  </tr>
+                  <tr>
+                    <td>2016.12.14 ~ 2016.12.27</td>
+                    <td>아이티고</td>
+                    <td>Spring Framework 기초 과정</td>
+                  </tr>
+                  <tr>
+                    <td>2015.06.01 ~ 2015.06.30</td>
+                    <td>한국정보화진흥원</td>
+                    <td>웹접근성의 이해 기본/심화</td>
+                  </tr>
+                  <tr>
+                    <td>2015.06.18 ~ 2015.06.19</td>
+                    <td>인스웨이브</td>
+                    <td>웹스퀘어 2.0 개발자, 디자인, 퍼블리싱 교육</td>
+                  </tr>
+                  <tr>
+                    <td>2014.06.30 ~ 2014.11.21</td>
+                    <td>한빛교육센터</td>
+                    <td>스마트 워크센터 구축을 위한 클라우드 시스템 전문가</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-lg-6">
+                <h2>자격증</h2>
+                <table class="table">
+                  <tr>
+                    <th>취득일</th>
+                    <th>자격증</th>
+                    <th>발행처</th>
+                  </tr>
+                  <tr>
+                    <td>2016.06</td>
+                    <td>직업능력개발훈련교사(산업디자인3급)</td>
+                    <td>서울지방고용노동청</td>
+                  </tr>
+                  <tr>
+                    <td>2016.06</td>
+                    <td>직업능력개발훈련교사(멀티미디어3급)</td>
+                    <td>서울지방고용노동청</td>
+                  </tr>
+                  <tr>
+                    <td>2016.06</td>
+                    <td>직업능력개발훈련교사(정보처리3급)</td>
+                    <td>서울지방고용노동청</td>
+                  </tr>
+                  <tr>
+                    <td>2016.06</td>
+                    <td>직업능력개발훈련교사(사무자동화3급)</td>
+                    <td>서울지방고용노동청</td>
+                  </tr>
+                  <tr>
+                    <td>2015.05</td>
+                    <td>정보처리기사</td>
+                    <td>한국산업인력공단</td>
+                  </tr>
+                  <tr>
+                    <td>2007.02</td>
+                    <td>중등학교2급정교사</td>
+                    <td>교육인적 자원부</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </article>
+          <!-- //profile end-->
+
+          <!-- works -->
+          <article id="works">
+            <h2 class="text-center">Works</h2>
+            <hr>
+
+            <!-- 카테고리 -->
+            <ul class="nav nav-pills nav-justified">
+              <li class="active"><a href="#">All</a></li>
+              <li data-sort-value="[data-category=responsive]"><a href="#">RESPONSIVE</a></li>
+              <li data-sort-value="[data-category=desktop]"><a href="#">DESKTOP</a></li>
+              <li data-sort-value="[data-category=mobile]"><a href="#">MOBILE</a></li>
+              <!-- <li data-sort-value="[data-category=UI/UX]"><a href="#">UI/UX</a></li>
+              <li data-sort-value="[data-category=design]"><a href="#">DESIGN</a></li> -->
+            </ul>
+
+            <!-- 리스트 -->
+            <div class="row filter">
+
+            </div>
+          </article>
+          <!-- //works -->
+        </div>
+        <!-- //contents -->
+      </section>
+    </div>
+
+    <footer>
+      <div class="bg-dark-gray1">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7">
+              <h3>Skills</h3>
+              <hr>
+              <ul class="list-unstyled list-inline">
+                <li><img src="images/logo/photoshop.png" alt="Photoshop" title="Photoshop"></li>
+                <li><img src="images/logo/illustrator.png" alt="Illustrator" title="Illustrator"></li>
+                <li><img src="images/logo/html.png" alt="HTML5" title="HTML5"></li>
+                <li><img src="images/logo/css.png" alt="CSS3" title="CSS3"></li>
+                <li><img src="images/logo/bootstrap.png" alt="bootstrap" title="BootStrap"></li>
+                <li><img src="images/logo/jquery.png" alt="jQuery" title="jQuery"></li>
+                <li><img src="images/logo/angular.png" alt="Angular" title="Angular"></li>
+                <li><img src="images/logo/vuejs.png" alt="Vue.js" title="Vue.js"></li>
+                <li><img src="images/logo/java.png" alt="java" title="Java"></li>
+                <li><img src="images/logo/oracle.png" alt="Oracle" title="Oracle"></li>
+              </ul>
+            </div>
+            <div class="col-sm-5">
+              <h3>Contacts</h3>
+              <hr>
+              <ul class="list-unstyled">
+                <li><span class="ion-email"></span>hanna7582@gmail.com</li>
+                <li><span class="ion-social-github"></span>https://github.com/hanna7582</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-dark-gray2 p20 text-center">
+        copyright&copy; HANNAZ.
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <!-- <div class="swiper-slide"><img src="" alt="" class="img-responsive"></div> -->
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary desktop"><i class="fas fa-desktop"></i>DESKTOP</button>
+            <button type="button" class="btn btn-success mobile"><i class="fas fa-mobile-alt"></i>MOBILE</button>
+            <button type="button" class="btn btn-warning responsive"><i class="fas fa-desktop"></i>RESPONSIVE</button>
+            <button type="button" class="btn btn-dark code"><i class="fab fa-github"></i>CODE</button>
+          </div>
+        </div><!-- //modal-content -->
+      </div><!-- //modal-dialog -->
+    </div><!-- //modal -->
+
+    <!-- 위로가기 -->
+    <a href="#home" class="go-up">
+      <span class="ion-arrow-up-b btn btn-info">
+        <span class="sr-only">위로가기</span>
+      </span>
+    </a>
+
+    <!-- loading -->
+    <div id="loading-bg">
+      <div class="loading">
+          <div class="circle">
+              <span class="dot"></span>
+          </div>
+          <span>LOADING</span>
+      </div>
+    </div>
+  </body>
+</html>

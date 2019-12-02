@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../css/hnt-bo2.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/hnt-bo2.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script>
+      $(function(){
+        var DELAY = 500, clicks = 0, timer = null;
+
+        $('tr').on('click',function(e){
+          $('.table tr').removeClass('active');
+          $(this).addClass('active');
+          var idVal=$(this).parents('.table-wrap').attr('id');
+          clicks++;
+          if(clicks === 1) {//클릭
+            timer = setTimeout(function() {
+              if(idVal=='hotel-info'){//룸정보등록 리스트 열기
+                $('#room-info').slideDown();
+              }
+              if(idVal=='room-info'){//기간별 가격등록리스트 열기
+                $('#price-info').slideDown();
+              }
+              clicks = 0;
+            }, DELAY);
+          } else {//더블클릭
+            clearTimeout(timer);
+            if(idVal=='hotel-info'){//호텔공통 정보 수정 팝업열기
+
+            }
+            if(idVal=='room-info'){//룸정보수정 팝업열기
+              $('#room-edit-modal').modal({backdrop: 'static'});
+            }
+            if(idVal=='price-info'){//기간별 가격수정 팝업열기
+              $('#price-edit-modal').modal({backdrop: 'static'});
+            }
+            clicks = 0;
+          }
+        }).on('dblclick',function(e){
+          e.preventDefault();
+        })
+
+        //image-sort
+        $( "#image-sort" ).sortable();
+        $( "#image-sort" ).disableSelection();
+
+        $('.icon-list li [type=checkbox]').change(function(){
+          $(this).parent().toggleClass('on');
+        })
+
+        //취소 환불
+        $('#cancel').on('click', 'a', function(){
+
+          var date=$(this).find('.date').text();
+          var percent=$(this).find('.percent').text();
+          $('#date').val(date);
+          $('#percent').val(percent);
+        })
+        //줄 삭제
+        $('.btn-close').on('click',function(){
+          $(this).parent().remove();
+        })
+
+        //달력
+        fn_datepicker('#datepicker1');
+        fn_datepicker('#datepicker2');
+        fn_datepicker('#datepicker3');
+        fn_datepicker('#datepicker4');
+      })
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1><a href="hnt-bo2-000001.html">Hotel n Tour</a></h1>
+      <div class="user-info">
+        안녕하세요 <b>관리자님</b>
+        <button class="btn btn-default btn-sm" onclick="location.href='hnt-bo2-000000.html'">로그아웃</button>
+      </div>
+      <nav class="gnb-nav">
+        <ul>
+          <li><a href="hnt-bo2-010100.html">회원정보</a></li>
+          <li class="active"><a href="hnt-bo2-020100.html">상품관리</a></li>
+          <li><a href="hnt-bo2-030100.html">예약관리</a></li>
+          <li><a href="hnt-bo2-040100.html">취소관리</a></li>
+          <li><a href="hnt-bo2-050100.html">정산관리</a></li>
+          <li><a href="hnt-bo2-060100.html">매출관리</a></li>
+          <li><a href="hnt-bo2-070100.html">게시판관리</a></li>
+          <li><a href="hnt-bo2-080100.html">쿠폰관리</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="snb-nav">
+      <h2>상품관리</h2>
+      <nav>
+        <ul>
+          <li class="active"><a href="hnt-bo2-020100.html">호텔상품등록</a></li>
+          <li><a href="hnt-bo2-020200.html">호텔등록상품관리</a></li>
+          <li><a href="hnt-bo2-020300.html">투어상품등록</a></li>
+          <li><a href="hnt-bo2-020400.html">투어등록상품관리</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contents">
+      <div class="top">
+        <ol class="breadcrumb">
+          <li><a href="#">상품관리</a></li>
+          <li class="active">호텔상품등록</li>
+        </ol>
+      </div>
+      <section>
+        <!-- 호텔 공통 정보등록 -->
+        <div id="hotel-info" class="table-wrap">
+          <div class="title">
+            <h5>호텔 공통 정보등록</h5>
+            <div class="po-right">
+              <button class="btn btn-danger w100">삭제</button>
+              <button class="btn btn-success w100" data-toggle="modal" data-target="#hotel-modal" data-backdrop="static">등록</button>
+            </div>
+          </div>
+          <table class="table table-fixed text-center table-hover">
+            <thead>
+              <tr>
+                <th class="col-xs-1">번호</th>
+                <th class="col-xs-2">작성자ID</th>
+                <th class="col-xs-7">지역/호텔명</th>
+                <th class="col-xs-2">등록일시</th>
+              </tr>
+            </thead>
+            <tbody style="max-height: 285px;">
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>하와이 > 오아후</div>
+                  더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>하와이 > 오아후</div>
+                  더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>하와이 > 오아후</div>
+                  더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>하와이 > 오아후</div>
+                  더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>하와이 > 오아후</div>
+                  더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>하와이 > 오아후</div>
+                  더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>하와이 > 오아후</div>
+                  더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!--  룸정보등록 -->
+        <div id="room-info" class="table-wrap" style="display:none;">
+          <div class="title">
+            <h5>룸 정보등록</h5>
+            <div class="po-right">
+              <button class="btn btn-danger w100">삭제</button>
+              <button class="btn btn-success w100" data-toggle="modal" data-target="#room-modal">등록</button>
+            </div>
+          </div>
+
+          <table class="table table-fixed text-center table-hover">
+            <thead>
+              <tr>
+                <th class="col-xs-1">번호</th>
+                <th class="col-xs-2">작성자ID</th>
+                <th class="col-xs-7">룸명</th>
+                <th class="col-xs-2">등록일시</th>
+              </tr>
+            </thead>
+            <tbody style="max-height: 185px;">
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">Resort Suite Fusion Suites Ocean View</td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">Resort Suite Fusion Suites Ocean View</td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">Resort Suite Fusion Suites Ocean View</td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">Resort Suite Fusion Suites Ocean View</td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">Resort Suite Fusion Suites Ocean View</td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">Resort Suite Fusion Suites Ocean View</td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">Resort Suite Fusion Suites Ocean View</td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 기간별 가격등록 -->
+        <div id="price-info" class="table-wrap" style="display:none;">
+          <div class="title">
+            <h5>기간별 가격등록</h5>
+            <div class="po-right">
+              <button class="btn btn-danger w100">삭제</button>
+              <button class="btn btn-success w100" data-toggle="modal" data-target="#price-modal">등록</button>
+            </div>
+          </div>
+          <table class="table table-fixed text-center table-hover">
+            <thead>
+              <tr>
+                <th class="col-xs-1">번호</th>
+                <th class="col-xs-2">작성자ID</th>
+                <th class="col-xs-7">기간별 가격</th>
+                <th class="col-xs-2">등록일시</th>
+              </tr>
+            </thead>
+            <tbody style="max-height: 285px;">
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>전체기간 : 2017.04.05 ~ 2017.06.20 200$ / 235,000&#92;</div>
+                  <div>토 200$ 210,000&#92; 일 210$ &#92;210,000</div>
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>전체기간 : 2017.04.05 ~ 2017.06.20 200$ / 235,000&#92;</div>
+                  <div>화 200$ 210,000&#92; 수 210$ &#92;210,000</div>
+                  <div>토 200$ 210,000&#92; 일 210$ &#92;210,000</div>
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>전체기간 : 2017.04.05 ~ 2017.06.20 200$ / 235,000&#92;</div>
+                  토 200$ 210,000&#92; 일 210$ &#92;210,000
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>전체기간 : 2017.04.05 ~ 2017.06.20 200$ / 235,000&#92;</div>
+                  토 200$ 210,000&#92; 일 210$ &#92;210,000
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>전체기간 : 2017.04.05 ~ 2017.06.20 200$ / 235,000&#92;</div>
+                  토 200$ 210,000&#92; 일 210$ &#92;210,000
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+              <tr>
+                <td class="col-xs-1">10</td>
+                <td class="col-xs-2">BLINK12</td>
+                <td class="col-xs-7 text-left">
+                  <div>전체기간 : 2017.04.05 ~ 2017.06.20 200$ / 235,000&#92;</div>
+                  토 200$ 210,000&#92; 일 210$ &#92;210,000
+                </td>
+                <td class="col-xs-2">2017-04-05 11:22:33</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- 호텔공통정보등록 팝업 -->
+    <div class="modal fade scroll" id="hotel-modal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">호텔공통정보등록</h4>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered mb0">
+              <colgroup>
+                <col style="width:140px">
+                <col style="">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>지역선택<span class="c-red">*</span></th>
+                  <td class="form-inline">
+                    <label for="">지역</label>
+                    <select class="form-control w200">
+                      <option>선택</option>
+                    </select>
+                    <label for="">세부지역</label>
+                    <select class="form-control w200">
+                      <option>선택</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th>필터링 선택<span class="c-red">*</span></th>
+                  <td>
+                    <b class="block">호텔등급</b>
+                    <label class="radio-inline">
+                      <input type="radio" name="radio1" id="" checked> 1성급
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="radio1" id=""> 2성급
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="radio1" id=""> 3성급
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="radio1" id=""> 4성급
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="radio1" id=""> 5성급
+                    </label>
+
+                    <b class="block">부대시설 및 서비스</b>
+                    <label class="checkbox-inline">
+                      <input type="checkbox"> 인터넷
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox"> 레스토랑
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox"> 주차장
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox"> 수영장
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox"> 호텔픽업
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox"> 피트니스
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox"> 바
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox"> 스파
+                    </label>
+
+                    <b class="block">숙소유형</b>
+                    <label class="radio-inline">
+                      <input type="radio" name="radio2" id="" checked> 호텔
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="radio2" id=""> 레지던스
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="radio2" id=""> 풀빌라
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="radio2" id=""> 게스트 하우스
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <th>상품명<span class="c-red">*</span></th>
+                  <td>
+                    <input type="text" class="form-control">
+                  </td>
+                </tr>
+                <tr>
+                  <th>상품소개 제목<span class="c-red">*</span></th>
+                  <td>
+                    <input type="text" class="form-control">
+                  </td>
+                </tr>
+                <tr>
+                  <th>상품소개 내용<span class="c-red">*</span></th>
+                  <td>
+                    <textarea name="" class="form-control h100"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th>주요 서비스<br>노출 아이콘<span class="c-red">*</span></th>
+                  <td>
+                    <ul class="icon-list">
+                      <!-- li*20>label>input[type=checkbox]+i[class="glyphicon glyphicon-star"]+span{아이콘이름} -->
+                      <li>
+                        <label>
+                          <input type="checkbox">
+                          <i class="glyphicon glyphicon-star"></i>
+                          <span>아이콘이름</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="checkbox">
+                          <i class="glyphicon glyphicon-star"></i>
+                          <span>아이콘이름</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="checkbox">
+                          <i class="glyphicon glyphicon-star"></i>
+                          <span>아이콘이름</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th>필수안내<span class="c-red">*</span></th>
+                  <td>
+                    <textarea name="" class="form-control h100"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th>노출이미지<span class="c-red">*</span></th>
+                  <td>
+                    <div class="image-upload">
+                      <label>
+                        <input type="file" name="" value="" class="skip">
+                        <span class="btn btn-info">파일선택</span>
+                      </label>
+                      <ul>
+                        <li>※ 이미지는 최대 40장까지 업로드 가능 합니다.</li>
+                        <li>※ jpg, png파일만 업로드 가능 합니다.</li>
+                        <li>※ 첫번째 업로드 이미지가 리스트의 상품 대표이미지로 사용 됩니다.</li>
+                        <li>※ 파일명이 이미지의 제목으로 표시 됩니다</li>
+                      </ul>
+                    </div>
+                    <ul id="image-sort" class="image-sort">
+                      <!-- li*20>div[class=wrap]>img[src=../../images/photo$.jpg]+span{스타오브호놀룰어쩌구저쩌구}+<button><i class="glyphicon glyphicon-remove"></i></button> -->
+                      <li>
+                        <div class="wrap">
+                          <div class="img-wrap"><img src="../../images/photo1.jpg" alt=""></div>
+                          <span class="img-name">스타오브호놀룰어쩌구저쩌구</span>
+                          <button><i class="glyphicon glyphicon-remove"></i></button>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="wrap">
+                          <div class="img-wrap"><img src="../../images/photo2.jpg" alt=""></div>
+                          <span class="img-name">스타오브호놀룰어쩌구저쩌구</span>
+                          <button><i class="glyphicon glyphicon-remove"></i></button>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="wrap">
+                          <div class="img-wrap"><img src="../../images/photo3.jpg" alt=""></div>
+                          <span class="img-name">스타오브호놀룰어쩌구저쩌구</span>
+                          <button><i class="glyphicon glyphicon-remove"></i></button>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="wrap">
+                          <div class="img-wrap"><img src="../../images/photo4.jpg" alt=""></div>
+                          <span class="img-name">스타오브호놀룰어쩌구저쩌구</span>
+                          <button><i class="glyphicon glyphicon-remove"></i></button>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th>주소</th>
+                  <td>
+                    <input type="text" class="form-control">
+                  </td>
+                </tr>
+                <tr>
+                  <th>체크인<br>체크아웃 시간<span class="c-red">*</span></th>
+                  <td class="form-inline">
+                    <b>체크인<b>
+                    <label for="">시간</label>
+                    <select class="form-control w80">
+                      <option>선택</option>
+                    </select>
+                    <label for="">분</label>
+                    <select class="form-control w80">
+                      <option>선택</option>
+                    </select>
+
+                    <b>체크아웃<b>
+                    <label for="">시간</label>
+                    <select class="form-control w80">
+                      <option>선택</option>
+                    </select>
+                    <label for="">분</label>
+                    <select class="form-control w80">
+                      <option>선택</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th>위치설정<span class="c-red">*</span></th>
+                  <td>
+                    <div class="row">
+                      <div class="col-xs-5">
+                        <p class="info">※ 경도,위도는 구글지도에서 확인 가능합니다.</p>
+                        <input type="text" class="form-control mb10" placeholder="경도">
+                        <input type="text" class="form-control" placeholder="위도">
+                      </div>
+                      <div class="col-xs-7">
+                        <div id="map" class="map">지도영역</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>호텔 주요사항<span class="c-red">*</span></th>
+                  <td>
+                    <div class="row">
+                      <div class="col-xs-3">
+                        <b class="block">주요정책</b>
+                        <div class="box2 h100"></div>
+                      </div>
+                      <div class="col-xs-3">
+                        <b class="block">주요시설</b>
+                        <div class="box2 h100"></div>
+                      </div>
+                      <div class="col-xs-3">
+                        <b class="block">주요 서비스</b>
+                        <div class="box2 h100"></div>
+                      </div>
+                      <div class="col-xs-3">
+                        <b class="block">주변정보</b>
+                        <div class="box2 h100"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>호텔소개영상</th>
+                  <td>
+                    <p class="info">※ youtube 영상위에서 마우스 우측키클릭 후 url을 복사하여 입력해 주세요.</p>
+                    <input type="text" class="form-control">
+                  </td>
+                </tr>
+                <tr>
+                  <th>호텔공통 포함사항<br>(예약정보에 노출)</th>
+                  <td>
+                    <textarea name="" class="form-control h100"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th>체크사항<span class="c-red">*</span><br>(예약정보에 노출)</th>
+                  <td>
+                    <textarea name="" class="form-control h100"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th>취소 및 환불 정책<span class="c-red">*</span><br>(예약정보에 노출)</th>
+                  <td>
+                    <textarea name="" class="form-control h100"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th>잔금 결제일 설정</th>
+                  <td>
+                    화면설계서 검토중..
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">취소 환불 설정</th>
+                  <td>
+                    <p class="info">※ 체크인 날짜 기준으로 입력해 주세요.</p>
+                    <div class="form-inline">
+                      <input type="text" class="form-control w60 text-right" id="date"> 일 전 취소시
+                      <input type="text" class="form-control w60 text-right" id="percent"> % 환불
+                      <button class="btn btn-info">추가</button>
+                      <!-- <button class="btn btn-danger">취소</button>
+                      <button class="btn btn-success">수정</button> -->
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ul class="mb0" id="cancel">
+                      <li><a href="#none">체크인 <span class="date">30</span>일전 취소시 <span class="percent">100</span>% 환불</a><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                      <li><a href="#none">체크인 <span class="date">20</span>일전 취소시 <span class="percent">70</span>% 환불</a><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                      <li><a href="#none">체크인 <span class="date">20</span>일전 취소시 <span class="percent">50</span>% 환불</a><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                      <li><a href="#none">체크인 <span class="date">7</span>일전 취소시 <span class="percent">0</span>% 환불</a><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">세금 설정</th>
+                  <td>
+                    <div class="form-inline">
+                      <select class="form-control">
+                        <option>카드결제 부가세 및 수수료</option>
+                        <option>실시간계좌이체 부가세 및 수수료</option>
+                        <option>서비스요금</option>
+                        <option>호텔세금</option>
+                        <option>리조트 피</option>
+                      </select>
+                      <input type="text" class="form-control w60 text-right" id="percent"> %
+                      <button class="btn btn-info">추가</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ul class="mb0">
+                      <li><a href="#none">부가가치세 10%</a><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                      <li><a href="#none">호텔세금 5%</a><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                      <li><a href="#none">서비스요금5%</a><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">완료</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- 룸정보등록 팝업 -->
+    <div class="modal fade" id="room-modal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span>하와이 > 오아후</span>
+            <h4 class="modal-title">더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]</h4>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered mb0">
+              <colgroup>
+                <col style="width:140px">
+                <col style="">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th rowspan="2">객실 추가<span class="c-red">*</span></th>
+                  <td>
+                    <div class="form-group mb10">
+                      <input type="text" class="form-control" placeholder="객실명">
+                    </div>
+                    <!-- <div class="row mb10">
+                      <div class="col-xs-6">
+                        <div class="form-inline">
+                          <label class="checkbox-inline mr10">
+                            <input type="checkbox"> 조식포함
+                          </label>
+                          <label for="">면적</label>
+                          <input type="text" class="form-control w70"> <b class="f20">m<sup>2</sup></b>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="form-inline">
+                          <label for="">투숙인원</label>
+                          <select class="form-control w100">
+                            <option>성인</option>
+                          </select>
+                          <select class="form-control w100">
+                            <option>아동</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div> -->
+                    <div class="form-inline mb10">
+                      <div class="form-group mr10">
+                        <label class="checkbox-inline mr10">
+                          <input type="checkbox"> 조식포함
+                        </label>
+                        <label for="">면적</label>
+                        <input type="text" class="form-control w70"> m<sup>2</sup>
+                      </div>
+
+                      <div class="form-group mr10">
+                        <label for="">투숙인원</label>
+                        <select class="form-control w100">
+                          <option>성인</option>
+                        </select>
+                        <select class="form-control w100">
+                          <option>아동</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="">최소 숙박일 지정</label>
+                        <select class="form-control w60">
+                          <option>1</option>
+                        </select>
+                        <span>박</span>
+                      </div>
+                    </div>
+                    <div class="file-upload mb10">
+                      <label>
+                        <input type="file" name="" value="" class="skip">
+                        <span class="btn btn-info">이미지등록</span>
+                        <span class="text file-name">선택된 파일 없음</span>
+                      </label>
+                      <span class="po-right">* 이미지 사이즈 : ???*??? px (웹/모바일 공통)</span>
+                    </div>
+                    <div class="file-upload mb10">
+                      <label>
+                        <input type="file" name="" value="" class="skip">
+                        <span class="btn btn-info">이미지등록</span>
+                        <span class="text file-name">선택된 파일 없음</span>
+                      </label>
+                      <span class="po-right">* 이미지 사이즈 : ???*??? px (웹/모바일 공통)</span>
+                    </div>
+                    <div class="file-upload mb10">
+                      <label>
+                        <input type="file" name="" value="" class="skip">
+                        <span class="btn btn-info">이미지등록</span>
+                        <span class="text file-name">선택된 파일 없음</span>
+                      </label>
+                      <span class="po-right">* 이미지 사이즈 : ???*??? px (웹/모바일 공통)</span>
+                    </div>
+                    <div class="row mb10">
+                      <div class="col-xs-6">
+                        <b class="block">포함사항</b>
+                        <textarea name="" class="form-control h100"></textarea>
+                      </div>
+                      <div class="col-xs-6">
+                        <b class="block">예약시 혜택</b>
+                        <textarea name="" class="form-control h100"></textarea>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <button type="button" class="btn btn-info">객실 추가</button>
+                      <!-- <button type="button" class="btn btn-danger">취소</button>
+                      <button type="button" class="btn btn-success">수정</button> -->
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ul class="mb0">
+                      <li><a href="#none">Resort Suite Fusion Suites Ocean View</a><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                      <li><a href="#none">Resort Suite Fusion Suites Ocean View</a><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                      <li><a href="#none">Resort Suite Fusion Suites Ocean View</a><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                      <li><a href="#none">Resort Suite Fusion Suites Ocean View</a><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                      <li><a href="#none">Resort Suite Fusion Suites Ocean View</a><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">완료</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- 룸정보수정 팝업 -->
+    <div class="modal fade" id="room-edit-modal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span>하와이 > 오아후</span>
+            <h4 class="modal-title">더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]</h4>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered mb0">
+              <colgroup>
+                <col style="width:140px">
+                <col style="">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>객실 추가<span class="c-red">*</span></th>
+                  <td>
+                    <div class="form-group mb10">
+                      <input type="text" class="form-control" placeholder="객실명">
+                    </div>
+                    <div class="form-inline mb10">
+                      <div class="form-group mr10">
+                        <label class="checkbox-inline mr10">
+                          <input type="checkbox"> 조식포함
+                        </label>
+                        <label for="">면적</label>
+                        <input type="text" class="form-control w70"> m<sup>2</sup>
+                      </div>
+
+                      <div class="form-group mr10">
+                        <label for="">투숙인원</label>
+                        <select class="form-control w100">
+                          <option>성인</option>
+                        </select>
+                        <select class="form-control w100">
+                          <option>아동</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="">최소 숙박일 지정</label>
+                        <select class="form-control w60">
+                          <option>1</option>
+                        </select>
+                        <span>박</span>
+                      </div>
+                    </div>
+                    <div class="file-upload mb10">
+                      <label>
+                        <input type="file" name="" value="" class="skip">
+                        <span class="btn btn-info">이미지등록</span>
+                        <span class="text file-name">선택된 파일 없음</span>
+                      </label>
+                      <span class="po-right">* 이미지 사이즈 : ???*??? px (웹/모바일 공통)</span>
+                    </div>
+                    <div class="file-upload mb10">
+                      <label>
+                        <input type="file" name="" value="" class="skip">
+                        <span class="btn btn-info">이미지등록</span>
+                        <span class="text file-name">선택된 파일 없음</span>
+                      </label>
+                      <span class="po-right">* 이미지 사이즈 : ???*??? px (웹/모바일 공통)</span>
+                    </div>
+                    <div class="file-upload mb10">
+                      <label>
+                        <input type="file" name="" value="" class="skip">
+                        <span class="btn btn-info">이미지등록</span>
+                        <span class="text file-name">선택된 파일 없음</span>
+                      </label>
+                      <span class="po-right">* 이미지 사이즈 : ???*??? px (웹/모바일 공통)</span>
+                    </div>
+                    <div class="row mb10">
+                      <div class="col-xs-6">
+                        <b class="block">포함사항</b>
+                        <textarea name="" class="form-control h100"></textarea>
+                      </div>
+                      <div class="col-xs-6">
+                        <b class="block">예약시 혜택</b>
+                        <textarea name="" class="form-control h100"></textarea>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">완료</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- 기간별 가격 등록 팝업 -->
+    <div class="modal fade" id="price-modal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span>하와이 > 오아후</span>
+            <h4 class="modal-title">더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]</h4>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered mb0">
+              <colgroup>
+                <col style="width:140px">
+                <col style="">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th rowspan="3">기간별 금액 등록<span class="c-red">*</span></th>
+                  <td>Resort Suite Fusion Suites Ocean View </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p class="message">※ 특가 기간 설정 시 할인율이 반영된 금액으로 입력 하시기 바랍니다.</p>
+                    <div class="form-inline mb10">
+                      <input type="text" name="" id="datepicker1" class="w120 form-control" readonly>
+                      <span class="text">~</span>
+                      <input type="text" name="" id="datepicker2" class="w120 form-control" readonly>
+                      <div class="form-group mr10">
+                        <label>1박요금</label>
+                        <input type="text" class="form-control w100"  placeholder="달러">$
+                      </div>
+                      <div class="form-group">
+                        <label class="checkbox-inline">
+                          <input type="checkbox"> 특가기간
+                        </label>
+                        <input type="text" class="form-control w100"  placeholder="할인율">%
+                      </div>
+                    </div>
+                    <div class="form-inline mb10">
+                      <div class="form-group">
+                        <label for="" class="mr10">월</label><input type="text" class="form-control w70"  placeholder="$">
+                        <label for="" class="mr10">화</label><input type="text" class="form-control w70"  placeholder="$">
+                        <label for="" class="mr10">수</label><input type="text" class="form-control w70"  placeholder="$">
+                        <label for="" class="mr10">목</label><input type="text" class="form-control w70"  placeholder="$">
+                        <label for="" class="mr10">금</label><input type="text" class="form-control w70"  placeholder="$">
+                        <label for="" class="mr10">토</label><input type="text" class="form-control w70"  placeholder="$">
+                        <label for="" class="mr10">일</label><input type="text" class="form-control w70"  placeholder="$">
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <button type="button" class="btn btn-primary">전체 기간의 기본 금액 등록</button>
+                      <button type="button" class="btn btn-info">세부 기간 별 금액 등록</button>
+                      <!-- <button type="button" class="btn btn-danger">취소</button>
+                      <button type="button" class="btn btn-success">수정</button> -->
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ul class="mb0">
+                      <li><b>전체기간 : 2017.04.05 ~ 2017.06.20 200$ 235,000&#92;</b><button class="btn-close glyphicon glyphicon-remove"></button>
+                        <br><b>토</b> 200$ 258,000&#92; <b>일</b> 200$ 258,000 &#92;</li>
+                      <li><b>세부기간 : 2017.06.21 ~ 2017-09.30 200$ 260,000&#92; 특가기간 할인 10%</b><button class="btn-close glyphicon glyphicon-remove"></button></li>
+                      <li><b>세부기간 : 2017.06.21 ~ 2017-09.30 성인 200$ / 260,000&#92;</b><button class="btn-close glyphicon glyphicon-remove"></button>
+                        <br><b>토</b> 200$ 258,000&#92; <b>일</b> 200$ 258,000 &#92;</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">완료</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- 기간별 가격 수정 팝업 -->
+    <div class="modal fade" id="price-edit-modal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span>하와이 > 오아후</span>
+            <h4 class="modal-title">더 카할라 호텔 & 리조트 [The Kahala Hotel & Resort]</h4>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered mb0">
+              <colgroup>
+                <col style="width:140px">
+                <col style="">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th rowspan="2">기간별 금액 등록<span class="c-red">*</span></th>
+                  <td>Resort Suite Fusion Suites Ocean View </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="form-inline mb10">
+                      <input type="text" name="" id="datepicker3" class="w120 form-control" readonly>
+                      <span class="text">~</span>
+                      <input type="text" name="" id="datepicker4" class="w120 form-control" readonly>
+                      <div class="form-group mr10">
+                        <label>1박요금</label>
+                        <input type="text" class="form-control w100"  placeholder="달러">$
+                      </div>
+                      <div class="form-group">
+                        <label class="checkbox-inline">
+                          <input type="checkbox"> 특가기간
+                        </label>
+                        <input type="text" class="form-control w100"  placeholder="할인율">%
+                      </div>
+                    </div>
+                    <div class="form-inline">
+                      <div class="form-group">
+                        <label for="" class="mr10">월</label><input type="text" class="form-control w70"  placeholder="$">
+                        <label for="" class="mr10">화</label><input type="text" class="form-control w70"  placeholder="$">
+                        <label for="" class="mr10">수</label><input type="text" class="form-control w70"  placeholder="$">
+                        <label for="" class="mr10">목</label><input type="text" class="form-control w70"  placeholder="$">
+                        <label for="" class="mr10">금</label><input type="text" class="form-control w70"  placeholder="$">
+                        <label for="" class="mr10">토</label><input type="text" class="form-control w70"  placeholder="$">
+                        <label for="" class="mr10">일</label><input type="text" class="form-control w70"  placeholder="$">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">완료</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>QMEMO intro</title>
+    <meta name="keywords" content="memo, quickmemo">
+    <meta name="description" content="QMEMO APP">
+    <meta name="author" content="hanna">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/multilevelmenu.css">
+    <link rel="stylesheet" href="../css/component.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/qmemo.css">
+
+    <!-- js -->
+    <script src="../js/modernizr.custom.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="../js/jquery.dlmenu.js"></script>
+    <script src="../js/pagetransitions.js"></script>
+  </head>
+  <body class="intro">
+
+    <!-- 페이지 전환 -->
+    <div id="pt-main" class="pt-perspective">
+      <div class="pt-page teal lighten-2">
+        <div class="container">
+          <h2 class="center-align">
+            <strong class="q teal-text text-darken-3">Q</strong> MEMO
+          </h2>
+          <div class="input-field">
+            <i class="material-icons prefix">mode_edit</i>
+            <input id="page-1-text" type="text" value="">
+          </div>
+        </div>
+      </div>
+			<div class="pt-page lime darken-1">
+        <div class="container">
+          <h2 class="center-align">
+            <strong class="q lime-text text-darken-3">Q</strong> MEMO
+          </h2>
+          <div class="input-field">
+            <i class="material-icons prefix">search</i>
+            <input id="page-2-text" type="text" value="">
+          </div>
+        </div>
+			</div>
+			<div class="pt-page orange lighten-1">
+        <div class="container">
+          <h2 class="center-align">
+            <strong class="q orange-text text-darken-3">Q</strong> MEMO
+          </h2>
+          <div class="input-field">
+            <i class="material-icons prefix">settings</i>
+            <input id="page-3-text" type="text" value="">
+          </div>
+        </div>
+			</div>
+    </div>
+
+    <!-- 버튼영역 -->
+    <div class="btn-group row">
+      <div class="col s6">
+        <!-- 전환효과 모두 적용 -->
+        <button id="iterateEffects" class="btn pulse wp100 teal darken-3">NEXT</button>
+      </div>
+      <div class="col s6">
+        <button id="btn-skip" class="btn waves-effect wp100 blue-grey darken-4">SKIP</button>
+      </div>
+    </div>
+
+    <script>
+      var msg=[
+        "메모를 간편하게 작성하세요!",
+        "필터, 정렬기능으로 메모를 검색하세요!",
+        "기본테마를 변경해보세요!"
+      ];
+
+      var msgIndex=0;
+      var textIndex=0;
+      var colorIndex=0;
+
+      //처음 한번 호출
+      fnMessage(msgIndex);
+
+      //메세지 출력하기
+      function fnMessage(msgIndex){
+        var start1=setInterval(function(){
+          var text=msg[msgIndex].substring(0, textIndex);
+          $('#page-'+(msgIndex+1)+'-text').val(text);
+          textIndex++;
+          if(textIndex > msg[msgIndex].length){clearInterval(start1)}
+        },100);
+      }
+
+      $('#iterateEffects').click(function(){
+        $(this).toggleClass(function(){
+          colorIndex++;
+          console.log('색상',colorIndex);
+          if(colorIndex==1){
+            $(this).removeClass('teal orange');
+            return 'lime';
+          }else if(colorIndex==2){
+            $(this).removeClass('lime teal');
+            return 'orange';
+          }else if(colorIndex==3){
+            $(this).removeClass('orange lime');
+            colorIndex=0;
+            return 'teal';
+          }
+        })
+        //초기화
+        // $('input[type=text]').val('');
+        // console.log('메세지길이체크',$('input[type=text]').val().length);
+        textIndex=0;
+        msgIndex++;
+        if(msgIndex==3){msgIndex=0;}
+        console.log('메세지',msgIndex);
+        fnMessage(msgIndex);
+      })
+
+      //skip
+      $('#btn-skip').click(function(){
+        location.href="QM-200000.html";
+      })
+
+
+    </script>
+  </body>
+</html>

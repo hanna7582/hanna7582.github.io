@@ -1,0 +1,74 @@
+@charset "UTF-8";
+nav{
+      position: fixed;
+      top:70px; bottom:0;
+      left:-250px;
+      width: 250px;
+      /* height: -webkit-fill-available; */
+      background: #2c2a29;
+      transition: left 0.5s;
+}
+.btn-menu{
+      position: absolute;
+      top:20px; left:20px;
+      width: 25px; height: 25px;
+}
+.btn-menu span{
+      position: absolute;
+      width: 25px; height: 2px;
+      background: #fff;       
+      transition: 0.5s;
+      transform-origin: 2px 1px;
+}
+.btn-menu span:nth-child(1){top:4px;}
+.btn-menu span:nth-child(2){top:50%;transform: translateY(-50%);}
+.btn-menu span:nth-child(3){bottom:4px;}
+
+#btn-menu:checked + label span:nth-child(1){transform: rotate(45deg);}
+#btn-menu:checked + label span:nth-child(2){opacity: 0;}
+#btn-menu:checked + label span:nth-child(3){transform: rotate(-45deg);}
+
+#btn-menu:checked ~ nav{left:0;}
+#btn-menu:checked ~ nav::after{
+      content: '';
+      z-index: -1;
+      position: fixed;
+      left: 0;
+      top: 70px; bottom:0;
+      width: 100%;
+      background: rgba(0,0,0,0.5);      
+}
+
+/* section ============================================================================== */
+
+/* 모바일은 보이고 싶다면.. */
+.product .product-list .wrap a{
+      position: relative; bottom:0;
+}
+
+/* footer */
+/* footer .banner *{outline: 1px solid yellow;} */
+footer .banner{position: relative; height: 70px;}
+footer .banner .wrap{
+      max-width: 400px; margin: auto;
+      overflow: hidden;
+}
+footer .banner .wrap label{
+      position: absolute;
+      bottom:0;
+}
+/* pause */
+footer .banner .wrap label::after{content: '\f04c';}
+footer .banner .wrap ul{
+   width: 1512px;
+   animation: banner 10s linear infinite;
+}
+footer .banner .wrap ul li{float: left;}
+/* play */
+#btn-banner:checked+label::after{content: '\f04b';}
+#btn-banner:checked~ul{animation-play-state: paused;}
+
+@keyframes banner {
+      0%{margin-left: 0;}
+      100%{margin-left: -1134px;}
+}

@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>kakao friends</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="(min-width: 768px) and (max-width: 1200px)" href="css/tablet.css" />
+  <link rel="stylesheet" media="(max-width: 767px)" href="css/mobile.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/ScrollMagic.js"></script>
+  <script src="js/animation.gsap.js"></script>
+  <script src="js/debug.addIndicators.js"></script>
+  
+  <script src="js/main.js"></script>
+  <script src="js/kakaofriends.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+</head>
+<body>
+  <header>
+    <div class="center">
+      <h1><a href="index.html" class="icon icon-logo"><span class="blind">kakao friends</span></a></h1>
+      <nav>
+        <ul>
+          <li><a href="#" data-popup="popup-login"><i class="icon icon-mypage"></i><span class="blind">로그인</span></a></li>
+          <li><a href="#" data-popup="popup-search"><i class="icon icon-search"></i><span class="blind">검색</span></a></li>
+          <li><a href="#" data-popup="popup-menu"><i class="icon icon-menu"></i><span class="blind">메뉴</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 퀵메뉴 -->
+  <nav class="quick-nav">
+    <button id="btn-wish"><i class="icon icon-wish"></i><span class="total">5</span><span class="blind">좋아요</span></button>
+    <button id="btn-cart"><i class="icon icon-cart"></i><span class="total">1</span><span class="blind">장바구니</span></button>
+    <button class="btn-top"><i class="icon icon-up"></i><span class="blind">위로가기</span></button>
+  </nav>
+
+  <section>
+    <!-- 캐릭터 -->
+    <article class="character center">
+      <h2 class="blind">캐릭터별 상품</h2>
+      <div class="swiper-container">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide"><a href="#" class="icon"><i class="icon icon-ryan"></i><span>라이언</span></a></li>
+          <li class="swiper-slide"><a href="#" class="icon"><i class="icon icon-apeach"></i><span>어피치</span></a></li>
+          <li class="swiper-slide"><a href="#" class="icon"><i class="icon icon-frodo"></i><span>프로도</span></a></li>
+          <li class="swiper-slide"><a href="#" class="icon"><i class="icon icon-neo"></i><span>네오</span></a></li>
+          <li class="swiper-slide"><a href="#" class="icon"><i class="icon icon-muzi"></i><span>무지</span></a></li>
+          <li class="swiper-slide"><a href="#" class="icon"><i class="icon icon-con"></i><span>콘</span></a></li>
+          <li class="swiper-slide"><a href="#" class="icon"><i class="icon icon-tube"></i><span>튜브</span></a></li>
+          <li class="swiper-slide"><a href="#" class="icon"><i class="icon icon-jayg"></i><span>제이지</span></a></li>
+          <li class="swiper-slide"><a href="#" class="icon"><i class="icon icon-niniz"></i><span>니니즈</span></a></li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 메인슬라이드 -->
+    <article class="main-slide">
+      <h2 class="blind">프로모션</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#"><img src="img/main_slide_1.jpg" alt="Ryan's Bookstore 젠틀맨 라이언과 함께하는 가을의 시작"></a></div>
+          <div class="swiper-slide"><a href="#"><img src="img/main_slide_2.jpg" alt="프렌즈랜드 테마 컬렉션 어서와, 프렌즈랜드는 처음이지?"></a></div>
+          <div class="swiper-slide"><a href="#"><img src="img/main_slide_3.jpg" alt="언제 어디서든, 더 쉽고 편하게 kakaominiC"></a></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <button class="icon icon-stop"></button>
+      </div>
+    </article>
+
+    <!-- 테마별 -->
+    <article class="theme center">
+      <h2 class="blind">테마,인기,신상,세일</h2>
+      <nav class="tab-nav">
+        <ul>
+          <li><a href="#theme-tab1" class="on">신상</a></li>
+          <li><a href="#theme-tab2">인기</a></li>
+          <li><a href="#theme-tab3">추천</a></li>
+          <li><a href="#theme-tab4">세일</a></li>
+          <li><a href="#theme-tab5">테마</a></li>
+        </ul>
+      </nav>
+      <div class="tab-contents">        
+        <!-- 신상 -->
+        <div id="theme-tab1" class="style2 on">
+          <div class="swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide" data-code="kakao-10">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_10.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">라이언 싱글 버블 퍼프</a>
+                    <span>6,900원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-11">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_11.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">목걸이카드지갑-라이언</a>
+                    <span>18,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-12">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_12.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">베이직슬리퍼-어피치</a>
+                    <span>20,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-13">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_13.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">케이블보호캡-베로니</a>
+                    <span>6,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-09">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_9.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">허니프렌즈 말랑쿠션-어피치</a>
+                    <span>32,900원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="sale-kakao-02">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_2.jpg" alt=""><label class="icon icon-sale">50%</label></div>
+                  <div class="text-box">
+                    <a href="#">2019 다이어리_어피치</a>
+                    <span>8,450원</span><del>16,900원</del>
+                    <div class="btn-group">
+                      <button class="icon icon-wish on"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-03">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_3.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">2019 탁상 스케줄러</a>
+                    <span>8,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-04">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_4.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">페이스안마봉_리틀콘</a>
+                    <span>12,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 인기 -->
+        <div id="theme-tab2" class="style2">
+          <div class="swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide" data-code="sale-kakao-02">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_2.jpg" alt=""><label class="icon icon-sale">50%</label></div>
+                  <div class="text-box">
+                    <a href="#">2019 다이어리_어피치</a>
+                    <span>8,450원</span><del>16,900원</del>
+                    <div class="btn-group">
+                      <button class="icon icon-wish on"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-01">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_1.jpg" alt=""><img src="img/product_1_hover.jpg" alt="" class="hover"></div>
+                  <div class="text-box">
+                    <a href="#">스타 홈웨어 여성용_라이언</a>
+                    <span>59,900원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-03">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_3.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">2019 탁상 스케줄러</a>
+                    <span>8,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-05">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_5.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">페이스립밤-네오</a>
+                    <span>14,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-04">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_4.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">페이스안마봉_리틀콘</a>
+                    <span>12,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-06">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_6.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">젠틀맨라이언 북스토어 인형</a>
+                    <span>29,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-07">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_7.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">2019 탁상 캘린더</a>
+                    <span>6,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-08">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_8.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">리틀프렌즈마우스패드-어피치</a>
+                    <span>5,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 추천 -->
+        <div id="theme-tab3" class="style2">
+          <div class="swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide" data-code="kakao-01">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_1.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">스타 홈웨어 여성용_라이언</a>
+                    <span>59,900원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="sale-kakao-02">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_2.jpg" alt=""><label class="icon icon-sale">50%</label></div>
+                  <div class="text-box">
+                    <a href="#">2019 다이어리_어피치</a>
+                    <span>8,450원</span><del>16,900원</del>
+                    <div class="btn-group">
+                      <button class="icon icon-wish on"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-03">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_3.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">2019 탁상 스케줄러</a>
+                    <span>8,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-04">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_4.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">페이스안마봉_리틀콘</a>
+                    <span>12,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-05">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_5.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">페이스립밤-네오</a>
+                    <span>14,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-06">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_6.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">젠틀맨라이언 북스토어 인형</a>
+                    <span>29,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-07">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_7.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">2019 탁상 캘린더</a>
+                    <span>6,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="kakao-08">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_8.jpg" alt=""></div>
+                  <div class="text-box">
+                    <a href="#">리틀프렌즈마우스패드-어피치</a>
+                    <span>5,000원</span>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+        <!-- 세일 -->
+        <div id="theme-tab4" class="style2">
+          <div class="swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide" data-code="sale-kakao-01">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_1.jpg" alt=""><label class="icon icon-sale">10%</label></div>
+                  <div class="text-box">
+                    <a href="#">스타 홈웨어 여성용_라이언</a>
+                    <span>53,910원</span><del>59,900원</del>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="sale-kakao-02">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_2.jpg" alt=""><label class="icon icon-sale">50%</label></div>
+                  <div class="text-box">
+                    <a href="#">2019 다이어리_어피치</a>
+                    <span>8,450원</span><del>16,900원</del>
+                    <div class="btn-group">
+                      <button class="icon icon-wish on"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="sale-kakao-03">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_3.jpg" alt=""><label class="icon icon-sale">10%</label></div>
+                  <div class="text-box">
+                    <a href="#">2019 탁상 스케줄러</a>
+                    <span>7,200원</span><del>8,000원</del>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="sale-kakao-04">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_4.jpg" alt=""><label class="icon icon-sale">20%</label></div>
+                  <div class="text-box">
+                    <a href="#">페이스안마봉_리틀콘</a>
+                    <span>9,600원</span><del>12,000원</del>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="sale-kakao-05">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_5.jpg" alt=""><label class="icon icon-sale">20%</label></div>
+                  <div class="text-box">
+                    <a href="#">페이스립밤-네오</a>
+                    <span>11,200원</span><del>14,000원</del>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="sale-kakao-06">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_6.jpg" alt=""><label class="icon icon-sale">30%</label></div>
+                  <div class="text-box">
+                    <a href="#">젠틀맨라이언 북스토어 인형</a>
+                    <span>20,300원</span><del>29,000원</del>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="sale-kakao-07">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_7.jpg" alt=""><label class="icon icon-sale">5%</label></div>
+                  <div class="text-box">
+                    <a href="#">2019 탁상 캘린더</a>
+                    <span>5,700원</span><del>6,000원</del>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" data-code="sale-kakao-08">
+                <div class="wrap">
+                  <div class="img-box"><img src="img/product_8.jpg" alt=""><label class="icon icon-sale">15%</label></div>
+                  <div class="text-box">
+                    <a href="#">리틀프렌즈마우스패드-어피치</a>
+                    <span>4,250원</span><del>5,000원</del>
+                    <div class="btn-group">
+                      <button class="icon icon-wish"><span class="blind">wish</span></button>
+                      <button class="icon icon-cart"><span class="blind">cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 테마 -->
+        <div id="theme-tab5" class="style1">
+          <div class="swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="wrap">
+                  <a href="#"><img src="img/sub_slide_1.jpg" alt="여행소품-여행을 떠나는 당신을 위해"></a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="wrap">
+                  <a href="#"><img src="img/sub_slide_2.jpg" alt="라이언 샤워커튼-라이언과 함께 신나는 샤워타임"></a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="wrap">
+                  <a href="#"><img src="img/sub_slide_3.jpg" alt="카카오프렌즈 인형-늘 곁에 두고픈 보들보들 인형 모음"></a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="wrap">
+                  <a href="#"><img src="img/sub_slide_4.jpg" alt="봉제 볼펜-자꾸만 만지고 싶은 볼펜"></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 공지&뮤지엄 -->
+    <article class="notice">
+      <h2 class="blind">공지&뮤지엄</h2>
+      <div class="center">
+        <div class="left">
+          <i class="icon icon-notice"></i>
+          <div class="rolling">
+            <ul>
+              <li><a href="#"><strong>공지</strong>크리스마스 에디션출시</a><span>18.12.25</span></li>
+              <li><a href="#"><strong>이벤트</strong>한정판매 이벤트를 진행합니다.</a><span>18.10.01</span></li>
+              <li><a href="#"><strong>프로모션</strong>휴가철에 필요한 필수 아이템 장만하세요.</a><span>18.08.10</span></li>
+            </ul>
+          </div>
+          <button class="icon icon-more"></button>
+        </div>
+        <div class="right">
+          <a href="#">
+            <label>뮤지엄</label>
+            <span>함께해요, 카카오게임</span>
+          </a>
+          <button class="icon icon-more2"></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 카카오 프렌즈 소개 -->
+    <article class="kakaofriends">
+      <h2>WE ARE KAKAO FRIENDS</h2>
+      <div class=wrap>
+        <div class="swiper-container">
+          <ul class="swiper-wrapper">
+          </ul>
+        </div>
+        <button class="icon icon-next"></button>
+        <button class="icon icon-prev"></button>
+      </div>  
+      <div class="swiper-pagination"></div>
+    </article>
+
+    <!-- 패럴렉스 배경 -->
+    <article id="parallax" class="parallaxParent">
+      <div></div>
+    </article>
+
+    <!-- 카카오 스토리 -->
+    <article class="kakaostory">
+      <h2>카카오 스토리</h2>
+      <nav class="filter-nav">
+        <ul>
+          <li><a href="#all" class="on"><span class="original">ALL</span><span class="small">ALL</span></a></li>
+          <li><a href="#wallpaper"><span class="original">WALLPAPER</span><span class="small">W</span></a></li>
+          <li><a href="#screensaver"><span class="original">SCREENSAVER</span><span class="small">SS</span></a></li>
+          <li><a href="#video"><span class="original">VIDEO</span><span class="small">V</span></a></li>
+          <li><a href="#issue"><span class="original">ISSUE</span><span class="small">I</span></a></li>
+          <li><a href="#sns"><span class="original">SNS</span><span class="small">S</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="filter-list center">
+        <ul>
+          <li data-filter="wallpaper">
+            <a href="#">
+              <img src="img/story_1.jpg" alt="">
+              <i class="icon icon-w"></i>
+              <span>2019년<br>4월의 배경화면</span>
+              <div class="hidden">
+                <i class="icon icon-down"></i>
+              </div>
+            </a>
+          </li>
+          <li data-filter="video">
+            <a href="#">
+              <img src="img/story_4.jpg" alt="">
+              <i class="icon icon-v"></i>
+              <span>라이언의<br>Hello 2019</span>
+              <div class="hidden">
+                <i class="icon icon-play"></i>
+              </div>
+            </a>
+          </li>
+          <li data-filter="sns">
+            <a href="#">
+              <img src="img/story_13.jpg" alt="">
+              <i class="icon icon-s"></i>
+              <span>SWEET APEACH<br>THE FACE SHOP</span>
+              <div class="hidden">
+                <i class="icon icon-view"></i>
+              </div>
+            </a>
+          </li>
+          <li data-filter="issue">
+            <a href="#">
+              <img src="img/story_14.jpg" alt="">
+              <i class="icon icon-i"></i>
+              <span>카카오 프렌즈와<br>루이비통</span>
+              <div class="hidden">
+                <i class="icon icon-view"></i>
+              </div>
+            </a>
+          </li>
+          <li data-filter="screensaver">
+            <a href="#">
+              <img src="img/story_5.jpg" alt="">
+              <i class="icon icon-ss"></i>
+              <span>라이언<br>해돋이 화면보호기</span>
+              <div class="hidden">
+                <i class="icon icon-down"></i>
+              </div>
+            </a>
+          </li>
+          <li data-filter="wallpaper">
+            <a href="#">
+              <img src="img/story_2.jpg" alt="">
+              <i class="icon icon-w"></i>
+              <span>2019년<br>3월의 배경화면</span>
+              <div class="hidden">
+                <i class="icon icon-down"></i>
+              </div>
+            </a>
+          </li>
+          <li data-filter="wallpaper">
+            <a href="#">
+              <img src="img/story_3.jpg" alt="">
+              <i class="icon icon-w"></i>
+              <span>2019년<br> 2월의 배경화면</span>
+              <div class="hidden">
+                <i class="icon icon-down"></i>
+              </div>
+            </a>
+          </li>
+          <li data-filter="wallpaper">
+            <a href="#">
+              <img src="img/story_6.jpg" alt="">
+              <i class="icon icon-w"></i>
+              <span>2019년<br> 1월의 배경화면</span>
+              <div class="hidden">
+                <i class="icon icon-down"></i>
+              </div>
+            </a>
+          </li>
+          <li data-filter="video">
+            <a href="#">
+              <img src="img/story_8.jpg" alt="">
+              <i class="icon icon-v"></i>
+              <span>KAKAO FRIENDS in<br>Los Angeles, KCON18 LA</span>
+              <div class="hidden">
+                <i class="icon icon-play"></i>
+              </div>
+            </a>
+          </li>
+          <li data-filter="wallpaper">
+            <a href="#">
+              <img src="img/story_7.jpg" alt="">
+              <i class="icon icon-w"></i>
+              <span>2018년<br> 10월의 배경화면</span>
+              <div class="hidden">
+                <i class="icon icon-down"></i>
+              </div>
+            </a>
+          </li>
+          <li data-filter="video">
+            <a href="#">
+              <img src="img/story_10.jpg" alt="">
+              <i class="icon icon-v"></i>
+              <span>라이언의<br>호캉스 즐기기</span>
+              <div class="hidden">
+                <i class="icon icon-play"></i>
+              </div>
+            </a>
+          </li>
+          <li data-filter="video">
+            <a href="#">
+              <img src="img/story_12.jpg" alt="">
+              <i class="icon icon-v"></i>
+              <span>프렌즈의 즐거운여름나기<br>ver. 비치볼</span>
+              <div class="hidden">
+                <i class="icon icon-play"></i>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <button class="icon icon-more"><span class="blind">더보기</span></button>
+    </article>
+
+    <!-- 이벤트&광고 -->
+    <article class="event">
+      <h2 class="blind">프로모션</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#"><img src="img/event_1.jpg" alt="갑자기 추워진 날씨 무엇?-겨울 용품 기획전"></a></div>
+          <div class="swiper-slide"><a href="#"><img src="img/event_2.jpg" alt="책상에 필요한 모든 것-문구류 모음"></a></div>
+        </div>
+      </div>
+      <div class="center">
+        <div class="control">
+          <button class="btn-prev icon icon-left"><span class="blind">이전</span></button>
+          <button class="btn-next icon icon-right"><span class="blind">다음</span></button>
+          <span class="paging"><span class="now">1</span>/2</span>
+          <input type="checkbox" id="event-control">
+          <label for="event-control">
+            <span class="btn"></span>
+            <span class="blind msg">재생</span>
+          </label>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    <div class="center">
+      <div class="etc-wrap">
+        <a href="#">사이트정보 <i class="icon icon-down"></i></a>
+        <ul class="etc-nav">
+          <li><a href="#">개인정보처리방침<i class="icon icon-next"></i></a></li>
+          <li><a href="#">이용약관<i class="icon icon-next"></i></a></li>
+          <li><a href="#">제휴문의<i class="icon icon-next"></i></a></li>
+          <li><a href="#">인재영입<i class="icon icon-next"></i></a></li>
+          <li class="on"><a href="#">글로벌배송<i class="icon icon-next"></i></a></li>
+        </ul>
+      </div>
+
+      <ul class="sns">
+        <li><a href="#"><i class="icon icon-facebook"></i><span class="tooltip">공식 페이스북</span></a></li>
+        <li><a href="#"><i class="icon icon-instargram"></i><span class="tooltip">공식 인스타그램</span></a></li>
+        <li><a href="#"><i class="icon icon-instargram"></i><span class="tooltip">카카오프랜즈랩</span></a></li>
+      </ul>
+
+      <address>
+        <ul>
+          <li>카카오아이엑스 사업자등록번호 : 354-86-00070</li>
+          <li>통신판매업 신고번호 : 2017-서울강남-02573 대표이사 : 권승조</li>
+          <li>주소 : 서울특별시 강남구 테헤란로 521 파르나스타워, 27층</li>
+          <li class="on">고객센터 : 1577-6263 / 평일 10시 ~ 18시| store@kakaofriends.com</li>
+          <li class="on">글로벌 배송 문의 : global@kakaofriends.com</li>
+        </ul>
+      </address>
+      <small>Copyright &copy; KAKAO IX Corp.</small>
+    </div>
+  </footer>
+
+  <!-- 카카오로그인 팝업 -->
+  <div class="popup popup-login">
+    <button class="icon icon-close"><span class="blind">닫기</span></button>
+    <div class="popup-body center">
+      <h2>KAKAO LOGIN</h2>
+      <div class="row">
+        <label for="user">계정</label>
+        <input type="text" id="user" placeholder="이메일 또는 전화번호">
+      </div>
+      <div class="row">
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" placeholder="비밀번호">
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox"><i class="icon icon-check"></i>로그인상태 유지</label>
+        <a href="#" class="link">비회원 주문조회</a>
+      </div>
+      <button class="btn-login">로그인</button>
+      <div class="bottom">
+        <a href="#" class="sign-up">회원가입</a>
+        <div class="right">
+          <a href="#">카카오계정찾기</a>
+          <a href="#">비밀번호 재설정</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 마이페이지팝업 -->
+  <div class="popup popup-mypage">
+    <h2 class="blind">마이페이지</h2>
+    <button class="icon icon-close"><span class="blind">닫기</span></button>
+    <div class="popup-body center vertical">
+      <ul>
+        <li><a href="#">주문내역</a></li>
+        <li><a href="#">취소 / 교환</a></li>
+        <li><a href="#">찜 / 장바구니</a></li>
+        <li><a href="#">포인트 / 쿠폰</a></li>        
+        <li><a href="#">1:1문의</a></li>
+        <li><a href="#">개인정보</a></li>
+        <li><a href="#" class="btn-logout">로그아웃</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 검색팝업 -->
+  <div class="popup popup-search">
+    <button class="icon icon-close"><span class="blind">닫기</span></button>
+    <div class="popup-body center">
+      <div class="title">
+        <h2>검색</h2>
+        <a href="#" class="icon icon-filter" data-popup="popup-filter"><span class="blind">필터검색</span></a>
+      </div>
+      <form action="#">
+        <div class="select-control">
+          <div class="col">
+            <div class="select">
+              <a href="#">전체캐릭터</a>
+              <i class="icon icon-select"></i>
+              <ul>
+                <li><a href="#">전체캐릭터</a></li>
+                <li><a href="#">라이언</a></li>
+                <li><a href="#">어피치</a></li>
+                <li><a href="#">프로도</a></li>
+                <li><a href="#">네오</a></li>
+                <li><a href="#">무지</a></li>
+                <li><a href="#">콘</a></li>
+                <li><a href="#">튜브</a></li>
+                <li><a href="#">제이지</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <div class="select category-choice">
+              <a href="#">전체카테고리</a>
+              <i class="icon icon-select"></i>
+              <ul>
+                <li><a href="#category0">전체카테고리</a></li>
+                <li><a href="#category1">인형/피규어</a></li>
+                <li><a href="#category2">리빙</a></li>
+                <li><a href="#category3">잡화</a></li>
+                <li><a href="#category4">의류</a></li>
+                <li><a href="#category5">쥬얼리</a></li>
+                <li><a href="#category6">문구</a></li>
+                <li><a href="#category7">여행/레저</a></li>
+                <li><a href="#category8">생활테크</a></li>
+              </ul>
+            </div> 
+          </div>
+          <div class="col">
+            <div class="select category-result">
+              <a href="#" class="isDisabled">세부카테고리</a>
+              <i class="icon icon-select"></i>
+              <ul>
+                <!-- <li><a href="#">세부카테고리</a></li> -->
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <div class="select">
+              <a href="#">신상품순</a>
+              <i class="icon icon-select"></i>
+              <ul>
+                <li><a href="#">신상품순</a></li>
+                <li><a href="#">인기상품순</a></li>
+                <li><a href="#">낮은가격순</a></li>
+                <li><a href="#">높은가격순</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="search-control">
+          <input type="text" placeholder="검색어를 입력하세요." title="검색어">
+          <button type="submit" class="icon icon-search2"><span class="blind">검색</span></button>
+        </div>
+      </form>
+      <div class="popular-list">
+        <h3><span>실시간 인기 검색어</span></h3>
+        <div class="rolling swiper-container">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide"><a href="#">머그컵</a></li>
+            <li class="swiper-slide"><a href="#">스케줄러</a></li>
+            <li class="swiper-slide"><a href="#">다이어리</a></li>
+            <li class="swiper-slide"><a href="#">마사지봉</a></li>
+            <li class="swiper-slide"><a href="#">담요</a></li>
+            <li class="swiper-slide"><a href="#">폰케이스</a></li>
+            <li class="swiper-slide"><a href="#">라이언인형</a></li>
+            <li class="swiper-slide"><a href="#">스탬프</a></li>
+            <li class="swiper-slide"><a href="#">지갑</a></li>
+            <li class="swiper-slide"><a href="#">우산</a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 필터검색팝업 -->
+  <div class="popup popup-filter">
+    <button class="icon icon-close"><span class="blind">닫기</span></button>
+    <div class="popup-body center">
+      <div class="title">
+        <h2>필터검색</h2>
+      </div>
+      <form action="#">
+        <div class="checkbox-wrap">
+        </div>
+        <button type="submit">검색</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 메뉴팝업 -->
+  <div class="popup popup-menu">
+    <h2 class="blind">메뉴</h2>
+    <button class="icon icon-close"><span class="blind">닫기</span></button>
+    <div class="popup-body center vertical">
+      <ul class="gnb-nav">
+        <li><a href="#">쇼핑</a>
+          <ul class="depth2">
+            <li><a href="#">전체</a>
+              <ul class="depth3">
+                <li><a href="#">신상품</a></li>
+                <li><a href="#">낮은가격순</a></li>
+                <li><a href="#">높은가격순</a></li>
+              </ul>
+            </li>
+            <li><a href="#">테마기획전</a>
+              <ul class="depth3">
+                <li><a href="#">젠틀맨 라이언</a></li>
+                <li><a href="#">프렌즈 랜드</a></li>
+                <li><a href="#">호텔 드 라이언</a></li>
+                <li><a href="#">리틀 레인보우</a></li>
+                <li><a href="#">살롱 드 프렌즈</a></li>
+                <li><a href="#">디저트 프렌즈</a></li>
+                <li><a href="#">플라잉 라이언</a></li>
+                <li><a href="#">네오의 홈트레이닝</a></li>
+              </ul>
+            </li>
+            <li><a href="#">인형/피규어</a>
+              <ul class="depth3">
+                <li><a href="#">미니</a></li>
+                <li><a href="#">중형</a></li>
+                <li><a href="#">대형</a></li>
+                <li><a href="#">키체인</a></li>
+                <li><a href="#">피규어/브릭</a></li>
+              </ul>
+            </li>
+            <li><a href="#">리빙</a>
+              <ul class="depth3">
+                <li><a href="#">쿠션/방석</a></li>
+                <li><a href="#">컵/텀블러</a></li>
+                <li><a href="#">주방용품</a></li>
+                <li><a href="#">미용/욕실용품</a></li>
+                <li><a href="#">생활소품/잡화</a></li>
+                <li><a href="#">푸드</a></li>
+                <li><a href="#">탈취/방향제</a></li>
+              </ul>
+            </li>
+            <li><a href="#">잡화</a>
+              <ul class="depth3">
+                <li><a href="#">신발</a></li>
+                <li><a href="#">파우치/지갑/가방</a></li>
+                <li><a href="#">패션소품</a></li>
+                <li><a href="#">우산</a></li>
+                <li><a href="#">모자</a></li>
+                <li><a href="#">시즌잡화</a></li>
+              </ul>
+            </li>
+            <li><a href="#">의류</a>
+              <ul class="depth3">
+                <li><a href="#">여성의류</a></li>
+                <li><a href="#">남성의류</a></li>
+                <li><a href="#">상의</a></li>
+                <li><a href="#">잠옷</a></li>
+                <li><a href="#">속옷</a></li>
+                <li><a href="#">양말</a></li>
+              </ul>
+            </li>
+            <li><a href="#">쥬얼리</a>
+              <ul class="depth3">
+                <li><a href="#">귀걸이</a></li>
+                <li><a href="#">반지</a></li>
+                <li><a href="#">가방참/핀뱃지</a></li>
+                <li><a href="#">케이스</a></li>
+                <li><a href="#">헤어스트링</a></li>
+              </ul>
+            </li>
+            <li><a href="#">문구</a>
+              <ul class="depth3">
+                <li><a href="#">필기구</a></li>
+                <li><a href="#">필통/케이스</a></li>
+                <li><a href="#">노트/메모</a></li>
+                <li><a href="#">파일</a></li>
+                <li><a href="#">스티커</a></li>
+                <li><a href="#">데스크소품</a></li>
+                <li><a href="#">카드/엽서</a></li>
+                <li><a href="#">선물포장</a></li>
+              </ul>
+            </li>
+            <li><a href="#">여행/레저</a>
+              <ul class="depth3">
+                <li><a href="#">여행</a></li>
+                <li><a href="#">물놀이</a></li>
+                <li><a href="#">캠핑</a></li>
+              </ul>
+            </li>
+            <li><a href="#">생활테크</a>
+              <ul class="depth3">
+                <li><a href="#">휴대폰케이스</a></li>
+                <li><a href="#">휴대폰악세사리</a></li>
+                <li><a href="#">노트북악세사리</a></li>
+                <li><a href="#">소형전자</a></li>
+              </ul>
+            </li>
+            <li><a href="#">NINIZ</a></li>
+          </ul>
+        </li>
+        <li><a href="#">프로모션</a></li>
+        <li><a href="#">스토리</a>
+          <ul class="depth2">
+            <li><a href="#">카카오스토리 소개</a></li>
+            <li><a href="#">캐릭터 소개</a></li>
+            <li><a href="#">스토리</a></li>
+          </ul>
+        </li>
+        <li><a href="#">매장</a></li>
+        <li><a href="#">고객센터</a>
+          <ul class="depth2">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="language-nav">
+        <li><a href="#" class="active">KOR</a></li>
+        <li><a href="#">ENG</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 장바구니/위시리스트 팝업 -->
+  <div class="popup popup-shopping">
+    <h2 class="blind">장바구니/위시리스트</h2>
+    <button class="icon icon-close"><span class="blind">닫기</span></button>
+    <div class="popup-body center">
+      <nav class="tab-nav">
+        <ul>
+          <li><a href="#wish" class="on">위시리스트</a></li>
+          <li><a href="#cart">장바구니</a></li>
+        </ul>
+      </nav>
+      <div class="tab-contents">
+        <!-- 위시리스트 -->
+        <div id="wish" class="tab-content on">
+          <label><input type="checkbox" id="wish-check-all" class="all-check"><i class="icon icon-check"></i>전체선택</label>
+          <ul>
+          </ul>
+          <div class="bottom-area">
+            <div class="result">
+              총<span class="total">1</span>개 /
+              <span class="count">0</span>개 선택
+            </div>
+            <div class="btn-group">
+              <button class="btn-remove">선택삭제</button>
+              <button class="btn-add-cart">장바구니담기</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 장바구니 -->
+        <div id="cart" class="tab-content">
+          <label><input type="checkbox" id="cart-check-all" class="all-check"><i class="icon icon-check"></i>전체선택</label>
+          <ul>
+          </ul>
+          <div class="bottom-area">
+            <div class="result">
+              총<span class="total">1</span>개 /
+              <span class="count">0</span>개 선택
+              <span class="pay">59,900원</span>
+            </div>
+            <div class="btn-group">
+              <button class="btn-remove">선택삭제</button>
+              <button class="btn-order">주문하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

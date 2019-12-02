@@ -1,0 +1,240 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		2;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+#ad3{
+	text-align: center;
+	font-size: 1em;
+	background-image: url(image/bg.jpg);
+	color: #666;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #000;
+	padding: 5px;
+	height: 50px;
+	line-height: 50px;
+}
+#top {
+	clear: both;
+	float: left;
+	width: 100%;
+	display: block;
+	background-color: #EBEBEB;
+	line-height: 50px;
+	height: 50px;
+}	
+#logo{
+	float: left;
+	width: 150px;
+	padding-left:10px;
+}
+#language{
+	float:right;
+	padding-right:10px;
+}
+#kor{
+	float: left;
+	width: 50px;
+}
+#eng{
+	float: left;
+	width: 50px;
+}
+#menu {
+	clear: both;
+	float: left;
+	width: 100%;
+	display: block;
+	background-image: url(image/menu_bg.jpg);
+	background-size: contain;
+	color: #FFF;
+	font-size: 15px;
+	text-align: center;
+	height: 39px;
+	line-height: 39px;
+	background-color: #3CA7E1;
+}
+#center {
+	clear: both;
+	float: left;
+	width: 100%;
+	display: block;
+	text-align: center;
+	vertical-align: top;
+}
+#quick {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+	background-color: #000;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-color: #000;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #666;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #999;
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+	font-size: 0.7em;
+}
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 100%;
+}
+#ad3{
+	text-align: center;
+	font-size: 2em;
+	background-image: url(image/bg.jpg);
+	color: #666;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #000;
+	padding: 5px;
+	height: 100px;
+	line-height: 100px;
+}	
+#top {
+	clear: both;
+	float: left;
+	width: 100%;
+	display: block;
+	background-color: #EBEBEB;
+	line-height: 80px;
+	height: 80px;
+}	
+#logo{
+	float: left;
+	width: 200px;
+	padding-left:10px;
+}
+#language{
+	float:right;
+	padding-right:10px;
+}
+#kor{
+	float: left;
+	width: 80px;
+}
+#eng{
+	float: left;
+	width: 80px;
+}
+#menu {
+	clear: both;
+	float: left;
+	width: 100%;
+	display: block;
+	background-image: url(image/menu_bg.jpg);
+	background-size: contain;
+	color: #FFF;
+	font-size: 30px;
+	text-align: center;
+	height: 80px;
+	line-height: 80px;
+}
+#center {
+	clear: both;
+	float: left;
+	width: 100%;
+	display: block;
+}
+#quick {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 100%;
+}
+#top {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#menu {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#center {
+	clear: both;
+	float: left;
+	width: 100%;
+	display: block;
+}
+#quick {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}

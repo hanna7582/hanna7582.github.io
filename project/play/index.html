@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>play</title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"">   
+   <link rel="stylesheet" href="css/play.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>   
+   <script src="js/play.js"></script>
+</head>
+<body>
+   <header>      
+      <button id="btn-list">
+         <i class="material-icons">playlist_play</i>
+      </button>
+   </header>
+   <div class="lp">
+      <span class="circle"></span>
+      <span class="label">play</span>
+   </div>
+   <div id="play-list" class="swiper-container">
+      <ul class="swiper-wrapper">
+         <!-- <li><span>나의 옛날 이야기 - 아이유</span></li> -->
+      </ul>
+   </div>
+
+   <footer>
+      <dl>
+         <dt>노래제목</dt>
+         <dd>아티스트명</dd>
+      </dl>
+      <audio>
+         <source src="music/아이유_나의 옛날이야기(My old story).mp3" type="audio/mpeg">
+      </audio>
+      <div id="volume">
+         <!-- volume_up/volume_off/volume_mute -->
+         <button id="btn-volume"><i class="material-icons">volume_up</i></button>        
+         <div class="slider"></div>
+      </div>
+      <div id="progress">
+         <div class="slider"></div>
+         <span class="now">00:00</span>
+         <span class="time">04:30</span>
+      </div>
+      <div id="controls">
+         <!-- repeat/repeat_one -->
+         <button id="btn-repeat"><i class="material-icons">repeat</i></button>
+         <div class="center">
+            <button id="btn-prev"><i class="material-icons">skip_previous</i></button>
+            <!-- play_arrow/pause -->
+            <button id="btn-play"><i class="material-icons">play_arrow</i></button>
+            <button id="btn-next"><i class="material-icons">skip_next</i></button>
+         </div>
+         <button id="btn-shuffle"><i class="material-icons">shuffle</i></button>
+      </div>
+   </footer>
+</body>
+</html>

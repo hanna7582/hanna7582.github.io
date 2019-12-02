@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>EDM HOLIC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimun-scale=1, maximun-scale=1, user-scalable=no" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+    
+    <!-- jquery -->
+    <script src="../js/jquery-1.11.2.min.js"></script>
+	<script src="../js/swiper.jquery.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+	
+    <!-- javascript -->
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="../js/main.js"></script>
+</head>
+<body>
+<!-- 헤더 -->
+<header class="navbar" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="toggle_left navbar-toggle" onclick="javascript:location.href='login.html'">
+            <span class="sr-only">뒤로가기</span>
+            <span class="btn_prev"></span>
+        </button>
+        <a class="navbar-brand" href="#">회원가입</a>
+    </div>
+</header>
+       
+<section class="login">
+	<div class="wrap">
+		<div class="form" style="border-bottom: 1px solid #42404b; box-shadow: none;">
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<label for="user_name">이름</label>
+							<input type="text" id="user_name" class="input_01_1">
+						</td>
+					</tr>
+					<tr>
+						<td style="position: relative;">
+							<span class="icon_id"></span>
+							<label for="user_id">Email</label>
+							<input type="text" id="user_id" class="input_01_2">
+							<p class="sub_text">*E-mail은 비밀번호 찾기에 사용되므로 정확하게 입력해주세요.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="form" style="border-bottom: 1px solid #42404b; box-shadow: none;">	
+			<table>
+				<tbody>		
+					<tr>
+						<td>
+							<label for="user_pw">비밀번호</label>
+							<input type="password" id="user_pw" class="input_01" placeholder="비밀번호">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="password" class="input_01" placeholder="비밀번호 확인">
+							<p class="sub_text">6자리 이상 영문,숫자, 특수문자 사용</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="form">
+			<table>
+				<tbody>
+					<tr><td><label for="user_birth">생년월일</label></td></tr>
+					<tr>
+						<td>
+							<ul style="margin-bottom: 21px;">
+							<li>
+								<div class="form-select">
+									<select id="user_birth">
+										<option value="">년도</option>
+										<option value="">2015</option>
+										<option value="">2014</option>
+										<option value="">2013</option>
+										<option value="">2012</option>
+										<option value="">2011</option>
+										<option value="">2010</option>
+									</select>
+								</div>
+							</li>
+							<li>
+								<div class="form-select">
+								<select>
+									<option value="">월</option>
+									<option value="">1</option>
+									<option value="">2</option>
+									<option value="">3</option>
+									<option value="">4</option>
+									<option value="">5</option>
+									<option value="">6</option>
+									<option value="">7</option>
+									<option value="">8</option>
+									<option value="">9</option>
+									<option value="">10</option>
+									<option value="">11</option>
+									<option value="">12</option>
+								</select>
+								</div>
+							</li>
+							<li>
+								<div class="form-select">
+								<select>
+									<option value="">일</option>
+									<option value="">1</option>
+									<option value="">2</option>
+									<option value="">3</option>
+									<option value="">4</option>
+									<option value="">5</option>
+									<option value="">6</option>
+									<option value="">7</option>
+									<option value="">8</option>
+									<option value="">9</option>
+									<option value="">10</option>
+									<option value="">11</option>
+									<option value="">12</option>
+									<option value="">13</option>
+									<option value="">14</option>
+									<option value="">15</option>
+									<option value="">16</option>
+									<option value="">17</option>
+									<option value="">18</option>
+									<option value="">19</option>
+									<option value="">20</option>
+									<option value="">21</option>
+									<option value="">22</option>
+									<option value="">23</option>
+									<option value="">24</option>
+									<option value="">25</option>
+									<option value="">26</option>
+									<option value="">27</option>
+									<option value="">28</option>
+									<option value="">29</option>
+									<option value="">30</option>
+									<option value="">31</option>
+								</select>
+								</div>
+							</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="text_left">
+							<input type="checkbox" id="use">
+							<label for="use" style="padding-bottom: 10px;"><span></span>EDM 홀릭의 <a href="use.html">이용약관</a>에 동의합니다.</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="text_left">
+							<input type="checkbox" id="private">
+							<label for="private"><span></span><a href="private.html">개인정보수집 및 이용</a>에 동의합니다.</label>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="btn_area">
+				<button class="btn_signup" onclick="toast_message('비밀번호는 6자리 이상의 영문, 숫자, 특수문자이어야 합니다');"></button><!-- javascript:location.href='signup_02.html'; -->
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+</html>

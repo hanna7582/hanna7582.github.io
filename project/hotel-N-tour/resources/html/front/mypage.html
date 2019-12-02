@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hotel N Tour</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/hnt-front.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <script src="../../js/hnt-front.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <a href="#contents" class="skip-menu">본문바로가기</a>
+    <header class="center border-bottom">
+      <h1><a href="index.html"><img src="../../images/front/logo.png" alt="hotel N Tour logo"></a></h1>
+      <ul class="lnb-nav">
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="signup.html">회원가입</a></li>
+        <li><a href="#">여행자보험</a></li>
+        <li class="mypage">
+          <a href="policy.html">
+            <img src="../../images/front/profile.png" alt="프로필이미지">
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <section id="contents">
+      <article class="tab-area" id="mypage">
+        <!-- 선택 -->
+        <div class="select-wrap">
+          <div class="select-form">
+            <div class="select select3">
+              <a href="#" class="c-white select-check">하와이</a>
+              <ul>
+                <li><a href="#">하와이</a></li>
+                <li><a href="#">test1</a></li>
+                <li><a href="#">test2</a></li>
+              </ul>
+              <select>
+                <option value="">하와이</option>
+                <option value="">test1</option>
+                <option value="">test2</option>
+              </select>
+            </div>
+            <div class="select select4">
+              <a href="#" class="select-check">전체보기</a>
+              <ul>
+                <li><a href="#">전체보기</a></li>
+                <li><a href="#">test1</a></li>
+                <li><a href="#">test2</a></li>
+              </ul>
+              <select>
+                <option value="">전체보기</option>
+                <option value="">test1</option>
+                <option value="">test2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="po-relative">
+          <h1>마이페이지</h1>
+          <a href="#" class="logout">로그아웃</a>
+        </div>
+
+        <nav>
+          <ul class="tab-menu">
+            <li class="active"><i class="icon icon-new"><span class="skip">new</span></i><a href="#">예약상품</a></li>
+            <li><a href="#">위시리스트</a></li>
+            <li><i class="icon icon-new"><span class="skip">new</span></i><a href="#">쿠폰</a></li>
+            <li><i class="icon icon-new"><span class="skip">new</span></i><a href="#">메시지</a></li>
+            <li><a href="#">내정보 수정</a></li>
+          </ul>
+        </nav>
+
+        <div class="fixed-menu">
+          <div id="map" class="center"></div>
+        </div>
+
+        <!-- tab-contents -->
+        <div class="tab-contents">
+          <div class="contents active accordion">
+            <div class="accordion-header row">
+              <div class="col1">위치</div>
+              <div class="col2">상품정보</div>
+              <div class="col3">상태
+                <button class="icon icon-info" title="상태정보"></button>
+                <img src="../../images/front/reservation-info.png" alt="">
+                <div class="blind">
+                  <ol>
+                    <li>예약신청-고객이 예약신청한 상태이며 "예약 확인중"으로넘어가기 전에는 바로취소 할 수 있음</li>
+                    <li>예약 확인중-상품판매자가 예약가부를 확인중인 상태.
+                    <li>
+                      <ol>
+                        <li>예약 불가-상품판매자가 예약 불가처리한 상태이며, 판매자가 불가사유를 안내.</li>
+                        <li>예약 확정-상품판매자가 "예약확정"한 상태.</li>
+                      </ol>
+                     </li>
+                     <li>
+                       <ol>
+                         <li>취소처리중-고객이 취소신청 한 상태이며, 판매자가 취소를 위한 업무 처리중.</li>
+                         <li>4-2.일정종료-"예약확정" 후 여행일정이 지난 상태.</li>
+                        </ol>
+                     </li>
+                     <li>취소완료-예약확정 이전에 취소하여 전액 환불되거나, 예약확정 상태에서 취소신청하여 취소 후 환불된 상태.</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="col4">예약안내</div>
+              <div class="col5">상품상담</div>
+            </div>
+
+            <ul class="accordion-body">
+              <li>
+                <div class="row">
+                  <div class="col1">
+                    <i class="icon icon-map"><span class="skip">지도</span></i>
+                  </div>
+                  <div class="col2">
+                    <div class="type">호텔</div>
+                    <dl>
+                      <dt>와이키키비치 메리어트 호텔<br>Resort Suite Fusion Suites Ocean View</dt>
+                      <dd>여행지역 : 하와이 > 오하우</dd>
+                      <dd>주문번호 : B-HIT2017010100001</dd>
+                      <dd>구매일시 : 17.12.03 10:00</dd>
+                      <dd>예약날짜 : 17.12.05 ~ 17.12.10</dd>
+                      <dd>현대카드 / 일시불 12345******45678</dd>
+                      <dd class="last"><span>결제 : &#92; 1,430,810</span></dd>
+                    </dl>
+                  </div>
+                  <div class="col3">
+                    <div>예약확정</div>
+                    <button class="btn-border btn-popup1">취소</button>
+                  </div>
+                  <div class="col4">
+                    <button id="btn-confirm" class="btn-border">확정서</button>
+                  </div>
+                  <div class="col5">
+                    <button class="icon icon-view"><i class="icon icon-new"><span class="skip">new</span></i><span class="skip"보기></span></button>
+                  </div>
+                </div>
+                <div class="message-wrap">
+                  <div class="wrap">
+                    <div class="left">
+                      <div class="top">
+                        <span>상담원</span>
+                        <span class="po-right">2018.12.03 10:05</span>
+                      </div>
+                      <div class="message-box">
+                        안녕하세요.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap">
+                    <div class="right">
+                      <div class="top">
+                        <span>2018.12.03 10:05</span>
+                      </div>
+                      <div class="message-box">
+                        하와이 상품관련 문의드립니다.하와이 상품관련 문의드립니다.하와이 상품관련 문의드립니다.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-inline">
+                    <input type="text">
+                    <button class="btn-border">전송</button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col1">
+                    <i class="icon icon-map on"><span class="skip">지도</span></i>
+                  </div>
+                  <div class="col2">
+                    <div class="type">호텔</div>
+                    <dl>
+                      <dt>와이키키비치 메리어트 호텔<br>Resort Suite Fusion Suites Ocean View</dt>
+                      <dd>여행지역 : 하와이 > 오하우</dd>
+                      <dd>주문번호 : B-HIT2017010100001</dd>
+                      <dd>구매일시 : 17.12.03 10:00</dd>
+                      <dd>예약날짜 : 17.12.05 ~ 17.12.10</dd>
+                      <dd>현대카드 / 일시불 12345******45678</dd>
+                      <dd class="fb"><span>결제 : &#92; 1,430,810</span> <span>환불(수수료 10%) : &#92; 1,287,729</span></dd>
+                    </dl>
+                  </div>
+                  <div class="col3">
+                    <span>취소완료</span>
+                  </div>
+                  <div class="col4">
+                    <button class="btn-border">안내</button>
+                  </div>
+                  <div class="col5">
+                    <button class="icon icon-view"><i class="icon icon-new"><span class="skip">new</span></i><span class="skip"보기></span></button>
+                  </div>
+                </div>
+                <div class="message-wrap">
+                  <div class="wrap">
+                    <div class="left">
+                      <div class="top">
+                        <span>상담원</span>
+                        <span class="po-right">2018.12.03 10:05</span>
+                      </div>
+                      <div class="message-box">
+                        안녕하세요.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap">
+                    <div class="right">
+                      <div class="top">
+                        <span>2018.12.03 10:05</span>
+                      </div>
+                      <div class="message-box">
+                        하와이 상품관련 문의드립니다.하와이 상품관련 문의드립니다.하와이 상품관련 문의드립니다.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap">
+                    <div class="left">
+                      <div class="top">
+                        <span>상담원</span>
+                        <span class="po-right">2018.12.03 10:05</span>
+                      </div>
+                      <div class="message-box">
+                        안녕하세요.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-inline">
+                    <input type="text">
+                    <button class="btn-border">전송</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- / 예약상품  -->
+
+          <div class="contents wishlist">
+            <div class="top-area">
+              <h3>호텔</h3>
+              <span class="po-right"><i class="icon icon-heart2"></i> 07</span>
+            </div>
+            <div class="hotel-result">
+              <!-- 상품이 없을 경우 -->
+              <div class="no-data">선택하신 상품이 없습니다.</div>
+              <!-- 상품이 있을 경우 -->
+              <!-- <div class="hotel-list">
+                <ul class="photo-list sort">
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo1.png" alt="">
+                      <i class="icon icon-special on"><span class="skip">특가</span></i>
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="name"><a href="#">5성 애스톤 와이키키 서클</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp80"></span></em>
+                      <span class="num">12</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo2.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="name"><a href="#">5성 애스톤 와이키키 서클</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp100"></span></em>
+                      <span class="num">332</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo2.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="name"><a href="#">5성 애스톤 와이키키 서클</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp20"></span></em>
+                      <span class="num">332</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo2.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="name"><a href="#">5성 애스톤 와이키키 서클</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp40"></span></em>
+                      <span class="num">332</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo1.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="name"><a href="#">5성 애스톤 와이키키 서클</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp80"></span></em>
+                      <span class="num">12</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo2.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="name"><a href="#">5성 애스톤 와이키키 서클</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp100"></span></em>
+                      <span class="num">332</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo2.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="name"><a href="#">5성 애스톤 와이키키 서클</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp20"></span></em>
+                      <span class="num">332</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo2.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="name"><a href="#">5성 애스톤 와이키키 서클</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp40"></span></em>
+                      <span class="num">332</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="btn-area text-center">
+                <a href="#" class="icon icon-more3 btn-more"><span class="skip">더보기</span></a>
+              </div> -->
+            </div>
+            <!-- / 호텔 -->
+
+            <div class="top-area">
+              <h3>투어</h3>
+              <span class="po-right"><i class="icon icon-heart2"></i> 05</span>
+            </div>
+            <div class="hotel-result tour">
+              <!-- 상품이 없을 경우 -->
+              <div class="no-data">선택하신 상품이 없습니다.</div>
+              <!-- 상품이 있을 경우 -->
+              <div class="hotel-list">
+                <ul class="photo-list sort">
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo1.png" alt="">
+                      <i class="icon icon-special on"><span class="skip">특가</span></i>
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="type">다이빙</div>
+                    <div class="name"><a href="#">발리 고래상어 투어＋투말록 폭포 스노주저리 주저리</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp80"></span></em>
+                      <span class="num">12</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo2.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="type">다이빙</div>
+                    <div class="name"><a href="#">발리 고래상어 투어＋투말록 폭포 스노주저리 주저리</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp100"></span></em>
+                      <span class="num">332</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo2.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="type">다이빙</div>
+                    <div class="name"><a href="#">발리 고래상어 투어＋투말록 폭포 스노주저리 주저리</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp20"></span></em>
+                      <span class="num">332</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo2.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="type">다이빙</div>
+                    <div class="name"><a href="#">발리 고래상어 투어＋투말록 폭포 스노주저리 주저리</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp40"></span></em>
+                      <span class="num">332</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo1.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="type">다이빙</div>
+                    <div class="name"><a href="#">발리 고래상어 투어＋투말록 폭포 스노주저리 주저리</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp80"></span></em>
+                      <span class="num">12</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo2.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="type">다이빙</div>
+                    <div class="name"><a href="#">발리 고래상어 투어＋투말록 폭포 스노주저리 주저리</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp100"></span></em>
+                      <span class="num">332</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo2.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="type">다이빙</div>
+                    <div class="name"><a href="#">발리 고래상어 투어＋투말록 폭포 스노주저리 주저리</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp20"></span></em>
+                      <span class="num">332</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="../../images/front/photo2.png" alt="">
+                      <i class="icon icon-heart"><span class="skip">좋아요</span></i>
+                      <i class="icon icon-map"><span class="skip">지도</span></i>
+                    </div>
+                    <div class="local">하와이 | 오하우</div>
+                    <div class="type">다이빙</div>
+                    <div class="name"><a href="#">발리 고래상어 투어＋투말록 폭포 스노주저리 주저리</a></div>
+                    <div class="price">&#92; 430,810</div>
+                    <div class="star">
+                      <em><span class="wp40"></span></em>
+                      <span class="num">332</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="btn-area text-center">
+                <a href="#" class="icon icon-more3 btn-more"><span class="skip">더보기</span></a>
+              </div>
+            </div>
+            <!-- / 투어 -->
+
+            <div class="top-area">
+              <h3><a href="#" class="btn-local">가고싶은 여행지 ▼</a></h3>
+              <div class="card card-local">
+                <div class="card-header">
+                  최대 5개의 여행지를 선택하실 수 있습니다.
+                  <button class="icon icon-close close"><span class="skip">닫기</span></button>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li><label><input type="checkbox" name="local" value="하와이" checked><i class="icon icon-check"></i><span>하와이</span><span class="sub">(오아후, 마우이, 코나, 라나이, 카우아이)</span></label></li>
+                    <li><label><input type="checkbox" name="local" value="태국" checked><i class="icon icon-check"></i><span>태국</span><span class="sub">(방콕, 푸켓, 코사무이, 크라비)</span></label></li>
+                    <li><label><input type="checkbox" name="local" value="필리핀" checked><i class="icon icon-check"></i><span>필리핀</span><span class="sub">(마닐라, 세부, 보홀, 보라카이)</span></label></li>
+                    <li><label><input type="checkbox" name="local" value="인도네시아"><i class="icon icon-check"></i><span>인도네시아</span><span class="sub">(발리, 롬복)</span></label></li>
+                    <li><label><input type="checkbox" name="local" value="몰디브" checked><i class="icon icon-check"></i><span>몰디브</span><span class="sub">(수상비행기, 스피드보트, 국내선)</span></label></li>
+                    <li><label><input type="checkbox" name="local" value="괌" checked><i class="icon icon-check"></i><span>괌</span></label></li>
+                    <li><label><input type="checkbox" name="local" value="사이판"><i class="icon icon-check"></i><span>사이판</span></label></li>
+                    <li><label><input type="checkbox" name="local" value="호주"><i class="icon icon-check"></i><span>호주</span><span class="sub">(시드니, 골드코스트, 케언즈, 멜버른)</span></label></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tag">
+              <p>가고 싶은 여행지를 지정하시면 해당지역의 유용한정보를 받아 보실 수 있습니다.</p>
+              <div class="tag-list">
+                <span data-value="하와이">하와이<button class="icon icon-del"><span class="skip">삭제</span></button></span>
+                <span data-value="태국">태국<button class="icon icon-del"><span class="skip">삭제</span></button></span>
+                <span data-value="필리핀">필리핀<button class="icon icon-del"><span class="skip">삭제</span></button></span>
+                <span data-value="필리핀">몰디브<button class="icon icon-del"><span class="skip">삭제</span></button></span>
+                <span data-value="괌">괌<button class="icon icon-del"><span class="skip">삭제</span></button></span>
+              </div>
+            </div>
+          </div>
+          <!-- / 위시리스트 -->
+
+          <div class="contents coupon">
+            <table>
+              <colgroup>
+                <col style="width:155px;">
+                <col style="width:100px;">
+                <col style="width:275px;">
+                <col style="width:240px;">
+                <col style="width:130px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>사용기한 (현지날짜)</th>
+                  <th>사용지역</th>
+                  <th>발급대상 / 쿠폰명</th>
+                  <th>혜택</th>
+                  <th>출력</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>17.12.05 ~ 17.12.10</td>
+                  <td>하와이<br>오하우</td>
+                  <td class="text-left">[하와이] 체험다이빙 (교육+강습) 상품구매고객 <strong>다이빙 무료 강습 1시간</strong></td>
+                  <td class="text-left">판매자에게 사전예약 하시면 다이빙 체험 전 한시간 무료 강습을 받으실 수 있습니다.</td>
+                  <td><button class="btn-border">출력</button></td>
+                </tr>
+                <tr>
+                  <td>17.12.05 ~ 17.12.10</td>
+                  <td>하와이<br>오하우</td>
+                  <td class="text-left">[하와이] 체험다이빙 (교육+강습) 상품구매고객 <strong>다이빙 무료 강습 1시간</strong></td>
+                  <td class="text-left">판매자에게 사전예약 하시면 다이빙 체험 전 한시간 무료 강습을 받으실 수 있습니다.</td>
+                  <td><button class="btn-border">출력</button></td>
+                </tr>
+                <tr>
+                  <td>17.12.05 ~ 17.12.10</td>
+                  <td>하와이<br>오하우</td>
+                  <td class="text-left">[하와이] 체험다이빙 (교육+강습) 상품구매고객 <strong>다이빙 무료 강습 1시간</strong></td>
+                  <td class="text-left">판매자에게 사전예약 하시면 다이빙 체험 전 한시간 무료 강습을 받으실 수 있습니다.</td>
+                  <td><button class="btn-border">출력</button></td>
+                </tr>
+                <tr>
+                  <td>17.12.05 ~ 17.12.10</td>
+                  <td>하와이<br>오하우</td>
+                  <td class="text-left">[하와이] 체험다이빙 (교육+강습) 상품구매고객 <strong>다이빙 무료 강습 1시간</strong></td>
+                  <td class="text-left">판매자에게 사전예약 하시면 다이빙 체험 전 한시간 무료 강습을 받으실 수 있습니다.</td>
+                  <td><button class="btn-border">출력</button></td>
+                </tr>
+                <tr>
+                  <td>17.12.05 ~ 17.12.10</td>
+                  <td>하와이<br>오하우</td>
+                  <td class="text-left">[하와이] 체험다이빙 (교육+강습) 상품구매고객 <strong>다이빙 무료 강습 1시간</strong></td>
+                  <td class="text-left">판매자에게 사전예약 하시면 다이빙 체험 전 한시간 무료 강습을 받으실 수 있습니다.</td>
+                  <td><button class="btn-border">출력</button></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="btn-area text-center">
+              <a href="#" class="icon icon-more3 btn-more"><span class="skip">더보기</span></a>
+            </div>
+          </div>
+          <!-- / 쿠폰 -->
+
+          <div class="contents messages">
+            <div class="top-area">
+              <h3>1:1 여행상담</h3>
+            </div>
+            <div class="list">
+              <ul>
+                <li>
+                  <div class="list-header">
+                    <h4>17.12.03 10:00 <b>[하와이]</b></h4>
+                    <p>하와이 여행문의 드립니다,항공권과 호텔은 제가 예약해서가고 현지에서 가이드 가능 하신지 문의드립니다.</p>
+                  </div>
+                  <div class="list-body">
+                    <i class="icon icon-new"><span class="skip">new</span></i>
+                    <p>안녕하세요. 저는 하와이현지에서 여행 설계 및 안내일을 하고 있습니다. 넵. 가능합니다. 가이드도 가능하며, 골프장부킹도 가능합니다. 보다 상세한
+                    상담을 위해서 저 네임카드 보시고 아래 링크 따라 들어오시면 카톡 있으니 카톡으로 연결 부탁드릴께요.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-header">
+                    <h4>17.12.03 10:00 <b>[하와이]</b></h4>
+                    <p>하와이 여행문의 드립니다,항공권과 호텔은 제가 예약해서가고 현지에서 가이드 가능 하신지 문의드립니다.</p>
+                  </div>
+                  <div class="list-body">
+                    <i class="icon icon-new"><span class="skip">new</span></i>
+                    <p>안녕하세요. 저는 하와이현지에서 여행 설계 및 안내일을 하고 있습니다. 넵. 가능합니다. 가이드도 가능하며, 골프장부킹도 가능합니다. 보다 상세한
+                    상담을 위해서 저 네임카드 보시고 아래 링크 따라 들어오시면 카톡 있으니 카톡으로 연결 부탁드릴께요.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-header">
+                    <h4>17.12.03 10:00 <b>[하와이]</b></h4>
+                    <p>하와이 여행문의 드립니다,항공권과 호텔은 제가 예약해서가고 현지에서 가이드 가능 하신지 문의드립니다.</p>
+                  </div>
+                  <div class="list-body">
+                    <i class="icon icon-new"><span class="skip">new</span></i>
+                    <p>안녕하세요. 저는 하와이현지에서 여행 설계 및 안내일을 하고 있습니다. 넵. 가능합니다. 가이드도 가능하며, 골프장부킹도 가능합니다. 보다 상세한
+                    상담을 위해서 저 네임카드 보시고 아래 링크 따라 들어오시면 카톡 있으니 카톡으로 연결 부탁드릴께요.</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="btn-area text-center">
+                <a href="#" class="icon btn-more icon-more3"><span class="skip">더보기</span></a>
+              </div>
+              <div class="form-group">
+                <div class="form-inline">
+                  <div class="select select2">
+                    <a href="#" class="select-check">지역선택</a>
+                    <ul style="display: none;">
+                      <li><a href="#">하와이</a></li>
+                      <li><a href="#">태국</a></li>
+                      <li><a href="#">몰디브</a></li>
+                    </ul>
+                    <select>
+                      <option value="">하와이</option>
+                      <option value="">태국</option>
+                      <option value="">몰디브</option>
+                    </select>
+                  </div>
+                  <input type="text">
+                  <button class="btn-border">전송</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="top-area">
+                <h3>후기</h3>
+              </div>
+
+              <ul class="comment-list">
+                <li>
+                  <div class="title">
+                    <div class="star">
+                      <em><span class="wp40"></span></em>
+                    </div>
+                    <span class="date">2017.12.06. 04:19:45</span>
+                  </div>
+                  <p>하얏트 처음 이용했는데 만족스러웠습니다. 하얏트 처음 이용했는데 만족스러웠습니다. 하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.</p>
+                </li>
+                <li>
+                  <div class="title">
+                    <div class="star">
+                      <em><span class="wp40"></span></em>
+                    </div>
+                    <span class="date">2017.12.06. 04:19:45</span>
+                  </div>
+                  <p>하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.</p>
+                </li>
+                <li>
+                  <div class="title">
+                    <div class="star">
+                      <em><span class="wp40"></span></em>
+                    </div>
+                    <span class="date">2017.12.06. 04:19:45</span>
+                  </div>
+                  <p>하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.</p>
+                </li>
+                <li>
+                  <div class="title">
+                    <div class="star">
+                      <em><span class="wp40"></span></em>
+                    </div>
+                    <span class="date">2017.12.06. 04:19:45</span>
+                  </div>
+                  <p>하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.</p>
+                </li>
+                <li>
+                  <div class="title">
+                    <div class="star">
+                      <em><span class="wp40"></span></em>
+                    </div>
+                    <span class="date">2017.12.06. 04:19:45</span>
+                  </div>
+                  <p>하얏트 처음 이용했는데 만족스러웠습니다. 하지만 비가 많이 오는날 천장에서 물이떨어진게 아쉬웠습니다. 이부분만 잘 해결해주시면 완벽했을거 같아요. 감사합니다.</p>
+                </li>
+              </ul>
+              <div class="btn-area text-center">
+                <a href="#" class="icon btn-more icon-more3"><span class="skip">더보기</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- / 메시지 -->
+
+          <div class="contents myinfo-edit">
+            <table>
+              <colgroup>
+                <col style="width:230px;">
+                <col style="width:670px;">
+              </colgroup>
+              <tr class="border">
+                <th>프로필 사진수정</th>
+                <td>
+                  <img src="../../images/front/profile.png" alt="프로필사진">
+                  <div class="image-upload">
+                    <label>
+                      <input type="file" name="" value="" class="skip">
+                      <span class="btn-border">파일 업로드</span>
+                    </label>
+                    <button class="btn-border btn-del">삭제</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>이름</th>
+                <td style="padding-top:20px;">
+                  <input type="text" placeholder="성/이름(한글)">
+                </td>
+              </tr>
+              <tr>
+                <th>이메일</th>
+                <td>hong1004@naver.com</td>
+              </tr>
+              <tr>
+                <th>비밀번호</th>
+                <td>
+                  <span class="text">***********</span>
+                  <button class="btn-border btn-popup2">비밀번호 변경</button>
+                </td>
+              </tr>
+              <tr>
+                <th>휴대폰번호</th>
+                <td>
+                  <span class="text">휴대폰 정보 없음</span>
+                  <button class="btn-border btn-popup3">휴대폰 인증하기</button>
+                </td>
+              </tr>
+              <tr>
+                <th>이벤트 및 마케팅 정보 수신</th>
+                <td>
+                  <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>이메일</span></label>
+                  <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>SMS</span></label>
+                  <label class="checkbox"><input type="checkbox"><i class="icon icon-check"></i><span>푸시</span></label>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom:15px;">환불계좌 입력</th>
+                <td style="padding-bottom:20px;">
+                  <input type="text" placeholder="예금주" style="width:165px;">
+                  <input type="text" placeholder="은행" style="width:165px;">
+                  <input type="text" placeholder="게좌번호" style="width:310px; margin:0;">
+                </td>
+              </tr>
+            </table>
+            <div class="btn-area">
+              <button class="btn-border btn-save">저장하기</button>
+            </div>
+          </div>
+          <!-- / 내정보 수정 -->
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <div class="center">
+        <ul class="app-download">
+          <li><a href="#" class="icon icon-appstore"><span class="skip">app store</span></a></li>
+          <li><a href="#" class="icon icon-googleplay"><span class="skip">google play</span></a></li>
+        </ul>
+        <ul class="info">
+          <li>
+            <h2>호텔 엔 투어</h2>
+            <ul>
+              <li><a href="about-us.html">회사소개</a></li>
+              <li><a href="#">보도자료</a></li>
+              <li><a href="customer.html">고객센터</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>정책안내</h2>
+            <ul>
+              <li><a href="policy.html">이용약관</a></li>
+              <li><a href="#">개인정보 취급방침</a></li>
+              <li><a href="#">취소/환불 규정</a></li>
+              <li><a href="#">저작권 안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>파트너 되기</h2>
+            <ul>
+              <li><a href="#">파트너 안내</a></li>
+              <li><a href="#">파트너 문의</a></li>
+              <li><a href="#">파트너 신청</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sns">
+          <li><a href="#" class="icon icon-facebook"><span class="skip">facebook</span></a></li>
+          <li><a href="#" class="icon icon-instagram"><span class="skip">instagram</span></a></li>
+          <li><a href="#" class="icon icon-youtube"><span class="skip">youtube</span></a></li>
+        </ul>
+        <small>Copyright © Hotel n Tour All rights reserved. </small>
+      </div>
+    </footer>
+
+    <!-- 예약상품 취소규정팝업 -->
+    <div class="popup popup-reservation-cancel">
+      <div class="popup-header">
+        <h1>예약 하신 상품의 취소규정</h1>
+        <button class="icon icon-close close"><span class="skip">닫기</span></button>
+      </div>
+      <div class="popup-body">
+        <ul>
+          <li>투어일 30일전 취소시 100% 환불</li>
+          <li>투어일 15일전 취소시 70% 환불</li>
+          <li>투어일 10일전 취소시 30% 환불</li>
+          <li>투어일 09 부터 취소 불가</li>
+        </ul>
+        <p>취소요청시 위의 환불규정에 따라 환불 되며, 환불불가 처리될 수 있습니다</p>
+        <b>투어일 28일전</b>
+      </div>
+      <div class="popup-footer">
+        <button class="btn-border">환불요청</button>
+      </div>
+    </div>
+
+    <!-- 비밀번호 변경 -->
+    <div class="popup popup-password">
+      <div class="popup-header">
+        <h1>비밀번호 변경</h1>
+        <button class="icon icon-close close"><span class="skip">닫기</span></button>
+      </div>
+      <div class="popup-body">
+        <span class="input-name">이름</span>
+        <input type="text" class="mb30">
+        <span class="input-name">새 비밀번호</span>
+        <input type="text" class="mb10" placeholder="'-'없이 입력해 주세요.">
+        <span class="input-name">인증번호</span>
+        <input type="text" class="mb55" placeholder="인증번호 6자리 입력">
+        <button class="btn-primary">비밀번호 변경</button>
+      </div>
+    </div>
+
+    <!-- 휴대폰 인증 팝업 -->
+    <div class="popup popup-phone">
+      <div class="popup-header">
+        <h1>휴대폰 인증</h1>
+        <button class="icon icon-close close"><span class="skip">닫기</span></button>
+      </div>
+      <div class="popup-body">
+        <p class="mb30">예약진행 상황 및 기타 안내를 위해 휴대폰 인증이 필요합니다.</p>
+        <span class="input-name">국가 번호</span>
+        <div class="select select2 wp100 mb10">
+          <a href="#" class="select-check">+82(대한민국)</a>
+          <ul>
+            <li><a href="#">+82(대한민국)</a></li>
+            <li><a href="#">test1</a></li>
+            <li><a href="#">test2</a></li>
+          </ul>
+          <select>
+            <option value="">+82(대한민국)</option>
+            <option value="">test1</option>
+            <option value="">test2</option>
+          </select>
+        </div>
+        <span class="input-name">휴대폰 번호</span>
+        <input type="text" class="mb10" placeholder="'-'없이 입력해 주세요.">
+        <button class="btn-border mb35">인증번호 발송</button>
+        <p class="mb10">입력하신 번호로 5 자리 인증 번호가 발송 되었습니다.<br>인증번호입력 후 "휴대폰인증" 을 선택하시면 완료 됩니다.</p>
+        <span class="input-name">인증 번호</span>
+        <input type="text" class="mb10" placeholder="인증번호 6자리 입력">
+        <a href="#" class="mb40 link">인증번호 재발송</a>
+
+        <button class="btn-primary">휴대폰 인증</button>
+      </div>
+    </div>
+
+    <!-- 확정서 팝업 -->
+    <div class="popup popup-vaucher">
+      <div class="popup-header">
+        <h1>Hotel Vaucher</h1>
+        <button class="icon icon-close close"><span class="skip">닫기</span></button>
+      </div>
+      <div class="popup-body">
+        <table class="table table-bordered">
+          <caption>예약 확정서 입력</caption>
+          <colgroup>
+            <col style="width:160px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>Confirmation No <span class="c-red">*</span></th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Hotel</th>
+              <td>앰배서더 호텔 와이키키 (Ambassador Hotel Waikiki)</td>
+            </tr>
+            <tr>
+              <th>Hotel address <span class="c-red">*</span></th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Check in<br>/ Check out</th>
+              <td>
+                <ul class="mb0">
+                  <li>Check in : 2017-12-20  15:00</li>
+                  <li>Check out : 2017-12-23  12:00</li>
+                  <li>3Nights</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Number of room</th>
+              <td>2 room</td>
+            </tr>
+            <tr>
+              <th>대표 투숙객</th>
+              <td>
+                <ul class="mb0">
+                  <li>Name : 홍길동 / hong gil dong</li>
+                  <li>MP : 010 1234 1234</li>
+                  <li>E mail : honggd@naver.com</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="2">Room 1</th>
+              <td><b>카이울라니 룸 [Kaiulani Room]</b></td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Adult1 : Hong gildong</li>
+                  <li>Child1 : Hong nana ( Data of birth - 2010.03.23 )</li>
+                  <li>Child2 : Hong nara ( Data of birth - 2012.05.13 )</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="2">Room 2</th>
+              <td><b>카이울라니 룸 [Kaiulani Room]</b></td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Adult1 : Hong gildong</li>
+                  <li>Child1 : Hong nana ( Data of birth - 2010.03.23 )</li>
+                  <li>Child2 : Hong nara ( Data of birth - 2012.05.13 )</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="4">Required<br>(고객요청사항)</th>
+              <td><p class="message">※ 요청하신 내용은 호텔 사정에 의해 변경 될 수 있으며, 확정되지 않습니다.</p></td>
+            </tr>
+            <tr>
+              <td>금연실(non-Smoking), 허니문(Honeymooners), 더블베드(Double bed)</td>
+            </tr>
+            <tr>
+              <td style="background:#f6f6f6;">기타요청사항</td>
+            </tr>
+            <tr>
+              <td>ㅇㅇㅇ 요청 드립니다.</td>
+            </tr>
+            <tr>
+              <th>Remarks <span class="c-red">*</span><br>(비고)</th>
+              <td>객실 배정 ( 동 지정, 층 수, 뷰 ) 등과 베드 타입( 더블베드, 트윈베드) 신청은 호텔에 전달되지만, 호텔 프론트의 고유권한 이므로 체크인 당시 객실 상황에 따라 결정이 되므로 체크인시 원하시는 것을 요청 하시면 도움이 될 것입니다</td>
+            </tr>
+            <tr>
+              <th>Customer Notice<br>(고객 안내사항)</th>
+              <td>객실 배정 ( 동 지정, 층 수, 뷰 ) 등과 베드 타입( 더블베드, 트윈베드) 신청은 호텔에 전달되지만, 호텔 프론트의 고유권한 이므로 체크인 당시 객실 상황에 따라 결정이 되므로 체크인시 원하시는 것을 요청 하시면 도움이 될 것입니다</td>
+            </tr>
+            <tr>
+              <th>비상연락처 <span class="c-red">*</span></th>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <img src="../../images/logo.png" alt="">
+                <ul class="mb0">
+                  <li>주소 : [07299] 서울시 영등포구 경인로775 (문래동3가, 에이스하이테크시티) 3동 301호</li>
+                  <li>대표번호 : 070-4888-3141</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <ul class="mb0">
+                  <li>주문일시 : 2018-06-11 16:36:52</li>
+                  <li>주문번호 : ord20180611162856_0</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      //지도고정
+      var fixedMenu=$('.fixed-menu').offset().top;
+      $(window).scroll(function(){
+        var windowTop=$(window).scrollTop();
+        if(windowTop>fixedMenu){
+          $('.fixed-menu').addClass('fixed');
+          $('.tab-contents').css('padding-top',$('.fixed-menu').height());
+        }else{
+          $('.fixed-menu').removeClass('fixed');
+          $('.tab-contents').css('padding-top','');
+        }
+      });
+
+      // 탭메뉴
+      $('.tab-menu li a').on('click',function(e){
+        e.preventDefault();
+        $('.tab-menu li').removeClass('active');
+        $(this).parent().addClass('active');
+        var tabIndex=$(this).parent().index();
+        $('.tab-contents .contents').hide();
+        $('.tab-contents .contents').eq(tabIndex).show();
+        var index=$(this).parent().index();
+        if(index>1){
+          $('#map').hide();
+        }else{
+          $('#map').show();
+        }
+      });
+
+      $('.icon-view').on('click',function(e){
+        $(this).toggleClass('on');
+        $(this).parents('li').find('.message-wrap').slideToggle();
+      });
+
+      $('.icon-heart, .icon-map').on('click',function(){
+        $(this).toggleClass('on');
+      });
+
+      //더보기
+      $('.btn-more').on('click',function(e){
+        e.preventDefault();
+        $(this).toggleClass('icon-more3 icon-more-close');
+        if($(this).hasClass('icon-more-close')){
+          $(this).parents('.hotel-result').find('.hotel-list').css('height','auto');
+        }else{
+          $(this).parents('.hotel-result').find('.hotel-list').css('height','');
+        }
+      });
+
+      //예약상품 취소규정팝업
+      $('.btn-popup1').on('click',function(){
+        $('.popup-reservation-cancel').slideDown();
+        $('body').append('<div class="popup-bg"></div>');
+      })
+      $('.popup .close').on('click',function(){
+        $('.popup').slideUp(function(){
+          $('.popup-bg').remove();
+        });
+      })
+
+      //비밀번호 변경 팝업
+      $('.btn-popup2').on('click',function(){
+        $('.popup-password').slideDown();
+        $('body').append('<div class="popup-bg"></div>');
+      })
+
+      //휴대폰인증 팝업
+      $('.btn-popup3').on('click',function(){
+        $('.popup-phone').slideDown();
+        $('body').append('<div class="popup-bg"></div>');
+      })
+
+      //확정서 팝업
+      $('#btn-confirm').on('click',function(){
+        $('.popup-vaucher').slideDown();
+        $('body').append('<div class="popup-bg"></div>');
+      })
+
+      //가고싶은 여행지 레이어팝업
+      $('.btn-local').on('click',function(e){
+        e.preventDefault();
+        $('.card-local').toggle();
+      })
+      //닫기
+      $('.card .close').on('click',function(){
+        $('.card').hide();
+      })
+
+      //가고싶은 여행지 체크박스 선택
+      $('.card-local input[name=local]').on('click',function(){
+        // var val=$(this).parents('li').index();
+        // console.log(val);
+        $('.tag-list').empty();
+        $(".card-local input[name=local]:checked").each(function() {
+          var local = $(this).val();
+          $('.tag-list').append('<span data-value="'+local+'">'+local+'<button class="icon icon-del"><span class="skip">삭제</span></button></span>');
+        })
+      })
+      //삭제버튼 눌러서 여행지 선택해제
+      $('.tag-list').on('click','button',function(){
+        var selectLocal=$(this).parent('span').attr('data-value');
+        $(this).parent('span').remove();
+        $(".card-local input[name=local]").each(function() {
+          var local = $(this).val();
+          if(local==selectLocal){
+            $(this).attr('checked', false);
+          }
+        })
+      })
+
+      //프로필 사진
+      $('.image-upload input[type=file]').on('change',function(){
+         file = $(this).prop("files")[0];
+         var reader = new FileReader();
+         reader.onload = function (e) {
+           $('.image-upload input[type=file]').parents('.image-upload').prev('img').attr({
+             'src': e.target.result,
+             alt:file.name
+           });
+         }
+         reader.readAsDataURL(file);
+      });
+      //프로필사진 삭제
+      $('.image-upload').on('click','button', function(){
+        $('.image-upload').prev('img').attr({
+          'src': '../../images/front/profile.png',
+          alt:'프로필사진'
+        });
+        $('.image-upload').find('.image-upload input[type=file]').val('');
+      });
+    </script>
+  </body>
+</html>

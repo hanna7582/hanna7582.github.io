@@ -1,0 +1,15 @@
+
+<script>
+ 
+@if($lang_supported[$lang_type]!="English") 
+    doChangeLangType('en'); 
+@end
+ 
+</script>
+<include target="_header.html" />
+<!--@if($oDocument->isExists())-->
+	<include target="_read.html" />
+<!--@else-->
+	<include target="_list.html" />
+<!--@end-->
+<include target="_footer.html" />

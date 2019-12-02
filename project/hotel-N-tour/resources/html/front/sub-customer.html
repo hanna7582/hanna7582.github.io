@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hotel N Tour</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/hnt-front.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <script src="../../js/hnt-front.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <a href="#contents" class="skip-menu">본문바로가기</a>
+    <header class="center border-bottom">
+      <h1><a href="index.html"><img src="../../images/front/logo.png" alt="hotel N Tour logo"></a></h1>
+      <ul class="lnb-nav">
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="signup.html">회원가입</a></li>
+        <li><a href="#">여행자보험</a></li>
+        <li class="mypage">
+          <a href="mypage.html">
+            <img src="../../images/front/profile.png" alt="프로필이미지">
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <section id="contents">
+      <article class="tab-area">
+        <!-- 선택 -->
+        <div class="select-wrap">
+          <div class="select-form">
+            <div class="select select3">
+              <a href="#" class="c-white select-check">하와이</a>
+              <ul>
+                <li><a href="#">하와이</a></li>
+                <li><a href="#">test1</a></li>
+                <li><a href="#">test2</a></li>
+              </ul>
+              <select>
+                <option value="">하와이</option>
+                <option value="">test1</option>
+                <option value="">test2</option>
+              </select>
+            </div>
+            <div class="select select4">
+              <a href="#" class="select-check">전체보기</a>
+              <ul>
+                <li><a href="#">전체보기</a></li>
+                <li><a href="#">test1</a></li>
+                <li><a href="#">test2</a></li>
+              </ul>
+              <select>
+                <option value="">전체보기</option>
+                <option value="">test1</option>
+                <option value="">test2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <h1>하와이 고객센터</h1>
+
+        <nav>
+          <ul class="tab-menu">
+            <li class="active"><a href="#">자주묻는 질문</a></li>
+            <li><i class="icon icon-new"><span class="skip">new</span></i><a href="#">공지사항</a></li>
+            <li><i class="icon icon-new"><span class="skip">new</span></i><a href="#">1:1 여행상담</a></li>
+          </ul>
+        </nav>
+
+        <!-- tab-contents -->
+        <div class="tab-contents">
+          <div class="contents service-qna active">
+            <div class="form-group">
+              <div class="form-inline">
+                <div class="select select2">
+                  <a href="#" class="select-check">지역선택</a>
+                  <ul style="display: none;">
+                    <li><a href="#">하와이</a></li>
+                    <li><a href="#">태국</a></li>
+                    <li><a href="#">몰디브</a></li>
+                  </ul>
+                  <select>
+                    <option value="">하와이</option>
+                    <option value="">태국</option>
+                    <option value="">몰디브</option>
+                  </select>
+                </div>
+                <input type="text">
+                <button class="btn-border">전송</button>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="wrap active">
+                <div class="accordion-header">
+                  <span>투어이용</span>
+                  <p>호텔엔투어 을 통해 여행을 가고 싶어요. 예약은 어떻게 해야 하나요?</p>
+                </div>
+                <div class="accordion-body" style="display:block;">
+                  <p>호텔엔투어는 여행지에서 즐길 수 있는 투어, 관광지 입장권, 교통패스,
+                  액티비티는 물론 현지 문화 체험까지 내가 원하는 여행을 쉽고 빠르게
+                  검색하고 예약할 수 있는 여행 플랫폼 서비스입니다. 호텔엔투어 회원가
+                  입 후 여행하실 지역을 검색하신 다음 상품 상세 페이지를 살펴보신 후
+                  예약해 주시면 됩니다.</p>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="accordion-header">
+                  <span>호텔이용</span>
+                  <p>호텔엔투어 을 통해 여행을 가고 싶어요.</p>
+                </div>
+                <div class="accordion-body">
+                  <p>호텔엔투어는 여행지에서 즐길 수 있는 투어, 관광지 입장권, 교통패스,
+                  액티비티는 물론 현지 문화 체험까지 내가 원하는 여행을 쉽고 빠르게
+                  검색하고 예약할 수 있는 여행 플랫폼 서비스입니다. 호텔엔투어 회원가
+                  입 후 여행하실 지역을 검색하신 다음 상품 상세 페이지를 살펴보신 후
+                  예약해 주시면 됩니다.</p>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="accordion-header">
+                  <span>예약</span>
+                  <p>예약은 어떻게 해야 하나요?</p>
+                </div>
+                <div class="accordion-body">
+                  <p>호텔엔투어는 여행지에서 즐길 수 있는 투어, 관광지 입장권, 교통패스,
+                  액티비티는 물론 현지 문화 체험까지 내가 원하는 여행을 쉽고 빠르게
+                  검색하고 예약할 수 있는 여행 플랫폼 서비스입니다. 호텔엔투어 회원가
+                  입 후 여행하실 지역을 검색하신 다음 상품 상세 페이지를 살펴보신 후
+                  예약해 주시면 됩니다.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-area text-center">
+              <a href="#" class="icon icon-more3 btn-more"><span class="skip">더보기</span></a>
+            </div>
+          </div>
+          <!-- / 자주묻는 질문  -->
+
+          <div class="contents service-notice">
+            <div class="form-group">
+              <div class="form-inline">
+                <input type="text">
+                <button class="btn-border">검색</button>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-title">
+                <div class="col1">번호</div>
+                <div class="col2">제목</div>
+                <div class="col3">등록일시</div>
+              </div>
+              <div class="wrap active">
+                <div class="accordion-header">
+                  <div class="col1">112</div>
+                  <div class="col2 text-left">사이트 이용에 대한 공지 사항입니다.</div>
+                  <div class="col3">17.12.05 12:23</div>
+                </div>
+                <div class="accordion-body" style="display:block;">
+                  <p>사이트 이용에 대한 공지 사항입니다. 사이트 이용에 대한 공지 사항입니다.사이트 이용에 대한 공지 사항입니다. 사이트 이용에 대한 공지 사항입니다.사이트 이용에 대한 공지 사항입니다. 사이트 이용에 대한 공지 사항입니다.</p>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="accordion-header">
+                  <div class="col1">111</div>
+                  <div class="col2 text-left">사이트 이용에 대한 공지 사항입니다.</div>
+                  <div class="col3">17.12.05 12:23</div>
+                </div>
+                <div class="accordion-body">
+                  <p>사이트 이용에 대한 공지 사항입니다. 사이트 이용에 대한 공지 사항입니다.</p>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="accordion-header">
+                  <div class="col1">110</div>
+                  <div class="col2 text-left">사이트 이용에 대한 공지 사항입니다.</div>
+                  <div class="col3">17.12.05 12:23</div>
+                </div>
+                <div class="accordion-body">
+                  <p>사이트 이용에 대한 공지 사항입니다. 사이트 이용에 대한 공지 사항입니다.</p>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="accordion-header">
+                  <div class="col1">109</div>
+                  <div class="col2 text-left">사이트 이용에 대한 공지 사항입니다.</div>
+                  <div class="col3">17.12.05 12:23</div>
+                </div>
+                <div class="accordion-body">
+                  <p>사이트 이용에 대한 공지 사항입니다. 사이트 이용에 대한 공지 사항입니다.</p>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="accordion-header">
+                  <div class="col1">108</div>
+                  <div class="col2 text-left">사이트 이용에 대한 공지 사항입니다.</div>
+                  <div class="col3">17.12.05 12:23</div>
+                </div>
+                <div class="accordion-body">
+                  <p>사이트 이용에 대한 공지 사항입니다. 사이트 이용에 대한 공지 사항입니다.</p>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="accordion-header">
+                  <div class="col1">107</div>
+                  <div class="col2 text-left">사이트 이용에 대한 공지 사항입니다.</div>
+                  <div class="col3">17.12.05 12:23</div>
+                </div>
+                <div class="accordion-body">
+                  <p>사이트 이용에 대한 공지 사항입니다. 사이트 이용에 대한 공지 사항입니다.</p>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="accordion-header">
+                  <div class="col1">106</div>
+                  <div class="col2 text-left">사이트 이용에 대한 공지 사항입니다.</div>
+                  <div class="col3">17.12.05 12:23</div>
+                </div>
+                <div class="accordion-body">
+                  <p>사이트 이용에 대한 공지 사항입니다. 사이트 이용에 대한 공지 사항입니다.</p>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="accordion-header">
+                  <div class="col1">105</div>
+                  <div class="col2 text-left">사이트 이용에 대한 공지 사항입니다.</div>
+                  <div class="col3">17.12.05 12:23</div>
+                </div>
+                <div class="accordion-body">
+                  <p>사이트 이용에 대한 공지 사항입니다. 사이트 이용에 대한 공지 사항입니다.</p>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="accordion-header">
+                  <div class="col1">104</div>
+                  <div class="col2 text-left">사이트 이용에 대한 공지 사항입니다.</div>
+                  <div class="col3">17.12.05 12:23</div>
+                </div>
+                <div class="accordion-body">
+                  <p>사이트 이용에 대한 공지 사항입니다. 사이트 이용에 대한 공지 사항입니다.</p>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="accordion-header">
+                  <div class="col1">103</div>
+                  <div class="col2 text-left">사이트 이용에 대한 공지 사항입니다.</div>
+                  <div class="col3">17.12.05 12:23</div>
+                </div>
+                <div class="accordion-body">
+                  <p>사이트 이용에 대한 공지 사항입니다. 사이트 이용에 대한 공지 사항입니다.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- pagination -->
+            <div class="pagination">
+              <ul>
+                <li><a href="#" class="icon icon-page-prev"><span class="skip">이전</span></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#" class="icon icon-page-next"><span class="skip">다음</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /공지사항 -->
+
+          <div class="contents service-counsel">
+            <p>※고객님의 마이페이지에서도 확인하실 수 있습니다.</p>
+            <div class="counsel">
+              <div class="wrap">
+                <div class="counsel-header">
+                  <b>17.12.03 10:00 [하와이]</b>
+                  <p>[하와이 여행문의 드립니다,항공권과 호텔은 제가 예약해서가고 현지에서 가이드 가능 하신지 문의드립니다.</p>
+                </div>
+                <p class="counsel-body">안녕하세요,. 저는 하와이현지에서 여행 설계 및 안내일을 하고 있습
+                  니다. 넵. 가능합니다. 가이드도 가능하며, 골프장부킹도 가능합니다. 
+                  보다 상세한 상담을 위해서 저 네임카드 보시고 아래 링크 따라 들어
+                  오시면 카톡 있으니 카톡으로 연결 부탁드릴께요.</p>
+              </div>
+              <div class="wrap">
+                <div class="counsel-header">
+                  <b>17.12.03 10:00 [하와이]</b>
+                  <p>[하와이 여행문의 드립니다,항공권과 호텔은 제가 예약해서가고 현지에서 가이드 가능 하신지 문의드립니다.</p>
+                </div>
+                <p class="counsel-body">안녕하세요,. 저는 하와이현지에서 여행 설계 및 안내일을 하고 있습
+                  니다. 넵. 가능합니다. 가이드도 가능하며, 골프장부킹도 가능합니다. 
+                  보다 상세한 상담을 위해서 저 네임카드 보시고 아래 링크 따라 들어
+                  오시면 카톡 있으니 카톡으로 연결 부탁드릴께요.</p>
+              </div>
+              <div class="wrap">
+                <div class="counsel-header">
+                  <b>17.12.03 10:00 [하와이]</b>
+                  <p>[하와이 여행문의 드립니다,항공권과 호텔은 제가 예약해서가고 현지에서 가이드 가능 하신지 문의드립니다.</p>
+                </div>
+                <p class="counsel-body">안녕하세요,. 저는 하와이현지에서 여행 설계 및 안내일을 하고 있습
+                  니다. 넵. 가능합니다. 가이드도 가능하며, 골프장부킹도 가능합니다. 
+                  보다 상세한 상담을 위해서 저 네임카드 보시고 아래 링크 따라 들어
+                  오시면 카톡 있으니 카톡으로 연결 부탁드릴께요.</p>
+              </div>
+            </div>
+            <div class="btn-area text-center">
+              <a href="#" class="icon icon-more3 btn-more"><span class="skip">더보기</span></a>
+            </div>
+
+            <div class="form-group">
+              <div class="form-inline">
+                <input type="text">
+                <button class="btn-border">문의</button>
+              </div>
+            </div>
+          </div>
+          <!-- / 1:1 여행상담 -->
+
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <div class="center">
+        <ul class="app-download">
+          <li><a href="#" class="icon icon-appstore"><span class="skip">app store</span></a></li>
+          <li><a href="#" class="icon icon-googleplay"><span class="skip">google play</span></a></li>
+        </ul>
+        <ul class="info">
+          <li>
+            <h2>호텔 엔 투어</h2>
+            <ul>
+              <li><a href="about-us.html">회사소개</a></li>
+              <li><a href="#">보도자료</a></li>
+              <li><a href="customer.html">고객센터</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>정책안내</h2>
+            <ul>
+              <li><a href="policy.html">이용약관</a></li>
+              <li><a href="#">개인정보 취급방침</a></li>
+              <li><a href="#">취소/환불 규정</a></li>
+              <li><a href="#">저작권 안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>파트너 되기</h2>
+            <ul>
+              <li><a href="#">파트너 안내</a></li>
+              <li><a href="#">파트너 문의</a></li>
+              <li><a href="#">파트너 신청</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sns">
+          <li><a href="#" class="icon icon-facebook"><span class="skip">facebook</span></a></li>
+          <li><a href="#" class="icon icon-instagram"><span class="skip">instagram</span></a></li>
+          <li><a href="#" class="icon icon-youtube"><span class="skip">youtube</span></a></li>
+        </ul>
+        <small>COPYRIGHT © HOTEL N TOUR ALL RIGHTS RESERVED.</small>
+        <address>
+          <ul>
+            <li>서울특별시 강남구 도산대로 506, 재정빌딩 2층 (주)호텔엔투어 대표 : 유태선</li>
+            <li>| 사업자등록번호 : 762-88-00877 | 통신판매업신고번호 : 2018-서울강남-01061 |</li>
+            <li>개인정보관리책입자 : webmaster@hotelntour.co.kr   대표번호 : 02 548 2222</li>
+            <li>자사는 서울특별시관광협회 공제영업보증보험에 가입이 되어 있습니다.</li>
+            <li>호텔엔투어는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 호텔엔투어는 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.</li>
+          </ul>
+        </address>
+      </div>
+    </footer>
+
+    <script>
+      // 탭메뉴
+      $('.tab-menu li a').on('click',function(e){
+        e.preventDefault();
+        $('.tab-menu li').removeClass('active');
+        $(this).parent().addClass('active');
+        var tabIndex=$(this).parent().index();
+        $('.tab-contents .contents').hide();
+        $('.tab-contents .contents').eq(tabIndex).show();
+      });
+
+      //더보기
+      $('.btn-more').on('click',function(e){
+        e.preventDefault();
+        $(this).toggleClass('icon-more3 icon-more-close');
+      });
+
+      $('.accordion-header').on('click',function(e){
+        $(this).parents('.accordion').find('.wrap').removeClass('active');
+        $(this).parent().addClass('active');
+        $(this).parents('.accordion').find('.accordion-body').stop().slideUp();
+        $(this).next().stop().slideDown();
+      });
+    </script>
+  </body>
+</html>

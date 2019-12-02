@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>QMEMO</title>
+    <meta name="keywords" content="memo, quickmemo">
+    <meta name="description" content="QMEMO APP">
+    <meta name="author" content="hanna">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/qmemo.css">
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="title">
+        <h3><strong>Q</strong> MEMO</h3>
+        <p>ver1.0</p>
+      </div>
+    </div>
+
+    <script>
+      //처음방문시
+      if(localStorage.getItem("intro")==null){
+        localStorage.setItem("intro",0);
+        localStorage.setItem("memoType","box");
+        localStorage.setItem("themeType","light");
+        setTimeout(function(){
+          //intro페이지로 이동
+          location.href="QM-100000.html";
+        },2000);
+      }else{//이후 방문시
+        setTimeout(function(){
+          //memo페이지로 이동
+          location.href="QM-200000.html";
+        },2000);
+      }
+    </script>
+  </body>
+</html>

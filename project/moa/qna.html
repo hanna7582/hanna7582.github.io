@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MOA</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <link rel="stylesheet" href="css/moa.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>            
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>    
+    <script src="js/jquery.touch.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/qna.js"></script>
+</head>
+<body class="sub">    
+    <header id ="top-nav">
+        <h1>Q&A</h1>
+        <button id="btn-back" class="btn-back material-icons" onclick="location.href='main.html'">keyboard_arrow_left</button>
+    </header>
+
+    <section>
+        <article class="qna-list">
+            <ul class="accordion">
+                <li>
+                    <a href="#">목표삭제는 어떻게 하나요? <i class="material-icons">keyboard_arrow_down</i></a>
+                    <div class="content">
+                        <p>전체 목표 삭제는 목표내역에서 휴지통을 누르시면 됩니다.
+                            메뉴에서 초기화를 누르시면 목표내역뿐아니라 보상내역도 한번에 삭제되므로 주의하세요.
+                            개별 삭제를 하고 싶으시면 메인페이지의 리스트항목을 좌우로 움직이시면 삭제가 되고 상세페이지에서 휴지통을 눌러도 삭제가 됩니다.</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">앱을 초기화하고 싶어요. <i class="material-icons">keyboard_arrow_down</i></a>
+                    <div class="content">
+                        <p>메뉴에서 초기화 버튼을 누르세요. 모든 데이터가 삭제되고 복구할 수 없으므로 주의하세요.</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">이름을 바꿀 수 있나요? <i class="material-icons">keyboard_arrow_down</i></a>
+                    <div class="content">
+                        <p>메뉴에서 이름옆에 있는 변경을 누르시면 이름을 바꿀 수 있습니다.</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">한번 했던 목표를 다시 도전할 수 있나요? <i class="material-icons">keyboard_arrow_down</i></a>
+                    <div class="content">
+                        <p>목표가 종료되면 목표내역에 등록이 됩니다. 목표내역 화면에서 다시 도전하고 싶은 목표를 선택 후 버튼을 누르세요.</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">데이터를 백업하고 싶어요.<i class="material-icons">keyboard_arrow_down</i></a>
+                    <div class="content">
+                        <p>메뉴에서 데이터백업을 누르고 저장하세요.</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">백업한 데이터를 불러오고 싶어요.<i class="material-icons">keyboard_arrow_down</i></a>
+                    <div class="content">
+                        <p>다운로드폴더에서 불러오고싶은 backup을 선택하시고 복구를 누르시면 데이터가 복구됩니다.</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">인트로 화면을 다시 보고 싶어요. <i class="material-icons">keyboard_arrow_down</i></a>
+                    <div class="content">
+                        <p>하단의 소개화면 다시보기를 눌러주세요.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="text-center">
+                <a href="introduce.html" class="link" id="link-introduce">소개화면 다시보기</a>
+                <p class="mail">기타 문의 사항은 아래 메일로 보내주세요.<br>atozstudio@gmail.com</p>
+            </div>
+        </article>
+    </section>
+
+    <div class="popup-bg"></div>
+</body>
+</html>

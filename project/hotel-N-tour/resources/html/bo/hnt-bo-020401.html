@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel N Tour</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/hnt-bo.css">
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/hnt-bo.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script>
+      $(function(){
+
+      })
+
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1><a href="hnt-bo-000001.html">Hotel n Tour</a></h1>
+      <div class="user-info">
+        안녕하세요 <b>관리자님</b>
+        <button class="btn btn-default btn-sm" onclick="location.href='hnt-bo-000000.html'">로그아웃</button>
+      </div>
+      <nav class="gnb-nav">
+        <ul>
+          <li><a href="hnt-bo-010100.html">일반회원관리</a></li>
+          <li class="active"><a href="hnt-bo-020100.html">파트너회원관리</a></li>
+          <li><a href="hnt-bo-030100.html">상품관리</a></li>
+          <li><a href="hnt-bo-040100.html">예약관리</a></li>
+          <li><a href="hnt-bo-050100.html">매출관리</a></li>
+          <li><a href="hnt-bo-060100.html">게시판관리</a></li>
+          <li><a href="hnt-bo-070100.html">상품후기관리</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="snb-nav">
+      <h2>파트너회원관리</h2>
+      <nav>
+        <ul>
+          <li><a href="#">지역생성관리</a></li>
+          <li><a href="#">파트너사 등록</a></li>
+          <li><a href="#">파트너회원 가입신청</a></li>
+          <li class="active"><a href="#">파트너회원</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contents">
+      <div class="top">
+        <ol class="breadcrumb">
+          <li><a href="#">파트너회원관리</a></li>
+          <li><a href="#">파트너회원</a></li>
+          <li class="active">상세화면</li>
+        </ol>
+      </div>
+      <section>
+        <div class="title">
+          <h5>계정 신청자 정보</h5>
+        </div>
+        <table class="table table-bordered">
+          <caption>계정 신청자 정보</caption>
+          <colgroup>
+            <col style="width:150px">
+            <col style="width:200px">
+            <col style="width:140px">
+            <col style="width:200px">
+            <col style="width:140px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>회사명</th>
+              <td>00투어</td>
+              <th>국가</th>
+              <td>대한민국</td>
+              <th>주소</th>
+              <td>서울시 마포구 마포대로 121 201호  </td>
+            </tr>
+            <tr>
+              <th>담당자 이름</th>
+              <td>홍길동</td>
+              <th>아이디</th>
+              <td>hong1234</td>
+              <th>이메일</th>
+              <td>hong001@naver.com</td>
+            </tr>
+            <tr>
+              <th>담당자 전화번호</th>
+              <td>82-000000000</td>
+              <th>비밀번호</th>
+              <td colspan="3">*********
+                <button class="btn btn-info w120" data-toggle="modal" data-target="#password-modal">비밀번호변경</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered">
+          <caption>ID사용여부</caption>
+          <colgroup>
+            <col style="width:150px">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>ID사용여부</th>
+              <td>
+                <label class="radio-inline">
+                  <input type="radio" name="radio1" id="" checked> 사용
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="radio1" id=""> 미사용
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="btn-area text-center mb20">
+          <button class="btn btn-primary w100">목록</button>
+          <div class="po-right">
+            <button class="btn btn-danger w100">삭제</button>
+          </div>
+        </div>
+
+        <table class="table text-center table-bordered">
+          <caption>수정내역</caption>
+          <colgroup>
+            <col style="">
+            <col style="">
+            <col style="">
+            <col style="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>수정일시</th>
+              <th>수정내용</th>
+              <th>수정자</th>
+              <th>IP</th>
+            </tr>
+            <tr>
+              <td>2017-04-19 19:16:22</td>
+              <td class="text-left">등록상태가 변경되었습니다.</td>
+              <td>Hnt02</td>
+              <td>123.123.123.12</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <div class="modal fade" id="password-modal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">비밀번호 변경</h4>
+          </div>
+          <div class="modal-body">
+            <p class="info">8~20자 이내의 특수문자, 숫자,영문자 혼용</p>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="새 비밀번호 입력">
+              <!-- <p class="message">새 비밀번호를 입력 해주세요.</p> -->
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="비밀번호 확인">
+              <!-- <p class="message">새 비밀번호를 한번 더 입력 해주세요.</p> -->
+            </div>
+            <div class="form-group mb0">
+              <input type="text" class="form-control" placeholder="통합 관리자 비밀번호 입력">
+              <!-- <p class="message">통합관리자 비밀번호가 일치하지 않습니다.</p> -->
+            </div>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </body>
+</html>

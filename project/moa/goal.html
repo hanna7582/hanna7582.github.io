@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MOA</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <link rel="stylesheet" href="css/moa.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>            
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>    
+    <script src="js/jquery.touch.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/goal.js"></script>
+</head>
+<body class="sub">
+    <header id ="top-nav">
+        <h1>목표내역</h1>
+        <button id="btn-back" class="btn-back material-icons" onclick="location.href='main.html'">keyboard_arrow_left</button>
+        <button id="btn-goal-delete" class="btn-delete material-icons">delete</button>
+    </header>
+    <section>
+        <div class="count">
+            <span class="total">TOTAL <b>0</b></span>
+            <div class="state">
+                <span class="now">진행 <b>0</b> / </span>
+                <span class="finish">종료 <b>0</b></span>
+            </div>
+        </div>
+        <article class="goal-list">
+            <ul class="accordion list-del">
+            </ul>            
+        </article>
+    </section>
+
+    <div class="popup-message popup-goal">
+        <h2>목표내역 삭제</h2>        
+        <p>모든 목표내역을 삭제하시겠습니까?</p>
+        <div class="btn-group">
+            <button type="button" class="btn-normal">취소</button>
+            <button type="button" class="btn-primary">삭제</button>
+        </div>
+    </div>
+
+    <div class="popup-message restart">
+        <h2>다시도전</h2>
+        <p>같은 내용으로 다시 도전하시겠습니까?</p>
+        <div class="btn-group">
+            <button type="button" class="btn-normal">취소</button>
+            <button type="button" class="btn-primary">도전</button>
+        </div>
+    </div>
+    
+    <div class="popup-bg"></div>
+</body>
+</html>

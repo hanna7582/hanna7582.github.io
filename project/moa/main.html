@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MOA</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/moa.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>            
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- ui.touch-punch sortable -->
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery.touch.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>  
+    <header id ="top-nav">
+        <h1>
+            <a href="index.html">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="72px" height="20px" viewBox="0 0 72 20" enable-background="new 0 0 72 20" xml:space="preserve">
+                    <path id="logo" fill="#5CB5E3" d="M26,20h20V0H26V20z M30,4h12v12H30V4z M52,0v20h4v-6h12v6h4V0H52z M68,10H56V4h12V10z M10,6L4,0H0v20h4
+                    V5.656l6,6l6-6V20h4V0h-4L10,6z"/>
+                </svg>    
+            </a>       
+        </h1>
+        <button id="btn-menu" class="btn-menu material-icons">menu</button>
+        <button id="btn-favorite" class="btn-favorite material-icons">favorite</button>
+        <button id="btn-search" class="btn-search material-icons">search</button>
+    </header>
+    <nav class="popup-menu">
+        <div class="user-info">
+            <span class="name"><b>귀한시간</b>님 <a href="#" id="link-name-change">변경</a></span>
+            <span class="level">레벨 <b>1</b></span>
+        </div>
+        <ul>
+            <li><a href="goal.html">목표내역</a></li>
+            <li><a href="reward.html">보상내역</a></li>
+            <li><a href="#">테마변경</a>
+                <div class="theme">
+                    <div class="group">
+                        <label for="display-check">화면</label>
+                        <div class="display">
+                            <span class="on">리스트</span>
+                            <input type="checkbox" id="display-check">
+                            <label for="display-check" class="switch">
+                                <span class="bar"></span>
+                                <span class="btn"></span>                                
+                            </label>
+                            <span>카드</span>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <label for="color-check">색상</label>
+                        <div class="color">
+                            <span class="on">화이트</span>
+                            <input type="checkbox" id="color-check">
+                            <label for="color-check" class="switch">
+                                <span class="bar"></span>
+                                <span class="btn"></span>                                
+                            </label>
+                            <span>블루</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="qna.html">Q&A</a></li>
+            <li><a href="#" id="link-reset">초기화</a></li>
+            <li><a href="#" id="link-backup">데이터백업</a></li>
+            <li><a href="#" id="link-recovery">데이터복구</a></li>
+            <li><a href="#" id="link-explanation">간단설명팝업</a></li>
+        </ul>
+        <div class="app-info">
+            <strong>MOA</strong>
+            <span>ver 1.0</span>
+            <span>atozstudio@gmail.com</span>
+        </div>
+    </nav>
+
+    <section class="view">
+        <h2 class="blind">목표리스트</h2>
+        <div class="count">
+            <span class="total">TOTAL <b></b></span>
+            <div class="state">
+                <span class="now">진행 <b></b> / </span>
+                <span class="finish">종료 <b></b></span>
+            </div>
+        </div>
+
+        <article class="list-view">  
+            <h3 class="blind">리스트뷰</h3>          
+            <ul class="sortable">
+            </ul>
+        </article>
+
+        <article class="card-view">
+            <h3 class="blind">카드뷰</h3>  
+            <ul class="sortable">
+            </ul>
+        </article>
+    </section>
+
+    <nav id="bottom-nav">
+        <button id="btn-filter" class="btn-filter material-icons">more_horiz</button>        
+        <button id="btn-sort" class="btn-sort material-icons">swap_vert</button>
+        <button id="btn-up" class="btn-up material-icons">keyboard_arrow_up</button>
+        <button id="btn-new" class="btn-new material-icons">add</button>
+    </nav>
+
+    <!-- popup -->
+    <div class="popup-search">
+        <input type="text" placeholder="찾고 싶은 목표를 검색하세요." title="목표검색">
+        <button class="material-icons">search</button>
+    </div>
+
+    <div class="popup-filter">
+        <label><input type="radio" name="filter" value="all" checked><span>전체</span></label>
+        <label><input type="radio" name="filter" value="ing"><span>진행</span></label>
+        <label><input type="radio" name="filter" value="end"><span>종료</span></label>
+    </div>    
+
+    <div class="popup-new">
+        <h2>목표 등록하기</h2>
+        <form id="form-new">
+            <div class="row">
+                <label for="goal-name" class="text-label">목표이름</label>
+                <input type="text" id="goal-name">
+            </div>
+            <div class="row">
+                <label for="reward-name" class="text-label">보상내용</label>
+                <input type="text" id="reward-name">
+            </div>
+            <div class="row inline-group">
+                <label>달성종류</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="goal-type" value="type1" checked><i></i><span>횟수지정</span></label>
+                    <label><input type="radio" name="goal-type" value="type2"><i></i><span>시간지정</span></label>
+                    <label><input type="radio" name="goal-type" value="type3"><i></i><span>수량/단위</span></label>
+                </div>
+            </div>
+            <div class="row inline-group">
+                <label>달성기준</label>
+                <div class="select-group">
+                    <div class="type1">
+                        <div class="col">
+                            <div>
+                                <select name="type1-val1" title="기간">
+                                    <option value="7">1주동안</option>
+                                    <option value="14">2주동안</option>
+                                    <option value="21">3주동안</option>
+                                    <option value="28">4주동안</option>        
+                                    <option value="35">5주동안</option>                        
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <select name="type1-val2" title="횟수">
+                                    <option value="1">매일 1회</option>
+                                    <option value="2">매일 2회</option>
+                                    <option value="3">매일 3회</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type2">
+                        <div class="col">
+                            <div>
+                                <select name="type2-val1" title="기간">
+                                    <option value="7">1주동안</option>
+                                    <option value="14">2주동안</option>
+                                    <option value="21">3주동안</option>
+                                    <option value="28">4주동안</option>        
+                                    <option value="35">5주동안</option>                         
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <select name="type2-val2" title="시간">
+                                    <option value="0">00:00 - 01:00</option>
+                                    <option value="1">01:00 - 02:00</option>
+                                    <option value="2">02:00 - 03:00</option> 
+                                    <option value="3">03:00 - 04:00</option>
+                                    <option value="4">04:00 - 05:00</option>
+                                    <option value="5">05:00 - 06:00</option> 
+                                    <option value="6">06:00 - 07:00</option>
+                                    <option value="7">07:00 - 08:00</option>
+                                    <option value="8">08:00 - 09:00</option> 
+                                    <option value="9">09:00 - 10:00</option>
+                                    <option value="10">10:00 - 11:00</option>
+                                    <option value="11">11:00 - 12:00</option>
+                                    <option value="12">12:00 - 13:00</option>
+                                    <option value="13">13:00 - 14:00</option>
+                                    <option value="14">14:00 - 15:00</option>
+                                    <option value="15">15:00 - 16:00</option>                                                  
+                                    <option value="16">16:00 - 17:00</option>
+                                    <option value="17">17:00 - 18:00</option>
+                                    <option value="18">18:00 - 19:00</option>
+                                    <option value="19">19:00 - 20:00</option>
+                                    <option value="20">20:00 - 21:00</option>
+                                    <option value="21">21:00 - 22:00</option>
+                                    <option value="22">22:00 - 23:00</option>
+                                    <option value="23">23:00 - 24:00</option>
+                                </select>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="type3">
+                        <div class="col">
+                            <div>
+                                <select name="type3-val1" title="기간">
+                                    <option value="7">1주동안</option>
+                                    <option value="14">2주동안</option>
+                                    <option value="21">3주동안</option>
+                                    <option value="28">4주동안</option>        
+                                    <option value="35">5주동안</option>                         
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <input type="text" name="type3-val2" placeholder="수량(숫자)" title="수량">
+                            </div>    
+                        </div>                        
+                        <div class="col">
+                            <div>
+                                <input type="text" name="type3-val3" placeholder="단위(문자)" title="단위">
+                            </div>          
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="btn-group">
+                    <button type="button" class="btn-cancel btn-normal">취소</button>
+                    <button type="button" class="btn-submit btn-primary">등록</button>
+                </div>
+            </div>
+        </form>
+    </div> 
+
+    <div class="popup-message popup-reset">
+        <h2>초기화</h2>        
+        <p>앱을 초기화 하시겠습니까?<br>초기상태로 돌아갑니다.</p>
+        <div class="btn-group">
+            <button type="button" class="btn-normal">취소</button>
+            <button type="button" class="btn-primary">초기화</button>
+        </div>
+    </div>
+
+    <div class="popup-message popup-backup">
+        <h2>백업</h2>        
+        <p>데이터를 백업하시겠어요?</p>
+        <div class="btn-group">
+            <button type="button" class="btn-normal">취소</button>
+            <a href="#" class="btn-primary" download>백업</a>
+        </div>
+    </div>
+
+    <div class="popup-message popup-recovery">
+        <h2>데이터 복구</h2> 
+        <p>복구할 JSON파일을 불러오세요.</p>  
+        <div class="row">
+            <label for="jsonfile">파일선택</label>
+            <input type="file" id="jsonfile">
+            <button type="button" id="btn-file">파일선택</button>
+            <span class="filename">선택된 파일없음</span>
+        </div>        
+        <div class="btn-group">
+            <button type="button" class="btn-normal">취소</button>
+            <button type="button" class="btn-primary">복구</button>
+        </div>
+    </div>
+
+    <div class="popup-explanation">                            
+        <button type="button">설명창 닫기</button>
+        <span class="text1">메뉴</span>
+        <span class="text2">관심목표</span>
+        <span class="text3">검색(자동완성)</span>
+        <span class="text4">리스트를 좌로 밀면 삭제/우로 밀면 취소</span>
+        <span class="text5">필터링</span>
+        <span class="text6">순서변경을 누르고 리스트 순서변경</span>
+        <span class="text7">목표등록</span>        
+    </div>
+
+    <div class="popup-bg"></div>
+</body>
+</html> 

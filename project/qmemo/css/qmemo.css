@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/* material icon */
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+/* reset */
+*{margin: 0; padding: 0;}
+html,body{height: 100%;}
+
+/* common */
+.q{font-family: 'Lato', sans-serif;}
+.wp100{width:100% !important;}
+.pr25{padding-right: 25px;}
+.pt100{padding-top: 100px;}
+.wrap{overflow-x:hidden;}
+
+/* materialize */
+.validate{border-bottom:1px solid #fff !important;}
+.input-field label{color: #fff;}
+
+/* isotope */
+.grid-item{
+  width:100%; padding: 5px;
+}
+@media only screen and (min-width:768px){
+  .grid-item{width:50%;}
+}
+@media only screen and (min-width:1200px){
+  .grid-item{width:33.33%;}
+}
+
+/* modal */
+#modal, #info-modal{
+  background-color: #263238;
+}
+#modal h4{
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+}
+@media only screen and (max-width:767px){
+  #modal h4{
+    font-size: 1rem;
+  }
+}
+/* main */
+.main{
+  background: #2d2d2d;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.main .title{
+  position: absolute;
+  left: 50%;
+  top:40%;
+  min-width: 300px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  text-shadow: 0px 0px 10px #000;
+}
+.main footer{
+  position: absolute;
+  bottom:20px;
+  left:50%;
+  transform: translateX(-50%);
+}
+.main footer img{
+  width:100px;
+}
+
+/* intro */
+.intro{overflow: hidden;}
+.intro .btn-group{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+.intro .input-field input{
+  border-bottom:1px solid #fff;
+}
+.intro .input-field .prefix{
+  padding-top:13px;
+}
+
+/* memo main */
+.memo-main.dark{
+  background: #303030;
+}
+
+header{
+  margin: 50px 0;
+}
+#memo-contents{
+  padding-bottom: 0;
+}
+#memo-list{
+  margin:0 -5px;
+}
+.memo-main{
+  background: #7ac9bd;
+}
+.memo-main .select-wrapper span.caret{
+  right:10px;
+  color:#fff;
+}
+.select-wrapper input.select-dropdown{
+  border-bottom: 1px solid #fff;
+}
+.search{
+  height: 50px;
+}
+.search .select-wrapper input.select-dropdown{
+  text-indent: 10px;
+  border-bottom:0;
+}
+.memo-main .card-content p{
+  text-align: justify;
+  height: 25px;
+}
+.filter-count{
+  padding-top:10px;
+}
+.card-action button{
+  background: transparent;
+  border:0;
+}
+#list-view{
+  margin: 0.8rem .375rem;
+}
+#list-view .row{
+  position: relative;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 0;
+  padding: 0.8rem 0;
+  width:100%;
+  margin: 0;
+}
+#list-view .row .date{
+  padding: 0;
+  width:225px;
+}
+#list-view .row .date .badge{
+  color:#fff;
+  width:50px;
+  border-radius: 3px;
+}
+#list-view .row .truncate{
+  padding-right: 60px;
+  height: 25px;
+}
+#list-view .row .modal-link{
+  position: absolute;
+  right:30px;
+  bottom:5px;
+}
+#list-view .row .remove{
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+}
+#toggle-menu{
+  position: fixed;
+  width:100%;
+  top:0;
+}
+.fixed-action-btn{
+  position: absolute;
+  top:10px;
+  right:10px;
+}
+.fixed-action-btn.horizontal ul li{
+  margin: 10px 5px 0 0;
+}
+
+/* go top */
+#go-top{
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left:50%;
+  bottom:25px;
+  transform: translateX(-50%);
+  box-shadow: none;
+  background: transparent;
+}
+#go-top.on{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**/

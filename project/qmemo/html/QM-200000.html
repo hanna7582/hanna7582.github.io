@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>QMEMO</title>
+    <meta name="keywords" content="memo, quickmemo">
+    <meta name="description" content="QMEMO APP">
+    <meta name="author" content="hanna">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/multilevelmenu.css">
+    <link rel="stylesheet" href="../css/component.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/qmemo.css">
+
+    <!-- js -->
+    <script src="../js/modernizr.custom.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="../js/jquery.dlmenu.js"></script>
+    <script src="../js/pagetransitions.js"></script>
+    <script src="../js/jquery.touchSwipe.min.js"></script>
+    <script src="../js/qmemo.js"></script>
+  </head>
+  <body class="memo-main dark">
+    <!-- header -->
+    <header>
+      <h4 class="center-align">
+        <strong class="q">Q</strong>MEMO
+      </h4>
+    </header>
+
+    <!-- side nav -->
+    <ul id="slide-out" class="side-nav">
+      <li><div class="user-view">
+        <div class="background">
+          <img src="https://lorempixel.com/400/200/abstract/2/">
+        </div>
+        <a href="#!user"><img class="circle" src="../images/qmemologo.png"></a>
+        <a href="#!name"><span class="white-text name">QMEMO ver1.0</span></a>
+        <a href="#!email"><span class="white-text email">hanna7582@gmail.com</span></a>
+      </div></li>
+      <li><a class="subheader" href="#!"><i class="material-icons">settings</i>Setting</a></li>
+      <li>
+        <a href="#!">
+          <div class="switch">
+            <span class="pr25">테마색상</span>
+            <label>
+              dark
+              <input type="checkbox" id="theme-check">
+              <span class="lever"></span>
+              light
+            </label>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#!">
+          <div class="switch">
+            <span class="pr25">메모형식</span>
+            <label>
+              list
+              <input type="checkbox" id="memo-check">
+              <span class="lever"></span>
+              box
+            </label>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+    <!-- container -->
+    <section class="container">
+      <form action="" name="memo" class="center-align">
+        <div class="wrap">
+          <div class="row">
+            <div class="input-field col s6">
+              <select class="select-category" name="">
+                <option value="" disabled selected>category</option>
+                <option value="idea">idea</option>
+                <option value="diary">diary</option>
+                <option value="etc">etc</option>
+              </select>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="memo-contents" class="materialize-textarea white-text validate"></textarea>
+              <label for="memo-contents">MEMO CONTENTS</label>
+            </div>
+          </div>
+          <button type="button" id="save" class="btn teal darken-2">SAVE</button>
+        </div>
+      </form>
+      <br>
+
+      <!-- search -->
+      <nav class="search">
+        <div class="nav-wrapper button-group row">
+          <div class="input-field col s6">
+            <select class="select-sort">
+              <option value="" disabled selected>sort</option>
+              <option value="date">date</option>
+              <option value="category">category</option>
+            </select>
+          </div>
+          <div class="input-field col s6">
+            <select class="select-filter">
+              <option value="" disabled selected>filter</option>
+              <option value="*">all</option>
+              <option value=".idea">idea</option>
+              <option value=".diary">diary</option>
+              <option value=".etc">etc</option>
+            </select>
+          </div>
+        </div>
+      </nav>
+      <!-- total -->
+      <p class="filter-count">Total 0</p>
+      <!-- memo list -->
+      <div id="memo-list">
+        <div id="list-view">
+          <!-- <div class="row idea" data-category="idea">
+            <div class="col s12 m5 date">
+              <span>2017-07-17 12:12:00</span>
+              <span class="badge green">idea</span>
+            </div>
+            <div class="col s12 m7 truncate">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+            <a href="#!" class="white-text modal-link"><i class="material-icons">open_in_new</i></a>
+            <a href="#!" class="white-text remove"><i class="material-icons">close</i></a>
+          </div>
+
+          <div class="row etc" data-category="etc">
+            <div class="col s12 m5 date">
+              <span>2017-01-17 10:12:00</span>
+              <span class="badge teal">etc</span>
+            </div>
+            <div class="col s12 m7 truncate">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+            <a href="#!" class="white-text modal-link"><i class="material-icons">open_in_new</i></a>
+            <a href="#!" class="white-text remove"><i class="material-icons">close</i></a>
+          </div>
+
+          <div class="row diary" data-category="diary">
+            <div class="col s12 m5 date">
+              <span>2017-03-17 12:50:00</span>
+              <span class="badge brown">diary</span>
+            </div>
+            <div class="col s12 m7 truncate">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+            <a href="#!" class="white-text modal-link"><i class="material-icons">open_in_new</i></a>
+            <a href="#!" class="white-text remove"><i class="material-icons">close</i></a>
+          </div> -->
+        </div><!--// list view end -->
+
+        <div id="box-view" style="display:none;">
+          <!-- <div class="grid-item idea" data-category="idea">
+            <div class="card hoverable green">
+              <a href="#modal" class="modal-link">
+                <div class="card-content white-text">
+                  <span class="card-title date">2017-07-17 12:12:00</span>
+                  <p class="truncate">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+              </a>
+              <div class="card-action">
+                <button class="remove">
+                  <i class="material-icons">close</i>
+                </button>
+                <span class="right">idea</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item etc" data-category="etc">
+            <div class="card hoverable teal">
+              <a href="#modal" class="modal-link">
+                <div class="card-content white-text">
+                  <span class="card-title date">2017-01-17 12:12:00</span>
+                  <p class="truncate">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+              </a>
+              <div class="card-action">
+                <button class="remove">
+                  <i class="material-icons">close</i>
+                </button>
+                <span class="right">etc</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item diary" data-category="diary">
+            <div class="card hoverable brown">
+              <a href="#modal" class="modal-link">
+                <div class="card-content white-text">
+                  <span class="card-title date">2017-03-17 12:12:00</span>
+                  <p class="truncate">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+              </a>
+              <div class="card-action">
+                <button class="remove">
+                  <i class="material-icons">close</i>
+                </button>
+                <span class="right">diary</span>
+              </div>
+            </div>
+          </div> -->
+        </div> <!--// box view end -->
+      </div>
+    </section>
+
+    <!-- go top -->
+    <button id="go-top" class="btn white-text">
+      <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <!-- toggle menu -->
+    <div id="toggle-menu">
+      <div class="fixed-action-btn click-to-toggle horizontal">
+        <a class="btn-floating btn-large red">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul>
+          <li><a id="btn-search" class="btn-floating red"><i class="material-icons">search</i></a></li>
+          <li><a id="btn-settings" data-activates="slide-out" class="btn-floating yellow darken-1"><i class="material-icons">settings</i></a></li>
+          <li><a id="btn-delete" class="btn-floating blue-grey"><i class="material-icons">delete</i></a></li>
+          <li><a href="QM-100000.html" class="btn-floating blue"><i class="material-icons">info_outline</i></a></li>
+          <li class="center-align"><a id="btn-q-info" class="btn-floating light-blue darken-4 q">Q</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- memo modal -->
+    <div id="modal" class="modal modal-fixed-footer">
+      <div class="modal-content blue-grey darken-4">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">close</a>
+      </div>
+    </div>
+
+    <!-- search modal -->
+    <div id="search-modal" class="modal bottom-sheet">
+      <div class="modal-content blue-grey darken-4">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">search</i>
+            <input type="text" id="autocomplete-input" class="autocomplete">
+            <label for="autocomplete-input">Autocomplete</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+      </div>
+    </div>
+
+    <!-- app info modal -->
+    <div id="info-modal" class="modal modal-fixed-footer">
+      <div class="modal-content blue-grey darken-4 center-align">
+        <h4>QMEMO</h4>
+        <p>version 1.0</p>
+        <p class="pt100">hanna7582@gmail.com</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">close</a>
+      </div>
+    </div>
+
+  </body>
+</html>
