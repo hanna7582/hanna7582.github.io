@@ -3,8 +3,8 @@
     "category":"desktop",
     "title":"신세계아카데미",
     "img":[
-      "images/shinsegae-desktop-1.jpg",
-      "images/shinsegae-desktop-2.jpg"
+      "images/works/shinsegae-desktop-1.jpg",
+      "images/works/shinsegae-desktop-2.jpg"
     ],
     "url":{
       "desktop":"https://www.shinsegae.com/culture/academylecture/aca_index.jsp",
@@ -18,8 +18,8 @@
     "category":"mobile",
     "title":"신세계아카데미",
     "img":[
-      "images/shinsegae-mobile-1.jpg",
-      "images/shinsegae-mobile-2.jpg"
+      "images/works/shinsegae-mobile-1.jpg",
+      "images/works/shinsegae-mobile-2.jpg"
     ],
     "url":{
       "desktop":"",
@@ -33,18 +33,18 @@
     "category":"mobile",
     "title":"MOA",
     "img":[
-      "images/moa-mobile-1.jpg",
-      "images/moa-mobile-2.jpg",
-      "images/moa-mobile-3.jpg",
-      "images/moa-mobile-4.jpg",
-      "images/moa-mobile-5.jpg",
-      "images/moa-mobile-6.jpg"
+      "images/works/moa-mobile-1.jpg",
+      "images/works/moa-mobile-2.jpg",
+      "images/works/moa-mobile-3.jpg",
+      "images/works/moa-mobile-4.jpg",
+      "images/works/moa-mobile-5.jpg",
+      "images/works/moa-mobile-6.jpg"
     ],
     "url":{
       "desktop":"",
       "mobile":"",
       "responsive":"project/moa/index.html",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/moa"
     },
     "description":"-목표관리 앱(스토어 등록예정)<br>-기획/설계/디자인/퍼블리싱/개발"
   },
@@ -52,76 +52,61 @@
     "category":"mobile",
     "title":"QMEMO",
     "img":[
-      "images/qmemo-mobile-1.jpg",
-      "images/qmemo-mobile-2.jpg",
-      "images/qmemo-mobile-3.jpg"
+      "images/works/qmemo-mobile-1.jpg",
+      "images/works/qmemo-mobile-2.jpg",
+      "images/works/qmemo-mobile-3.jpg"
     ],
     "url":{
       "desktop":"",
       "mobile":"https://play.google.com/store/apps/details?id=com.hannazclass.qmemo",
       "responsive":"",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/qmemo"
     },
     "description":"-메모장 앱(구글 플레이 스토어)<br>-기획/설계/디자인/퍼블리싱/개발"
-  },
-  {
-    "category":"mobile",
-    "title":"play",
-    "img":[
-      "images/play-mobile-1.jpg",
-      "images/play-mobile-2.jpg"
-    ],
-    "url":{
-      "desktop":"",
-      "mobile":"project/play/index.html",
-      "responsive":"",
-      "code":""
-    },
-    "description":"-음악 플레이어 앱<br>-기획/설계/디자인/퍼블리싱/개발"
   },
   {
     "category":"responsive",
     "title":"카카오프렌즈 샵",
     "img":[
-      "images/kakaofriends.jpg",
-      "images/kakaofriends-responsive-1.jpg",
-      "images/kakaofriends-responsive-2.jpg"
+      "images/works/kakaofriends.jpg",
+      "images/works/kakaofriends-responsive-1.jpg",
+      "images/works/kakaofriends-responsive-2.jpg"
     ],
     "url":{
       "desktop":"",
       "mobile":"",
       "responsive":"project/kakaofriends/index.html",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/kakofriends"
     },
     "description":"-캐릭터 샵 리뉴얼<br>-디자인/퍼블리싱"
   },
   {
     "category":"mobile",
-    "title":"EDM Holic",
+    "title":"play",
     "img":[
-      "images/edm-mobile-1.jpg",
-      "images/edm-mobile-2.jpg"
+      "images/works/play-mobile-1.jpg",
+      "images/works/play-mobile-2.jpg"
     ],
     "url":{
       "desktop":"",
-      "mobile":"project/edm-holic/html_work/list.html",
+      "mobile":"project/play/index.html",
       "responsive":"",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/play"
     },
-    "description":"-EDM MUSIC Hybrid App<br>-퍼블리싱/프론트엔드"
+    "description":"-음악 플레이어 앱<br>-기획/설계/디자인/퍼블리싱/개발"
   },
   {
     "category":"mobile",
     "title":"호텔 엔 투어",
     "img":[
-      "images/hotelNtour-mobile-1.jpg",
-      "images/hotelNtour-mobile-2.jpg"
+      "images/works/hotelNtour-mobile-1.jpg",
+      "images/works/hotelNtour-mobile-2.jpg"
     ],
     "url":{
       "desktop":"",
       "mobile":"project/hotel-N-tour/resources/html/mobile/list.html",
       "responsive":"",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/hotel-N-tour/resources/html/mobile"
     },
     "description":"-여행 사이트 리뉴얼<br>-퍼블리싱"
   },
@@ -129,14 +114,14 @@
     "category":"desktop",
     "title":"호텔 엔 투어",
     "img":[
-      "images/hotelNtour-desktop-1.jpg",
-      "images/hotelNtour-desktop-2.jpg"
+      "images/works/hotelNtour-desktop-1.jpg",
+      "images/works/hotelNtour-desktop-2.jpg"
     ],
     "url":{
       "desktop":"project/hotel-N-tour/resources/html/front/list.html",
       "mobile":"",
       "responsive":"",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/hotel-N-tour/resources/html/front"
     },
     "description":"-여행 사이트 리뉴얼<br>-퍼블리싱"
   },
@@ -144,14 +129,14 @@
     "category":"desktop",
     "title":"호텔 엔 투어",
     "img":[
-      "images/hotelNtour-bo-desktop-1.jpg",
-      "images/hotelNtour-bo-desktop-2.jpg"
+      "images/works/hotelNtour-bo-desktop-1.jpg",
+      "images/works/hotelNtour-bo-desktop-2.jpg"
     ],
     "url":{
       "desktop":"project/hotel-N-tour/resources/html/bo/hnt-bo-000000.html",
       "mobile":"",
       "responsive":"",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/hotel-N-tour/resources/html/bo"
     },
     "description":"-관리자페이지 <br>-퍼블리싱"
   },
@@ -159,30 +144,45 @@
     "category":"desktop",
     "title":"호텔 엔 투어",
     "img":[
-      "images/hotelNtour-bo2-desktop-1.jpg",
-      "images/hotelNtour-bo2-desktop-2.jpg"
+      "images/works/hotelNtour-bo2-desktop-1.jpg",
+      "images/works/hotelNtour-bo2-desktop-2.jpg"
     ],
     "url":{
       "desktop":"project/hotel-N-tour/resources/html/bo2/hnt-bo-000000.html",
       "mobile":"",
       "responsive":"",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/hotel-N-tour/resources/html/bo2"
     },
     "description":"-관리자페이지<br>-퍼블리싱"
+  },
+  {
+    "category":"mobile",
+    "title":"EDM Holic",
+    "img":[
+      "images/works/edm-mobile-1.jpg",
+      "images/works/edm-mobile-2.jpg"
+    ],
+    "url":{
+      "desktop":"",
+      "mobile":"project/edm-holic/html_work/list.html",
+      "responsive":"",
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/edm-holic/html_work"
+    },
+    "description":"-EDM MUSIC Hybrid App<br>-퍼블리싱/프론트엔드"
   },
   {
     "category":"responsive",
     "title":"starbucks",
     "img":[
-      "images/starbucks-en.jpg",
-      "images/starbucks-en-responsive-1.jpg",
-      "images/starbucks-en-responsive-2.jpg"
+      "images/works/starbucks-en.jpg",
+      "images/works/starbucks-en-responsive-1.jpg",
+      "images/works/starbucks-en-responsive-2.jpg"
     ],
     "url":{
       "desktop":"",
       "mobile":"",
       "responsive":"project/starbucks-en/index.html",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/starbucks-en"
     },
     "description":"-한국어 사이트 리뉴얼<br>-디자인/퍼블리싱"
   },
@@ -190,15 +190,15 @@
     "category":"responsive",
     "title":"starbucks",
     "img":[
-      "images/starbucks-ko.jpg",
-      "images/starbucks-ko-responsive-1.jpg",
-      "images/starbucks-ko-responsive-2.jpg"
+      "images/works/starbucks-ko.jpg",
+      "images/works/starbucks-ko-responsive-1.jpg",
+      "images/works/starbucks-ko-responsive-2.jpg"
     ],
     "url":{
       "desktop":"",
       "mobile":"",
       "responsive":"project/starbucks-ko/index.html",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/starbucks-ko"
     },
     "description":"-영어 사이트 리뉴얼<br>-디자인/퍼블리싱"
   },
@@ -206,14 +206,14 @@
     "category":"desktop",
     "title":"starbucks",
     "img":[
-      "images/starbucks-desktop-1.jpg",
-      "images/starbucks-desktop-2.jpg"
+      "images/works/starbucks-desktop-1.jpg",
+      "images/works/starbucks-desktop-2.jpg"
     ],
     "url":{
       "desktop":"",
       "mobile":"",
       "responsive":"project/starbucks-video/index.html",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/starbucks-video"
     },
     "description":"-한국어 사이트 리뉴얼<br>-디자인/퍼블리싱"
   },
@@ -221,7 +221,7 @@
     "category":"desktop",
     "title":"공연예술통합전산망",
     "img":[
-      "images/kopis.jpg"
+      "images/works/kopis.jpg"
     ],
     "url":{
       "desktop":"http://www.kopis.or.kr/por/main/main.do",
@@ -235,10 +235,10 @@
     "category":"desktop",
     "title":"인천 스마트 마이스",
     "img":[
-      "images/smice-desktop-1.jpg",
-      "images/smice-desktop-2.jpg",
-      "images/smice-desktop-3.jpg",
-      "images/smice-desktop-4.jpg"
+      "images/works/smice-desktop-1.jpg",
+      "images/works/smice-desktop-2.jpg",
+      "images/works/smice-desktop-3.jpg",
+      "images/works/smice-desktop-4.jpg"
     ],
     "url":{
       "desktop":"https://mice.visitincheon.or.kr/mice/main.do",
@@ -252,11 +252,11 @@
     "category":"mobile",
     "title":"인천 스마트 마이스",
     "img":[
-      "images/smice-mobile-1.jpg",
-      "images/smice-mobile-2.jpg",
-      "images/smice-mobile-3.jpg",
-      "images/smice-mobile-4.jpg",
-      "images/smice-mobile-5.jpg"
+      "images/works/smice-mobile-1.jpg",
+      "images/works/smice-mobile-2.jpg",
+      "images/works/smice-mobile-3.jpg",
+      "images/works/smice-mobile-4.jpg",
+      "images/works/smice-mobile-5.jpg"
     ],
     "url":{
       "desktop":"",
@@ -270,15 +270,15 @@
     "category":"responsive",
     "title":"이디야",
     "img":[
-      "images/ediya.jpg",
-      "images/ediya-responsive-1.jpg",
-      "images/ediya-responsive-2.jpg"
+      "images/works/ediya.jpg",
+      "images/works/ediya-responsive-1.jpg",
+      "images/works/ediya-responsive-2.jpg"
     ],
     "url":{
       "desktop":"",
       "mobile":"",
       "responsive":"project/ediya/index.html",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/ediya"
     },
     "description":"-사이트 리뉴얼<br>-퍼블리싱"
   },
@@ -286,14 +286,14 @@
     "category":"desktop",
     "title":"고객관리시스템",
     "img":[
-      "images/cms-desktop-1.jpg",
-      "images/cms-desktop-2.jpg"
+      "images/works/cms-desktop-1.jpg",
+      "images/works/cms-desktop-2.jpg"
     ],
     "url":{
       "desktop":"project/cms/index.html",
       "mobile":"",
       "responsive":"",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/cms"
     },
     "description":"-사이트 리뉴얼<br>-퍼블리싱"
   },
@@ -301,14 +301,14 @@
     "category":"desktop",
     "title":"NEM KOREA 2012",
     "img":[
-      "images/nemkorea2012-desktop-1.jpg",
-      "images/nemkorea2012-desktop-2.jpg"
+      "images/works/nemkorea2012-desktop-1.jpg",
+      "images/works/nemkorea2012-desktop-2.jpg"
     ],
     "url":{
       "desktop":"project/nemkorea/2012/index.html",
       "mobile":"",
       "responsive":"",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/nemkorea/2012"
     },
     "description":"-사내 사이트<br>-디자인/퍼블리싱/제로보드"
   },
@@ -316,14 +316,14 @@
     "category":"desktop",
     "title":"NEM KOREA 2013",
     "img":[
-      "images/nemkorea2013-desktop-1.jpg",
-      "images/nemkorea2013-desktop-2.jpg"
+      "images/works/nemkorea2013-desktop-1.jpg",
+      "images/works/nemkorea2013-desktop-2.jpg"
     ],
     "url":{
       "desktop":"project/nemkorea/2013/index.html",
       "mobile":"",
       "responsive":"",
-      "code":""
+      "code":"https://github.com/hanna7582/hanna7582.github.io/project/nemkorea/2013"
     },
     "description":"-사내 사이트<br>-디자인/퍼블리싱/제로보드"
   }

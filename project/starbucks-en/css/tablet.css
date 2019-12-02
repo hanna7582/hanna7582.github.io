@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+.service{max-width: 560px;}
+.service .col{width: 100%;}
+.service .col:nth-child(1){margin-bottom: 40px;}
+
 /* rewards ============================================================================= */
 .rewards{  
    position: relative; 
