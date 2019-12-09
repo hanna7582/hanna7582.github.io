@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>박강석치과의원</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+  <link rel="stylesheet" href="../css/grid.css">
+  <link rel="stylesheet" href="../css/custom-style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+  <script src="../js/custom-js.js"></script>
+</head>
+<body>
+  <header>
+    <div class="center">
+      <h1><a href="main.html">박강석치과</a><span>밝은 미소 건강한 치아</span></h1>
+      <button id="btn-menu" class="fas fa-bars"></button>
+      <nav>
+        <ul class="gnb">
+          <li><a href="#" class="active">치과소개</a>
+            <ul>
+              <li><a href="about.html">인사말</a></li>
+              <li><a href="contact.html">오시는길/진료시간</a></li>
+            </ul>
+          </li>
+          <li><a href="dreamAligner.html" class="twinkle"><span>드</span><span>림</span><span>투</span><span>명</span><span>교</span><span>정</span></a></li>
+          <li><a href="#">진료안내</a>
+            <ul>
+              <li><a href="diagnosis.html">자기치아살리기</a></li>
+              <li><a href="#">최소삭제레진치료</a></li>
+              <li><a href="#">틀니/임플란트틀니</a></li>
+              <li><a href="#">임플란트</a></li>
+              <li><a href="#">발치즉시 임플란트</a></li>
+              <li><a href="#">일반보철</a></li>
+              <li><a href="#">심미보철</a></li>
+              <li><a href="#">스케일링 구강위생 관리</a></li>
+              <li><a href="#">치경부 마모증</a></li>
+              <li><a href="#">시린니 지각과민</a></li>
+              <li><a href="#">치아미백</a></li>
+              <li><a href="#">사랑니발치</a></li>
+              <li><a href="#">턱관절치료 TCH지도</a></li>
+              <li><a href="#">교근 축소술</a></li>
+              <li><a href="#">최소삭제 접착성 브릿지</a></li>
+            </ul>
+          </li>
+          <li><a href="#">고객센터</a>
+            <ul>
+              <li><a href="notice.html">공지사항</a></li>
+              <li><a href="event.html">이벤트</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="custom-container">
+    <article class="fixed-bg bg1"></article>
+
+    <article class="jumbo center">
+      <h2>오시는길/진료시간</h2>
+
+      <div class="row custom-box2">
+        <div id="map" class="col-sm-6"></div>
+        <div class="col-sm-6">
+          <dl>
+            <dt>오시는길</dt>
+            <dd>Address - 서울특별시 종로구 종로 115 (종로3가) 낙원빌딩3F(박강석치과의원)</dd>
+            <dd>지하철 - 종로3가역 1번출구에서 70m직진(도보 2분거리)</dd>
+            <dd>버스 - 종로3가. 탑골공원 정류장</dd>
+          </dl>
+
+          <dl>
+            <dt>진료시간</dt>
+            <dd>월요일-금요일 AM 9:30 ~ PM 7:00</dd>
+            <dd>토요일 AM 9:30 ~ PM 5:00</dd>
+            <dd>공휴일 - 휴무</dd>
+          </dl>
+        </div>
+      </div>
+
+    </article>
+  </section>
+  <footer>
+    <div class="center">
+      <div class="sns">
+        <a href="https://m.blog.naver.com/PostList.nhn?blogId=pgs3594"><img src="../images/naver-blog.png" alt="네이버블로그"></a>
+      </div>
+      <address>
+        <ul>
+          <li>박강석치과의원</li>
+          <li>서울특별시 종로구 종로 115 (종로3가) 낙원빌딩3F(박강석치과의원)</li>
+          <li>사업자등록번호 : 101-91-38321</li>
+          <li>Email : pgs77777@naver.com</li>
+          <li>TEL : 02-765-2879</li>
+          <li>FAX : 02-764-2879</li>
+        </ul>
+      </address>
+      <div class="info">
+        <dl>
+          <dt>전화상담 및 진료시간</dt>
+          <dd class="primary"><a href="tel:027652879">02-765-2879<i class="fas fa-phone"></i></a></dd>
+          <dd>월요일-금요일 AM 9:30 ~ PM 7:00</dd>
+          <dd>토요일 AM 9:30 ~ PM 5:00</dd>
+          <dd>공휴일 - 휴무</dd>
+        </dl>
+      </div>
+      <small>copyright(c) Dr.PARK DENTAL CLINIC All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=6689c92fbda9087551f3a97f499d28ed"></script>
+  <script>
+  var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+    mapOption = {
+        center: new daum.maps.LatLng(37.570619, 126.990427), // 지도의 중심좌표
+        level: 2 // 지도의 확대 레벨
+    };
+
+  var map = new daum.maps.Map(mapContainer, mapOption);
+
+  // 마커가 표시될 위치입니다
+  var markerPosition  = new daum.maps.LatLng(37.570619, 126.990427);
+
+  // 마커를 생성합니다
+  var marker = new daum.maps.Marker({
+      position: markerPosition
+  });
+
+  // 마커가 지도 위에 표시되도록 설정합니다
+  marker.setMap(map);
+
+  var iwContent = '<div style="padding:5px; font-size:14px;">박강석치과의원<a href="http://map.daum.net/link/to/박강석치과의원,37.570619,126.990427">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+      iwPosition = new daum.maps.LatLng(37.570619, 126.990427); //인포윈도우 표시 위치입니다
+
+  // 인포윈도우를 생성합니다
+  var infowindow = new daum.maps.InfoWindow({
+      position : iwPosition,
+      content : iwContent
+  });
+
+  // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+  infowindow.open(map, marker);
+  </script>
+</body>
+</html>
