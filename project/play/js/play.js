@@ -43,6 +43,10 @@ $(function(){
 
    //재생 시간
    function timer(seconds){
+      console.log(typeof seconds);
+      if(isNaN(seconds)){
+         return '00:00';
+      }
       var h=parseInt(seconds/3600);
       var m=parseInt(seconds/60%60);
       var s=parseInt(seconds%60);
@@ -115,7 +119,7 @@ $(function(){
 
    playListSwiper.on('slideChangeTransitionEnd', function () {
       var index=0;
-      console.log(shuffle);      
+      // console.log(shuffle);      
       if(shuffle){
          index=randomIndex;         
       }else{

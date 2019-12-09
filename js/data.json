@@ -296,35 +296,5 @@
       "code":"https://github.com/hanna7582/hanna7582.github.io/tree/master/project/cms"
     },
     "description":"-사이트 리뉴얼<br>-퍼블리싱"
-  },
-  {
-    "category":"desktop",
-    "title":"NEM KOREA 2012",
-    "img":[
-      "images/works/nemkorea2012-desktop-1.jpg",
-      "images/works/nemkorea2012-desktop-2.jpg"
-    ],
-    "url":{
-      "desktop":"project/nemkorea/2012/index.html",
-      "mobile":"",
-      "responsive":"",
-      "code":"https://github.com/hanna7582/hanna7582.github.io/tree/master/project/nemkorea/2012"
-    },
-    "description":"-사내 사이트<br>-디자인/퍼블리싱/제로보드"
-  },
-  {
-    "category":"desktop",
-    "title":"NEM KOREA 2013",
-    "img":[
-      "images/works/nemkorea2013-desktop-1.jpg",
-      "images/works/nemkorea2013-desktop-2.jpg"
-    ],
-    "url":{
-      "desktop":"project/nemkorea/2013/index.html",
-      "mobile":"",
-      "responsive":"",
-      "code":"https://github.com/hanna7582/hanna7582.github.io/tree/master/project/nemkorea/2013"
-    },
-    "description":"-사내 사이트<br>-디자인/퍼블리싱/제로보드"
   }
 ]

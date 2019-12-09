@@ -2,13 +2,13 @@ $(function(){
   //초기 스크롤 제거
   $('html').css('overflow','hidden');
 
-  $(window).on('load',function(){
-    setTimeout(total,100);
+  $('img').on('load',function(){
     $('#loading-bg').animate({
         opacity:0
     },2000,function(){
         $(this).remove();
         $('html').removeAttr('style');
+        total();
     })
   })
 
