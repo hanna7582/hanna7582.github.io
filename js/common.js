@@ -2,16 +2,6 @@ $(function(){
   //초기 스크롤 제거
   $('html').css('overflow','hidden');
 
-  $('img').on('load',function(){
-    $('#loading-bg').animate({
-        opacity:0
-    },2000,function(){
-        $(this).remove();
-        $('html').removeAttr('style');
-        total();
-    })
-  })
-
   //각 디바이스별 스크롤 이벤트 시작위치 다르게 설정
   $(window).resize(function(){
     w=$(window).width();
@@ -113,21 +103,30 @@ $(function(){
 
   //isotope ==========================================================================
   var qsRegex;
-  setTimeout(function(){
-    $grid=$('.filter').isotope({
-       filter:function(){
-           return qsRegex ? $(this).text().match(qsRegex):true;
-       }
-    });
 
-    //정렬 후 이벤트 추가
-    $grid.on('layoutComplete',function(event, laidOutItems){
-        //정렬된 아이템의 수
-        var searchLength=laidOutItems.length;
-        if(searchLength==0) fn_alertMessage(searchLength);
-        total(searchLength);
+  $('img').on('load',function(){
+    $('#loading-bg').animate({
+        opacity:0
+    },2000,function(){
+        $(this).remove();
+        $('html').removeAttr('style');
+        $grid=$('.filter').isotope({
+           filter:function(){
+               return qsRegex ? $(this).text().match(qsRegex):true;
+           }
+        });
+      
+        //정렬 후 이벤트 추가
+        $grid.on('layoutComplete',function(event, laidOutItems){
+            //정렬된 아이템의 수
+            var searchLength=laidOutItems.length;
+            if(searchLength==0) fn_alertMessage(searchLength);
+            total(searchLength);
+        })
+        total();
     })
-  },500);
+  })
+
 
   //카테고리 메뉴 클릭시 정렬하기
   $('#works .nav li').on('click', function(){
