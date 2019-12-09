@@ -3,7 +3,7 @@ $(function(){
       var scrollTop=$(window).scrollTop();
       var cultureLab=$('.main-culture').offset().top-500;
       var coffeeLab=$('.main-coffee-lab').offset().top-500;
-      console.log(scrollTop, cultureLab );      
+      // console.log(scrollTop, cultureLab );      
       if(scrollTop>0){
          $('body').addClass('scroll');         
       }else{
