@@ -43,7 +43,6 @@ $(function(){
 
    //재생 시간
    function timer(seconds){
-      console.log(typeof seconds);
       if(isNaN(seconds)){
          return '00:00';
       }
@@ -237,22 +236,22 @@ $(function(){
          player.loop=false;
          state=setInterval(function(){
             if(player.ended){
-               console.log('끝남');
+               // console.log('끝남');
                $('#btn-next').trigger('click');
                progressloop=setInterval(progressStatus, 10);
             }
          }, 1000);
-         console.log('전체 반복');
+         // console.log('전체 반복');
       }else if($(this).text()=='repeat' && !$(this).hasClass('on')){
          player.loop=true;
          $(this).find('i').text('repeat_one');
          $(this).addClass('on');
-         console.log('현재 영상만 반복');
+         // console.log('현재 영상만 반복');
       }else if($(this).text()=='repeat' && $(this).hasClass('on')){
          $(this).removeClass('on');
          player.loop=false;
          clearInterval(state);
-         console.log('반복안함');
+         // console.log('반복안함');
       }
    })
 
@@ -290,10 +289,10 @@ $(function(){
    $('#btn-shuffle').click(function (e) { 
       $(this).toggleClass('on');
       if($(this).hasClass('on')){
-         console.log('랜덤');  
+         // console.log('랜덤');  
          shuffle=true;
       }else{
-         console.log('순서대로');
+         // console.log('순서대로');
          shuffle=false;
       }
    });
