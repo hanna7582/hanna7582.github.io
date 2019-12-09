@@ -93,7 +93,7 @@
       "responsive":"",
       "code":"https://github.com/hanna7582/hanna7582.github.io/tree/master/project/play"
     },
-    "description":"-음악 플레이어 앱<br>-기획/설계/디자인/퍼블리싱/개발"
+    "description":"-뮤직 플레이어 앱<br>-기획/설계/디자인/퍼블리싱/개발"
   },
   {
     "category":"mobile",
@@ -284,7 +284,7 @@
   },
   {
     "category":"desktop",
-    "title":"고객관리시스템",
+    "title":"컨텐츠관리시스템",
     "img":[
       "images/works/cms-desktop-1.jpg",
       "images/works/cms-desktop-2.jpg"
