@@ -78,7 +78,7 @@
       "responsive":"project/kakaofriends/index.html",
       "code":"https://github.com/hanna7582/hanna7582.github.io/tree/master/project/kakofriends"
     },
-    "description":"-캐릭터 샵 리뉴얼<br>-디자인/퍼블리싱"
+    "description":"-캐릭터 샵 리뉴얼<br>-디자인/퍼블리싱/프론트엔드"
   },
   {
     "category":"mobile",
@@ -295,6 +295,6 @@
       "responsive":"",
       "code":"https://github.com/hanna7582/hanna7582.github.io/tree/master/project/cms"
     },
-    "description":"-사이트 리뉴얼<br>-퍼블리싱"
+    "description":"-관리자페이지<br>-퍼블리싱"
   }
 ]
