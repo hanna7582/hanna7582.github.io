@@ -103,19 +103,25 @@ $(function(){
 
   //isotope ==========================================================================
   var qsRegex;
-
+  var $grid;
+  
   $('img').on('load',function(){
-    $('#loading-bg').animate({
-        opacity:0
-    },2000,function(){
+      $('#loading-bg').animate({
+          opacity:0
+      },2000,function(){
         $(this).remove();
         $('html').removeAttr('style');
+
         $grid=$('.filter').isotope({
-           filter:function(){
-               return qsRegex ? $(this).text().match(qsRegex):true;
-           }
+            filter:function(){
+                return qsRegex ? $(this).text().match(qsRegex):true;
+            }
         });
-      
+    
+        $grid.imagesLoaded().progress( function() {
+          $grid.isotope('layout');
+        }); 
+    
         //정렬 후 이벤트 추가
         $grid.on('layoutComplete',function(event, laidOutItems){
             //정렬된 아이템의 수
@@ -123,10 +129,8 @@ $(function(){
             if(searchLength==0) fn_alertMessage(searchLength);
             total(searchLength);
         })
-        total();
-    })
+      })    
   })
-
 
   //카테고리 메뉴 클릭시 정렬하기
   $('#works .nav li').on('click', function(){
