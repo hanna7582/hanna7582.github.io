@@ -103,7 +103,6 @@ $(function(){
 
   //isotope ==========================================================================
   var qsRegex;
-  var $grid;
   
   $('img').on('load',function(){
       $('#loading-bg').animate({
