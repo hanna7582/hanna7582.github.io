@@ -12,10 +12,10 @@ $(function(){
           <div class="col-sm-6 col-md-4 col-lg-3 item" data-category="${item.category}" data-index="${i}">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">
+                <h4 class="panel-title">
                   <span class="title">${item.title}</span>
                   <span class="label label-${item.category} pull-right">${item.category}</span>
-                </h3>
+                </h4>
               </div>
               <div class="panel-body">
                 <img src="${item.img[0]}" alt="" class="img-responsive">
