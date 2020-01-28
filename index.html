@@ -25,7 +25,7 @@
   <body data-spy="scroll" data-offset="73" data-target="#nav" id="home">
     <!-- 상단영역 -->
     <div class="container-fluid">
-      <section class="row content">
+      <div class="row content">
         <!-- 네비게이션 -->
         <nav class="col-sm-3 col-lg-2" id="nav">
           <div class="wrap">
@@ -39,7 +39,7 @@
             <div class="search-form">
               <div class="count text-right">총 <span class="total"></span>/<span class="search"></span>개</div>
               <div class="input-group">
-                <input type="text" class="form-control quicksearch" placeholder="검색어">
+                <input type="text" class="form-control quicksearch" placeholder="검색어" title="검색">
                 <span class="input-group-btn">
                   <button class="btn btn-primary" type="button">
                       <span class="glyphicon glyphicon-search">
@@ -52,8 +52,10 @@
           </div>
         </nav>
         <!-- 컨텐츠 -->
-        <div class="col-sm-9 col-lg-10" id="contents">
+        <section class="col-sm-9 col-lg-10" id="contents">
+          <h2 class="blind">컨텐츠</h2>
           <article id="slide">
+            <h3 class="blind">메인 슬라이드</h3>
             <div class="swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide"><a href="https://www.shinsegae.com/culture/academylecture/aca_index.jsp" target="_blank"><img src="images/works/shinsegae.jpg" alt="신세계 아카데미"></a></div>
@@ -72,9 +74,10 @@
 
           <!-- profile -->
           <article id="profile">
+            <h3 class="blind">profile</h3>
             <div class="row">
               <div class="col-lg-6">
-                <h2>About</h2>
+                <h4>About</h4>
                 <hr>
                 <strong>귀한시간 - 나에게 주어진 시간을 귀하게 쓰자</strong>
                 <p>
@@ -105,7 +108,7 @@
                 </p>
               </div>
               <div class="col-lg-6">
-                <h2>Skills</h2>
+                <h4>Skills</h4>
                 <hr>
                 <dl>
                   <dt>HTML5</dt>
@@ -159,240 +162,254 @@
             </div>
             <div class="row">
               <div class="col-lg-6">
-                <h2>강의</h2>
                 <table class="table">
-                  <tr>
-                    <th>기간</th>
-                    <th>교육기관</th>
-                    <th>교육내용</th>
-                  </tr>
-                  <tr>
-                    <td>2019.03 ~ 현재</td>
-                    <td>더조은 컴퓨터 아트학원(신촌)</td>
-                    <td>기획, 설계, 디자인, 퍼블리싱, Angular 교육</td>
-                  </tr>
-                  <tr>
-                    <td>2018.10 ~ 2019.02</td>
-                    <td>더조은 IT 아카데미(강남)</td>
-                    <td>디자인, 퍼블리싱 교육</td>
-                  </tr>
-                  <tr>
-                    <td>2018.04 ~ 2018.09</td>
-                    <td>더조은 컴퓨터 아트학원(종로)</td>
-                    <td>기획, 설계, 디자인, 퍼블리싱 교육</td>
-                  </tr>
-                  <tr>
-                    <td>2017.12 ~ 2018.01</td>
-                    <td>더조은 컴퓨터 아트학원(신촌)</td>
-                    <td>JAVA 교육</td>
-                  </tr>
-                  <tr>
-                    <td>2017.12 ~ 2018.03</td>
-                    <td>더조은 IT 아카데미(신촌)</td>
-                    <td>기획, 설계, 디자인, 퍼블리싱 교육</td>
-                  </tr>
-                  <tr>
-                    <td>2017.05 ~ 2017.11</td>
-                    <td>더조은 IT 아카데미(종각)</td>
-                    <td>퍼블리싱, JAVA, JSP, Oracle, MySQL, Spring, Android 교육</td>
-                  </tr>
-                  <tr>
-                    <td>2017.03 ~ 2017.05</td>
-                    <td>더조은 컴퓨터 아트학원(일산)</td>
-                    <td>퍼블리싱 교육</td>
-                  </tr>
-                  <tr>
-                    <td>2017.01 ~ 2017.03</td>
-                    <td>더조은 컴퓨터 아트학원(일산)</td>
-                    <td>디자인, 퍼블리싱 교육</td>
-                  </tr>
-                  <tr>
-                    <td>2017.10 ~ 2017.11</td>
-                    <td>비트교육센터(신촌)</td>
-                    <td>JAVA 교육</td>
-                  </tr>
-                  <tr>
-                    <td>2016.08 ~ 2017.09</td>
-                    <td>한빛교육센터(신촌)</td>
-                    <td>JAVA, JSP, DB (Oracle, MySQL) 교육</td>
-                  </tr>
-                  <tr>
-                    <td>2015.01 ~ 2015.02</td>
-                    <td>개별 맞춤 교육</td>
-                    <td>Rhinoceros Tool 교육</td>
-                  </tr>
-                  <tr>
-                    <td>2014.11 ~ 2014.12</td>
-                    <td>아이티뱅크(세종시)</td>
-                    <td>Wordpress 교육</td>
-                  </tr>
+                  <caption>강의</caption>
+                  <thead>
+                    <tr>
+                      <th>기간</th>
+                      <th>교육기관</th>
+                      <th>교육내용</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2019.03 ~ 현재</td>
+                      <td>더조은 컴퓨터 아트학원(신촌)</td>
+                      <td>기획, 설계, 디자인, 퍼블리싱, Angular 교육</td>
+                    </tr>
+                    <tr>
+                      <td>2018.10 ~ 2019.02</td>
+                      <td>더조은 IT 아카데미(강남)</td>
+                      <td>디자인, 퍼블리싱 교육</td>
+                    </tr>
+                    <tr>
+                      <td>2018.04 ~ 2018.09</td>
+                      <td>더조은 컴퓨터 아트학원(종로)</td>
+                      <td>기획, 설계, 디자인, 퍼블리싱 교육</td>
+                    </tr>
+                    <tr>
+                      <td>2017.12 ~ 2018.01</td>
+                      <td>더조은 컴퓨터 아트학원(신촌)</td>
+                      <td>JAVA 교육</td>
+                    </tr>
+                    <tr>
+                      <td>2017.12 ~ 2018.03</td>
+                      <td>더조은 IT 아카데미(신촌)</td>
+                      <td>기획, 설계, 디자인, 퍼블리싱 교육</td>
+                    </tr>
+                    <tr>
+                      <td>2017.05 ~ 2017.11</td>
+                      <td>더조은 IT 아카데미(종각)</td>
+                      <td>퍼블리싱, JAVA, JSP, Oracle, MySQL, Spring, Android 교육</td>
+                    </tr>
+                    <tr>
+                      <td>2017.03 ~ 2017.05</td>
+                      <td>더조은 컴퓨터 아트학원(일산)</td>
+                      <td>퍼블리싱 교육</td>
+                    </tr>
+                    <tr>
+                      <td>2017.01 ~ 2017.03</td>
+                      <td>더조은 컴퓨터 아트학원(일산)</td>
+                      <td>디자인, 퍼블리싱 교육</td>
+                    </tr>
+                    <tr>
+                      <td>2017.10 ~ 2017.11</td>
+                      <td>비트교육센터(신촌)</td>
+                      <td>JAVA 교육</td>
+                    </tr>
+                    <tr>
+                      <td>2016.08 ~ 2017.09</td>
+                      <td>한빛교육센터(신촌)</td>
+                      <td>JAVA, JSP, DB (Oracle, MySQL) 교육</td>
+                    </tr>
+                    <tr>
+                      <td>2015.01 ~ 2015.02</td>
+                      <td>개별 맞춤 교육</td>
+                      <td>Rhinoceros Tool 교육</td>
+                    </tr>
+                    <tr>
+                      <td>2014.11 ~ 2014.12</td>
+                      <td>아이티뱅크(세종시)</td>
+                      <td>Wordpress 교육</td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
               <div class="col-lg-6">
-                <h2>프로젝트</h2>
                 <table class="table">
-                  <tr>
-                    <th>기간</th>
-                    <th>발주처</th>
-                    <th>상세내용</th>
-                  </tr>
-                  <tr>
-                    <td>2018.11 ~ 2018.12</td>
-                    <td>모젼스랩</td>
-                    <td>DMC INOVATION CAMP 퍼블리싱</td>
-                  </tr>
-                  <tr>
-                    <td>2018.11 ~ 2018.12</td>
-                    <td>모젼스랩</td>
-                    <td>DMC GOVERNANCE 반응형 퍼블리싱</td>
-                  </tr>
-                  <tr>
-                    <td>2018.01 ~ 2018.07</td>
-                    <td>호텔엔투어</td>
-                    <td>호텔엔투어 포털(웹&모바일)/관리자 퍼블리싱</td>
-                  </tr>
-                  <tr>
-                    <td>2017.06 ~ 2017.08</td>
-                    <td>인천경제산업정보 테크노파크</td>
-                    <td>SMART MICE 조성사업 웹 & 모바일 퍼블리싱</td>
-                  </tr>
-                  <tr>
-                    <td>2017.01 ~ 2017.01</td>
-                    <td>모젼스랩</td>
-                    <td>앱스토어 퍼블리싱</td>
-                  </tr>
-                  <tr>
-                    <td>2015.03 ~ 2017.05</td>
-                    <td>예술경영지원센터</td>
-                    <td>공연예술통합전산망 고도화 백엔드개발, 프론트엔드개발, 퍼블리싱</td>
-                  </tr>
-                  <tr>
-                    <td>2016.01 ~ 2016.02</td>
-                    <td>모젼스랩</td>
-                    <td>CMS 가상화 관리 시스템 디자인, 퍼블리싱</td>
-                  </tr>
-                  <tr>
-                    <td>2016.01 ~ 2016.02</td>
-                    <td>한화S&C</td>
-                    <td>COEX MICE 전시회입장관리 Hybrid App GUI 디자인, 퍼블리싱</td>
-                  </tr>
-                  <tr>
-                    <td>2015.08 ~ 2016.03</td>
-                    <td>신세계아이앤씨</td>
-                    <td>
-                      <ul>
-                        <li>신세계아카데미 구축 (관리자 시스템, Portal Web, Mobile) / 백엔드개발, 프론트엔드개발, 퍼블리싱</li>
-                        <li>신세계 서비스 스테이션 / 퍼블리싱</li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2015.05 ~ 2015.07</td>
-                    <td>모젼스랩</td>
-                    <td>EDM Holic Hybrid Web App 프론트엔드개발, 퍼블리싱</td>
-                  </tr>
-                  <tr>
-                    <td>2015.05</td>
-                    <td>에잇프레임</td>
-                    <td>한방두방세방(부동산 매칭 서비스) 반응형 퍼블리싱</td>
-                  </tr>
-                  <tr>
-                    <td>2015.01 ~ 2015.01</td>
-                    <td>알엠테크</td>
-                    <td>와우키즈 App 디자인</td>
-                  </tr>
-                  <tr>
-                    <td>2012.05 ~ 2014.05</td>
-                    <td>엔이엠코리아</td>
-                    <td>사내 홈페이지 구축 및 운영, 유지보수</td>
-                  </tr>
-                  <tr>
-                    <td>2010.11 ~ 2012.01</td>
-                    <td>한정테크</td>
-                    <td>사내 홈페이지 기획 및 운영</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <h2>교육이수</h2>
-                <table class="table">
-                  <tr>
-                    <th>기간</th>
-                    <th>교육기관</th>
-                    <th>교육명</th>
-                  </tr>
-                  <tr>
-                    <td>2018.12.17 ~ 2019.01.20</td>
-                    <td>한국기술교육대학교</td>
-                    <td>파이썬프로그래밍</td>
-                  </tr>
-                  <tr>
-                    <td>2018.12.17 ~ 2019.01.20</td>
-                    <td>한국기술교육대학교</td>
-                    <td>웹표준에 맞는 HTML5 프로그래밍</td>
-                  </tr>
-                  <tr>
-                    <td>2016.12.14 ~ 2016.12.27</td>
-                    <td>아이티고</td>
-                    <td>Spring Framework 기초 과정</td>
-                  </tr>
-                  <tr>
-                    <td>2015.06.01 ~ 2015.06.30</td>
-                    <td>한국정보화진흥원</td>
-                    <td>웹접근성의 이해 기본/심화</td>
-                  </tr>
-                  <tr>
-                    <td>2015.06.18 ~ 2015.06.19</td>
-                    <td>인스웨이브</td>
-                    <td>웹스퀘어 2.0 개발자, 디자인, 퍼블리싱 교육</td>
-                  </tr>
-                  <tr>
-                    <td>2014.06.30 ~ 2014.11.21</td>
-                    <td>한빛교육센터</td>
-                    <td>스마트 워크센터 구축을 위한 클라우드 시스템 전문가</td>
-                  </tr>
+                  <caption>프로젝트</caption>
+                  <thead>
+                    <tr>
+                      <th>기간</th>
+                      <th>발주처</th>
+                      <th>상세내용</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2018.11 ~ 2018.12</td>
+                      <td>모젼스랩</td>
+                      <td>DMC INOVATION CAMP 퍼블리싱</td>
+                    </tr>
+                    <tr>
+                      <td>2018.11 ~ 2018.12</td>
+                      <td>모젼스랩</td>
+                      <td>DMC GOVERNANCE 반응형 퍼블리싱</td>
+                    </tr>
+                    <tr>
+                      <td>2018.01 ~ 2018.07</td>
+                      <td>호텔엔투어</td>
+                      <td>호텔엔투어 포털(웹&모바일)/관리자 퍼블리싱</td>
+                    </tr>
+                    <tr>
+                      <td>2017.06 ~ 2017.08</td>
+                      <td>인천경제산업정보 테크노파크</td>
+                      <td>SMART MICE 조성사업 웹 & 모바일 퍼블리싱</td>
+                    </tr>
+                    <tr>
+                      <td>2017.01 ~ 2017.01</td>
+                      <td>모젼스랩</td>
+                      <td>앱스토어 퍼블리싱</td>
+                    </tr>
+                    <tr>
+                      <td>2015.03 ~ 2017.05</td>
+                      <td>예술경영지원센터</td>
+                      <td>공연예술통합전산망 고도화 백엔드개발, 프론트엔드개발, 퍼블리싱</td>
+                    </tr>
+                    <tr>
+                      <td>2016.01 ~ 2016.02</td>
+                      <td>모젼스랩</td>
+                      <td>CMS 가상화 관리 시스템 디자인, 퍼블리싱</td>
+                    </tr>
+                    <tr>
+                      <td>2016.01 ~ 2016.02</td>
+                      <td>한화S&C</td>
+                      <td>COEX MICE 전시회입장관리 Hybrid App GUI 디자인, 퍼블리싱</td>
+                    </tr>
+                    <tr>
+                      <td>2015.08 ~ 2016.03</td>
+                      <td>신세계아이앤씨</td>
+                      <td>
+                        <ul>
+                          <li>신세계아카데미 구축 (관리자 시스템, Portal Web, Mobile) / 백엔드개발, 프론트엔드개발, 퍼블리싱</li>
+                          <li>신세계 서비스 스테이션 / 퍼블리싱</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2015.05 ~ 2015.07</td>
+                      <td>모젼스랩</td>
+                      <td>EDM Holic Hybrid Web App 프론트엔드개발, 퍼블리싱</td>
+                    </tr>
+                    <tr>
+                      <td>2015.05</td>
+                      <td>에잇프레임</td>
+                      <td>한방두방세방(부동산 매칭 서비스) 반응형 퍼블리싱</td>
+                    </tr>
+                    <tr>
+                      <td>2015.01 ~ 2015.01</td>
+                      <td>알엠테크</td>
+                      <td>와우키즈 App 디자인</td>
+                    </tr>
+                    <tr>
+                      <td>2012.05 ~ 2014.05</td>
+                      <td>엔이엠코리아</td>
+                      <td>사내 홈페이지 구축 및 운영, 유지보수</td>
+                    </tr>
+                    <tr>
+                      <td>2010.11 ~ 2012.01</td>
+                      <td>한정테크</td>
+                      <td>사내 홈페이지 기획 및 운영</td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
               <div class="col-lg-6">
-                <h2>자격증</h2>
                 <table class="table">
-                  <tr>
-                    <th>취득일</th>
-                    <th>자격증</th>
-                    <th>발행처</th>
-                  </tr>
-                  <tr>
-                    <td>2016.06</td>
-                    <td>직업능력개발훈련교사(산업디자인3급)</td>
-                    <td>서울지방고용노동청</td>
-                  </tr>
-                  <tr>
-                    <td>2016.06</td>
-                    <td>직업능력개발훈련교사(멀티미디어3급)</td>
-                    <td>서울지방고용노동청</td>
-                  </tr>
-                  <tr>
-                    <td>2016.06</td>
-                    <td>직업능력개발훈련교사(정보처리3급)</td>
-                    <td>서울지방고용노동청</td>
-                  </tr>
-                  <tr>
-                    <td>2016.06</td>
-                    <td>직업능력개발훈련교사(사무자동화3급)</td>
-                    <td>서울지방고용노동청</td>
-                  </tr>
-                  <tr>
-                    <td>2015.05</td>
-                    <td>정보처리기사</td>
-                    <td>한국산업인력공단</td>
-                  </tr>
-                  <tr>
-                    <td>2007.02</td>
-                    <td>중등학교2급정교사</td>
-                    <td>교육인적 자원부</td>
-                  </tr>
+                  <caption>교육이수</caption>
+                  <thead>
+                    <tr>
+                      <th>기간</th>
+                      <th>교육기관</th>
+                      <th>교육명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2018.12.17 ~ 2019.01.20</td>
+                      <td>한국기술교육대학교</td>
+                      <td>파이썬프로그래밍</td>
+                    </tr>
+                    <tr>
+                      <td>2018.12.17 ~ 2019.01.20</td>
+                      <td>한국기술교육대학교</td>
+                      <td>웹표준에 맞는 HTML5 프로그래밍</td>
+                    </tr>
+                    <tr>
+                      <td>2016.12.14 ~ 2016.12.27</td>
+                      <td>아이티고</td>
+                      <td>Spring Framework 기초 과정</td>
+                    </tr>
+                    <tr>
+                      <td>2015.06.01 ~ 2015.06.30</td>
+                      <td>한국정보화진흥원</td>
+                      <td>웹접근성의 이해 기본/심화</td>
+                    </tr>
+                    <tr>
+                      <td>2015.06.18 ~ 2015.06.19</td>
+                      <td>인스웨이브</td>
+                      <td>웹스퀘어 2.0 개발자, 디자인, 퍼블리싱 교육</td>
+                    </tr>
+                    <tr>
+                      <td>2014.06.30 ~ 2014.11.21</td>
+                      <td>한빛교육센터</td>
+                      <td>스마트 워크센터 구축을 위한 클라우드 시스템 전문가</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-lg-6">
+                <table class="table">
+                  <caption>자격증</caption>
+                  <thead>
+                    <tr>
+                      <th>취득일</th>
+                      <th>자격증</th>
+                      <th>발행처</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2016.06</td>
+                      <td>직업능력개발훈련교사(산업디자인3급)</td>
+                      <td>서울지방고용노동청</td>
+                    </tr>
+                    <tr>
+                      <td>2016.06</td>
+                      <td>직업능력개발훈련교사(멀티미디어3급)</td>
+                      <td>서울지방고용노동청</td>
+                    </tr>
+                    <tr>
+                      <td>2016.06</td>
+                      <td>직업능력개발훈련교사(정보처리3급)</td>
+                      <td>서울지방고용노동청</td>
+                    </tr>
+                    <tr>
+                      <td>2016.06</td>
+                      <td>직업능력개발훈련교사(사무자동화3급)</td>
+                      <td>서울지방고용노동청</td>
+                    </tr>
+                    <tr>
+                      <td>2015.05</td>
+                      <td>정보처리기사</td>
+                      <td>한국산업인력공단</td>
+                    </tr>
+                    <tr>
+                      <td>2007.02</td>
+                      <td>중등학교2급정교사</td>
+                      <td>교육인적 자원부</td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
@@ -401,7 +418,7 @@
 
           <!-- works -->
           <article id="works">
-            <h2 class="text-center">Works</h2>
+            <h3 class="text-center">Works</h3>
             <hr>
 
             <!-- 카테고리 -->
@@ -420,9 +437,9 @@
             </div>
           </article>
           <!-- //works -->
-        </div>
+        </section>
         <!-- //contents -->
-      </section>
+      </div>
     </div>
 
     <footer>
