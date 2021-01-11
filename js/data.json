@@ -1,5 +1,39 @@
 [
   {
+    "category":"responsive",
+    "title":"기관 대시보드",
+    "img":[
+      "images/works/institution-dashboard.jpg",
+      "images/works/institution-dashboard-responsive-1.jpg",
+      "images/works/institution-dashboard-responsive-2.jpg",
+      "images/works/institution-dashboard-responsive-3.jpg",
+      "images/works/institution-dashboard-responsive-4.jpg"
+    ],
+    "url":{
+      "desktop":"",
+      "mobile":"",
+      "responsive":"",
+      "code":""
+    },
+    "description":"-기관용 학습분석 대시보드<br>-퍼블리싱/프론트 개발"
+  },
+  {
+    "category":"mobile",
+    "title":"todo",
+    "img":[
+      "images/works/vue-todo-mobile-1.jpg",
+      "images/works/vue-todo-mobile-2.jpg",
+      "images/works/vue-todo-mobile-3.jpg"
+    ],
+    "url":{
+      "desktop":"",
+      "mobile":"",
+      "responsive":"https://hanna7582.github.io/vue-todo-vuex-helpers",
+      "code":"https://github.com/hanna7582/vue-todo-vuex-helpers/tree/master"
+    },
+    "description":"-vue todo<br>-기획/설계/디자인/퍼블리싱/개발"
+  },
+  {
     "category":"desktop",
     "title":"신세계아카데미",
     "img":[
@@ -46,7 +80,7 @@
       "responsive":"project/moa/index.html",
       "code":"https://github.com/hanna7582/hanna7582.github.io/tree/master/project/moa"
     },
-    "description":"-목표관리 앱(스토어 등록예정)<br>-기획/설계/디자인/퍼블리싱/개발"
+    "description":"-목표관리 앱<br>-기획/설계/디자인/퍼블리싱/개발"
   },
   {
     "category":"mobile",
@@ -78,7 +112,7 @@
       "responsive":"project/kakaofriends/index.html",
       "code":"https://github.com/hanna7582/hanna7582.github.io/tree/master/project/kakofriends"
     },
-    "description":"-캐릭터 샵 리뉴얼<br>-디자인/퍼블리싱/프론트엔드"
+    "description":"-캐릭터 샵 리뉴얼<br>-디자인/퍼블리싱/개발"
   },
   {
     "category":"mobile",
