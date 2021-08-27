@@ -94,6 +94,7 @@ header{
    width: 50%;
    height: 310px;
    transition: right 0.5s;
+   overflow:hidden;
 }
 .open #play-list{
    right:0;
