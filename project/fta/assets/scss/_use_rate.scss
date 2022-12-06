@@ -1,0 +1,127 @@
+@charset 'UTF-8';
+
+.con_box, .con_wrapper .con_box { width: 1168px; margin: 0 auto; }
+.main-use-rate-box { padding: 0 15px; background: #0da9bf; height: 95px; }
+.main-use-rate-box .container {  @include flex-y;  margin: auto; height: 100%; }
+
+.main-use-rate-box h3 { margin-right: 24px; font-size: 24px; font-weight: 500; letter-spacing: -1.44px; color: #fff; }
+.main-use-rate-box span { font-size: 17px;  letter-spacing: -1.02px; color: #fff; }
+.main-use-rate-box button { @include positionYCenter; right:0; font-size: 17px; line-height: 1;  letter-spacing: -1.02px; color: #fff;
+    padding-right: 35px;
+    background: url('/assets/images/icon/icon-main-use-rate-down.png') no-repeat right center/19px 13px; 
+}
+
+.main-use-rate-box.active button { background-image: url('/assets/images/icon/icon-main-use-rate-up.png'); }
+
+/* pc */
+.map_guide { display: none; height: 736px; padding: 65px 0 56px; width: 100%; background: url('/assets/images/main/main_map_bg.jpeg') no-repeat center / cover; color: #fff; box-sizing: border-box; }
+.map_guide button { color: #fff; }
+.map_guide .con_box { position: relative; height: 100%; }
+.map_guide .map_btnbox { position: absolute; left: 0; bottom: 0; }
+.map_guide .map_btnbox button { float: left; width: 178px; height: 48px; font-size: 17px; line-height: 48px; border: 1px solid #fff; }
+.map_guide .map_btnbox button.active { background: #fff; color: #333; font-weight: 500; }
+
+.map_guide .map_container { background: url('/assets/images/main/img_map.png') no-repeat center top 0 / 1168px 527px; }
+
+.map_guide .graph_box,
+.map_guide .map_box { position: relative; height: 527px; display: none; }
+.map_guide .graph_box.active,
+.map_guide .map_box.active { display: block; }
+.map_guide .graph_container { display: none; }
+
+.map_guide .map_box .country { display: block; position: absolute; color: #fff; font-size: 15px; font-weight: lighter; }
+.map_guide .map_box .country em { display: inline-block; min-width: 76px; margin-left: 7px; color: #fff; font-size: 24px; font-style: normal; font-weight: bold; text-align: left; }
+
+.map_guide .map_box .country::before { content: ""; display: inline-block; width: 5px; height: 5px; margin-right: 6px; background: #5ad7ff; border-radius: 100%; vertical-align: middle; }
+.map_guide .map_box .country.india::before,
+.map_guide .map_box .country.newzealand::before,
+.map_guide .map_box .country.peru::before { display: none; }
+.map_guide .map_box .country.india::after,
+.map_guide .map_box .country.newzealand::after,
+.map_guide .map_box .country.peru::after { content: ""; display: inline-block; width: 5px; height: 5px; margin-left: 6px; background: #5ad7ff; border-radius: 100%; vertical-align: middle; }
+.map_guide .map_box .country.india em,
+.map_guide .map_box .country.newzealand em,
+.map_guide .map_box .country.peru em { text-align: right; margin-right: 7px; }
+
+.map_guide .map_box .efta { left: 110px; top: 62px; }
+.map_guide .map_box .turkey { left: 89px; top: 112px; }
+.map_guide .map_box .eu { left: 219px; top: 113px; }
+.map_guide .map_box .india { left: 195px; top: 213px; }
+.map_guide .map_box .china { left: 377px; top: 152px; }
+.map_guide .map_box .asean { left: 372px; top: 213px; }
+.map_guide .map_box .vietnam { left: 407px; top: 248px; }
+.map_guide .map_box .australia { left: 483px; bottom: 112px; }
+.map_guide .map_box .newzealand { left: 462px; bottom: 56px; }
+.map_guide .map_box .canada { right: 144px; top: 106px; }
+.map_guide .map_box .usa { right: 177px; top: 172px; }
+.map_guide .map_box .columbia { right: 48px; bottom: 238px; }
+.map_guide .map_box .peru { right: 213px; bottom: 182px; }
+.map_guide .map_box .chile { right: 66px; bottom: 127px; }
+
+.map_guide .map_txt { position: absolute; right: 0; bottom: 0; padding: 40px 0 32px; width: 437px; background: url('/assets/images/main/img_bg.png') no-repeat right 0 center / 368px; font-size: 40px; }
+.map_guide .map_txt span { display: block; color: #fff; }
+.map_guide .map_txt .f_bold { font-weight: bold; }
+.map_guide .map_txt:after { content: ""; display: block; margin-top: 28px; width: 200px; height: 2px; background: #fff; }
+.map_guide .map_txt div { position: absolute; right: 32px; top: 40px; z-index: 2; }
+.map_guide .map_txt div button { position: relative; display: block; padding-left: 16px; color: #8ab9ff; font-size: 17px; }
+.map_guide .map_txt div button.active { color: #fff; }
+.map_guide .map_txt div button.active::before { content: ""; display: inline-block; width: 2px; height: 15px; position: absolute; left: 0; top: 6px; background: #fff;}
+
+/* 협정, 산업별 그래프 */
+.map_guide .graph_box { padding-top: 55px; }
+.map_guide .graph_box .graph_list li { float: left; width: 33.33%; padding-bottom: 56px; }
+.map_guide .graph_box .graph_list li em { display: block; color: #fff; font-style: normal; }
+.map_guide .graph_box .graph_list .graph_bar { display: inline-block; width: 240px; height: 2px; background-color: #3474ba; border-radius: 4px; }
+.map_guide .graph_box .graph_list .graph_bar div { background: #63d0ff; height: 4px; border-radius: 4px; margin-top: -1px; }
+.map_guide .graph_box .graph_list li strong { padding-left: 20px; font-size: 22px; color: #63d0ff; vertical-align: middle; }
+
+/* mo */
+.mo-use-rate {display: none; padding: 20px; background:#f2f2f2;}
+.mo-use-rate .tab {overflow:hidden; margin-bottom:6px; border:1px solid #e1e1e1; background:#ffffff;}
+.mo-use-rate .tab li {float:left; width:50%;}
+.mo-use-rate .tab li+li {border-left:1px solid #e1e1e1;}
+.mo-use-rate .tab li button {display:block; width:100%; height:40px; font-size:16px; line-height:40px; }
+.mo-use-rate .tab li.on button {color:#fff; background:$standard;}
+.mo-use-rate .container {display:none; padding-bottom:12px;}
+.mo-use-rate .tab_cont {overflow:hidden; border-top:1px solid #767676; border-bottom:1px solid #767676;}
+.mo-use-rate table {width:100%; margin:-1px 0;}
+.mo-use-rate table td,
+.mo-use-rate table th {padding:7px; border:1px solid #e1e1e1; text-align:center; background:#fff;}
+.mo-use-rate table th {border-top:0; background:#fafafa;}
+
+#tab_cont02 {display:none;}
+
+/* use-rate */
+.main-use-rate {
+    .use-rate-wrap {
+        display: block;
+    }
+    .mo-use-rate-wrap {
+        display: none;
+    }
+}
+
+// FTA 활용율 전용 
+@media (max-width: 1200px) {
+    .main-use-rate-box { height: 80px; }
+    .main-use-rate-box h3 { margin-right: 15px; font-size: 18px; }
+    .main-use-rate-box span { font-size: 13px; line-height: 1.69; }
+    .main-use-rate-box span .br { display: block; }
+    .main-use-rate {
+        .use-rate-wrap {
+            display: none;
+        }
+        .mo-use-rate-wrap {
+            display: block;
+            .mo-use-rate{padding: 15px;}
+        }
+    }
+}
+
+// mobile
+@media (max-width: 767px) {
+    .main-use-rate-box button {
+        color: transparent;
+        background-position: right 15px center;
+    }
+}

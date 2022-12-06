@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .popup-list li {
+        line-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="popup-list">
+      <li><button class="btn" data-html="/popup/file_delete.html">파일 삭제 - file_delete.html</button></li>
+      <li><button class="btn" data-html="/popup/delete_confirm.html">삭제 확인 - delete_confirm.html</button></li>
+      <li><button class="btn" data-html="/popup/delete.html">삭제 - delete.html</button></li>
+      <li><button class="btn" data-html="/popup/subscribing.html">구독중 - subscribing.html</button></li>
+      <li><button class="btn" data-html="/popup/submit_cancel_confirm.html">등록 취소 확인 - submit_cancel_confirm.html</button></li>
+      <li><button class="btn" data-html="/popup/submit.html">등록 - submit.html</button></li>
+      <li><button class="btn" data-html="/popup/password.html">비밀번호 확인 - password.html</button></li>
+      <li><button class="btn" data-html="/popup/login_required.html">로그인 필요 - login_required.html</button></li>
+      <li><button onclick="fnShowVideo('LLWDFqaCOzQ', event);">비디오 - video.html</button></li>
+      <li><button class="btn" data-html="/popup/newsletter.html">뉴스레터 메일링 서비스 - newsletter.html</button></li>
+      <li><button class="btn" data-html="/popup/support_1380_4_4_1.html">업종선택 - support_1380_4_4_1.html</button></li>
+      <li><button class="btn" data-html="/popup/support_1380_4_4_2.html">컨설팅 품목활용 FTA(FTA 분류) - support_1380_4_4_2.html</button></li>
+      <li><button class="btn" data-html="/popup/support_1380_4_4_3.html">컨설턴트 검색 - support_1380_4_4_3.html</button></li>
+      <li><button class="btn" data-html="/popup/support_1380_4_4_4.html">에로유형 안내 - support_1380_4_4_4.html</button></li>
+      <li><button class="btn" data-html="/popup/support_consulting_4_3_1.html">현장방문 컨설팅 개요 - support_consulting_4_3_1.html</button></li>
+      <li><button class="btn" data-html="/popup/support_consulting_4_3_2.html">추천기관 선택 - support_consulting_4_3_2.html</button></li>
+      <li><button class="btn" data-html="/popup/usage_simulation_1_1.html">활용 시뮬레이션 안내문구 - usage_simulation_1_1.html</button></li>
+    </ul>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script>
+      $('.btn').on('click', function (e) {
+        var url = $(this).data('html')
+        $('body').append('<div id="popup"></div>')
+        $('#popup').load(url, function () {
+          popupOpen(e.currentTarget, $('.popup'))
+        })
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FTA 통합 플랫폼</title>
+    <link rel="icon" href="/assets/images/bi_portal.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+  </head>
+  <body class="notice-on">
+    <div id="skip-nav"><a href="#content">본문 바로가기</a></div>
+    <!-- header -->
+    <div id="header"></div>
+
+    <!-- 본문 -->
+    <div id="content" class="sub usage">
+      <div class="sub-visual">
+        <div class="container">
+          <h2>FTA 활용</h2>
+        </div>
+      </div>
+      <div class="sub-container">
+        <div class="container">
+          <!-- sub-nav -->
+          <!-- [pub] 
+              활성화 메뉴 <a href="#" class="active" aria-current="page">공지사항</a>
+          -->
+          <nav class="sub-nav" aria-label="sub navigation">
+            <ul class="depth1">
+              <li><a href="#">FTA 기초</a></li>
+              <li><a href="#" class="active" aria-current="page">활용절차</a></li>
+              <li><a href="#">품목확인</a></li>
+              <li><a href="#">활용 시뮬레이션</a></li>
+              <li><a href="#">비즈니스모델</a></li>
+              <li><a href="#">FTA 활용사례</a></li>
+            </ul>
+          </nav>
+          <div class="sub-body">
+            <!-- title -->
+            <div class="title-area">
+              <!-- breadcrumb -->
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item home" aria-label="home"></li>
+                <li class="breadcrumb-item">FTA 활용</li>
+                <li class="breadcrumb-item active" aria-current="page">활용절차</li>
+              </ul>
+              <h3 class="title">활용절차</h3>
+            </div>
+
+            <div class="usage-process">
+              <!-- usage-process-nav -->
+              <nav class="usage-process-nav" aria-label="활용절차 navigation">
+                <div class="usage-process-control">
+                  <button type="button" class="btn-usage-process-menu" aria-label="활용절차 메뉴 열기"></button>
+                  <div class="fta-call">
+                    전국 어디서나 FTA 활용 무엇이든 물어보세요!
+                    <span class="standard">☎1380</span>
+                  </div>
+                </div>
+                <ul class="depth1">
+                  <li class="drop-down" aria-expanded="true">
+                    <a href="#process1" class="active icon">수출자 FTA 활용절차</a>
+                    <ul class="depth2">
+                      <li><a href="#process1-1" class="active">1. 수출 대상국 확인</a></li>
+                      <li><a href="#process1-2">2. 수출물품 HS CODE 확인</a></li>
+                      <li><a href="#process1-3">3. FTA 협정관세 적용 실익 검토</a></li>
+                      <li><a href="#process1-4">4. 원산지 결정 기준 확인</a></li>
+                      <li><a href="#process1-5">5. 원산지 판정용 증빙서류 작성 또는 취합</a></li>
+                      <li><a href="#process1-6">6. 원산지 판정 및 원산지 소명서 작성</a></li>
+                      <li><a href="#process1-7">7. 원산지 증명서 발급</a></li>
+                      <li><a href="#process1-8">8. 수입자 제공</a></li>
+                    </ul>
+                  </li>
+                  <li class="drop-down" aria-expanded="false">
+                    <a href="#process2" class="icon">로컬 수출자 FTA 활용절차</a>
+                    <ul class="depth2">
+                      <li><a href="#process2-1">1. 판매물품의 HS CODE 확인</a></li>
+                      <li><a href="#process2-2">2. 원산지 결정기준 확인</a></li>
+                      <li><a href="#process2-3">3. 원산지 판정용 증빙서류 작성 또는 취합 </a></li>
+                      <li><a href="#process2-4">4. 원산지 판정 </a></li>
+                      <li><a href="#process2-5">5. 원산지(포괄) 확인서 작성</a></li>
+                      <li><a href="#process2-6">6. 원산지(포괄) 확인서 제공</a></li>
+                    </ul>
+                  </li>
+                  <li class="drop-down" aria-expanded="false">
+                    <a href="#process3" class="icon">수입자 FTA 활용절차</a>
+                    <ul class="depth2">
+                      <li><a href="#process3-1">1. 대상국 확인</a></li>
+                      <li><a href="#process3-2">2.수입물품의 HS CODE 확인</a></li>
+                      <li><a href="#process3-3">3. 실익 발생 여부 확인 (수입양허세율 확인)</a></li>
+                      <li><a href="#process3-4">4. 원산지 증명서 수령</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#process4">원산지 검증</a></li>
+                  <li><a href="#process5">원산지 검증 대응 서류보관 가이드</a></li>
+                  <li><a href="#process6">품목별 / 업체별 인증 수출자</a></li>
+                </ul>
+              </nav>
+
+              <div class="usage-process-body">
+                <!-- 수출자 FTA 활용절차 -->
+                <h4 class="main-title" id="process1">수출자 FTA 활용절차</h4>
+
+                <div class="wrap" id="process1-1">
+                  <h5 class="sub-title">1. 수출 대상국 확인</h5>
+                  <p class="explanation">
+                    수출물품의 수입국을 파악하여 우리나라와 FTA를 체결한 당사국인지 여부를 확인합니다.<br />
+                    FTA 협정국으로 수출할 경우에만 현지 수입 관세율을 확인하여 수입자가 혜택이 있는지 분석할 수 있습니다.
+                  </p>
+                  <div class="quiz-box">
+                    <div class="quiz-box-header">
+                      <div class="title">
+                        다음 중 현재 (2022년) FTA 당사국이 아닌 국가는?
+                        <a
+                          href="https://www.customs.go.kr/ftaportalkor/cm/cntnts/cntntsView.do?mi=3310&cntntsId=986"
+                          class="hint"
+                          target="_blank"
+                          title="새창 열기"
+                          >Hint 보기</a
+                        >
+                      </div>
+                    </div>
+                    <div class="quiz-box-body">
+                      <div class="choice-group">
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-1" />
+                          <span class="text">1. 한국</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-1" />
+                          <span class="text">2. 미국</span>
+                        </label>
+                        <label class="choice choice-o">
+                          <input type="radio" name="process1-1" />
+                          <span class="text">3.몽골</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-1" />
+                          <span class="text">4. 폴란드</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-1" />
+                          <span class="text">5. 튀르키에</span>
+                        </label>
+                      </div>
+                      <p class="text-ex">해설) 우리나라와 FTA 협정이 발효된 국가만 당사국이 될 수 있습니다.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wrap" id="process1-2">
+                  <h5 class="sub-title">2. 수출물품 HS CODE 확인</h5>
+                  <p class="explanation">
+                    수출하고자 하는 물품의 HS CODE를 확인합니다. 반드시 우리나라에서 수출신고를 하는 때의 수출신고 HS CODE 뿐 만 아니라 해당 물품을 수입하는
+                    수입국(상대국가)의 수입신고 HS CODE를 확인하여 HS CODE 6단위까지 일치하는지 확인하여야 합니다.
+                  </p>
+                  <div class="quiz-box">
+                    <div class="quiz-box-header">
+                      <div class="title">
+                        0301.99-9070 이란 숫자는 무얼 뜻하는 걸까요?
+                        <a href="https://unipass.customs.go.kr/clip/index.do" class="hint" target="_blank" title="새창 열기"
+                          >HINT보기 (메뉴: 세계 HS 정보 → 관세율표)</a
+                        >
+                      </div>
+                    </div>
+                    <div class="quiz-box-body">
+                      <div class="choice-group">
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-2" />
+                          <span class="text">1. 활어</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-2" />
+                          <span class="text">2. 관상용 민물 비단잉어</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-2" />
+                          <span class="text">3. 활방어</span>
+                        </label>
+                        <label class="choice choice-o">
+                          <input type="radio" name="process1-2" />
+                          <span class="text">4. 살아있는 미꾸라지</span>
+                        </label>
+                      </div>
+                      <p class="text-ex">해설) ①활어 (0301) ②관상용 민물 비단잉어 (0301.11-1000) ③ 방어 ( 0301.99-2000)④ 살아있는 미꾸라지 (0301.99-9070)</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wrap" id="process1-3">
+                  <h5 class="sub-title">3. FTA 협정관세 적용 실익 검토</h5>
+                  <p class="explanation">
+                    FTA 활용상대국의 HS CODE 6자리를 바탕으로 FTA 활용 시 관세율 감면의 혜택이 있는지 확인합니다. 만약 실익이 없는 경우 FTA C/O 발행실익
+                    없습니다.
+                  </p>
+                  <p class="explanation">
+                    하지만, 미국의 경우 FTA 를 적용하지 않은 일반적인 세율이 0%라고 하더라도 미국에서 수입통관시 부과되는 ‘물품취급수수료(Merchandise Processing
+                    Fee)'를 면제받을 수 있으므로 미국 수입자가 FTA 원산지 증명서를 발급받기를 원하는지 확인하는 것이 좋습니다.
+                  </p>
+                </div>
+
+                <div class="wrap" id="process1-4">
+                  <h5 class="sub-title">4. 원산지 결정기준 확인</h5>
+                  <p class="explanation">
+                    제품의 CODE 6단위로 해당 FTA 협정의 원산지결정기준을 확인합니다. 원산지결정기준은 협정별, CODE별로 상이하므로 원산지 증명서를 발급하고자
+                    하는 협정에 따라 원산지 결정기준을 파악하여야 합니다.
+                  </p>
+                  <div class="quiz-box">
+                    <div class="quiz-box-header">
+                      <div class="title">원산지 결정기준을 뜻하는 약어는?</div>
+                    </div>
+                    <div class="quiz-box-body">
+                      <div class="choice-group">
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-4-2" />
+                          <span class="text">1. Contry of Origin</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-4-2" />
+                          <span class="text">2. FTA</span>
+                        </label>
+                        <label class="choice choice-o">
+                          <input type="radio" name="process1-4-2" />
+                          <span class="text">3. PSR (Product Specific Rule)</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-4-2" />
+                          <span class="text">4. Certificate of Origin</span>
+                        </label>
+                      </div>
+                      <p class="text-ex">해설) PSR (Product Specific Rule)입니다.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wrap" id="process1-5">
+                  <h5 class="sub-title">5. 원산지 판정용 증빙서류 작성 또는 취합</h5>
+                  <p class="explanation">자재명세서(Bill of Materials; BOM)과 제조공정도 등의 원산지 판정용 서류를 작성합니다.</p>
+                  <p class="explanation">생산 제품에 투입된 자재명세서 (Bill of Materials; BOM)을 작성하고 원재료에 대한 품목분류를 진행합니다.</p>
+                  <p class="explanation">
+                    작성된 자재명세서를 기준으로 완제품과 동일한일정단위(2단위 - CC, 4단위 CTH, 6단위 CTSH) 의 HS CODE를 가지는 비역내산 원재료 또는 가격 비율이
+                    높은 원재료를 주요 대상으로 원산지확인서를 취합합니다. 포괄기간이 종료된 원재료에 대해서도 원산지확인서를 갱신하여 줄 것을 요청하여 취합 ·
+                    관리합니다.
+                  </p>
+                  <div class="quiz-box">
+                    <div class="quiz-box-header">
+                      <div class="title">원산지 결정기준이 부가가치기준인 수출품의 원산지 판정 시 활용하지 않는 증빙서류는?</div>
+                    </div>
+                    <div class="quiz-box-body">
+                      <div class="choice-group">
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-5-2" />
+                          <span class="text">1. 원재료 구매 내역서</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-5-2" />
+                          <span class="text">2. BOM</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-5-2" />
+                          <span class="text">3. 원산지 확인서</span>
+                        </label>
+                        <label class="choice choice-o">
+                          <input type="radio" name="process1-5-2" />
+                          <span class="text">4. 원산지증명서 작성자 서명 리스트</span>
+                        </label>
+                      </div>
+                      <p class="text-ex">해설) 원산지 증명서 작성자 서명 리스트는 인증수출자 인증 등록 시 필요 서류입니다.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wrap" id="process1-6">
+                  <h5 class="sub-title">6. 원산지 판정 및 원산지 소명서 작성</h5>
+                  <p class="explanation">
+                    수출 물품이 원산지결정기준을 충족하는 지 여부를 전문가나 회사 내의 원산지 관리담당자를 통하여 판정합니다. 만약 원산지 판정 결과
+                    원산지결정기준을 충족하지 못하는 경우 최소허용기준 (De minimis rule)등 보충기준을 추가로 검토하여 원산지 충족여부를 결정합니다.
+                  </p>
+                  <p class="explanation">
+                    특히 원산지 결정기준이 세번변경기준인 경우 비원산지재료와 제품간에 일정단위의 CODE가 동일하면 세번변경이 이루어진 것으로 보지 않으므로
+                    제품의 원산지를 역내산으로 할 수 없습니다. 따라서 원재료의 정확한 품목분류가 바탕이 되어야 적절한 원산지 판정을 진행할 수 있습니다.
+                  </p>
+                  <p class="explanation">결과에 맞추어 원산지 소명서를 형식에 맞추어 작성하도록 합니다.</p>
+                  <div class="quiz-box">
+                    <div class="quiz-box-header">
+                      <div class="title">
+                        한-아세안 FTA 협정의 수출물품이 원산지 결정 기중을 충족하려면 최소허용기준 몇 % 일까요?
+                        <a
+                          href="https://www.customs.go.kr/ftaportalkor/cm/cntnts/cntntsView.do?mi=10342&cntntsId=5100"
+                          class="hint"
+                          target="_blank"
+                          title="새창 열기"
+                          >Hint 보기</a
+                        >
+                      </div>
+                    </div>
+                    <div class="quiz-box-body">
+                      <div class="choice-group">
+                        <label class="choice choice-o">
+                          <input type="radio" name="process1-6" />
+                          <span class="text">1. 10%</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-6" />
+                          <span class="text">2. 15%</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-6" />
+                          <span class="text">3. 8%</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-6" />
+                          <span class="text">4. 5%</span>
+                        </label>
+                      </div>
+                      <p class="text-ex">해설) 일반물품의 경우 10 %입니다 완제품 FOB 가격 대비 10% 이하인 경우 원산지결정기준이 충족됩니다.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wrap" id="process1-7">
+                  <h5 class="sub-title">7. 원산지 증명서 발급</h5>
+                  <p class="explanation">
+                    판정 결과 ‘역내산’임이 확인된 물품은 수출대상국과 체결한 협정에서 정한 방식( 기관 발급 또는 자율 작성)에 따라 발행합니다.
+                  </p>
+                  <div class="quiz-box">
+                    <div class="quiz-box-header">
+                      <div class="title">한-중 FTA협정 원산지 증명서를 발급 할 수 없는 기관은?</div>
+                    </div>
+                    <div class="quiz-box-body">
+                      <div class="choice-group">
+                        <label class="choice choice-o">
+                          <input type="radio" name="process1-7" />
+                          <span class="text">1. 외교부</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-7" />
+                          <span class="text">2. 관세청</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-7" />
+                          <span class="text">3. 대한상공회의소</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process1-7" />
+                          <span class="text">4. 지역 상공회의소</span>
+                        </label>
+                      </div>
+                      <p class="text-ex">해설) 기관 발급 대상 FTA 협정으로 관세청 UNIPASS 및 상공회의소 원산지증명센터에서 발급받을 수 있습니다.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wrap" id="process1-8">
+                  <h5 class="sub-title">8. 수입자 제공</h5>
+                  <p class="explanation">
+                    원산지증명서는 협정에 따라 사본 또는 원본을 해당 협정국 관세당국 및 수입자에게 송부합니다. 제품이 협정국에 수입통관 되기 전 도착하는 것이
+                    일반적이므로 발급 후 이메일 또는 국제특송으로 송부합니다.
+                  </p>
+                  <p class="explanation">
+                    FTA 원산지 증명서를 수출 시 발행하지 못하는 경우 수입자에게 안내하여 사후 적용이 가능한지 확인하도록 합니다. 수입국가별로 사후 적용
+                    가능여부와 기간이 상이하니 주의 하도록 합니다.
+                  </p>
+                </div>
+
+                <!-- 로컬 수출자 FTA 활용절차 -->
+                <h4 class="main-title" id="process2">로컬 수출자 FTA 활용절차</h4>
+                <div class="wrap" id="process2-1">
+                  <h5 class="sub-title">1. 판매물품의 HS CODE 확인</h5>
+                  <p class="explanation">
+                    원산지 (포괄)확인서를 발급요청 받은 제품 및 소요 원재료에 대한 HS CODE를 확인하여야 합니다. 제품의 HS CODE 에 따라 원산지결정기준이
+                    달라지므로 정확한 확인이 필수적입니다.
+                  </p>
+                </div>
+
+                <div class="wrap" id="process2-2">
+                  <h5 class="sub-title">2. 원산지 결정기준 확인</h5>
+                  <p class="explanation">
+                    CODE 별로 상이하므로 원산지(포괄)확인서를 발급하고자 하는 협정에 따라 원산지결정기준을 파악하여 적용하는 것이 중요합니다.
+                  </p>
+                </div>
+
+                <div class="wrap" id="process2-3">
+                  <h5 class="sub-title">3. 원산지 판정용 증빙서류 작성 또는 취합</h5>
+                  <p class="explanation">자재명세서(Bill of Materials; BOM)와 제조공정도 등의 기초적인 원산지 판정용 서류를 작성합니다.</p>
+                </div>
+
+                <div class="wrap" id="process2-4">
+                  <h5 class="sub-title">4. 원산지 판정</h5>
+                  <p class="explanation">해당 물품의 원산지결정기준을 적용하여 공급물품이 원산지결정기준을 충족하는 지 여부를 판정합니다.</p>
+                  <p class="explanation">
+                    특히 세번변경기준의 경우 완제품과 원부자재간의 2단위(CC), 4단위(CTH), 6단위(CTSH) 변경여부가 원산지 충족여부를 판단하므로 HS CODE는
+                    6단위까지 확인하도록 합니다. 만약 원산지 판정 결과 원산지결정기준을 충족하지 못하는 경우 최소허용기준(De minimis rule)등 보충기준을 추가로
+                    검토하여 원산지 충족여부를 결정합니다.
+                  </p>
+                </div>
+
+                <div class="wrap" id="process2-5">
+                  <h5 class="sub-title">5. 원산지(포괄)확인서 작성</h5>
+                  <p class="explanation">
+                    원산지 판정결과에 따라 원산지(포괄)확인서를 작성합니다. 원산지(포괄)확인서는 FTA 관세특례법시행규칙상의 정해진 서식을 이용해 작성방법에 따라
+                    적정하게 작성하여야 하고 원산지포괄확인기간의 경우 작성일기준이 아닌 물품공급일 기준으로 12개월을 초과하지 않는 범위 내에서 설정합니다.
+                  </p>
+                  <div class="quiz-box">
+                    <div class="quiz-box-header">
+                      <div class="title">원산지(포괄)확인서의 최대 포괄확인기간은?</div>
+                    </div>
+                    <div class="quiz-box-body">
+                      <div class="choice-group">
+                        <label class="choice choice-x">
+                          <input type="radio" name="process2-5" />
+                          <span class="text">1. 6개월</span>
+                        </label>
+                        <label class="choice choice-o">
+                          <input type="radio" name="process2-5" />
+                          <span class="text">2. 12개월</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process2-5" />
+                          <span class="text">3. 18개월</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process2-5" />
+                          <span class="text">4. 24개월</span>
+                        </label>
+                      </div>
+                      <p class="text-ex">해설) 최대12개월 작성이 가능하며 물품의 특성별로 12개월보다 더 짧은 기간설정 또는 ‘단건발급’도 가능합니다.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wrap" id="process2-6">
+                  <h5 class="sub-title">6. 원산지(포괄)확인서 제공</h5>
+                  <p class="explanation">원산지(포괄)확인서를 작성하여 수출자 또는 중간원재료 생산자에게 제공합니다.</p>
+                  <div class="quiz-box">
+                    <div class="quiz-box-header">
+                      <div class="title">
+                        생산자를 통해 구매한 상품을 유통업자가 구매하여 수출자에게 제공하는 경우 수출자는 원산지확인서를 누구로부터 우선 수취해야 할까요?
+                      </div>
+                    </div>
+                    <div class="quiz-box-body">
+                      <div class="choice-group">
+                        <label class="choice choice-x">
+                          <input type="radio" name="process2-6" />
+                          <span class="text">1. 생산자</span>
+                        </label>
+                        <label class="choice choice-o">
+                          <input type="radio" name="process2-6" />
+                          <span class="text">2. 유통업자</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process2-6" />
+                          <span class="text">3. 수입자</span>
+                        </label>
+                        <label class="choice choice-x">
+                          <input type="radio" name="process2-6" />
+                          <span class="text">4. 수출자 자체 작성</span>
+                        </label>
+                      </div>
+                      <p class="text-ex">해설) 수출자는 유통업자로부터 상품을 구매하였으므로 유통업자로부터 원산지확인서를 수취할 수 있습니다.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 수입자 FTA 활용절차 -->
+                <h4 class="main-title" id="process3">수입자 FTA 활용절차</h4>
+                <div class="wrap" id="process3-1">
+                  <h5 class="sub-title">1. 대상국 확인</h5>
+                  <p class="explanation">
+                    FTA 특혜관세율을 적용받기 위해서는 물품의 수출자, 수입자가 FTA 체약당사국에 소재해야 합니다. 따라서 물품을 수출하는 국가가 우리나라와 FTA
+                    협정을 체결한 체약당사국에 해당하는지를 가장 먼저 확인해야 합니다.
+                  </p>
+                </div>
+
+                <div class="wrap" id="process3-2">
+                  <h5 class="sub-title">2. 수입물품의 HS CODE 확인</h5>
+                  <p class="explanation">
+                    수입하고자 하는 물품의 HS Code를 확인합니다. HS Code에 따라 관세율이 달라질 수 있으므로 HS Code를 정확히 확인하는 것이 중요합니다.
+                  </p>
+                </div>
+
+                <div class="wrap" id="process3-3">
+                  <h5 class="sub-title">3. 실익 발생 여부 확인 (수입양허세율 확인)</h5>
+                  <p class="explanation">
+                    HS CODE를 이용하여 수입하고자 하는 물품이 해당 FTA 의 관세철폐계획에 따라 우리나라에서 협정관세적용 대상품목인지 확인한 후 해당 협정에서
+                    정한 FTA 특혜관세율을 파악합니다. 해당 물품에 적용되는 일반관세율과 FTA 협정관세율을 비교하여 FTA 협정관세 적용여부에 따른 관세절감효과를
+                    분석합니다.
+                  </p>
+                </div>
+
+                <div class="wrap" id="process3-4">
+                  <h5 class="sub-title">4. 원산지 증명서 수령</h5>
+                  <p class="explanation">
+                    FTA 효과분석을 통해 FTA 협정관세 적용 시 관세절감혜택이 있다고 판단되는 경우 (예를 들어 기본 관세율이 8% 이고 FTA 양허세율이 5%인 경우)
+                    해외의 수출자에게 FTA 원산지증명서를 요청합니다.
+                  </p>
+                  <p class="explanation">
+                    원산지증명서의 경우 기관발급방식, 자율발급방식 등 각 협정마다 발급방식 및 양식이 상이하고 원산지결정기준 또한 상이하므로 사후 추징 등의
+                    리스크를 최소화하기 위해서는 상대국 수출자로 하여금 원산지 기준 등의 형식적요건에 맞는 원산지증명서를 발급하도록 요청하는 것이 중요합니다.
+                  </p>
+                  <p class="explanation">
+                    일반적으로 수입신고 시 협정관세 적용을 신청하고, 세관장이 원산지증명서 원본 제출을 요구하는 경우를 제외하고는 사본 제출이 가능합니다. <br />
+                    또한, 수입신고 수리 전까지 협정관세의 신청이 불가능한 경우 수입신고 수리일로부터 1년 이내에 FTA C/O를 수취하여 사후 적용 신청도 가능합니다.
+                  </p>
+                </div>
+
+                <!-- 원산지 검증 -->
+                <h4 class="main-title" id="process4">원산지 검증</h4>
+                <div class="wrap">
+                  <h5 class="sub-title">원산지 검증이란(Verification)?</h5>
+                  <p class="explanation">
+                    수입물품이 해당 FTA 가 정한 원산지상품인지 여부를 확인하는 절차입니다. 자세히 말하면 특혜관세의 수혜요건인 원산지규정을 충족하였는지,
+                    증빙서류를 유지관리하였는지, 직접운송원칙 등을 충족하였는지 여부를 확인하고 위반한 경우에는 일정한 제재조치를 취하는 일련의 절차입니다.
+                  </p>
+                </div>
+
+                <div class="wrap">
+                  <h5 class="sub-title">1. 원산지 검증의 주체에 따른 분류</h5>
+                  <p class="explanation mb15">
+                    수입하고자 하는 물품의 HS Code를 확인합니다. HS Code에 따라 관세율이 달라질 수 있으므로 HS Code를 정확히 확인하는 것이 중요합니다.
+                  </p>
+                  <div class="table-area">
+                    <div class="table-wrap">
+                      <table class="table vertical-top">
+                        <caption>
+                          원산지 검증의 주체에 따른 분류
+                        </caption>
+                        <colgroup>
+                          <col style="width: 33.33%" />
+                          <col style="width: 33.33%" />
+                          <col style="width: 33.33%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>직접검증</th>
+                            <th>간접검증</th>
+                            <th>선간접 후 직접검증</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="left">관세당국이 주체가 되어 상대국의 대상자를 대상으로 검증</td>
+                            <td class="left">관세당국이 체약상대국의 관세당국 에서 원산지검증을 의뢰하여 수행</td>
+                            <td class="left">직접검증과 간접검증이 이 혼합되어 체약상대국이 관세당국에게 검증 의뢰하는 선간접 후 직접검증 진행</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wrap">
+                  <h5 class="sub-title mb15">2. 원산지 검증의 대상자에 따른 분류</h5>
+                  <div class="table-area">
+                    <div class="table-wrap">
+                      <table class="table">
+                        <caption>
+                          원산지 검증의 대상자에 따른 분류
+                        </caption>
+                        <colgroup>
+                          <col style="width: 50%" />
+                          <col style="width: 50%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>수입자검증</th>
+                            <th>선간접 후 직접검증</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="left">수입관세당국이 자국수입자를 대상으로 자국의 국내법에 의해 수입자 검증을 수행하는 경우</td>
+                            <td class="left">수출국의 수출자(또는 생산자)를 대상으로 수출물품의 원산지를 검증하는 경우</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 원산지 검증 대응 서류보관 가이드 -->
+                <h4 class="main-title" id="process5">원산지 검증 대응 서류보관 가이드</h4>
+                <div class="wrap">
+                  <h5 class="sub-title">1. 원산지증빙서류의 보관 범위 (FTA 특례법 시행령 제10조 1항 )</h5>
+                  <p class="explanation mb15">수출자, 생산자, 수입자 별로 원산지증명서의 증빙서류를 보관하여야 합니다.</p>
+                  <div class="table-area">
+                    <div class="table-wrap">
+                      <table class="table vertical-top">
+                        <caption>
+                          원산지 검증 대응 서류보관 가이드
+                        </caption>
+                        <colgroup>
+                          <col style="width: 33.33%" />
+                          <col style="width: 33.33%" />
+                          <col style="width: 33.33%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>직접검증</th>
+                            <th>간접검증</th>
+                            <th>선간접 후 직접검증</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="left">
+                              <ul class="list">
+                                <li>원산지증명서(신고서) 및 발급신청서류 사본</li>
+                                <li>수출신고필증</li>
+                                <li>품목분류 근거자료(사전심사서, 질의회신서 용도·기능·성분 등 물품 설명서)</li>
+                                <li>사용된 재료 또는 부분품의 수입신고필증(수출자의 명의로 직접 수입한 경우)</li>
+                                <li>거래관계 증빙자료(거래계약서, 구매주문서, 세금계산서,신용장, 구매확인서, 기납증, 송품장 등)</li>
+                                <li>가격 증빙자료(판매 또는 구매 관련 대금 영수·지급증빙자료 포함)</li>
+                                <li>운송관련 서류</li>
+                                <li>판매 또는 구매 관련 운송·보험·통관 등 부대비용 증빙자료</li>
+                                <li>출납·재고관리 대장</li>
+                                <li>공급자 또는 생산자의 진술서·원산지확인서·원산지소명서 등 확인서류</li>
+                                <li>원산지증명서 서명카드 및 작성대장(수출자 자율증명)</li>
+                                <li>인증수출자 인증서(인증수출자에 한함)</li>
+                                <li>
+                                  일반적으로 인정된 회계원칙에 따라 작성된 회계자료 및 증빙자료(회계감사보고서,재무제표, 매출전표, 외환거래 증빙자료,
+                                  제조원가명세서, 제품수불부, 거래처벌 매입보조부, 국내매입 증빙자료 등)
+                                </li>
+                              </ul>
+                            </td>
+                            <td class="left">
+                              <ul class="list">
+                                <li>수출자 or 수입자에게 원산지증명을 위해 작성·제공한 서류(원산지확인서, 국내제조확인서 등)</li>
+                                <li>당해물품의 생산에 사용된 원재료·부분품 등의 수입신고필증(생산자의 명의로 수입한 경우)</li>
+                                <li>당해물품 및 원재료의 품목분류 근거자료(사전심사서, 질의회신서, 용도·기능·성분 등 물품 설명서)</li>
+                                <li>당해물품의 생산된 형태로의 생산에 관한 기록</li>
+                                <li>당해물품 및 원재료의 거래관계 증빙자료(거래계약서, 구매문서, 세금계산서, 신용장, 구매확인서, 기납증 등)</li>
+                                <li>당해물품 및 원재료의 가격 증빙자료(판매 또는 구매 관련 대금 영수·지급 증빙자료 포함)</li>
+                                <li>당해물품 및 원재료의 운송서류</li>
+                              </ul>
+                            </td>
+                            <td class="left">
+                              <ul class="list">
+                                <li>원산지 증명서 사본</li>
+                                <li>수입신고필증</li>
+                                <li>지식재산권거래관련 계약서</li>
+                                <li>수입물품의 과세가격 결정에 관한 자료</li>
+                                <li>수입물품의 국제 운송 관련 서류</li>
+                                <li>사전심사 사본 및 증빙자료 (사전심사서 교부 받은 경우)</li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wrap">
+                  <h5 class="sub-title">2. 원산지 증빙서류 의 당사자별 보관 기간</h5>
+                  <p class="explanation mb15">수출자, 수입자, 생산자는 FTA 협정에서 정한 서류를 일정기간까지 보관 하여야 합니다.</p>
+                  <div class="table-area">
+                    <div class="table-wrap">
+                      <table class="table">
+                        <caption>
+                          원산지 증빙서류 의 당사자별 보관 기간
+                        </caption>
+                        <colgroup>
+                          <col style="width: 33.33%" />
+                          <col style="width: 33.33%" />
+                          <col style="width: 33.33%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>수출자 보관 의무기간</th>
+                            <th>생산자 보관 의무기간</th>
+                            <th>수입자 보관 의무기간</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td colspan="2">FTA 원산지 증명서작성일 또는 발급일로부터 5년 (한-중 FTA 는 3년)</td>
+                            <td>협정적용 신청한 날의 다음 날부터 5년</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wrap">
+                  <h5 class="sub-title">3. 원산지 증빙서류 제출 의무</h5>
+                  <p class="explanation">
+                    수출자,생산자 또는 수입자는 요청이 있는 경우 요청된 기한 이내에 각 FTA 협정에서 정한 서류를 정해진 기한 이내에 제출하여야 합니다.
+                  </p>
+                </div>
+
+                <div class="wrap">
+                  <h5 class="sub-title">4. 원산지 증빙서류 제출 미비시의 영향</h5>
+                  <p class="explanation">
+                    원산지를 증빙하기 위한 자료는 과세당국에서 요청한 자료에 한정하지 않고 검증대상에 따라 증빙자료의 종류 및 방법등이 달라질 수 있습니다.
+                    그러므로, 제시된 증빙자료 외의 기타의 자료 및 방법으로도 원산지를 증빙할 수 없는 경우에는 증빙자료제출을 요청 받은 물품의 원산지를 확인할 수
+                    없는 것으로 간주될 수 있습니다.
+                  </p>
+                  <p class="explanation">
+                    미보관·미제출 및 사실과 다르게 제출하거나 원산지를 확인하는데 필요한 증빙자료를 충분히 제시하지 못하는 경우 협정관세 적용배제 및 FTA
+                    특례법에서 정한 벌금·과태료 등 행정벌이 부과 될 수 있습니다.
+                  </p>
+                </div>
+
+                <div class="wrap">
+                  <h5 class="sub-title">5. 원산지증빙서류 보관 매체</h5>
+                  <p class="explanation">마이크로필름·광디스크 등 자료전달매체 또는 서버 등 자료보관매체 등을 이용하여 보관할 수 있습니다.</p>
+                </div>
+
+                <!-- 품목별 / 업체별 인증 수출자 -->
+                <h4 class="main-title" id="process6">품목별 / 업체별 인증 수출자</h4>
+                <div class="wrap">
+                  <h5 class="sub-title">인증 수출자란?</h5>
+                  <p class="explanation">
+                    관세당국이 원산지증명 능력이 있다고 인증한 수출자에게 원산지증명서 발급권한(한-EU FTA , 한-영 FTA 등) 또는 첨부서류 제출 간소화 혜택을
+                    부여하는 제도입니다.
+                  </p>
+                  <p class="explanation mb15">
+                    인증수출자 인증을 받기 위하여는 원산지관리전담자 교육이수 점수가 필수입니다. (단, 교육종료일이 인증신청일로부터 2년 이내일 것)
+                  </p>
+                  <div class="table-area">
+                    <div class="table-wrap">
+                      <table class="table">
+                        <caption>
+                          품목별 / 업체별 인증 수출자
+                        </caption>
+                        <colgroup>
+                          <col style="width: 50%" />
+                          <col style="width: 50%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>업체별 인증 수출자 원산지관리전담자</th>
+                            <th>품목별 인증 수출자 원산지관리전담자</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>FTA 교육이수 20점 이상 필요</td>
+                            <td>FTA 교육이수 10점 이상 필요</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="btn-area">
+                    <button type="button" class="btn">원산지관리전담자 교육</button>
+                  </div>
+                </div>
+
+                <div class="wrap">
+                  <h5 class="sub-title mb15">1. 인증 수출자의 종류</h5>
+                  <div class="table-area">
+                    <div class="table-wrap">
+                      <table class="table">
+                        <caption>
+                          인증 수출자의 종류
+                        </caption>
+                        <colgroup>
+                          <col style="width: 20%" />
+                          <col style="width: 40%" />
+                          <col style="width: 40%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>구분</th>
+                            <th>업체별 원산지인증수출자</th>
+                            <th>품목별 원산지인증수출자</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>혜택범위</td>
+                            <td class="left">모든 협정, 모든 품목</td>
+                            <td class="left">인증받은 협정별, HS 6단위</td>
+                          </tr>
+                          <tr>
+                            <td>인증유효기간</td>
+                            <td class="left">5년</td>
+                            <td class="left">5년 (법규준수도에 따라 차등적용 가능)</td>
+                          </tr>
+                          <tr>
+                            <td>인증기간</td>
+                            <td class="left" colspan="2">본부세관(서울·부산·인천·대구·광주) 및 평택 직할세관</td>
+                          </tr>
+                          <tr>
+                            <td>인증기준</td>
+                            <td class="left">협정상대국별 원산지증명능력 및 법규 준수도</td>
+                            <td class="left">HS 6단위별 원산지증명능력 및 법규 준수도</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wrap">
+                  <h5 class="sub-title">2. 인증 수출자의 혜택 (협정별 혜택 / 종류별 혜택)</h5>
+                  <div class="table-area mb30">
+                    <p class="text-ex">* 협정별 해택</p>
+                    <div class="table-wrap">
+                      <table class="table vertical-top">
+                        <caption>
+                          인증 수출자의 혜택 (협정별 혜택)
+                        </caption>
+                        <colgroup>
+                          <col style="width: 20%" />
+                          <col style="width: 40%" />
+                          <col style="width: 40%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>구분</th>
+                            <th>업체별 원산지인증수출자</th>
+                            <th>품목별 원산지인증수출자</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="left">
+                              <ul class="list-default">
+                                <li>한-EU</li>
+                                <li>한-영</li>
+                              </ul>
+                            </td>
+                            <td class="left">6,000유로 이하의 수출물품에 대하여만 원 산지 신고서 작성가능</td>
+                            <td class="left">6,000유로 초과 물품을 수출할 경우 인증 수출자에 한하여 원산지 증명서 발급 가능</td>
+                          </tr>
+                          <tr>
+                            <td class="left">
+                              <ul class="list-default">
+                                <li>한-아세안</li>
+                                <li>한-싱가포르</li>
+                                <li>한-인도</li>
+                                <li>한-중국</li>
+                                <li>한-베트남</li>
+                              </ul>
+                            </td>
+                            <td class="left">
+                              <ul class="list-default">
+                                <li>1) 원산지증명서 발급신청서작성(전산으로 신청)</li>
+                                <li>2) 첨부서류 제출 수출신고필증 사본, 원산지소명서, 원산지확인서 (생산자와 수출자가 다른경우), 그 밖의 원산지 증빙자료</li>
+                                <li>3) 현지확인(필요한 경우)</li>
+                              </ul>
+                            </td>
+                            <td class="left">
+                              <ul class="list-default">
+                                <li>1) 원산지증명서 발급신청서 작성(전산으로 신청)</li>
+                                <li>2) 첨부서류 제출 생략</li>
+                                <li>3) 현지확인 생략 가능</li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="left">한-EFTA</td>
+                            <td class="left">자율발급 원산지증명서로(통상 lnvoice 신고 시) 수출자의 서명 필요 (전자문서 이용 불가능)</td>
+                            <td class="left">자율발급 원산지증명서로(통상 lnvoice 신고시) 수출자의 서명 생략 (전자문서 이용 가능)</td>
+                          </tr>
+                          <tr>
+                            <td class="left">RCEP</td>
+                            <td class="left">-</td>
+                            <td class="left">
+                              원산지증명서 자율발급 권한 부여<br />
+                              원산지증명서 기관발급 시 첨부서류 제출 생략<br /><br />
+
+                              *인증수출자 운영 현황(한국, 중국, 일본, 호주, 싱가포르, 태국)-'22.1.31.기준
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="left" style="vertical-align: middle">기타</td>
+                            <td class="left" colspan="2" style="vertical-align: middle">동 제도 미 적용</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="table-area">
+                    <p class="text-ex">* 종류별 해택</p>
+                    <div class="table-wrap">
+                      <table class="table vertical-top">
+                        <caption>
+                          인증 수출자의 혜택 (종류별 혜택)
+                        </caption>
+                        <colgroup>
+                          <col style="width: 20%" />
+                          <col style="width: 40%" />
+                          <col style="width: 40%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>구분</th>
+                            <th>업체별 원산지인증수출자</th>
+                            <th>품목별 원산지인증수출자</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="left">인증요건</td>
+                            <td class="left">
+                              <ul class="list">
+                                <li>원산지관리시스템 또는 원산지증명능력보유</li>
+                                <li>원산지증명서 작성대장 비치 관리여부</li>
+                                <li>원산지관리전담자 지정 및 운영여부</li>
+                                <li>최근 2년간 원산지조사 거부사실 無</li>
+                                <li>최근 2년간 서류보관의무 위반 無</li>
+                                <li>최근 2년간 원산지증명서 부정발급 無</li>
+                              </ul>
+                            </td>
+                            <td class="left">
+                              <ul class="list">
+                                <li>해당품목(HS6단위)원산지결정기준 충족여부</li>
+                                <li>원산지증명서 작성대장 비치 관리여부</li>
+                                <li>원산지관리전담자 지정 및 운영여부</li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="left" style="vertical-align: middle">혜택범위</td>
+                            <td class="left" style="vertical-align: middle">전체 협정, 전체 품목</td>
+                            <td class="left" style="vertical-align: middle">인증 심사받은 협정, 인증 품목(HS 6단위)</td>
+                          </tr>
+                          <tr>
+                            <td class="left" style="vertical-align: middle">유효기간</td>
+                            <td class="left" style="vertical-align: middle">5년</td>
+                            <td class="left" style="vertical-align: middle">5년</td>
+                          </tr>
+                          <tr>
+                            <td class="left">인증혜택</td>
+                            <td class="left">1회 인증으로 인증수출자의 모든 수출물품에 대해 C/O 발급절차 간소화 가능(모든 협정에 적용)</td>
+                            <td class="left">품목별 인증을 통해 인증 품목에 대해 C/O발급 절차간소화 가능 (인증 협정에만 적용)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wrap">
+                  <h5 class="sub-title">3. 인증 수출자 인증 시 유의 사항</h5>
+                  <ul class="list">
+                    <li>
+                      업체별 원산지인증수출자는 모든 협정, 모든 품목에 대해 인증혜택 부여하는 것에 반하여 품목별 원산지인증수출자는 인증받은 협정·품목번호
+                      6단위에 대해서만 인증혜택 부여합니다.
+                    </li>
+                    <li>
+                      인증수출자 지정은 자율적으로 원산지를 판단할 수 있는 권한을 준 것이지 해당 업제 수출물품에 대해 한국산으로 공인한 것이 아니므로 인증을
+                      받더라도 업체 책임하에 원산지결정기준 충족여부를 판단하여, 충족하는 물품에 대해서만 원산지증명서 발급하셔야 합니다.
+                    </li>
+                    <li>원산지인증수출자 확약서 및 여타 규정에 따라 인증 후 업체에서 작성하는 모든 원산지증빙서류에 대한 책임은 업체에 있습니다.</li>
+                    <li>
+                      인증수출자는 원산지증명서 발급과정에서 간소화 혜택을 부여한 것으로 원산지 판정관련 증빙서류 보관의무 및 사후 검증에 대한 의무는 면제되지
+                      않습니다.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/sub.js"></script>
+    <script>
+      $('#header').load('/layout/header.html')
+      $('#footer').load('/layout/footer.html')
+
+      // 팝업
+      $('.btn-subscribe').on('click', function (e) {
+        $('body').append('<div id="popup"></div>')
+        $('#popup').load('/popup/subscribing.html', function () {
+          popupOpen(e.currentTarget, $('.popup'))
+        })
+      })
+    </script>
+  </body>
+</html>

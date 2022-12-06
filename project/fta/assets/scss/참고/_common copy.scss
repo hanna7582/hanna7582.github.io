@@ -1,0 +1,2754 @@
+@charset 'UTF-8';
+
+// icon
+[class^='i-'] {
+  background: url() no-repeat;
+}
+.i-logo {
+  background-position: 0 0;
+}
+
+// color
+.standard {
+  color: $standard !important;
+}
+.gold {
+  color: $gold !important;
+}
+.vip {
+  color: $vip !important;
+}
+.normal {
+  color: $normal !important;
+}
+.premium {
+  color: $premium !important;
+}
+.blue {
+  color: $blue !important;
+}
+.red {
+  color: $red !important;
+}
+.purple {
+  color: #9b72f9 !important;
+}
+.bold {
+  font-weight: bold !important;
+}
+
+// icon / image
+.icon-new {
+  @include bgWH($url: '../images/icon-new.png', $width: 16px, $height: 16px);
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.btn-delete {
+  @include bgWH($url: '../images/btn-delete.png', $width: 18px, $height: 18px);
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+// 간격
+// @for $i from 1 through 30 {
+//   .mb#{$i} {
+//     margin-bottom: $i*1px !important;
+//   }
+// }
+$margin-sizes: 0, 5, 10, 15, 20, 25, 30, 40;
+$padding-sizes: 0, 10, 15, 30, 40;
+.mb50 {
+  margin-bottom: 50px !important;
+}
+.mt70 {
+  margin-top: 70px !important;
+}
+@each $size in $margin-sizes {
+  .mt#{$size} {
+    margin-top: $size * 1px !important;
+  }
+  .mr#{$size} {
+    margin-right: $size * 1px !important;
+  }
+  .mb#{$size} {
+    margin-bottom: $size * 1px !important;
+  }
+  .ml#{$size} {
+    margin-left: $size * 1px !important;
+  }
+}
+@each $size in $padding-sizes {
+  .pt#{$size} {
+    padding-top: $size * 1px !important;
+  }
+  .pr#{$size} {
+    padding-right: $size * 1px !important;
+  }
+  .pb#{$size} {
+    padding-bottom: $size * 1px !important;
+  }
+  .pl#{$size} {
+    padding-left: $size * 1px !important;
+  }
+}
+
+// 테두리
+.b0 {
+  border: none !important;
+}
+.bt0 {
+  border-top: none !important;
+}
+.bb0 {
+  border-bottom: none !important;
+}
+.bl0 {
+  border-left: none !important;
+}
+.br0 {
+  border-right: none !important;
+}
+
+// form ======================================================================================
+.img-box img {
+  width: 100%;
+}
+.select-box {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  &.w70 {
+    width: 70px !important;
+    .choice,
+    .drop-down {
+      background-position-x: 40px !important;
+    }
+  }
+  &.w110 {
+    width: 110px !important;
+    .choice,
+    .drop-down {
+      background-position-x: 80px !important;
+    }
+  }
+  &.w170 {
+    width: 170px !important;
+    .choice,
+    .drop-down {
+      background-position-x: 140px !important;
+    }
+  }
+  &.w230 {
+    width: 230px !important;
+    .choice,
+    .drop-down {
+      background-position-x: 200px !important;
+    }
+  }
+  &.w260 {
+    width: 260px !important;
+    .choice,
+    .drop-down {
+      background-position-x: 230px !important;
+    }
+  }
+  &.w290 {
+    width: 290px !important;
+    .choice,
+    .drop-down {
+      background-position-x: 260px !important;
+    }
+  }
+  &.multi-line {
+    .choice,
+    .drop-down li {
+      line-height: 18px;
+    }
+    .drop-down li {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.none-line {
+    .choice {
+      @extend %font12;
+      padding-left: 0;
+      border: 0;
+      height: 35px;
+      line-height: 35px;
+    }
+    .drop-down {
+      border: 0;
+      @include border($color: #6a6a6a, $direction: bottom);
+      padding-left: 0;
+      border-radius: 0;
+      li {
+        @extend %font12;
+      }
+    }
+  }
+  .choice {
+    @include border($color: #d6d6d6);
+    @include bg($url: '../images/select-arrow.png', $x: 170px, $y: center);
+    @extend %font14;
+    display: block;
+    height: 40px;
+    padding: 0 30px 0 10px;
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: left;
+    &.en {
+      @extend %font14-500-en;
+    }
+  }
+  .drop-down {
+    @include position($top: 0, $left: 0);
+    @include border($color: #6a6a6a);
+    @include bg($url: '../images/select-arrow-up.png', $x: 170px, $y: 15px);
+    display: none;
+    width: 100%;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color: $white;
+    &.active {
+      display: block;
+    }
+    li {
+      @extend %font14;
+      @extend %cursor-pointer;
+      line-height: 1.86;
+      text-align: left;
+      &:hover,
+      &.active {
+        color: $blue;
+      }
+      &.en {
+        @extend %font14-500-en;
+      }
+    }
+  }
+  .en {
+    @extend %font14-500-en;
+  }
+}
+
+.datepicker {
+  .input-text {
+    @include bg($url: '../images/icon-calendar.png', $x: 170px, $y: center);
+    @extend %font14-500-en;
+    @extend %cursor-default;
+    width: 200px;
+    padding: 0 40px 0 10px;
+    &.w250 {
+      width: 250px !important;
+      background-position-x: 220px !important;
+    }
+  }
+}
+
+select {
+  padding: 0 40px 0 10px;
+}
+
+select,
+.input-text {
+  @include border($color: #d6d6d6);
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  background-color: $white;
+}
+
+.checkbox {
+  @extend %flex-center;
+  @extend %cursor-pointer;
+  .input-checkbox {
+    position: absolute;
+  }
+  .icon-checkbox {
+    @include bgWH($url: '../images/checkbox-off.png', $width: 22px, $height: 22px);
+    @extend %cursor-pointer;
+  }
+  .input-checkbox:checked + .icon-checkbox {
+    background-image: url('../images/checkbox-on.png');
+  }
+  span {
+    @extend %font14;
+    margin-left: 8px;
+    color: #777777;
+  }
+}
+
+.radio {
+  @extend %flex-center;
+  @extend %cursor-pointer;
+  .icon-radio {
+    @include bgWH($url: '../images/btn-radio-off.png', $width: 18px, $height: 18px);
+    @extend %cursor-pointer;
+  }
+  .input-radio:checked + .icon-radio {
+    background-image: url('../images/btn-radio-on.png');
+  }
+  > span {
+    @extend %font14;
+    margin-left: 8px;
+    color: #777777;
+  }
+}
+
+.checkbox-red {
+  .icon-checkbox {
+    @include bgWH($url: '../images/btn-message-delete-off.png', $width: 30px, $height: 30px);
+    @extend %cursor-pointer;
+  }
+  .input-checkbox:checked + .icon-checkbox {
+    background-image: url('../images/btn-message-delete-on.png');
+  }
+}
+// message
+.s-message {
+  @extend %font14;
+  line-height: 20px;
+  text-align: center;
+}
+.l-message {
+  @extend %font22-bold;
+  text-align: center;
+}
+.message-right {
+  @extend %font12;
+  margin-right: 50px;
+  color: #dc4f4f;
+  line-height: 32px;
+  text-align: right;
+}
+.tooltip {
+  @include position($top: 40px, $left: -145px);
+  @include border($weight: 4px, $color: $blue);
+  display: none;
+  width: 215px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.07);
+  background-color: #ffffff;
+  text-align: left;
+  dt {
+    @extend %font18-bold;
+    margin-bottom: 8px;
+    line-height: 26px;
+    letter-spacing: -1px;
+  }
+  dd {
+    @extend %font16;
+    letter-spacing: -0.8px;
+  }
+  &::after {
+    content: '';
+    @include position($top: -17px, $right: 19px);
+    @include bgWH($url: '../images/tooltip-arrow.png', $width: 16px, $height: 17px);
+  }
+}
+.word-break {
+  word-break: break-all !important;
+  line-height: normal !important;
+}
+
+// layout ======================================================================================
+.container {
+  position: relative;
+  width: 1280px;
+  margin: auto;
+  padding: 0 30px;
+}
+.container-center {
+  width: 1220px;
+  margin: auto;
+}
+
+.flex-between {
+  @extend %flex-between;
+}
+.over-view {
+  @extend %flex-center;
+  @include positionCenter($position: fixed);
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background-color: rgba(255, 255, 255, 0.5);
+  .l-message {
+    margin-top: 280px;
+  }
+}
+
+// 요약 정보 ======================================================================================
+.summary-area {
+  @extend %flex;
+  @include border($weight: 4px, $color: #378de3);
+  width: 1220px;
+  margin: 70px auto 60px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.07);
+  &.type1 {
+    height: 242px;
+    padding: 40px 0;
+    .col:nth-child(1) {
+      width: 541px;
+      dl:nth-child(1) {
+        width: 65%;
+      }
+      dl:nth-child(2) {
+        width: 35%;
+      }
+    }
+    .col:nth-child(2) {
+      width: 678px;
+      dl:nth-child(1) {
+        width: 60%;
+      }
+      dl:nth-child(2) {
+        width: 40%;
+      }
+    }
+    .col {
+      @extend %flex-wrap;
+      padding: 0 60px;
+    }
+    .row {
+      @extend %flex-between;
+      width: 100%;
+      &:nth-child(2) {
+        align-items: flex-end;
+      }
+    }
+  }
+  &.type2 {
+    @extend %flex-y-between;
+    height: 140px;
+    padding: 0 109px;
+    .title {
+      @extend %font20-bold;
+      color: $blue;
+    }
+    dl dd {
+      font-size: 36px;
+      .num {
+        font-size: 40px;
+      }
+    }
+  }
+  &.type3 {
+    @extend %flex;
+    flex-wrap: wrap;
+    height: 258px;
+    .row {
+      width: 100%;
+      @extend %flex-y-between;
+      > dl {
+        width: 33.33%;
+        padding: 0 40px;
+      }
+    }
+    dl {
+      @include border($color: #dedede, $direction: right);
+      dd {
+        font-size: 30px;
+        .num {
+          font-size: 36px;
+        }
+      }
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    .inner-box {
+      @extend %flex-center;
+      width: 367px;
+      height: 48px;
+      margin: 0 40px;
+      padding: 0 20px;
+      border-radius: 12px;
+      background-color: $blue;
+      dl {
+        @extend %flex-y;
+        dt {
+          @extend %font14;
+          color: $white;
+          opacity: 0.7;
+        }
+        dd {
+          @extend %font14-en;
+          margin-left: 12px;
+          color: $white;
+          line-height: normal;
+          letter-spacing: normal;
+        }
+        // &:nth-child(1){
+        //   margin-right: 18px;
+        //   padding-right: 19px;
+        //   @include border($color: rgba(255, 255, 255, 0.2), $direction: right);
+        // }
+      }
+    }
+  }
+  &.type4 {
+    @extend %flex;
+    height: 258px;
+    padding: 40px 40px 40px 0;
+    .col {
+      @extend %flex-wrap;
+      align-content: space-between;
+      border: 0;
+    }
+    .row {
+      @extend %flex-y-between;
+      width: 880px;
+      height: 56px;
+      margin: 5px 0;
+      dl {
+        @extend %flex-y;
+        @include border($color: #dedede, $direction: right);
+        flex-wrap: wrap;
+        width: 33.33%;
+        padding-left: 70px;
+        &:last-child {
+          border: 0;
+        }
+      }
+      dt {
+        width: 100%;
+      }
+      dd {
+        font-size: 28px;
+        .num {
+          font-size: 32px;
+        }
+      }
+    }
+    .inner-box {
+      @extend %flex-wrap;
+      align-content: center;
+      width: 300px;
+      height: 168px;
+      padding: 20px;
+      border-radius: 16px;
+      background-color: $blue;
+      .title {
+        @extend %font18-500;
+        width: 100%;
+        letter-spacing: -1.13px;
+        color: $white;
+      }
+      .price {
+        @include border($style: dashed, $color: rgba(255, 255, 255, 0.5), $direction: top);
+        @include border($style: dashed, $color: rgba(255, 255, 255, 0.5), $direction: bottom);
+        @extend %font28;
+        width: 100%;
+        height: 50px;
+        margin: 10px 0;
+        line-height: 50px;
+        text-align: right;
+        color: $white;
+        .en {
+          @extend %font32-600-en;
+          display: inline;
+          color: $white;
+          margin-right: 5px;
+        }
+      }
+      .btn-group {
+        @extend %flex-end;
+        width: 100%;
+        button {
+          @extend %font18-bold;
+          width: 110px;
+          height: 34px;
+          border-radius: 6px;
+          background-color: $white;
+          color: $blue;
+        }
+      }
+    }
+  }
+  .col {
+    @include border($color: #dedede, $direction: right);
+    &:last-child {
+      border: none;
+    }
+  }
+  dl {
+    dt {
+      @extend %font14-500;
+      line-height: 20px;
+      letter-spacing: -0.39px;
+      opacity: 0.7;
+    }
+    dd {
+      @extend %font28;
+      color: $blue;
+      line-height: 39px;
+      letter-spacing: -1.75px;
+      .num {
+        @extend %font32-600-en;
+        color: $blue;
+        margin-right: 4px;
+        letter-spacing: -1.14px;
+      }
+    }
+  }
+}
+
+// 검색 ======================================================================================
+.search-area {
+  width: 1220px;
+  margin: auto;
+  .row {
+    @extend %flex-between;
+    margin-bottom: 14px;
+    &.right {
+      justify-content: flex-end;
+    }
+    .left {
+      @extend %flex;
+      .select-box {
+        margin-right: 16px;
+      }
+    }
+  }
+  .date-range {
+    @extend %flex;
+    .datepicker {
+      @extend %flex-y;
+      .text {
+        width: 16px;
+        text-align: center;
+      }
+    }
+    .btn-group {
+      @extend %flex;
+      margin-left: 10px;
+      &.w80 button {
+        width: 80px;
+      }
+      button {
+        @extend %font14;
+        width: 54px;
+        height: 40px;
+        margin-right: 6px;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+        &.active {
+          background-color: $blue;
+          color: $white;
+        }
+      }
+    }
+  }
+  .btn-group-search {
+    @extend %flex;
+    margin-left: 10px;
+    button {
+      @extend %font16-bold;
+      width: 118px;
+      height: 40px;
+      margin-left: 10px;
+      border-radius: calc(40px / 2px);
+      &.btn-reset {
+        @include border($color: #444444);
+        background-color: $white;
+        color: #444444;
+      }
+      &.btn-search {
+        @extend %flex-center;
+        background-color: #444444;
+        color: $white;
+        &::before {
+          @include bgWH($url: '../images/icon-search-btn.png', $width: 18px, $height: 18px);
+          content: '';
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .form-group {
+    @extend %flex;
+    .select-box {
+      margin-right: 16px;
+    }
+    .input-text {
+      @extend %font14;
+    }
+  }
+  .row:nth-child(1) {
+    .form-group {
+      .select-box {
+        width: 220px !important;
+        .choice,
+        .drop-down {
+          background-position-x: 190px !important;
+        }
+      }
+      .input-text {
+        width: 234px;
+      }
+    }
+  }
+  .row:nth-child(2) {
+    .form-group .input-text {
+      width: 294px;
+    }
+  }
+}
+
+// 컨트롤 ======================================================================================
+.control-area {
+  position: relative;
+  @include border($color: #444444, $direction: bottom);
+  @extend %flex-y-between;
+  height: 43px;
+  margin: 46px auto 0;
+  &.tab-title {
+    justify-content: normal;
+    .left {
+      transform: translateY(-5px);
+      margin-right: 40px;
+    }
+  }
+  .title {
+    @extend %font24-500;
+    line-height: 35px;
+  }
+  .tab-group {
+    @extend %flex;
+    button {
+      @extend %font16;
+      min-width: 120px;
+      height: 42px;
+      margin-right: 1px;
+      padding: 0 16px;
+      border-radius: 10px 10px 0 0;
+      background-color: #cccccc;
+      color: $white;
+      &.active {
+        background-color: #444444;
+      }
+    }
+  }
+  &.line-style {
+    width: 1220px;
+    @include border($weight: 2px, $color: $blue, $direction: bottom);
+    button {
+      @include border($weight: 2px, $color: $blue);
+      border-bottom: 0;
+      margin-right: 0;
+      background-color: $white;
+      color: $blue;
+      opacity: 0.7;
+      &.active {
+        background-color: $blue;
+        color: $white;
+        opacity: 1;
+      }
+    }
+  }
+  .btn-group {
+    @extend %flex;
+    &.center {
+      align-items: center;
+    }
+    button {
+      @extend %font14;
+    }
+    &-checkbox {
+      .checkbox {
+        float: left;
+        span {
+          @extend %font14;
+          margin-right: 15px;
+        }
+      }
+    }
+    &-sortable {
+      @extend %flex-end;
+      button {
+        @extend %font12;
+        margin-left: 30px;
+        background: none;
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
+    &-select {
+      button {
+        @include border($color: #999999);
+        float: left;
+        padding: 0 11px;
+        min-width: 90px;
+        height: 32px;
+        border-radius: 5px;
+        margin-left: 8px;
+        color: $font;
+        &.sm {
+          min-width: 76px;
+        }
+      }
+      .btn-cancel {
+        @include border($color: #fa9c64);
+        margin-left: 30px;
+        color: #fa9c64;
+      }
+      .btn-confirm {
+        @include border($color: #f93d5c);
+        color: #f93d5c;
+      }
+      .btn-line {
+        @include border($color: #666666);
+        color: $font;
+        font-weight: 500;
+      }
+      .btn-line-blue {
+        @include border($color: $blue);
+        color: $blue;
+        font-weight: 500;
+      }
+      .btn-dark {
+        border: 0;
+        background-color: #555555;
+        color: $white;
+        font-weight: 500;
+      }
+      .btn-blue {
+        border: 0;
+        background-color: $blue;
+        color: $white;
+        font-weight: 500;
+      }
+    }
+    &-group {
+      margin-left: 20px;
+      button {
+        float: left;
+        width: 120px;
+        height: 32px;
+        margin-left: 10px;
+        border-radius: 5px;
+        font-weight: 500;
+        &:nth-child(1) {
+          @include border($color: $blue);
+          color: $blue;
+        }
+        &:nth-child(2) {
+          background-color: $blue;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+// 테이블 ======================================================================================
+.table-area {
+  margin: 0 auto 60px;
+  .sortable {
+    @extend %flex-end;
+    margin: 9px 0 24px;
+    button {
+      @extend %font12;
+      margin-left: 30px;
+      background: none;
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
+  .btn-state-group {
+    @include border($weight: 5px, $color: rgba(0, 0, 0, 0.05));
+    @extend %flex-y;
+    margin-bottom: 30px;
+    padding: 17px 20px;
+    .title {
+      @extend %font19-bold;
+      @include border($color: rgba(0, 0, 0, 0.25), $direction: right);
+      padding-right: 20px;
+      margin-right: 20px;
+      height: 22px;
+    }
+    .btn-group {
+      button {
+        margin-right: 10px;
+      }
+      .btn-line {
+        @extend %btn-process;
+        @include border($color: #222222);
+        color: #222222;
+      }
+      .btn-blue {
+        @extend %btn-process;
+        background-color: $blue;
+        color: $white;
+      }
+      .btn-line-red {
+        @extend %btn-process;
+        @include border($color: #e02020);
+        color: #e02020;
+      }
+    }
+  }
+  .table-title {
+    @extend %font18-500;
+    overflow: hidden;
+    margin-bottom: 10px;
+    .title {
+      float: left;
+      width: 75px;
+    }
+    .en {
+      @extend %font18-en;
+    }
+    .small {
+      @extend %font14-500;
+      .en {
+        @extend %font14-en;
+      }
+    }
+  }
+  .table-wrap {
+    @include border($color: #222222, $direction: top);
+  }
+  .table {
+    &.multi-line {
+      td {
+        padding: 10px 5px;
+        word-break: break-word;
+        line-height: normal;
+      }
+    }
+    &.right-none {
+      th,
+      td {
+        border-right: 0;
+      }
+    }
+    .post-number {
+      @extend %font14-500-en;
+      margin-bottom: -12px;
+    }
+    &.font14 {
+      th {
+        @extend %font14-500;
+      }
+      td {
+        @extend %font14-500-en;
+        .ko {
+          @extend %font14;
+        }
+      }
+    }
+    tr.checked {
+      background-color: #f5f8fb;
+      a {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+    tr.bg1 {
+      background-color: rgba(237, 246, 255, 0.5);
+    }
+    tr.bg2 {
+      background-color: #eaf3ff;
+    }
+    tr.top-notice {
+      background-color: #f5f8fb;
+      td,
+      th,
+      a {
+        font-weight: 500;
+      }
+    }
+    &.no-data th {
+      border-right: 0 !important;
+    }
+    &.no-data td {
+      line-height: 33px !important;
+    }
+    th,
+    td {
+      @include border($color: #e2e3e4, $direction: bottom);
+      @include border($color: #e2e3e4, $direction: right);
+      text-align: center;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    &.list td,
+    &.list th {
+      border-right: 0;
+    }
+
+    th {
+      @extend %font16-500;
+      padding: 15px 10px;
+      line-height: 24px;
+      white-space: nowrap;
+      background-color: #f7f7f7;
+    }
+    td {
+      @extend %font16-500-en;
+      padding: 10px;
+      line-height: 33px;
+    }
+    tbody tr:last-child th,
+    tbody tr:last-child td {
+      @include border($color: rgba(34, 34, 34, 0.3), $direction: bottom);
+    }
+    .left {
+      text-align: left;
+    }
+    .right {
+      text-align: right;
+    }
+    .ko {
+      @extend %font16;
+    }
+    .text-overflow {
+      @extend %text-overflow-1;
+    }
+    .text-overflow2 {
+      @extend %text-overflow-2;
+    }
+    a {
+      @extend %font16;
+      text-decoration: underline;
+    }
+    .btn-secession {
+      @include border($color: #888888);
+      @extend %font14-500;
+      width: 76px;
+      height: 32px;
+      border-radius: 5px;
+      color: #888888;
+    }
+    // 신고승인
+    .btn-process1 {
+      @extend %btn-process;
+      @include border($color: #f93d5c);
+      color: #f93d5c;
+    }
+    // 승인보류
+    .btn-process2 {
+      @extend %btn-process;
+      @include border($color: #9b72f9);
+      color: #9b72f9;
+    }
+    // 신고대기
+    .btn-process3 {
+      @extend %btn-process;
+      @include border($color: #bbbbbb);
+      color: #bbbbbb;
+    }
+    // 승인취소
+    .btn-process4 {
+      @extend %btn-process;
+      @include border($color: #fa9c64);
+      color: #fa9c64;
+    }
+    // 답변하기
+    .btn-answer {
+      @extend %btn-process;
+      @include border($color: $blue);
+      color: $blue;
+    }
+    .btn-blue {
+      @extend %btn-process;
+      background-color: $blue;
+      color: $white;
+    }
+    .btn-line-blue {
+      @extend %btn-process;
+      @include border($color: $blue);
+      background-color: $white;
+      color: $blue;
+      &:hover {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+    .btn-line {
+      @extend %btn-process;
+      @include border($color: #888888);
+      background-color: $white;
+      color: #888888;
+    }
+    .btn-link {
+      position: relative;
+      @extend %font16-500;
+      text-decoration: underline;
+      &:hover {
+        color: $blue;
+        text-decoration: none;
+      }
+      &:hover .tooltip {
+        display: block;
+      }
+    }
+  }
+  .pagination {
+    @extend %flex-x;
+    margin-top: 40px;
+    a {
+      @extend %font14-500-en;
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      margin: 0 4px;
+      line-height: 35px;
+      text-align: center;
+      color: #999999;
+      &.prev {
+        @include bg($url: '../images/arrow-prev.png', $x: center, $y: center);
+        &.disabled {
+          background-image: url('../images/arrow-prev-off.png');
+        }
+      }
+      &.next {
+        @include bg($url: '../images/arrow-next.png', $x: center, $y: center);
+        &.disabled {
+          background-image: url('../images/arrow-next-off.png');
+        }
+      }
+      &.active {
+        @include border($color: $blue);
+        border-radius: 3px;
+        color: $blue;
+        font-weight: bold;
+      }
+      &:hover {
+        color: $blue;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.table-style {
+  @include border($color: rgba(34, 34, 34, 0.1), $direction: top);
+  @include border($color: rgba(68, 68, 68, 0.5), $direction: bottom);
+  display: table;
+  width: 100%;
+  dl {
+    display: table-row;
+    dt {
+      @extend %font16-500;
+      display: table-cell;
+      width: 120px !important;
+      padding: 15px 10px;
+      background-color: #f7f7f7;
+      text-align: center;
+    }
+    dd {
+      @extend %font16;
+      display: table-cell;
+      padding: 15px 10px;
+    }
+  }
+}
+
+// 스크롤 제어 ======================================================================================
+.view-control {
+  // display: none;
+  @include position($position: fixed, $bottom: 18px, $right: 15px);
+  @include border($color: #eeeeee);
+  width: 45px;
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.06);
+  background-color: $white;
+  button {
+    width: 45px;
+    height: 40px;
+  }
+  .up {
+    @include border($color: #eeeeee, $direction: bottom);
+    @include bg($url: '../images/arrow-long-up-off.png', $x: center, $y: center);
+    &:hover {
+      background-image: url('../images/arrow-long-up.png');
+    }
+  }
+  .down {
+    @include bg($url: '../images/arrow-long-down-off.png', $x: center, $y: center);
+    &:hover {
+      background-image: url('../images/arrow-long-down.png');
+    }
+  }
+}
+
+// 상세 ======================================================================================
+.detail {
+  &-header {
+    @extend %flex-y-between;
+    @include border($weight: 2px, $color: #222222, $direction: bottom);
+    padding-bottom: 10px;
+    .title {
+      @extend %font24-500;
+      line-height: 35px;
+    }
+    .btn-group {
+      button {
+        @extend %font14;
+        float: left;
+        width: 76px;
+        height: 32px;
+        margin-left: 10px;
+        border-radius: 5px;
+      }
+      .btn-line {
+        @include border($color: #999999);
+      }
+      .btn-dark {
+        background-color: #444444;
+        color: $white;
+      }
+    }
+  }
+  &-footer {
+    @include border($color: #e2e3e4, $direction: top);
+    @extend %flex-x;
+    width: 100%;
+    padding-top: 30px;
+    button {
+      @extend %font16-500;
+      width: 160px;
+      height: 40px;
+      border-radius: calc(40px / 2px);
+      margin: 0 7px;
+      &.btn-confirm {
+        background-color: $blue;
+        color: $white;
+        &:disabled {
+          @extend %cursor-not-allowed;
+          background-color: #eeeeee;
+          color: #aaaaaa;
+        }
+      }
+      &.btn-cancel {
+        @include border($color: #666666);
+        color: $font;
+        &:disabled {
+          @extend %cursor-not-allowed;
+          border-color: #eeeeee;
+          color: #aaaaaa;
+        }
+      }
+    }
+  }
+  .content {
+    &-header {
+      @extend %flex-y-between;
+      @include border($color: rgba(34, 34, 34, 0.1), $direction: bottom);
+      height: 80px;
+      .title {
+        @extend %font16-bold;
+      }
+      .info {
+        @extend %font14-500;
+        dl {
+          @extend %flex;
+          float: left;
+          margin-left: 35px;
+          dd {
+            @extend %font14-500-en;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    &-body {
+      dl {
+        @extend %flex;
+        @include border($color: #e4e5e6, $direction: bottom);
+        line-height: 65px;
+        dt {
+          @extend %font14-500;
+          width: 100px;
+        }
+        dd {
+          @extend %font14;
+        }
+      }
+      .acceptor {
+        @include border($color: #cccccc);
+        width: 1122px;
+        height: 256px;
+        margin: 20px 0;
+        padding: 16px 20px;
+        line-height: normal;
+        border-radius: 10px;
+        .row:nth-child(1) {
+          @include border($color: #e4e5e6, $direction: bottom);
+          margin-bottom: 16px;
+          padding-bottom: 16px;
+        }
+        .badge {
+          @extend %font12;
+          width: 54px;
+          height: 18px;
+          margin-bottom: 5px;
+          border-radius: 4px;
+          text-align: center;
+          line-height: 16px;
+          &.blue {
+            @include border($color: $blue);
+          }
+          &.red {
+            @include border($color: $red);
+          }
+        }
+        .mail-list {
+          @extend %font14;
+          overflow: auto;
+          height: 95px;
+          color: #585858;
+          line-height: 1.71;
+          &.sm {
+            height: 50px;
+            font-weight: 500;
+          }
+        }
+      }
+      .title {
+        @include border($color: #222222, $direction: top);
+        @include border($color: rgba(34, 34, 34, 0.1), $direction: bottom);
+        @extend %font16-bold;
+        line-height: 65px;
+      }
+      .description {
+        @extend %font16;
+        min-height: 420px;
+        padding: 20px 0;
+        line-height: 24px;
+        &.sm {
+          @extend %font14;
+        }
+      }
+      .file-list li {
+        float: left;
+        a {
+          @extend %font14;
+          margin-right: 20px;
+          color: $blue;
+          text-decoration: underline;
+        }
+      }
+    }
+    &-footer {
+      @extend %flex-x;
+      padding: 20px 0 40px;
+      button {
+        @extend %font16-500;
+        width: 100px;
+        height: 40px;
+        margin: 0 7px;
+        border-radius: 5px;
+        &.btn-dark {
+          background-color: #444444;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+// 등록 폼 ======================================================================================
+.form {
+  &-header {
+    @extend %flex-y;
+    @include border($weight: 2px, $color: #222222, $direction: bottom);
+    // height: 80px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    .title {
+      @extend %font24-500;
+      margin-right: 20px;
+      line-height: 35px;
+    }
+    .sub-title {
+      @extend %font14;
+    }
+  }
+  &-footer {
+    @extend %flex-x;
+    @include border($color: #e2e3e4, $direction: top);
+    width: 100%;
+    padding-top: 30px;
+    button {
+      @extend %font16-500;
+      width: 160px;
+      height: 40px;
+      border-radius: calc(40px / 2px);
+      margin: 0 7px;
+      &.btn-confirm {
+        background-color: $blue;
+        color: $white;
+        &:disabled {
+          @extend %cursor-not-allowed;
+          background-color: #eeeeee;
+          color: #aaaaaa;
+        }
+      }
+      &.btn-cancel {
+        @include border($color: #666666);
+        &:disabled {
+          @extend %cursor-not-allowed;
+          border-color: #eeeeee;
+          color: #aaaaaa;
+        }
+      }
+    }
+  }
+  &-area {
+    .row {
+      margin-bottom: 20px;
+    }
+    .readonly {
+      display: flex;
+    }
+    .typing-info {
+      @extend %font12;
+      padding: 4px 0 10px;
+      color: #bcbcbc;
+      line-height: 17px;
+      text-align: right;
+    }
+    .message {
+      @extend %font12;
+      margin-left: 80px;
+      line-height: 32px;
+    }
+    .file-area {
+      height: 60px;
+      .file-placeholder {
+        @extend %font14;
+        margin-right: 20px;
+        color: #bcbcbc;
+      }
+    }
+    .form-group {
+      @extend %flex-y;
+      label:nth-child(1) {
+        @extend %font16-500;
+        width: 80px;
+        &.top {
+          align-self: flex-start;
+          margin-top: 10px;
+        }
+      }
+      .input-text {
+        @extend %font14;
+        width: calc(100% - 80px);
+      }
+      .text {
+        @extend %font12;
+        padding: 0 10px;
+      }
+      .textarea {
+        @include border($color: #d6d6d6);
+        overflow: hidden;
+        width: calc(100% - 80px);
+        height: 243px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: $white;
+        textarea {
+          @extend %font14-500;
+        }
+      }
+      .checkbox {
+        span {
+          color: $font;
+        }
+        .small {
+          @extend %font12;
+          color: #666666;
+        }
+      }
+      .radio {
+        margin-right: 20px;
+        line-height: 40px;
+      }
+      .file-list {
+        display: flex;
+        li {
+          @extend %font14;
+          margin-right: 20px;
+        }
+      }
+      .file {
+        label {
+          @include font($size: 14px);
+          @extend %cursor-pointer;
+          color: $blue;
+          text-decoration: underline;
+        }
+      }
+    }
+    dl {
+      @extend %flex;
+      dt {
+        @extend %font16-500;
+        width: 80px;
+      }
+      dd {
+        @extend %font16;
+        width: 190px;
+      }
+    }
+  }
+  .radio-group {
+    @extend %flex;
+  }
+  .mail-list {
+    @extend %flex-between;
+    @include border($color: #d6d6d6, $direction: bottom);
+    padding: 10px 0;
+    textarea {
+      overflow-y: auto;
+      width: 1084px;
+      height: 28px;
+      max-height: 100px;
+      line-height: 28px;
+    }
+    .btn-line {
+      @include border($color: #666666);
+      @extend %font14;
+      height: 32px;
+      padding: 0 11px;
+      border-radius: 5px;
+    }
+  }
+  .none-label {
+    .input-text {
+      @extend %font16-bold;
+      width: 100%;
+      height: 53px;
+      padding: 0;
+      border-radius: 0;
+      border: 0;
+      &::placeholder {
+        @extend %font14;
+      }
+    }
+    .textarea {
+      width: 100%;
+      height: 440px;
+      border-radius: 0;
+    }
+  }
+}
+
+// sms ======================================================================================
+.sms {
+  @extend %flex-around;
+  > .left {
+    width: calc(100% - 350px);
+  }
+  > .right {
+    width: 350px;
+  }
+  .control-area {
+    width: 100%;
+    margin-top: 0;
+    align-items: center;
+    .info {
+      dl {
+        @extend %flex;
+        dt {
+          @extend %font16-500;
+          margin-right: 14px;
+        }
+        dd {
+          @extend %font16;
+        }
+      }
+    }
+  }
+  .table-area {
+    margin-bottom: 20px;
+    .table-wrap {
+      @include border($color: #e2e3e4, $direction: bottom);
+      overflow: auto;
+      height: 480px;
+      &.sms-detail {
+        height: 647px;
+      }
+      th {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      tr:last-child td {
+        border-bottom: 0;
+      }
+    }
+  }
+  .phone {
+    @include bgWH($url: '../images/img-phone.png', $width: 338px, $height: 660px);
+    transform: translateX(20px);
+    .wrap {
+      width: 248px;
+      margin: 28px auto 0;
+    }
+    &-header {
+      overflow: hidden;
+      button {
+        @extend %font16-bold;
+        float: left;
+        width: 124px;
+        height: 40px;
+        background-color: #ebebeb;
+        color: #bcbcbc;
+        &:nth-child(1) {
+          border-radius: 20px 0 0 20px;
+        }
+        &:nth-child(2) {
+          border-radius: 0 20px 20px 0;
+        }
+        &.active {
+          background-color: #444444;
+          color: $white;
+        }
+      }
+    }
+    &-body {
+      width: 240px;
+      margin: auto;
+      .title {
+        @include border($color: #e2e3e4, $direction: bottom);
+        height: 60px;
+        margin-bottom: 14px;
+        .input-text {
+          @extend %font16-bold;
+          border: none;
+          outline: none;
+          background: none;
+          margin-top: 10px;
+          padding: 0;
+          color: $black;
+        }
+        .input-text::placeholder {
+          @extend %font16-bold;
+          color: $black;
+        }
+      }
+      textarea {
+        @extend %font16;
+        height: 348px;
+        background: none;
+        color: $black;
+        line-height: 24px;
+      }
+      .typing-info {
+        @include border($color: #e2e3e4, $direction: bottom);
+        @extend %font12;
+        padding-bottom: 7px;
+        line-height: 17px;
+        text-align: right;
+        color: #bcbcbc;
+      }
+      .message {
+        @extend %font12;
+        padding: 10px 0 17px;
+        color: #6c6c6c;
+      }
+    }
+    &-footer {
+      @extend %flex;
+      button {
+        @extend %font16-500;
+        width: 118px;
+        height: 40px;
+        margin: 0 2px;
+        border-radius: 6px;
+      }
+      .btn-save {
+        @include border($color: #666666);
+      }
+      .btn-send {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+    &.view {
+      margin-top: 50px;
+      .phone-header {
+        button {
+          width: 248px;
+          border-radius: 20px;
+        }
+      }
+      .phone-body {
+        .title {
+          @extend %font16-bold;
+          color: $black;
+          line-height: 60px;
+        }
+        .content {
+          @extend %font16;
+          color: $black;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+.sms-message {
+  margin-top: 50px;
+  &-header {
+    @extend %flex-y-between;
+    height: 35px;
+    margin-bottom: 30px;
+    .title {
+      @extend %flex-y;
+      @extend %font24-500;
+    }
+    .sub-title {
+      @extend %font14-bold;
+      margin-left: 20px;
+      color: $black;
+      .small {
+        @extend %font14;
+        color: #7d7d7d;
+      }
+    }
+    .btn-group {
+      button {
+        @extend %font14;
+        float: left;
+        padding: 0 10px;
+        min-width: 68px;
+        height: 32px;
+        border-radius: 5px;
+        margin-left: 8px;
+      }
+      .btn-line {
+        @include border($color: #666666);
+      }
+      .btn-line-red {
+        @include border($color: #f93d5c);
+        color: #f93d5c;
+      }
+    }
+  }
+  &-body {
+    @extend %flex-y-between;
+    flex-wrap: wrap;
+    min-height: 200px;
+    .message {
+      @extend %font16-500;
+      width: 100%;
+      text-align: center;
+    }
+    .card {
+      position: relative;
+      width: 220px;
+      height: 180px;
+      margin-bottom: 30px;
+      > .icon-radio {
+        @include position($top: 21px, $right: 21px);
+      }
+      .input-radio:checked ~ .card-wrap::after {
+        @include position($top: 0, $right: 0, $bottom: 0, $left: 0);
+        @include border($weight: 6px, $color: $blue);
+        content: '';
+        border-radius: 20px;
+      }
+
+      &-wrap {
+        @include border($color: #6c6c6d);
+        height: 100%;
+        padding: 16px 20px;
+        border-radius: 20px;
+        background-color: rgba(242, 246, 250, 0.7);
+        .card-title {
+          @extend %font18-bold;
+          line-height: 26px;
+          color: #353535;
+          &::after {
+            content: '';
+            display: block;
+            width: 14px;
+            height: 1px;
+            margin: 20px 0;
+            background-color: #353535;
+          }
+        }
+        .card-message {
+          @extend %font14;
+          line-height: 18px;
+        }
+      }
+      &-over {
+        @include position($top: 0, $right: 0, $bottom: 0, $left: 0);
+        display: none;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+    &.delete {
+      .card {
+        cursor: default;
+      }
+      .card-over {
+        display: flex;
+      }
+    }
+  }
+}
+.sms-footer {
+  @extend %flex-between;
+  margin: 20px 0 40px;
+  .btn-dark {
+    @extend %font16-500;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #444444;
+    color: $white;
+  }
+  .alert {
+    @extend %flex-y;
+    .message {
+      @extend %font16-bold;
+      margin-right: 30px;
+      color: $black;
+    }
+    .btn-blue {
+      @extend %font16-500;
+      width: 146px;
+      height: 40px;
+      border-radius: 5px;
+      background-color: $blue;
+      color: $white;
+    }
+  }
+}
+.send-info {
+  @extend %flex-y-between;
+  @include border($color: #e9eaea);
+  height: 76px;
+  border-radius: 10px;
+  padding: 0 30px;
+  background-color: #f9f9f9;
+  &.sm {
+    height: 64px;
+    justify-content: center;
+    margin-bottom: 20px;
+    .title {
+      margin-right: 70px;
+    }
+    .col {
+      @extend %flex-y;
+    }
+    .col:nth-child(1) {
+      &::after {
+        content: '';
+        width: 1px;
+        height: 36px;
+        margin: 0 80px;
+        background-color: #d6d6d6;
+      }
+    }
+    .radio:nth-of-type(1) {
+      margin-right: 30px;
+    }
+  }
+  .title {
+    @extend %font14-bold;
+  }
+  .radio-box {
+    @extend %flex;
+  }
+  .radio {
+    > span {
+      color: $font;
+    }
+    &:nth-of-type(1) {
+      margin-right: 70px;
+    }
+    &:nth-of-type(2) {
+      margin-right: 10px;
+    }
+  }
+  .form-group {
+    @extend %flex-y;
+    label {
+      @extend %font14;
+      margin: 0 8px;
+    }
+    .select-box .choice {
+      background-color: $white;
+    }
+    .text {
+      width: 14px;
+      text-align: center;
+      color: $font;
+    }
+  }
+  .datepicker .input-text {
+    width: 130px;
+    background-position-x: 100px;
+  }
+}
+
+// 마이페이지 ======================================================================================
+.my-page {
+  margin-top: 40px;
+  .title-area {
+    @extend %flex-between;
+    margin-bottom: 10px;
+    .title {
+      @extend %font24-bold;
+      line-height: 34px;
+    }
+    .btn-dark {
+      @extend %font16-bold;
+      width: 120px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: #444444;
+      color: $white;
+    }
+  }
+  .box-area {
+    @include border($color: #d4d4d4);
+    overflow: hidden;
+    border-radius: 20px;
+    &-header {
+      @extend %flex-y;
+      @include border($color: #e9eaea, $direction: bottom);
+      height: 66px;
+      padding: 0 40px;
+      background-color: #f9f9f9;
+      dl {
+        @extend %flex;
+        dt {
+          @extend %font18-bold;
+          margin-right: 35px;
+        }
+        dd {
+          @extend %font18-bold;
+          color: $blue;
+        }
+      }
+      dl:nth-child(1) dd {
+        @include border($color: #d4d4d4, $direction: right);
+        @extend %font18-bold-en;
+        color: $blue;
+        margin-right: 50px;
+        padding-right: 50px;
+      }
+    }
+    &-body {
+      &.flex {
+        @extend %flex;
+      }
+      padding: 40px;
+      .col {
+        width: 50%;
+      }
+      .col:nth-child(1) {
+        @include border($color: #d4d4d4, $direction: right);
+        margin-right: 30px;
+        padding-right: 30px;
+      }
+      th {
+        position: relative;
+        @extend %font14-bold;
+        text-align: left;
+        .top {
+          @include position($top: 20px, $left: 0);
+        }
+      }
+      td {
+        @extend %font14;
+        height: 50px;
+        padding: 10px 0;
+        &.en {
+          @extend %font14-500-en;
+        }
+      }
+      .table {
+        [class*='btn-'] {
+          margin-left: 10px;
+        }
+        .message {
+          @extend %font12;
+          clear: both;
+          height: 32px;
+          margin-left: 12px;
+          line-height: 32px;
+          color: $message;
+          &.success {
+            color: $blue;
+          }
+        }
+      }
+      .form-group {
+        @extend %flex-y;
+      }
+      .right {
+        margin-right: 90px;
+      }
+      select {
+        @include bg($url: '../images/select-arrow.png', $x: 80px, $y: center);
+      }
+      select,
+      .input-text {
+        @extend %font14;
+        width: 320px;
+        border: 0;
+        border-radius: 5px;
+        background-color: rgba(240, 245, 251, 0.7);
+      }
+      select.en,
+      .input-text.en {
+        @extend %font14-500-en;
+      }
+      .text {
+        @extend %font14-500;
+        padding: 0 5px;
+        line-height: 40px;
+      }
+      .btn-line-blue {
+        @include border($color: $blue);
+        @extend %font14-500;
+        width: 96px;
+        height: 38px;
+        border-radius: 5px;
+        color: $blue;
+      }
+      .btn-line {
+        @include border($color: #888888);
+        @extend %font14-500;
+        width: 96px;
+        height: 38px;
+        border-radius: 5px;
+        color: #888888;
+        &.sm {
+          width: 80px;
+          height: 36px;
+        }
+      }
+      .email {
+        .input-text:nth-of-type(1) {
+          width: 140px;
+        }
+        .input-text:nth-of-type(2) {
+          width: 154px;
+        }
+      }
+      .phone {
+        margin-bottom: 10px;
+        select {
+          width: 110px;
+          margin-right: 10px;
+        }
+        .input-text:nth-of-type(1) {
+          width: 200px;
+        }
+      }
+      .bank {
+        margin-bottom: 10px;
+        select {
+          width: 110px;
+          margin-right: 10px;
+        }
+        .input-text:nth-of-type(1) {
+          width: 200px;
+        }
+        .input-text:nth-of-type(2) {
+          width: 80px;
+          margin-left: 10px;
+          text-align: center;
+        }
+      }
+      .certification {
+        float: left;
+        position: relative;
+        width: 320px;
+        .input-text {
+          padding-right: 70px;
+        }
+        .time {
+          @include positionYCenter();
+          @extend %font14-500;
+          right: 14px;
+          color: $blue;
+        }
+      }
+      .file {
+        @extend %flex-end;
+        .input-text {
+          width: 300px;
+        }
+        .btn-line {
+          text-align: center;
+          line-height: 35px;
+          @extend %cursor-pointer;
+        }
+      }
+      .file-name {
+        @extend %font12;
+        color: $blue;
+        text-align: right;
+        line-height: 32px;
+      }
+      .file-message {
+        @extend %font14;
+        color: #babdbf;
+        text-align: right;
+        line-height: 32px;
+      }
+      .row {
+        @extend %flex-y-between;
+        width: 100%;
+      }
+      dl {
+        @extend %flex-y;
+        dt {
+          @extend %font14-bold;
+          width: 133px;
+        }
+        dd {
+          @extend %font14;
+        }
+      }
+      .radio-box {
+        @extend %flex;
+        .radio > span {
+          width: 95px;
+        }
+      }
+    }
+  }
+  .box-message {
+    @extend %font14;
+    margin: 10px 0 20px;
+    color: #babdbf;
+    text-align: right;
+  }
+}
+
+// 판매 ======================================================================================
+.margin-setting {
+  height: 330px;
+  @include border($weight: 4px, $color: $blue);
+  padding: 10px 30px 40px;
+  border-radius: 0 10px 10px 10px;
+  .table {
+    th {
+      position: relative;
+      @extend %font14-bold;
+      text-align: left;
+      .top {
+        @include position($top: 38px, $left: 0);
+        z-index: 1;
+      }
+    }
+    td {
+      padding: 10px 0;
+    }
+    .row {
+      @extend %flex;
+      @include border($color: #e9e9e9, $direction: bottom);
+      padding: 15px 0;
+    }
+    .col {
+      @extend %flex;
+      &:nth-child(1) {
+        width: 288px;
+      }
+    }
+    .radio {
+      margin-right: 10px;
+    }
+    .input-text {
+      @extend %font14;
+      border: 0;
+      border-radius: 5px;
+      background-color: rgba(242, 246, 250, 0.7);
+    }
+    .checkbox-group {
+      @extend %flex;
+      .checkbox {
+        margin-right: 30px;
+      }
+    }
+    .category-select {
+      position: relative;
+      @extend %flex-y;
+      height: 40px;
+      background-color: rgba(242, 246, 250, 0.7);
+      input {
+        @extend %cursor-default;
+        @include border($color: #dddddd, $direction: right);
+        width: 33.33%;
+        height: 14px;
+        border-radius: 0;
+        &.depth1 {
+          @include bg($url: '../images/select-arrow.png', $x: 180px, $y: center);
+        }
+        &:nth-child(3) {
+          border-right: 0;
+        }
+      }
+    }
+  }
+  .category-nav {
+    display: none;
+    position: relative;
+    @include position($top: 0, $left: 0);
+    @include border($color: $blue);
+    width: 668px;
+    height: 312px;
+    padding: 8px 14px;
+    border-radius: 5px;
+    background-color: #f6f8fb;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.14);
+    &.active {
+      display: block;
+    }
+    li {
+      line-height: 26px;
+      a {
+        position: relative;
+        display: block;
+        @extend %font14;
+        &:hover {
+          color: $blue;
+          font-weight: bold;
+        }
+      }
+      &:hover > a::after {
+        content: '';
+        @include positionYCenter();
+        right: 10px;
+        @include bgWH($url: '../images/arrow-popup-01.png', $width: 8px, $height: 13px);
+      }
+      &:hover .depth2-wrap {
+        @include position($top: 8px, $left: 222px);
+        display: block;
+        width: 225px;
+      }
+      & li:hover .depth3-wrap {
+        @include position($top: 0px, $left: 224px);
+        display: block;
+        width: 225px;
+        a::after {
+          background: none;
+        }
+      }
+    }
+    .depth1 {
+      @include border($color: #dddddd, $direction: right);
+      width: 208px;
+    }
+    .depth2-wrap {
+      @include border($color: #dddddd, $direction: right);
+      display: none;
+      padding-left: 13px;
+    }
+    .depth3-wrap {
+      @include border($color: #dddddd, $direction: right);
+      display: none;
+      padding-left: 13px;
+    }
+  }
+  .btn-group {
+    @extend %flex-center;
+    margin-top: 10px;
+    button {
+      @extend %font16-bold;
+      width: 166px;
+      height: 40px;
+      margin: 0 5px;
+      border-radius: calc(40px / 2px);
+      &.btn-reset {
+        @include border($color: #444444);
+        background-color: $white;
+        color: #444444;
+      }
+      &.btn-save {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+}
+.sale {
+  .title-area {
+    margin-bottom: 38px;
+    .title {
+      @extend %font24-bold;
+      line-height: 35px;
+    }
+  }
+  .box-area {
+    @include border($color: #d4d4d4);
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 40px;
+    &.type1 {
+      @extend %flex-y-between;
+      flex-wrap: wrap;
+    }
+    &.type2 {
+      .row {
+        display: block;
+      }
+      .input-text {
+        width: 100%;
+      }
+    }
+    .row {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      position: relative;
+      margin: 0 5px;
+    }
+    label {
+      @extend %font14-bold;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 8px;
+      line-height: 20px;
+      .blue {
+        @extend %font12-500;
+        padding-left: 5px;
+      }
+      &.required::after {
+        content: '';
+        @include position($right: -8px, $top: 5px);
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $blue;
+      }
+      &.en {
+        @extend %font14-bold-en;
+      }
+    }
+    select {
+      @include bg($url: '../images/select-arrow.png', $x: 345px, $y: center);
+    }
+    select,
+    .input-text {
+      @extend %font14;
+      width: 373px;
+      height: 40px;
+      border-radius: 5px;
+      border: 0;
+      background-color: rgba(242, 246, 250, 0.7);
+    }
+    .col4 select,
+    .col4 .input-text {
+      @extend %font14;
+      width: 277px;
+      height: 40px;
+      border-radius: 5px;
+      border: 0;
+      background-color: rgba(242, 246, 250, 0.7);
+    }
+    .col4 select {
+      @include bg($url: '../images/select-arrow.png', $x: 249px, $y: center);
+    }
+    .btn-menu {
+      @extend %flex-y;
+      @include position($right: 0, $bottom: 0);
+      flex-direction: column;
+      padding: 8px 0;
+      justify-content: space-around;
+      width: 34px;
+      height: 40px;
+      opacity: 0.9;
+      border-radius: 0 5px 5px 0;
+      background-color: #e4effb;
+      i {
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: #222222;
+      }
+    }
+  }
+  .footer-btn-group {
+    @extend %flex-end;
+    margin-bottom: 50px;
+    button {
+      @extend %font16-bold;
+      width: 166px;
+      height: 40px;
+      margin-left: 10px;
+      border-radius: calc(40px / 2px);
+      &.btn-reset {
+        @include border($color: #444444);
+        background-color: $white;
+        color: #444444;
+      }
+      &.btn-confirm {
+        @extend %flex-center;
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+  .footer-message {
+    @extend %font12-500;
+    margin: 10px 0 0 40px;
+    color: #dc4f4f;
+    line-height: 32px;
+  }
+}
+.payment {
+  width: 900px;
+  margin: auto;
+  .radio > span {
+    color: $font;
+  }
+  .payment-choice {
+    @extend %flex-y-between;
+    margin: 40px auto;
+    .card-wrap {
+      width: 200px;
+      .card {
+        position: relative;
+        @extend %flex-x;
+        align-items: flex-end;
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        .title {
+          @extend %font22-bold;
+          transform: translateY(-50px);
+          line-height: 32px;
+          color: $white;
+        }
+      }
+      .checkbox,
+      .radio {
+        margin-top: 20px;
+      }
+
+      [type='radio']:checked + .card::after,
+      [type='checkbox']:checked + .card::after {
+        content: '';
+        @include positionCenter();
+        @include border($weight: 6px, $color: $blue);
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-sizing: border-box;
+      }
+      [type='checkbox']:checked ~ .checkbox .icon-checkbox {
+        background-image: url('../images/checkbox-on.png');
+      }
+      [type='radio']:checked ~ .radio .icon-radio {
+        background-image: url('../images/btn-radio-on.png');
+      }
+    }
+    &.multi .pay1 {
+      .card {
+        @include bg($url: '../images/icon-pay-01.png', $x: center, $y: 45px);
+        background-color: #3d3d3d;
+      }
+      [type='checkbox']:checked + .card {
+      }
+    }
+    &.multi .pay2 {
+      .card {
+        @include bg($url: '../images/icon-pay-02.png', $x: center, $y: 45px);
+        background-color: #686868;
+      }
+      [type='checkbox']:checked + .card {
+      }
+    }
+    &.multi .pay3 {
+      .card {
+        @include bg($url: '../images/icon-pay-03.png', $x: center, $y: 45px);
+        background-color: #f6e3e6;
+      }
+      [type='checkbox']:checked + .card {
+        background-color: #f93d5c;
+      }
+    }
+    &.single .pay1 {
+      .card {
+        @include bg($url: '../images/icon-pay-04.png', $x: center, $y: 45px);
+        background-color: #3d3d3d;
+      }
+      [type='checkbox']:checked + .card {
+      }
+    }
+    &.single .pay2 {
+      .card {
+        @include bg($url: '../images/icon-pay-02.png', $x: center, $y: 45px);
+        background-color: #686868;
+      }
+      [type='checkbox']:checked + .card {
+      }
+    }
+    &.single .pay3 {
+      .card {
+        @include bg($url: '../images/icon-pay-03.png', $x: center, $y: 45px);
+        background-color: #f93d5c;
+      }
+      [type='checkbox']:checked + .card {
+      }
+    }
+  }
+
+  .arrow-down {
+    @include bgWH($url: '../images/icon-arrow-pay.png', $width: 41px, $height: 23px);
+    display: block;
+    margin: 60px auto 40px;
+    text-align: center;
+  }
+  .box-area {
+    @include border($color: #d4d4d4);
+    width: 900px;
+    margin: auto;
+    padding: 30px 45px;
+    border-radius: 20px;
+    &.type1 {
+      @extend %flex-between;
+    }
+  }
+  .my-grade {
+    width: 100%;
+    @extend %flex-y-between;
+    .title {
+      @extend %font22-bold;
+    }
+    .member-grade {
+      @extend %flex-y;
+    }
+    .badge {
+      @extend %font18-bold-en;
+      width: 140px;
+      height: 26px;
+      line-height: 26px;
+      margin-right: 25px;
+      border-radius: 13px;
+      background-color: #222222;
+      color: $white;
+      text-align: center;
+    }
+  }
+  .subscription {
+    @extend %flex;
+    dt {
+      @extend %font22-bold;
+      margin-right: 20px;
+    }
+    .btn-link {
+      @include border($color: #222222);
+      @extend %font14;
+      width: 204px;
+      height: 28px;
+      border-radius: 16px;
+      &::after {
+        @include bgWH($url: '../images/icon-link.png', $width: 16px, $height: 13px);
+        content: '';
+        margin-left: 5px;
+      }
+    }
+  }
+  .member-grade {
+    dl {
+      @extend %flex-y;
+      margin-bottom: 15px;
+    }
+    dt {
+      @extend %font16;
+      margin-right: 20px;
+    }
+    dd {
+      .select-box {
+        text-align: right;
+        .choice,
+        .drop-down li {
+          @extend %font18-bold-en;
+          text-align: right;
+          padding-right: 40px;
+        }
+        .drop-down li {
+          padding-right: 27px;
+        }
+      }
+    }
+    .price {
+      @extend %font28;
+      text-align: right;
+      .en {
+        @extend %font34-bold-en;
+        line-height: 50px;
+      }
+    }
+  }
+  .monthly-fee {
+    width: 100%;
+    .title {
+      @extend %font22-bold;
+      margin-bottom: 40px;
+    }
+    .sub-title {
+      @extend %font16;
+      white-space: nowrap;
+    }
+    .row {
+      @extend %flex-y-between;
+    }
+    .btn-group {
+      @extend %flex;
+      margin-left: 10px;
+      button {
+        @extend %font14;
+        width: 70px;
+        height: 40px;
+        margin-right: 6px;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+        &.active {
+          background-color: $blue;
+          color: $white;
+        }
+      }
+    }
+    .message {
+      @extend %font12;
+      color: #dc4f4f;
+      line-height: 32px;
+      text-align: right;
+    }
+    .form-group {
+      @extend %flex-y;
+      .input-text {
+        @extend %font18-bold-en;
+        width: 290px;
+        color: $blue;
+        text-align: right;
+      }
+      .text {
+        @extend %font14;
+        margin-left: 5px;
+      }
+    }
+  }
+  .charge {
+    .row {
+      @extend %flex-between;
+      align-items: baseline;
+      .col {
+        @extend %flex;
+        align-items: baseline;
+        .form-group {
+          @extend %flex-wrap;
+          justify-content: flex-end;
+          margin-right: 20px;
+        }
+        .input-text {
+          width: 200px;
+        }
+        .message {
+          width: 50%;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+  .payment-method {
+    @extend %flex-y-between;
+    width: 100%;
+    .title {
+      @extend %font16;
+    }
+    .radio-group {
+      @extend %flex;
+      .radio {
+        margin-left: 50px;
+      }
+    }
+  }
+  .bank {
+    @extend %flex-between;
+    width: 100%;
+    .title {
+      @extend %font16;
+    }
+    .radio-group {
+      margin-bottom: 20px;
+      .radio {
+        justify-content: space-between;
+        line-height: 30px;
+      }
+      .col {
+        @extend %flex-y;
+      }
+      .en {
+        @extend %font16-500-en;
+      }
+    }
+    .bank-info .user {
+      text-align: right;
+      label {
+        @extend %font16;
+        display: inline-block;
+        width: 81px;
+      }
+      .input-text {
+        @extend %font16-bold;
+        width: 130px;
+        color: $blue;
+      }
+    }
+  }
+  .agree {
+    @extend %flex-y;
+    flex-wrap: wrap;
+    margin: 20px 0 30px 50px;
+    .text {
+      @extend %font16;
+      line-height: 32px;
+      padding-right: 10px;
+    }
+    .message {
+      @extend %font12;
+      width: 100%;
+      color: #dc4f4f;
+    }
+  }
+  .footer-btn-group {
+    @extend %flex-center;
+    margin-bottom: 100px;
+    button {
+      @extend %font20;
+      width: 186px;
+      height: 50px;
+      margin: 0 5px;
+      border-radius: calc(50px / 2);
+      &.btn-confirm {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+}
+
+// 주문 ======================================================================================
+.order {
+}

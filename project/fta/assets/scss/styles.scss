@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+// NotoSansKR : Regular 400 / Medium 500 / Bold 700
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
+// @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '_responsive';
+@import '_variables';
+@import '_mixin';
+@import '_extend';
+@import '_reset';
+@import '_common';
+
+// layout
+@import '_top_notice';
+@import '_search';
+@import '_header';
+@import '_main';
+@import '_use_rate';
+@import '_footer';
+@import '_sub';
+@import '_popup';
+
+// https://heropy.blog/2018/01/31/sass/
+// https://sass-guidelin.es/ko
+// https://okfta.kita.net/main
+// https://app.zeplin.io/project/6136bf7d997abd2fb16661d2/dashboard
+// sass --watch assets/scss/styles.scss:assets/css/styles.css

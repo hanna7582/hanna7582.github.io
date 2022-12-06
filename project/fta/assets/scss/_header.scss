@@ -1,0 +1,224 @@
+@charset 'UTF-8';
+
+.notice-on{
+  .sub-bg {
+    top: 130px;
+  }
+}
+header {
+  @include border($color: #e1e1e1, $direction: bottom);
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: white;
+  &.on::after{
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-color: black;
+  }
+  .header-wrap{
+    padding: 27px 15px 25px;
+    .container {
+      @include flex-between;
+      position: relative;
+      z-index: 1000;
+    }
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: -1.32px;
+    outline: none;
+    strong {
+      padding-right: 5px;
+      color: $standard;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: -0.96px;
+    }
+  }
+  nav {
+    position: relative;
+    margin-left: 200px;
+    width: 852px;
+    a{
+      display: inline-block;
+    }
+    a:hover,
+    .active > a {
+      color: $standard !important;
+    }
+    .depth1 {
+      @include flex-between;
+      > li {
+        width: 213px;
+        &:last-child {
+          display: none;
+        }
+        > a {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 28px;
+          letter-spacing: -1.2px;
+        }
+      }
+    }
+    .depth2 {
+      display: none;
+      margin-top: 58px;
+      > li {
+        padding-bottom: 25px;
+        > a {
+          font-size: 17px;
+          letter-spacing: -1.02px;
+        }
+      }
+    } 
+    .depth3 {
+      padding-top: 16px;
+      li a {
+        color: #666666;
+        font-size: 15px;
+        letter-spacing: -0.9px;
+        line-height: 1.87;
+        &::before{
+          content: '·';
+          padding-right: 5px;
+        }
+      }
+    }
+    &.login {
+      width: 930px;
+      .depth1 > li:last-child {
+        display: block;
+      }
+    }
+  }
+  &.on{
+    .depth2, 
+    .depth3,
+    .sub-bg{
+      display: block;
+    }
+  }
+  .sub-bg {
+    @include position($top: 80px);
+    @include border($color: #e1e1e1, $direction: top);
+    display: none;
+    z-index: 999;
+    width: 100%;
+    height: 450px;
+    padding: 0 15px;
+    background-color: white;
+    p {
+      @include position($top: 23px, $left: 0);
+      font-size: 20px;
+      line-height: 1.7;
+      letter-spacing: -0.5px;
+      color: #707070;
+    }
+  }
+  .btn-area {
+    @include flex-y;
+    height: 28px;
+    button {
+      height: 24px;
+      margin-left: 25px;
+      &:first-child {
+        margin-left: 0 !important;
+      }
+    }
+    .btn-menu {
+      display: none;
+    }
+  }
+}
+/* 반응형 ======================================================================== */
+// tablet 이하
+@media (max-width: 1399px) {
+  .notice-on{
+    header nav {
+      top: 110px;
+      width: 100%;
+    }
+  }
+  
+  header {
+    padding: 0 15px;
+    .header-wrap{
+      padding: 16px 0;
+      .container {
+        align-items: center;
+      }
+    }
+    h1 {
+      font-size: 19px;
+      letter-spacing: -1.14px;
+      strong {
+        font-size: 21px;
+        letter-spacing: -0.84px;
+      }
+    }
+    nav {
+      @include border($color: #e1e1e1, $direction: top);
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      margin: 0;
+      background-color: white;
+      &::before {
+        @include position($top: 0, $bottom: 0);
+        z-index: 0;
+        content: '';
+        width: 153px;
+        background-color: #f7f8f9;
+      }
+      .depth1 {
+        position: relative;
+        display: block;
+        > li {
+          width: 153px;
+          height: 48px;
+          padding: 15px;
+          margin-bottom: 16px;
+          &.active {
+            background-color: $standard;
+            > a {
+              color: white !important;
+            }
+          }
+          &.active .depth2 {
+            display: block;
+          }
+          > a {
+            font-size: 19px;
+            line-height: 1;
+            color: #333333;
+          }
+        }
+      }
+      .depth2 {
+        @include position($top: 23px, $left: 177px, $right: 0);
+        margin: 0;
+      } 
+    }
+    .sub-bg { 
+      display: none;
+    }
+    .btn-area {
+      button {
+        margin-left: 10px;
+      }
+      .btn-menu {
+        display: initial;
+      }
+    }
+  }
+}

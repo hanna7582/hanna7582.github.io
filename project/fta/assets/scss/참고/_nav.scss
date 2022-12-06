@@ -1,0 +1,179 @@
+@charset 'UTF-8';
+
+.top-nav{
+  position: relative;
+  height: 118px;
+  padding: 28px 30px 29px;
+  color:white;
+  .gnb{
+    .depth1{
+      @extend %flex-between;
+      width: 626px;
+      margin: auto;
+      > li{
+        position: relative;
+        padding: 9px 0 12px;
+      }
+      > li:nth-child(1) .depth2{
+        
+      }
+      > li:nth-child(2) .depth2{
+        left: -134px;
+      }
+      > li:nth-child(3) .depth2{
+        left: -31px;
+      }
+      > li:nth-child(4) .depth2{
+        
+      }
+      > li:nth-child(5) .depth2{
+        right: -165px;
+      }
+      > li > a{
+        @extend %font18-500;
+        color: white;
+        opacity: 0.7;
+      }
+      > li:hover > a,
+      > li.active > a{
+        opacity: 1;
+        font-weight: bold;
+      }
+    }
+    li:hover > .depth2{
+      @extend %flex;
+    }
+    .depth2{
+      position: absolute;
+      top: 40px;
+      display: none;
+      align-items: center;
+      justify-content: space-around;
+      height: 44px;
+      padding: 0 20px;
+      border-radius: calc(44px / 2);
+      background-color: white;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+      li{
+        margin: 0 28px;
+        a{
+          @extend %font16-500;
+          white-space: nowrap;
+          opacity: 0.8;
+          color: #686868;
+        }
+        &.active a{
+          font-weight: bold;
+          letter-spacing: -1px;
+        }
+      }
+    }
+  }
+
+  .sub-nav{
+    @include position($top: 18px, $right: 30px);
+    @extend %font12;
+    display: flex;
+    .seller-info{
+      @extend %flex-y;
+      @include border($weight: 1.5px, $color: rgba(255, 255, 255, 0.5));
+      height: 34px;
+      padding: 0 13px;
+      border-radius: calc(34px / 2);
+      .seller-name{
+        color: white;
+        font-weight: 100;
+        letter-spacing: -0.1px;
+      }
+      .text{
+        padding-left: 10px;
+        color: white;
+      }
+      .seller-type{
+        width: 80px;
+        height: 34px;
+        line-height: 34px;
+        letter-spacing: -0.1px;
+        .choice{
+          @extend %flex-y-between;
+          @extend %font12-bold;
+          @extend %cursor-pointer;
+          padding-left: 10px;
+          color: white;
+          &::after{
+            @include bgWH($url: '/assets/images/main/drop-arrow.png', $width: 8px, $height: 4px, $x: center, $y: right);
+            content: '';
+          }
+        }
+        .drop-down{
+          display: none;
+          padding: 0 10px;
+          border-radius: 0 0 5px 5px;
+          background-color: white;
+          color: $normal;
+          &.active{
+            display: block;
+          }
+          li{
+            @extend %cursor-pointer;
+          }
+        }
+      }
+    }
+    .menu{
+      @extend %flex;
+      margin-left: 10px;
+      li{
+        @extend %flex-y;
+        margin-left:20px;
+      }
+      li::before{
+        content: '';
+      }
+      li:nth-child(1)::before{
+        @include bgWH($url: '/assets/images/icon/icon-mypage.png', $width: 13px, $height: 13px);
+      }
+      li:nth-child(2)::before{
+        @include bgWH($url: '/assets/images/icon/icon-search-deli.png', $width: 13px, $height: 13px);
+      }
+      li:nth-child(3)::before{
+        @include bgWH($url: '/assets/images/icon/icon-logout.png', $width: 11px, $height: 14px);
+      }
+      a{
+        letter-spacing: -0.1px;
+      }
+    }
+  }
+
+  $themas: $thema1, $thema2, $thema3, $thema4, $thema5, $thema6;
+
+  @for $i from 1 through length($themas) {
+    $thema: nth($themas, $i);
+    &.thema#{$i}{
+      @if $i == 1 {
+        background-image: linear-gradient(to right, #22b3d9 14%, #19c7d2);
+      } @else if $i == 2 {
+        background-image: linear-gradient(to right, #319afe 14%, #739dff);
+      } @else if $i == 3 {
+        background-image: linear-gradient(to right, #4872ff 14%, #7d79ff);
+      } @else if $i == 4 {
+        background-image: linear-gradient(to right, #6455ff 14%, #9b66ff);
+      } @else if $i == 5 {
+        background-image: linear-gradient(to right, #8b55ff 14%, #b861dd);
+      } @else if $i == 6{
+        background: $thema6;
+      } 
+      .gnb .depth2 li a:hover, 
+      .gnb .depth2 li.active a{
+        color: $thema;
+      }
+      .sub-nav .seller-info .seller-type .drop-down{
+        @include border($color: $thema);
+        border-top: 0;
+        li:hover{
+          color: $thema;
+        }
+      }
+    }
+  }
+}

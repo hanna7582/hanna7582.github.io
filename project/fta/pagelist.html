@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 950px;
+        margin: auto;
+        padding-bottom: 50px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 5px 10px;
+        border: 1px solid black;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>페이지 목록 - <span class="count"></span>개</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>대메뉴</th>
+          <th>중메뉴</th>
+          <th>소메뉴</th>
+          <th>페이지</th>
+          <th>File</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+      var pages = [
+        {
+          depth1: '메인',
+          depth2: '',
+          depth3: '',
+          page: '',
+          file: '/page/main.html',
+        },
+        {
+          depth1: '통합검색',
+          depth2: '',
+          depth3: '',
+          page: '',
+          file: '/page/search.html',
+        },
+        {
+          depth1: '마이페이지',
+          depth2: 'FTA 상담조회',
+          depth3: 'FTA 기업애로/문의조회',
+          page: '상세',
+          file: '/page/mypage_councling_1_2.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '전문상담 조회',
+          page: '목록',
+          file: '/page/mypage_councling_2_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: '상세',
+          file: '/page/mypage_councling_2_2.html',
+        },
+        {
+          depth1: '',
+          depth2: 'FTA 컨설팅 조회',
+          depth3: 'FTA 일일방문 컨설팅 조회',
+          page: '목록',
+          file: '/page/mypage_consulting_1_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: '상세',
+          file: '/page/mypage_consulting_1_2.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: '수정',
+          file: '/page/mypage_consulting_1_3.html',
+        },
+        {
+          depth1: '',
+          depth2: 'FTA 컨설팅 조회',
+          depth3: '컨설팅 조회',
+          page: '상세',
+          file: '/page/mypage_consulting_2_2.html',
+        },
+        {
+          depth1: 'FTA 지원',
+          depth2: '공지사항',
+          depth3: '',
+          page: '목록',
+          file: '/page/support_notice_1_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: '상세',
+          file: '/page/support_notice_1_2.html',
+        },
+        {
+          depth1: '',
+          depth2: '1380 상담신청',
+          depth3: '문의',
+          page: '문의',
+          file: '/page/support_1380_1_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '전화상담예약',
+          page: '전화상담예약 - 첨부파일목록예시',
+          file: '/page/support_1380_2_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '온라인상담',
+          page: '목록',
+          file: '/page/support_1380_3_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: '상세',
+          file: '/page/support_1380_3_2.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: 'STEP2 - 신청정보 입력',
+          file: '/page/support_1380_3_3.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: 'FTA 일일방문 컨설팅',
+          page: '목록',
+          file: '/page/support_1380_4_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: '상세',
+          file: '/page/support_1380_4_2.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: 'STEP1 - 개인정보 수집 및 이용 동의',
+          file: '/page/support_1380_4_3.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: 'STEP2 - 신청정보 입력',
+          file: '/page/support_1380_4_4.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: 'STEP3 - FTA 관리 자가진단',
+          file: '/page/support_1380_4_5.html',
+        },
+        {
+          depth1: '',
+          depth2: 'FTA 심층컨설팅 신청',
+          depth3: '',
+          page: '심층 컨설팅 신청 안내',
+          file: '/page/support_consulting_1_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: 'OK FTA 컨설팅',
+          page: 'OK FTA 컨설팅 신청',
+          file: '/page/support_consulting_2_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: 'STEP2 - 신청정보 입력',
+          file: '/page/support_consulting_2_3.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '차이나데스크 컨설팅',
+          page: '차이나데스크 컨설팅 신청',
+          file: '/page/support_consulting_3_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: 'STEP2 - 신청정보 입력',
+          file: '/page/support_consulting_3_3.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '인증/지재권 컨설팅',
+          page: '인증/지재권 컨설팅 신청',
+          file: '/page/support_consulting_4_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: '인증 STEP2 - 신청정보 입력',
+          file: '/page/support_consulting_4_3.html',
+        },
+        {
+          depth1: 'FTA 정보',
+          depth2: 'FTA 뉴스레터',
+          depth3: '',
+          page: '목록',
+          file: '/page/info_newsletter_1_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: '상세',
+          file: '/page/info_newsletter_1_2.html',
+        },
+        {
+          depth1: '',
+          depth2: 'FTA 자료실',
+          depth3: '발간물 자료실',
+          page: '목록',
+          file: '/page/info_pds_1_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: '상세',
+          file: '/page/info_pds_1_2.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '영상 자료실',
+          page: '목록',
+          file: '/page/info_pds_2_1.html',
+        },
+        {
+          depth1: '',
+          depth2: 'FTA 체결현황',
+          depth3: '',
+          page: 'FTA 체결현황',
+          file: '/page/info_ftalist_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '용어집',
+          depth3: '',
+          page: '용어집',
+          file: '/page/info_word_1.html',
+        },
+        {
+          depth1: '',
+          depth2: 'FAQ',
+          depth3: '',
+          page: 'FAQ기본',
+          file: '/page/info_faq_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: '협정별',
+          file: '/page/info_faq_2.html',
+        },
+        {
+          depth1: 'FTA 활용',
+          depth2: 'FTA 기초',
+          depth3: '',
+          page: 'FTA 기초 콘텐츠',
+          file: '/page/usage_basic_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '활용절차',
+          depth3: '',
+          page: '활용절차 콘텐츠',
+          file: '/page/usage_process_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '품목확인',
+          depth3: '',
+          page: '품목확인 목록',
+          file: '/page/usage_hscode_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '활용 시뮬레이션',
+          depth3: '',
+          page: '시뮬레이션',
+          file: '/page/usage_simulation_1.html',
+        },
+        {
+          depth1: '센터소개',
+          depth2: '인사말',
+          depth3: '',
+          page: '인사말',
+          file: '/page/intro_about_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '소개 및 주요업무',
+          depth3: '',
+          page: 'FTA 종합지원센터',
+          file: '/page/intro_introduce_1.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: '지역 FTA 활용지원센터',
+          file: '/page/intro_introduce_2.html',
+        },
+        {
+          depth1: '',
+          depth2: '',
+          depth3: '',
+          page: '해외 FTA 활용지원센터',
+          file: '/page/intro_introduce_3.html',
+        },
+        {
+          depth1: '',
+          depth2: '조직도',
+          depth3: '',
+          page: '조직도',
+          file: '/page/intro_organization.html',
+        },
+        {
+          depth1: '',
+          depth2: '연혁',
+          depth3: '',
+          page: '연혁',
+          file: '/page/intro_history.html',
+        },
+        {
+          depth1: '',
+          depth2: '찾아오시는 길',
+          depth3: '',
+          page: '찾아오시는 길',
+          file: '/page/intro_location.html',
+        },
+        {
+          depth1: '',
+          depth2: '유관기관',
+          depth3: '',
+          page: '유관기관',
+          file: '/page/intro_relation.html',
+        },
+      ]
+      var count = pages.length
+      $('.count').text(count)
+      pages.forEach((item) => {
+        $('tbody').append(
+          `<tr>
+            <td>${item.depth1}</td>
+            <td>${item.depth2}</td>
+            <td>${item.depth3}</td>
+            <td>${item.page}</td>
+            <td><a href="${item.file}" target="_blank">${item.file}</a></td>
+          </tr>`
+        )
+      })
+    </script>
+  </body>
+</html>

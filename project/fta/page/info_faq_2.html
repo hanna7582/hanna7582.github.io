@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FTA 통합 플랫폼</title>
+    <link rel="icon" href="/assets/images/bi_portal.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+  </head>
+  <body class="notice-on">
+    <div id="skip-nav"><a href="#content">본문 바로가기</a></div>
+    <!-- header -->
+    <div id="header"></div>
+
+    <!-- 본문 -->
+    <div id="content" class="sub info">
+      <div class="sub-visual">
+        <div class="container">
+          <h2>FTA 정보</h2>
+        </div>
+      </div>
+      <div class="sub-container">
+        <div class="container">
+          <!-- sub-nav -->
+          <!-- [pub] 
+              활성화 메뉴 <a href="#" class="active" aria-current="page">공지사항</a>
+          -->
+          <nav class="sub-nav" aria-label="sub navigation">
+            <ul class="depth1">
+              <li><a href="#">FTA 뉴스</a></li>
+              <li><a href="#">FTA 뉴스레터</a></li>
+              <li class="drop-down" aria-expanded="false">
+                <a href="#" class="arrow">FTA 자료실</a>
+                <ul class="depth2">
+                  <li><a href="#">발간물 자료실</a></li>
+                  <li><a href="#">영상 자료실</a></li>
+                </ul>
+              </li>
+              <li><a href="#">FTA 체결현황</a></li>
+              <li><a href="#">용어집</a></li>
+              <li><a href="#">서식/법령</a></li>
+              <li><a href="#" class="active" aria-current="page">FAQ</a></li>
+            </ul>
+          </nav>
+          <div class="sub-body">
+            <!-- title -->
+            <div class="title-area">
+              <!-- breadcrumb -->
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item home" aria-label="home"></li>
+                <li class="breadcrumb-item">FTA 정보</li>
+                <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+              </ul>
+              <h3 class="title">FAQ</h3>
+            </div>
+
+            <!-- tab-area -->
+            <div class="tab-area">
+              <button type="button" class="btn-tab">FTA 기본</button>
+              <button type="button" class="btn-tab active" aria-current="page">협정별</button>
+            </div>
+
+            <div class="list-button">
+              <button type="button" data-filter="group1" class="btn active" title="선택됨">한-칠레</button>
+              <button type="button" data-filter="group2" class="btn">한-미</button>
+              <button type="button" data-filter="group3" class="btn">한-EU</button>
+              <button type="button" data-filter="group4" class="btn">한-ASEAN</button>
+              <button type="button" data-filter="group5" class="btn">한-EFTA</button>
+              <button type="button" data-filter="group6" class="btn">한-인도</button>
+              <button type="button" data-filter="group7" class="btn">한-페루</button>
+              <button type="button" data-filter="group8" class="btn">한-터키</button>
+              <button type="button" data-filter="group9" class="btn">한-싱가포르</button>
+              <button type="button" data-filter="group10" class="btn">한-호</button>
+              <button type="button" data-filter="group11" class="btn">한-캐나다</button>
+              <button type="button" data-filter="group12" class="btn">한-콜롬비아</button>
+              <button type="button" data-filter="group13" class="btn">한-뉴질랜드</button>
+              <button type="button" data-filter="group14" class="btn">한-중</button>
+              <button type="button" data-filter="group15" class="btn">한-베트남</button>
+            </div>
+
+            <div class="bg-box" data-filter="group1">
+              <h4 class="title small">한-칠레 FTA</h4>
+              <p class="small">한-칠레 FTA는 2004년 4월 1일 발효되었으며, 원산지증명서 발급방식은 자율발급 방식이나 통일서식이 정해져 있습니다.</p>
+              <h5 class="list-title">협정관세 적용 시 유의사항</h5>
+              <ul class="list">
+                <li>
+                  원산지증명서 발급방식은 자율발급방식이며, 통일서식을 사용하여 수출자가 작성하여야 합니다.
+                  <div class="ml10">
+                    <h6 class="ol-title">원산지증명서 필수기재항목</h6>
+                    <ol class="ol-list">
+                      <li>① 증명인의 성명(필요한 경우 연락처 또는 그 밖의 신원확인 정보 포함)</li>
+                      <li>② 상품의 수입자(아는 경우에 한한다.)</li>
+                      <li>③ 상품의 수출자(생산자와 다른 경우에 한한다.)</li>
+                      <li>④ 상품의 생산자(아는 경우에 한한다.)</li>
+                      <li>⑤ 물품의 HS품목번호 및 품명</li>
+                      <li>⑥ 상품이 원산지 상품임을 증명하는 정보</li>
+                      <li>⑦ 증명일자</li>
+                      <li>⑧ 증명서 유효기간(포괄증명의 경우)</li>
+                    </ol>
+                  </div>
+                </li>
+                <li>원산지증명서의 유효기간은 발급일로부터 2년입니다.</li>
+                <li>협정에서 정한 운송원칙을 충족하여야 합니다.</li>
+              </ul>
+            </div>
+            <div class="bg-box" data-filter="group2">
+              <h4 class="title small">한-미국 FTA</h4>
+              <p class="small">한-미국 FTA는 2012년 3월 15일 발효되었으며, 원산지증명서 발급방식은 자율발급 방식입니다.</p>
+              <h5 class="list-title">협정관세 적용 시 유의사항</h5>
+              <ul class="list">
+                <li>
+                  원산지증명서 발급방식은 자율발급방식이나 협정에서 정한 필수항목이 기재되어 있어야 하며, FTA특례법에서 정하고 있는 권고서식을 사용할 수도
+                  있습니다.
+                  <div class="ml10">
+                    <h6 class="ol-title">원산지증명서 필수기재항목</h6>
+                    <ol class="ol-list">
+                      <li>① 증명인의 성명(필요한 경우 연락처 또는 그 밖의 신원확인 정보 포함)</li>
+                      <li>② 상품의 수입자(아는 경우에 한한다.)</li>
+                      <li>③ 상품의 수출자(생산자와 다른 경우에 한한다.)</li>
+                      <li>④ 상품의 생산자(아는 경우에 한한다.)</li>
+                      <li>⑤ 물품의 HS품목번호 및 품명</li>
+                      <li>⑥ 상품이 원산지 상품임을 증명하는 정보</li>
+                      <li>⑦ 증명일자</li>
+                      <li>⑧ 증명서 유효기간(포괄증명의 경우)</li>
+                    </ol>
+                  </div>
+                </li>
+                <li>
+                  원산지증명서는 송품장 등 상업서류에 기재하거나 별도의 원산지증명서 서식을 통해 수출자, 생산자, 수입자 모두 작성가능합니다. 다만, 수입자가
+                  원산지증명서를 작성하는 경우 당해 수입물품이 원산지제품인 것과 운송요건을 충족하였음을 서류로 증명할 수 있어야 합니다.
+                </li>
+                <li>
+                  반복되어 선적되는 동일물품에 대해서는 원산지증명서 작성일부터 12개월을 초과하지 아니하는 범위안에서 최초의 원산지증명서를 반복 사용하는
+                  “원산지포괄증명”이 가능합니다.
+                </li>
+                <li>원산지증명서의 유효기간은 발급일로부터 4년입니다.</li>
+                <li>협정에서 정한 운송원칙을 충족하여야 합니다.</li>
+              </ul>
+            </div>
+            <div class="bg-box" data-filter="group14">
+              <h4 class="title small">한-중국 FTA</h4>
+              <p class="small">한-중국 FTA는 2015년 12월 20일 발효되었으며, 원산지증명서 발급방식은 기관발급 방식입니다.</p>
+              <h5 class="list-title">협정관세 적용 시 유의사항</h5>
+              <ul class="list">
+                <li>
+                  원산지증명서 발급방식은 기관발급방식으로서 협정에서 정하고 있는 서식을 사용하여야 하며 원산지증명서 발급기관을 통해 원산지증명서를 발급받아야
+                  합니다.
+                </li>
+                <li>원산지증명서의 유효기간은 발급일로부터 1년입니다.</li>
+                <li>협정에서 정한 직접운송원칙을 충족하여야 합니다.</li>
+              </ul>
+            </div>
+
+            <div class="box mb0" data-filter="group1">
+              <h4 class="sub-title">한-칠레 FTA 관련 FAQ</h4>
+            </div>
+            <div class="box mb0" data-filter="group2">
+              <h4 class="sub-title">한-미국 FTA 관련 FAQ</h4>
+            </div>
+            <div class="box mb0" data-filter="group14">
+              <h4 class="sub-title">한-중국 FTA 관련 FAQ</h4>
+            </div>
+            <!-- accordion -->
+            <div class="accordion" data-filter="group1">
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button type="button" aria-expanded="false">
+                    <div class="title">칠레를 첫 번째 FTA 대상국으로 선정한 이유는 무엇입니까?</div>
+                  </button>
+                </div>
+                <div class="accordion-body">
+                  <p>
+                    2004.4.1일 발효된 한-칠레 FTA는 우리나라가 체결한 첫 번째 FTA입니다. 국가 선정단계에서부터 여러 측면을 신중히 고려하여 칠레를 첫 번째
+                    대상국으로 지정하였습니다. 칠레 선정의 주된 이유는 첫째 투명하고 모범적인 경제 운용으로 남미 경제를 선도하는 국가로서 그 자체로 중요할 뿐
+                    아니라 나아가 중남미 시장의 교두보 역할을 할 수 있다는 점, 둘째 우리의 경우 공산품에 칠레의 경우 원 · 부자재에 강점을 가지고 있어 양국의
+                    산업 및 교역구조가 보완적인 점, 마지막으로 우리 정부가 칠레의 활발한 FTA 체결 움직임 속에서 상대적으로 불리해졌던 우리 기업의 수출 환경을
+                    서둘러 개선하려 했다는 점을 들 수 있습니다.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button type="button" aria-expanded="false">
+                    <div class="title">한-칠레 FTA에서 사전판정(Advanced Ruling) 제도는 무엇인가요?</div>
+                  </button>
+                </div>
+                <div class="accordion-body">
+                  <p>
+                    한-칠레 FTA에서 규정하는 원산지 관련 사전판정 제도(Advanced Ruling) 제도는 수입자, 체약상대국의 수출자 및 생산자가 수출입 물품에 대하여
+                    원산지결정기준의 충족여부 등을 미리 심사하여 줄 것을 요청하는 제도입니다. 칠레로 물품을 수출하는 우리기업이 동 제도를 활용한다면, 칠레
+                    세관과의 통관 마찰을 줄이고 사후 원산지검증에 따른 위험도 줄일 수 있게 됩니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion" data-filter="group2">
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button type="button" aria-expanded="false">
+                    <div class="title">한-미국 FTA 원산지증명서는 수입자도 발급가능한가요?</div>
+                  </button>
+                </div>
+                <div class="accordion-body">
+                  <p>한-미국 FTA 협정은 원산지증명서를 업체가 자체적으로 발급하는 자율발급 형식으로 발급주체를 <수출자, 생산자, 수입자>로 정의하고있습니다.</p>
+                  <p>
+                    하지만 수입자는 수출자와 원활한 자료 협조 관계 등 FTA 사후검증 대응이 가능한 경우에 한해 원산지증명서 발급을 하는것이 안전합니다. 본사와
+                    지사간의 관계 등이 좋은 예입니다.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button type="button" aria-expanded="false">
+                    <div class="title">한-미국 FTA 원산지증명서 필수기재사항은?</div>
+                  </button>
+                </div>
+                <div class="accordion-body">
+                  <p>한-미국 FTA의 원산지증명서 발급은 업체가 자체적으로 발급하는 자율발급 형식입니다.</p>
+                  <p>
+                    증명서 양식은 별도로 정해져 있지는 않으나 KITA FTA포털(http://fta.kita.net)의 원산지-> 원산지증명서발급-> 자율발급 원산지 로 가시면
+                    증명서양식과 작성요령을 참고하실 수 있습니다.
+                  </p>
+                  <strong>한-미국 FTA 원산지 증명서 필수 기재항목</strong>
+                  <ol>
+                    <li>① 증명인의 성명(필요한 경우 연락처 또는 그 밖의 신원확인 정보 포함)</li>
+                    <li>② 상품의 수입자(아는 경우에 한한다.)</li>
+                    <li>③ 상품의 수출자(생산자와 다른 경우에 한한다.)</li>
+                    <li>④ 상품의 생산자(아는 경우에 한한다.)</li>
+                    <li>⑤ 물품의 HS품목번호 및 품명</li>
+                    <li>⑥ 상품이 원산지 상품임을 증명하는 정보</li>
+                    <li>⑦ 증명일자</li>
+                    <li>⑧ 증명서 유효기간(포괄증명의 경우)</li>
+                  </ol>
+                  <p>
+                    FTA 체약상대국이 자국 산업보호를 위해 관세철폐 양허를 하지 않고 고관세를 유지하는 품목(민감품목)을 상대국에 수출할 경우, 수입국도
+                    FTA협정에서 관세를 철폐하기로 약속한 품목이라 하더라도 상호주의에 따라 관세철폐를 하지 않거나, 상대국 관세율 수준으로 관세를 부과할 수 있는
+                    제도를 말합니다. 이에 따라 아세안 국가가 자국 산업보호 등을 목적으로 우리나라로부터 수입되는 물품에 대해 고관세를 유지하고 있는
+                    품목(민감품목)중 당해 품목이 우리나라로 수입될 경우 향후 국내산업피해가 우려되는 품목에 대해 우리나라가 협정에서 아세안측에 약속한 FTA
+                    특혜관세혜택을 부여하지 아니하고 FTA 미체결국에 적용되는 관세율(MFN 세율)을 적용합니다. 다만, 아세안 국가가 우리나라로부터 수입되는 물품에
+                    대해 적용하는 관세율이 10% 이하인 경우 우리나라도 아세안 국가로부터 수입되는 동일한 물품에 대하여는 아세안국가와 동일한 관세율을 적용합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion" data-filter="group14">
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button type="button" aria-expanded="false">
+                    <div class="title">한-중국 FTA 관세가 어떻게 인하되나요?</div>
+                  </button>
+                </div>
+                <div class="accordion-body">
+                  <p>
+                    한-중국 FTA에서는 원칙적으로 매년 단계적으로 관세를 낮추는 선형철폐(linear cut) 방식이 도입되었습니다. 따라서 선형철폐 방식이 적용되는
+                    대부분의 품목은 협정 발효일 즉시 1년차의 관세인하가 적용되고, 매년 1월 1일마다 일정한 비율로 추가적으로 관세가 인하되게 됩니다.
+                  </p>
+                  <strong>한-중국 FTA 상품양허 유형</strong>
+                  <div class="table-area">
+                    <div class="table-wrap">
+                      <table class="table">
+                        <caption>
+                          한-중국 FTA 상품양허 유형 및 내용
+                        </caption>
+                        <colgroup>
+                          <col style="width: 20%" />
+                          <col style="width: auto" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>양허유형</th>
+                            <th>내용</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>0</th>
+                            <td class="left">협정 발효일 즉시 관세철폐</td>
+                          </tr>
+                          <tr>
+                            <th>5</th>
+                            <td class="left">
+                              협정발효일을 시작으로 5단계에 걸쳐 매년 균등 철폐<br />
+                              (이행 5년차 1월 1일 무관세)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>10</th>
+                            <td class="left">
+                              협정발효일을 시작으로 10단계에 걸쳐 매년 균등 철폐<br />
+                              (이행 10년차 1월 1일 무관세)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>10-A</th>
+                            <td class="left">
+                              이행 9년차 1월 1일을 시작으로 2단계에 걸쳐 매년 균등 철폐<br />
+                              (이행 10년차 1월 1일 무관세)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>15</th>
+                            <td class="left">
+                              협정발효일을 시작으로 15단계에 걸쳐 매년 균등 철폐<br />
+                              (이행 15년차 1월 1일 무관세)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>15-A</th>
+                            <td class="left">
+                              이행 11년차 1월 1일을 시작으로 5단계에 걸쳐 매년 균등 철폐<br />
+                              (이행 15년차 1월 1일 무관세)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>20</th>
+                            <td class="left">
+                              협정발효일을 시작으로 20단계에 걸쳐 매년 균등 철폐<br />
+                              (이행 20년차 1월 1일 무관세)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>20-A</th>
+                            <td class="left">
+                              이행 11년차 1월 1일을 시작으로 10단계에 걸쳐 매년 균등 철폐<br />
+                              (이행 20년차 1월 1일 무관세)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>20-B</th>
+                            <td class="left">
+                              이행 11년차 1월 1일을 시작으로 8단계에 걸쳐 매년 균등 철폐<br />
+                              (이행 20년차 1월 1일 무관세)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>PR-1</th>
+                            <td class="left">
+                              협정 발효일 즉시 기준세율의 1퍼센트를 인하<br />
+                              (기준세율의 99% 유지)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>PR-8</th>
+                            <td class="left">
+                              협정 발효일을 시작으로 기준세율의 8퍼센트를 5단계에 걸쳐 매년 균등인하<br />
+                              (이행 5년차 1월 1일부터 기준세율의 92% 유지)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>pr-10</th>
+                            <td class="left">
+                              협정 발효일을 시작으로 기준세율의 10퍼센트를 5단계에 걸쳐 매년 균등인하<br />
+                              (이행 5년차 1월 1일부터 기준세율의 90% 유지)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>PR-15</th>
+                            <td class="left">
+                              협정 발효일을 시작으로 기준세율의 15퍼센트를 5단계에 걸쳐 매년 균등인하<br />
+                              (이행 5년차 1월 1일부터 기준세율의 85% 유지)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>PR-20</th>
+                            <td class="left">
+                              협정 발효일을 시작으로 기준세율의 20퍼센트를 5단계에 걸쳐 매년 균등인하<br />
+                              (이행 5년차 1월 1일부터 기준세율의 80% 유지)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>PR-30</th>
+                            <td class="left">
+                              협정 발효일을 시작으로 기준세율의 30퍼센트를 5단계에 걸쳐 매년 균등인하<br />
+                              (이행 5년차 1월 1일부터 기준세율의 70% 유지)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>PR-35</th>
+                            <td class="left">
+                              협정 발효일을 시작으로 기준세율의 35퍼센트를 5단계에 걸쳐 매년 균등인하<br />
+                              (이행 5년차 1월 1일부터 기준세율의 65% 유지)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>PR-50</th>
+                            <td class="left">
+                              협정 발효일을 시작으로 기준세율의 50퍼센트를 5단계에 걸쳐 매년 균등인하<br />
+                              (이행 5년차 1월 1일부터 기준세율의50% 유지)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>PR-130</th>
+                            <td class="left">
+                              협정 발효일을 시작으로 관세율의 130%로 10단계에 걸쳐 매년 균등인하<br />
+                              (이행 10년차 1월 1일부터 종가세 130% 유지)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>TRQ</th>
+                            <td class="left">일정물량에 한해 무관세로 수입하되, 나머지에 대해서는 기준관세율 유지</td>
+                          </tr>
+                          <tr>
+                            <th>E</th>
+                            <td class="left">기준관세율 유지</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/sub.js"></script>
+    <script>
+      $('#header').load('/layout/header.html')
+      $('#footer').load('/layout/footer.html')
+
+      $('.list-button button').on('click', function () {
+        // 초기화
+        $('.list-button button').removeClass('active')
+        $('.bg-box').hide()
+        $('.box').hide()
+        $('.accordion').hide()
+        // 활성화 그룹만 active 및 보여주기
+        var activeGroup = $(this).data('filter')
+        $(this).addClass('active')
+        $('.bg-box[data-filter=' + activeGroup + ']').show()
+        $('.box[data-filter=' + activeGroup + ']').show()
+        $('.accordion[data-filter=' + activeGroup + ']').show()
+      })
+      $('.list-button button.active').trigger('click')
+    </script>
+  </body>
+</html>

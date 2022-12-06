@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FTA 통합 플랫폼</title>
+    <link rel="icon" href="/assets/images/bi_portal.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+  </head>
+  <body class="notice-on">
+    <div id="skip-nav"><a href="#content">본문 바로가기</a></div>
+    <!-- header -->
+    <div id="header"></div>
+
+    <!-- 본문 -->
+    <div id="content" class="sub support">
+      <div class="sub-visual">
+        <div class="container">
+          <h2>FTA 지원</h2>
+        </div>
+      </div>
+      <div class="sub-container">
+        <div class="container">
+          <!-- sub-nav -->
+          <!-- [pub] 
+              활성화 메뉴 <a href="#" class="active" aria-current="page">공지사항</a>
+          -->
+          <nav class="sub-nav" aria-label="sub navigation">
+            <ul class="depth1">
+              <li><a href="#" class="active" aria-current="page">공지사항</a></li>
+              <li class="drop-down" aria-expanded="false">
+                <a href="#" class="arrow">1380 상담 신청</a>
+                <ul class="depth2">
+                  <li><a href="#">문의</a></li>
+                  <li><a href="#">전화상담 예약</a></li>
+                  <li><a href="#">온라인 상담</a></li>
+                  <li><a href="#">FTA 일일방문 컨설팅</a></li>
+                </ul>
+              </li>
+              <li class="drop-down" aria-expanded="false">
+                <a href="#" class="arrow">FTA 심층컨설팅 신청</a>
+                <ul class="depth2">
+                  <li><a href="#">OK FTA 컨설팅</a></li>
+                  <li><a href="#">차이나데스크 컨설팅</a></li>
+                  <li><a href="#">인증/지재권 컨설팅</a></li>
+                </ul>
+              </li>
+              <li><a href="#">FTA 교육신청</a></li>
+            </ul>
+          </nav>
+          <div class="sub-body">
+            <!-- title -->
+            <div class="title-area">
+              <!-- breadcrumb -->
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item home" aria-label="home"></li>
+                <li class="breadcrumb-item">FTA 지원</li>
+                <li class="breadcrumb-item active" aria-current="page">공지사항</li>
+              </ul>
+              <h3 class="title">공지사항</h3>
+            </div>
+
+            <!-- detail -->
+            <div class="detail-area">
+              <div class="detail-header">
+                <h4 class="title">
+                  <span class="flag">사업공고</span>
+                  인증수출자 관련 다른물품 수출 시 인증여부 문의- 제목 노출 긴 글자 테스트 긴 글자 테스트 긴 글자 테스트 긴 글자 테스트 긴 글자 테스트
+                </h4>
+                <div class="row">
+                  <span class="text">2022-11-25</span>
+                  <span class="text">조회수 : <span class="data">1,234</span></span>
+                </div>
+                <div class="file-list">
+                  <button type="button" class="btn-file">자염 한-중FTA원산지증명서 발급문의 긴 글자 테스트 긴 글자 테스트.pdf</button>
+                  <button type="button" class="btn-file">자염 한-중FTA원산지증명서 발급문의.pdf</button>
+                </div>
+              </div>
+
+              <div class="detail-body">
+                <div class="contents">
+                  내용 노출 ~ 표제의 첨부파일 게재하오니, 필요하신 분들의 많은 활용 바랍니다.
+                  <br />
+                  활용방법 : 첨부파일 다운 후 압축 푸신 뒤, 폴더에서 까만색 아이콘 파일을 클릭하시면 E-book을 보실 수 있습니다.
+                  <br />
+                  <목차>
+                  <br />
+                  Chapter 01 지식재산권의 이해
+                  <br />
+                  01) 특허, 실용신안 07p
+                </div>
+              </div>
+
+              <div class="detail-navigation">
+                <dl>
+                  <dt class="prev">이전글</dt>
+                  <dd>
+                    <span class="flag">사업공고</span>
+                    <a href="#" class="link">자염 한-중FTA원산지증명서 발급문의 자염 한-중FTA원산지증명서 발급문의</a>
+                    <span class="date">2022-11-25</span>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt class="next">다음글</dt>
+                  <dd>
+                    <span class="flag">사업공고</span>
+                    <a href="#" class="link">자염 한-중FTA원산지증명서 발급문의 자염 한-중FTA원산지증명서 발급문의</a>
+                    <span class="date">2022-11-25</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="btn-area">
+              <button type="button" class="btn-list">목록</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/sub.js"></script>
+    <script>
+      $('#header').load('/layout/header.html')
+      $('#footer').load('/layout/footer.html')
+    </script>
+  </body>
+</html>

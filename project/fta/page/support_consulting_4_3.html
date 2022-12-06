@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FTA 통합 플랫폼</title>
+    <link rel="icon" href="/assets/images/bi_portal.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+  </head>
+  <body class="notice-on">
+    <div id="skip-nav"><a href="#content">본문 바로가기</a></div>
+    <!-- header -->
+    <div id="header"></div>
+
+    <!-- 본문 -->
+    <div id="content" class="sub support">
+      <div class="sub-visual">
+        <div class="container">
+          <h2>FTA 지원</h2>
+        </div>
+      </div>
+      <div class="sub-container">
+        <div class="container">
+          <!-- sub-nav -->
+          <!-- [pub] 
+              활성화 메뉴 <a href="#" class="active" aria-current="page">공지사항</a>
+          -->
+          <nav class="sub-nav" aria-label="sub navigation">
+            <ul class="depth1">
+              <li><a href="#">공지사항</a></li>
+              <li class="drop-down" aria-expanded="false">
+                <a href="#" class="arrow">1380 상담 신청</a>
+                <ul class="depth2">
+                  <li><a href="#">문의</a></li>
+                  <li><a href="#">전화상담 예약</a></li>
+                  <li><a href="#">온라인 상담</a></li>
+                  <li><a href="#">FTA 일일방문 컨설팅</a></li>
+                </ul>
+              </li>
+              <li class="drop-down" aria-expanded="true">
+                <a href="#" class="arrow active">FTA 심층컨설팅 신청</a>
+                <ul class="depth2">
+                  <li><a href="#">OK FTA 컨설팅</a></li>
+                  <li><a href="#">차이나데스크 컨설팅</a></li>
+                  <li><a href="#" class="active" aria-current="page">인증/지재권 컨설팅</a></li>
+                </ul>
+              </li>
+              <li><a href="#">FTA 교육신청</a></li>
+            </ul>
+          </nav>
+          <div class="sub-body">
+            <!-- title -->
+            <div class="title-area">
+              <!-- breadcrumb -->
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item home" aria-label="home"></li>
+                <li class="breadcrumb-item">FTA 지원</li>
+                <li class="breadcrumb-item">FTA 심층컨설팅 신청</li>
+                <li class="breadcrumb-item active" aria-current="page">인증/지재권 컨설팅</li>
+              </ul>
+              <h3 class="title">인증/지재권 컨설팅</h3>
+            </div>
+
+            <div class="step-area">
+              <ol>
+                <li><span class="step">STEP1</span>개인정보 수집 및 이용 동의</li>
+                <li class="active" title="선택됨"><span class="step">STEP2</span>신청정보 입력</li>
+              </ol>
+            </div>
+
+            <!-- 컨설팅 신청 -->
+            <div class="table-area detail">
+              <div class="table-title">
+                <h4 class="title">컨설팅 신청</h4>
+              </div>
+
+              <div class="table-style">
+                <div class="tr-row">
+                  <dl>
+                    <dt>개요</dt>
+                    <dd>
+                      <div class="cell-row">
+                        해외인증(TBT) 현장방문 컨설팅 / 지식재산권(IP) 현장방문 컨설팅
+                        <button type="button" id="btn1" class="btn-line ml10">개요보기</button>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <!-- 컨설팅 신청유형 -->
+            <div class="table-area detail">
+              <div class="table-title">
+                <h4 class="title">컨설팅 신청유형</h4>
+                <p class="message"><span class="required">*</span>표시는 필수 입력사항입니다.</p>
+              </div>
+
+              <div class="table-style">
+                <div class="tr-row">
+                  <dl>
+                    <dt>컨설팅 신청 분야<span class="required">*</span></dt>
+                    <dd>
+                      <label class="radio">
+                        <input type="radio" name="radio1" class="input-radio" checked />
+                        <i class="icon-radio"></i>
+                        <span>해외인증 현장방문 컨설팅</span>
+                      </label>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>해외인증 보유여부(TBT)</dt>
+                    <dd>
+                      <label class="radio mr30">
+                        <input type="radio" name="radio2" class="input-radio" checked />
+                        <i class="icon-radio"></i>
+                        <span>있음</span>
+                      </label>
+                      <label class="radio mr30">
+                        <input type="radio" name="radio2" class="input-radio" />
+                        <i class="icon-radio"></i>
+                        <span>없음</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="radio2" class="input-radio" />
+                        <i class="icon-radio"></i>
+                        <span>잘모르겠음</span>
+                      </label>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>해외인증 보여여부 건수(TBT)</dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>해외인증 보여여부 내역(TBT)</dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <!-- 업체정보 -->
+            <div class="table-area detail">
+              <div class="table-title">
+                <h4 class="title">업체정보</h4>
+                <p class="message"><span class="required">*</span>표시는 필수 입력사항입니다.</p>
+              </div>
+
+              <div class="table-style">
+                <div class="tr-row">
+                  <dl>
+                    <dt>사업자 등록번호<span class="required">*</span></dt>
+                    <dd>
+                      <input type="text" class="input-text w100" />
+                      <span class="text-center">-</span>
+                      <input type="text" class="input-text w100" />
+                      <span class="text-center">-</span>
+                      <input type="text" class="input-text w100 mr10" />
+                      <button type="button" class="btn-default">업체정보 불러오기</button>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>기업명<span class="required">*</span></dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>대표자<span class="required">*</span></dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>무역업 고유번호</dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>상시근로자 수<span class="required">*</span></dt>
+                    <dd>
+                      <input type="text" class="input-text w400 mr10" />
+                      <span class="text">(명)</span>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>홈페이지</dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>업태<span class="required">*</span></dt>
+                    <dd>
+                      <label class="radio mr30">
+                        <input type="radio" name="radio3" class="input-radio" checked />
+                        <i class="icon-radio"></i>
+                        <span>제조업</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="radio3" class="input-radio" />
+                        <i class="icon-radio"></i>
+                        <span>비 제조업</span>
+                      </label>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>업종<span class="required">*</span></dt>
+                    <dd>
+                      <select class="select-box w490">
+                        <option value="">전체</option>
+                      </select>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>본사 위치<span class="required">*</span></dt>
+                    <dd>
+                      <select class="select-box w490">
+                        <option value="">전체</option>
+                      </select>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>본사 주소<span class="required">*</span></dt>
+                    <dd>
+                      <div class="cell-row">
+                        <input type="text" class="input-text w413 mr10" />
+                        <button type="button" class="btn-default">찾기</button>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>공장 위치</dt>
+                    <dd>
+                      <select class="select-box w490">
+                        <option value="">전체</option>
+                      </select>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>공장 주소</dt>
+                    <dd>
+                      <div class="cell-row">
+                        <input type="text" class="input-text w413 mr10" />
+                        <button type="button" class="btn-default">찾기</button>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>전년도 매출액(백만원)<span class="required">*</span></dt>
+                    <dd>
+                      <input type="text" class="input-text w400 mr10" />
+                      <span class="text">(백만원)</span>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>전년도 수출액(천달러)<span class="required">*</span></dt>
+                    <dd>
+                      <input type="text" class="input-text w400 mr10" />
+                      <span class="text">(천달러)</span>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>담당자명<span class="required">*</span></dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>담당자 부서<span class="required">*</span></dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>담당자 직급<span class="required">*</span></dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>담당자 휴대번호<span class="required">*</span></dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>담당자 전화번호<span class="required">*</span></dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>담당자 E-mail<span class="required">*</span></dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>담당자 FAX</dt>
+                    <dd>
+                      <input type="text" class="input-text w490" />
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <!-- 거래현황 -->
+            <div class="table-area detail">
+              <div class="table-title">
+                <h4 class="title">거래현황</h4>
+                <p class="message"><span class="required">*</span>표시는 필수 입력사항입니다.</p>
+              </div>
+
+              <div class="table-style">
+                <div class="tr-row">
+                  <dl>
+                    <dt>수출형태</dt>
+                    <dd>
+                      <label class="radio mr30">
+                        <input type="radio" name="radio4" class="input-radio" checked />
+                        <i class="icon-radio"></i>
+                        <span>국내공급(로컬수출)</span>
+                      </label>
+                      <label class="radio mr30">
+                        <input type="radio" name="radio4" class="input-radio" />
+                        <i class="icon-radio"></i>
+                        <span>직수출</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="radio4" class="input-radio" />
+                        <i class="icon-radio"></i>
+                        <span>수출 예정</span>
+                      </label>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>FTA활용 국가<span class="required">*</span></dt>
+                    <dd>
+                      <div class="cell-row wrap">
+                        <label class="checkbox col-sm-3 col-md-6 col-lg-6">
+                          <input type="checkbox" name="checkbox2" class="input-checkbox" />
+                          <i class="icon-checkbox"></i>
+                          <span>한-중국</span>
+                        </label>
+                        <label class="checkbox col-sm-3 col-md-6 col-lg-6">
+                          <input type="checkbox" name="checkbox2" class="input-checkbox" />
+                          <i class="icon-checkbox"></i>
+                          <span>한-미국</span>
+                        </label>
+                        <label class="checkbox col-sm-3 col-md-6 col-lg-6">
+                          <input type="checkbox" name="checkbox2" class="input-checkbox" />
+                          <i class="icon-checkbox"></i>
+                          <span>한-EU</span>
+                        </label>
+                        <label class="checkbox col-sm-3 col-md-6 col-lg-6">
+                          <input type="checkbox" name="checkbox2" class="input-checkbox" />
+                          <i class="icon-checkbox"></i>
+                          <span>한-EFTA</span>
+                        </label>
+                        <label class="checkbox col-sm-3 col-md-6 col-lg-6">
+                          <input type="checkbox" name="checkbox2" class="input-checkbox" />
+                          <i class="icon-checkbox"></i>
+                          <span>한-아세안</span>
+                        </label>
+                        <label class="checkbox col-sm-3 col-md-6 col-lg-6">
+                          <input type="checkbox" name="checkbox2" class="input-checkbox" />
+                          <i class="icon-checkbox"></i>
+                          <span>한-베트남</span>
+                        </label>
+                        <label class="checkbox col-sm-3 col-md-6 col-lg-6">
+                          <input type="checkbox" name="checkbox2" class="input-checkbox" />
+                          <i class="icon-checkbox"></i>
+                          <span>한-인도</span>
+                        </label>
+                        <label class="checkbox col-sm-3 col-md-6 col-lg-6">
+                          <input type="checkbox" name="checkbox2" class="input-checkbox" />
+                          <i class="icon-checkbox"></i>
+                          <span>한-인도네시아</span>
+                        </label>
+                        <label class="checkbox col-sm-3 col-md-6 col-lg-6">
+                          <input type="checkbox" name="checkbox2" class="input-checkbox" />
+                          <i class="icon-checkbox"></i>
+                          <span>한-뉴질랜드</span>
+                        </label>
+                        <label class="checkbox col-sm-3 col-md-6 col-lg-6">
+                          <input type="checkbox" name="checkbox2" class="input-checkbox" />
+                          <i class="icon-checkbox"></i>
+                          <span>한-싱가포르</span>
+                        </label>
+                        <label class="checkbox col-sm-3 col-md-6 col-lg-6">
+                          <input type="checkbox" name="checkbox2" class="input-checkbox" />
+                          <i class="icon-checkbox"></i>
+                          <span>한-한-영국</span>
+                        </label>
+                        <label class="checkbox col-sm-3 col-md-6 col-lg-6">
+                          <input type="checkbox" name="checkbox2" class="input-checkbox" />
+                          <i class="icon-checkbox"></i>
+                          <span>한-이스라엘</span>
+                        </label>
+                      </div>
+                      <span class="text mt10">(최대 5개까지 선택)</span>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="table-style">
+                  <div class="row-append">
+                    <div class="table-style-border">
+                      <div class="tr-row">
+                        <dl>
+                          <dt>수출 HS Code</dt>
+                          <dd>
+                            <div class="cell-row">
+                              <label class="text w40">HSK : </label>
+                              <input type="text" class="input-text w400 mr10" />
+                              <button type="button" class="btn-default">HSK code 조회</button>
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                      <div class="tr-row">
+                        <dl>
+                          <dt>품목명(국문)</dt>
+                          <dd>
+                            <input type="text" class="input-text w440" />
+                          </dd>
+                        </dl>
+                      </div>
+                      <div class="tr-row">
+                        <dl>
+                          <dt>품목명(영문)</dt>
+                          <dd>
+                            <input type="text" class="input-text w440" />
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-group center mt20">
+                    <button type="button" class="btn-row-delete btn-line">행삭제</button>
+                    <button type="button" class="btn-row-add btn-default">행추가</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 기타정보 -->
+            <div class="table-area detail">
+              <div class="table-title">
+                <h4 class="title">기타정보</h4>
+                <p class="message"><span class="required">*</span>표시는 필수 입력사항입니다.</p>
+              </div>
+
+              <div class="table-style">
+                <div class="tr-row">
+                  <dl>
+                    <dt>컨설팅 희망 소재지<span class="required">*</span></dt>
+                    <dd>
+                      <label class="radio mr30">
+                        <input type="radio" name="radio5" class="input-radio" checked />
+                        <i class="icon-radio"></i>
+                        <span>본사</span>
+                      </label>
+                      <label class="radio mr30">
+                        <input type="radio" name="radio5" class="input-radio" />
+                        <i class="icon-radio"></i>
+                        <span>공장</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="radio5" class="input-radio" />
+                        <i class="icon-radio"></i>
+                        <span>기타</span>
+                      </label>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>컨설팅 희망 주소</dt>
+                    <dd>
+                      <input type="text" class="input-text w432" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>컨설팅 착수 희망일<span class="required">*</span></dt>
+                    <dd>
+                      <div class="datepicker">
+                        <input type="text" class="input-text w350" value="2021-02-03" id="datepicker1" />
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>컨설팅 신청 사유</dt>
+                    <dd>
+                      <input type="text" class="input-text w432" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>컨설팅 추천 기관명</dt>
+                    <dd>
+                      <div class="cell-row">
+                        <input type="text" class="input-text w432 mr10" />
+                        <button type="button" id="btn2" class="btn-default">찾기</button>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>
+                      <span class="text-wrap">
+                        컨설팅 신청일<br />
+                        신청서 제출일<span class="required">*</span>
+                      </span>
+                    </dt>
+                    <dd>
+                      <div class="datepicker">
+                        <input type="text" class="input-text w350" value="2021-02-03" id="datepicker2" />
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>참가신청서</dt>
+                    <dd>
+                      <div class="cell-row vertical">
+                        <div class="cell-row">
+                          <input type="text" class="input-text w350" />
+                          <span class="text nowrap ml10 mr10">(50MB 이하)</span>
+                        </div>
+                        <div class="btn-group">
+                          <input type="file" id="file1" />
+                          <label for="file1" class="btn-default file mr5">파일 선택</label>
+                          <button type="button" class="btn-line">샘플파일 다운</button>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>사업진행동의서<span class="required">*</span></dt>
+                    <dd>
+                      <div class="cell-row vertical">
+                        <div class="cell-row">
+                          <input type="text" class="input-text w350" />
+                          <span class="text nowrap ml10 mr10">(50MB 이하)</span>
+                        </div>
+                        <div class="btn-group">
+                          <input type="file" id="file2" />
+                          <label for="file2" class="btn-default file mr5">파일 선택</label>
+                          <button type="button" class="btn-line">샘플파일 다운</button>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>정보제공동의서<span class="required">*</span></dt>
+                    <dd>
+                      <div class="cell-row vertical">
+                        <div class="cell-row">
+                          <input type="text" class="input-text w350" />
+                          <span class="text nowrap ml10 mr10">(50MB 이하)</span>
+                        </div>
+                        <div class="btn-group">
+                          <input type="file" id="file3" />
+                          <label for="file3" class="btn-default file mr5">파일 선택</label>
+                          <button type="button" class="btn-line">샘플파일 다운</button>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>사업자등록증<span class="required">*</span></dt>
+                    <dd>
+                      <div class="cell-row vertical">
+                        <div class="cell-row">
+                          <input type="text" class="input-text w350" />
+                          <span class="text nowrap ml10 mr10">(50MB 이하)</span>
+                        </div>
+                        <div class="btn-group">
+                          <input type="file" id="file4" />
+                          <label for="file4" class="btn-default file">파일 선택</label>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>
+                      증빙서류<br />
+                      (직전년도 매출실적)
+                    </dt>
+                    <dd>
+                      <div class="wrap">
+                        <div class="cell-row">
+                          <input type="text" class="input-text w432 mr10" />
+                          <input type="file" id="file5" />
+                          <label for="file5" class="btn-default file">파일 선택</label>
+                        </div>
+                        <span class="text-ex">* 국세청 홈택스 발급본만 인정 : 부가가치세과세표준증명원 또는 표준재무제표증명원</span>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>제품설명서(카달로그등)</dt>
+                    <dd>
+                      <div class="cell-row vertical">
+                        <div class="cell-row">
+                          <input type="text" class="input-text w350" />
+                          <span class="text nowrap ml10 mr10">(50MB 이하)</span>
+                        </div>
+                        <div class="btn-group">
+                          <input type="file" id="file6" />
+                          <label for="file6" class="btn-default file">파일 선택</label>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>
+                      기타 (컨설팅 진행 시<br />
+                      참고 가능한 자료)
+                    </dt>
+                    <dd>
+                      <div class="cell-row">
+                        <input type="text" class="input-text w432 mr10" />
+                        <input type="file" id="file7" />
+                        <label for="file7" class="btn-default file">파일 선택</label>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>
+                      최근 2년 이내<br />
+                      유사 컨설팅 수혜 경험
+                    </dt>
+                    <dd>
+                      <div class="cell-row">
+                        <label class="radio mr30">
+                          <input type="radio" name="radio6" class="input-radio" checked />
+                          <i class="icon-radio"></i>
+                          <span>유</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="radio6" class="input-radio" />
+                          <i class="icon-radio"></i>
+                          <span>무</span>
+                        </label>
+                      </div>
+                      <span class="text-ex">(이전 컨설팅과 품목 또는 문의 국가 중 하나라도 다를 경우 지원가능)</span>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="tr-row">
+                  <dl>
+                    <dt>컨설팅 수혜 경험</dt>
+                    <dd>
+                      <input type="text" class="input-text w432" />
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-area">
+              <button type="button" class="btn-prev">이전</button>
+              <button type="button" class="btn-submit">등록</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/sub.js"></script>
+    <script>
+      $('#header').load('/layout/header.html')
+      $('#footer').load('/layout/footer.html')
+
+      // 날짜 선택
+      $('#datepicker1, #datepicker2').datepicker()
+
+      // 행추가
+      $('.btn-row-add').on('click', function () {
+        var row = $('.table-style-border').clone()
+        $('.row-append').append(row)
+      })
+      // 행삭제
+      $('.btn-row-delete').on('click', function (e) {
+        var rowCount = $('.table-style-border').length
+        if (rowCount == 1) {
+          $('body').append('<div id="popup"></div>')
+          $('#popup').load('/popup/row_delete.html', function () {
+            popupOpen(e.currentTarget, $('.popup'))
+          })
+        } else {
+          $('.row-append .table-style-border:last-child').remove()
+        }
+      })
+
+      // 개요보기
+      $('#btn1').on('click', function (e) {
+        e.preventDefault()
+        $('body').append('<div id="popup"></div>')
+        $('#popup').load('/popup/support_consulting_4_3_1.html', function () {
+          popupOpen(e.currentTarget, $('.popup'))
+        })
+      })
+
+      // 추천 기관 찾기
+      $('#btn2').on('click', function (e) {
+        e.preventDefault()
+        $('body').append('<div id="popup"></div>')
+        $('#popup').load('/popup/support_consulting_4_3_2.html', function () {
+          popupOpen(e.currentTarget, $('.popup'))
+        })
+      })
+    </script>
+  </body>
+</html>

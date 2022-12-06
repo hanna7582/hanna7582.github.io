@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FTA 통합 플랫폼</title>
+    <link rel="icon" href="/assets/images/bi_portal.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+  </head>
+  <body class="notice-on">
+    <div id="skip-nav"><a href="#content">본문 바로가기</a></div>
+    <!-- header -->
+    <div id="header"></div>
+
+    <!-- 본문 -->
+    <div id="content" class="sub info">
+      <div class="sub-visual">
+        <div class="container">
+          <h2>FTA 정보</h2>
+        </div>
+      </div>
+      <div class="sub-container">
+        <div class="container">
+          <!-- sub-nav -->
+          <!-- [pub] 
+              활성화 메뉴 <a href="#" class="active" aria-current="page">공지사항</a>
+          -->
+          <nav class="sub-nav" aria-label="sub navigation">
+            <ul class="depth1">
+              <li><a href="#">FTA 뉴스</a></li>
+              <li><a href="#">FTA 뉴스레터</a></li>
+              <li class="drop-down" aria-expanded="false">
+                <a href="#" class="arrow">FTA 자료실</a>
+                <ul class="depth2">
+                  <li><a href="#">발간물 자료실</a></li>
+                  <li><a href="#">영상 자료실</a></li>
+                </ul>
+              </li>
+              <li><a href="#">FTA 체결현황</a></li>
+              <li><a href="#" class="active" aria-current="page">용어집</a></li>
+              <li><a href="#">서식/법령</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </nav>
+          <div class="sub-body">
+            <!-- title -->
+            <div class="title-area">
+              <!-- breadcrumb -->
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item home" aria-label="home"></li>
+                <li class="breadcrumb-item">FTA 정보</li>
+                <li class="breadcrumb-item active" aria-current="page">용어집</li>
+              </ul>
+              <h3 class="title">용어집</h3>
+            </div>
+
+            <!-- search -->
+            <form>
+              <div class="search-area mb30">
+                <div class="search-form">
+                  <div class="row">
+                    <div class="form-group">
+                      <label for="">검색어</label>
+                      <input type="text" class="input-text w500" placeholder="검색어를 입력해주세요." />
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <button type="reset" class="btn-refresh mr5" area-label="새로고침"></button>
+                  <button type="button" class="btn-search">검색</button>
+                </div>
+              </div>
+            </form>
+
+            <!-- word-list -->
+            <div class="word-list">
+              <div class="row">
+                <button type="button" class="btn-word active">ㄱ</button>
+                <button type="button" class="btn-word">ㄴ</button>
+                <button type="button" class="btn-word">ㄷ</button>
+                <button type="button" class="btn-word">ㄹ</button>
+                <button type="button" class="btn-word">ㅁ</button>
+                <button type="button" class="btn-word">ㅂ</button>
+                <button type="button" class="btn-word">ㅅ</button>
+                <button type="button" class="btn-word">ㅇ</button>
+                <button type="button" class="btn-word">ㅈ</button>
+                <button type="button" class="btn-word">ㅊ</button>
+                <button type="button" class="btn-word">ㅋ</button>
+                <button type="button" class="btn-word">ㅌ</button>
+                <button type="button" class="btn-word">ㅍ</button>
+                <button type="button" class="btn-word">ㅎ</button>
+              </div>
+              <div class="row">
+                <button type="button" class="btn-word">A</button>
+                <button type="button" class="btn-word">B</button>
+                <button type="button" class="btn-word">C</button>
+                <button type="button" class="btn-word">D</button>
+                <button type="button" class="btn-word">E</button>
+                <button type="button" class="btn-word">F</button>
+                <button type="button" class="btn-word">G</button>
+                <button type="button" class="btn-word">H</button>
+                <button type="button" class="btn-word">I</button>
+                <button type="button" class="btn-word">J</button>
+                <button type="button" class="btn-word">K</button>
+                <button type="button" class="btn-word">L</button>
+                <button type="button" class="btn-word">M</button>
+                <button type="button" class="btn-word">N</button>
+                <button type="button" class="btn-word">O</button>
+                <button type="button" class="btn-word">P</button>
+                <button type="button" class="btn-word">Q</button>
+                <button type="button" class="btn-word">R</button>
+                <button type="button" class="btn-word">S</button>
+                <button type="button" class="btn-word">T</button>
+                <button type="button" class="btn-word">U</button>
+                <button type="button" class="btn-word">V</button>
+                <button type="button" class="btn-word">W</button>
+                <button type="button" class="btn-word">X</button>
+                <button type="button" class="btn-word">Y</button>
+                <button type="button" class="btn-word">Z</button>
+              </div>
+            </div>
+
+            <!-- accordion -->
+            <div class="accordion">
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button type="button" aria-expanded="false">
+                    <span class="sub">FTA</span>
+                    <div class="title">자유무역협정 Free Trade Agreement</div>
+                  </button>
+                </div>
+                <div class="accordion-body">
+                  <p>
+                    상품의 관세인하, 비관세장벽 제거 등 요소를 포함하면서 무역원활화 및 여타 협력분야 등에 중점을 두고 있는 협정이며 그 내용에 있어서 기본적으로
+                    자유무역협정으로 볼 수 있음. 2002년 11월 프놈펜에서 체결된 일본-ASEAN CEP를 예로 들 수 있으며 일본과 ASEAN 10개국은 무역과 투자 자유화를
+                    비롯해 금융 ; 정보 ; 커뮤니케이션 기술 ; 과학기술 ; 인력개발 ; 관광 ; 에너지 ; 식량 문제 등에 관한 협의를 포함한다. 인도-ASEAN CEP 또한
+                    무역장벽의 최소화 또는 제거, 역내 무역과 투자 증진, 경제효율성 제고, 국가간 발전격차 해소 등에 대한 합의임. 2002년 일본으로서는 첫
+                    지역경제협력 협상인 일본-싱가폴 EPA는 농산물과 석유화학품을 제외한 투자 ; 경쟁 ; 상호인정 ; 금융 분야에 걸친 합의를 이끌어낸 바 있음.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button type="button" aria-expanded="false">
+                    <div class="title">중간재 흡수원칙 Absorption/takeover principle</div>
+                  </button>
+                </div>
+                <div class="accordion-body">
+                  <p>
+                    상품의 관세인하, 비관세장벽 제거 등 요소를 포함하면서 무역원활화 및 여타 협력분야 등에 중점을 두고 있는 협정이며 그 내용에 있어서 기본적으로
+                    자폴 EPA는 농산물과 석유화학품을 제외한 투자 ; 경쟁 ; 상호인정 ; 금융 분야에 걸친 합의를 이끌어낸 바 있음.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button type="button" aria-expanded="false">
+                    <span class="sub">CEP</span>
+                    <div class="title">포괄적 경제동반자관계 기본합의 Comprehensive Economic Partnership</div>
+                  </button>
+                </div>
+                <div class="accordion-body">
+                  <p>내용입니다.</p>
+                </div>
+              </div>
+              <!-- <div class="no-data">검색 결과가 없습니다.</div> -->
+            </div>
+
+            <div class="pagination">
+              <!-- [pub] 
+                    disabled class="disabled" tabindex="-1" 
+                    현재 페이지 class="active" aria-current="page"
+              -->
+              <a href="#" class="first disabled" tabindex="-1" aria-label="첫 페이지"></a>
+              <a href="#" class="prev disabled" tabindex="-1" aria-label="이전"></a>
+              <a href="#" class="active" aria-current="page">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#" class="next" aria-label="다음"></a>
+              <a href="#" class="last" aria-label="마지막 페이지"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/sub.js"></script>
+    <script>
+      $('#header').load('/layout/header.html')
+      $('#footer').load('/layout/footer.html')
+    </script>
+  </body>
+</html>

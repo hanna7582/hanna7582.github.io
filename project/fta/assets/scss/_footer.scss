@@ -1,0 +1,173 @@
+@charset 'UTF-8';
+
+footer {
+    height: 300px;
+    padding: 10px 15px;
+    background-color: #3e4043;
+    .container,
+    .flex-between{
+        height: 100%;
+    }
+    .list {
+        @include flex;
+        padding: 45px 0 40px;
+        li {
+            margin-right: 20px;
+            a {
+                font-size: 17px;
+                letter-spacing: -1.02px;
+                color: #c7c7c7;
+                &:hover {
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    address {
+        margin-bottom: 20px;
+        font-size: 17px;
+        font-style: normal;
+        letter-spacing: -1.02px;
+        color: #c7c7c7;
+    }
+    .copyright {
+        font-size: 15px;
+        letter-spacing: -0.9px;
+        color: #888;
+    }
+    .service {
+        @include border($style: dotted, $color: #707070, $direction: left);
+        width: 30%;
+        padding: 76px 0 0 40px;
+        .call {
+            @include flex-y;
+            margin-bottom: 25px;
+            dt {
+                margin-right: 10px;
+                font-size: 17px;
+                letter-spacing: -1.02px;
+                color: white;
+            }
+            dd {
+                @include flex-y;
+                font-size: 30px;
+                font-weight: 500;
+                letter-spacing: -1.8px;
+                color: #08d4a0;
+                &::before {
+                    @include bgWH($url: '/assets/images/icon/icon-footer-call.png', $w: 27px, $h: 27px);
+                    content: '';
+                    margin-right: 4px;
+                }
+            }
+        }
+        .work {
+            dt, dd {
+                font-size: 17px;
+                letter-spacing: -1.02px;
+                color: white;
+            }
+        }
+    }
+    .family-site {
+        @include position($bottom: 40px);
+        @include flex;
+        .family-list { position: relative; margin-right: 16px; }
+        .family-list button { display: block; padding-left: 16px; width: 195px; height: 40px; border-radius: 20px; line-height: 40px; background: #4a4c4f url('/assets/images/icon/icon-family-arrow-down.png') no-repeat right 16px center / 14px 10px; color: #fff; font-size: 15px; letter-spacing: -0.9px; text-align: left; }
+        .family-list button.active { border-radius: 0 0 20px 20px; background-image: url('/assets/images/icon/icon-family-arrow-up.png'); }
+        .family-list ul { display: none; position: absolute; bottom: 40px; left: 0; padding: 7px 6px 7px 10px; width: 195px; background-color: #2a2a2a; border: 1px solid #5f5f5f; box-sizing: border-box; z-index: 100; }
+        .family-list ul a { line-height: 29px; font-size: 15px; color: white; }
+        .family-list:first-child ul,
+        .family-list:nth-child(2) ul { height: 334px; overflow: auto; }
+        .family-list .scroll-style { overflow: auto; }
+        .family-list .scroll-style::-webkit-scrollbar { width: 3px; }
+        .family-list .scroll-style::-webkit-scrollbar-thumb { background-color: #cdcdcd; border-radius: 100px; }
+        .family-list .scroll-style::-webkit-scrollbar-track { background-color: #e5e5e5; border-radius: 100px; background-clip: padding-box; border: 3px solid transparent; }
+    }
+}
+
+/* 반응형 ======================================================================== */
+// tablet 이하
+@media (max-width: 1399px) {
+    footer {
+        height: auto;
+        padding: 0 15px;
+        .flex-between {
+            display: block;
+        }
+        .info {
+            padding-bottom: 33px;
+        }
+        .list {
+            padding: 28px 0 30px;
+            li {
+                margin-right: 15px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    font-size: 14px;
+                    letter-spacing: -0.84px;
+                }
+            }
+        }
+        address {
+            font-size: 13px;
+            letter-spacing: -0.78px;
+        }
+        .copyright {
+            font-size: 12px;
+            letter-spacing: -0.72px;
+        }
+        .service {
+            @include flex-y;
+            border: 0;
+            @include border($style: dotted, $color: #707070, $direction: top);
+            width: 100%;
+            padding: 24px 0;
+            .call {
+                margin: 0 8px 0 0;
+                dt {
+                    display: none;
+                }
+                dd {
+                    font-size: 24px;
+                    letter-spacing: -1.44px;
+                    &::before {
+                        margin-right: 7px;
+                    }
+                }
+            }
+            .work {
+                dt, dd {
+                    font-size: 14px;
+                    letter-spacing: -0.84px;
+                }
+            }
+        }
+        .family-site {
+            position: static;
+            display: flex;
+            .family-list { margin: 0 16px 30px 0; }
+            .family-list button { height: 32px; border-radius: 16px; line-height: 32px; font-size: 13px; letter-spacing: -0.78px; }
+            .family-list button.active { border-radius: 0 0 16px 16px; }
+            .family-list ul { bottom: 32px; width: 100%; }
+            .family-list ul a { line-height: 29px; color: white; }
+            .family-list:first-child ul,
+            .family-list:nth-child(2) ul { height: 334px; overflow: auto; }
+        }
+    }
+}
+
+// mobile
+@media (max-width: 767px) {
+    footer {
+        .family-site {
+            display: block;
+            padding-bottom: 12px;
+            .family-list { margin: 0 0 12px 0; }
+            .family-list button { width: 100%; }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+@charset 'UTF-8';
+
+/* 상단 네비 검색 */
+.notice-on{
+    .nav_search {
+        top: 130px;
+    }
+}
+.nav_search .right { float: right; }
+.nav_search { display: none; position: fixed; left: 0; right: 0; top: 80px; background-color: #fff; z-index: 101; padding: 80px 0; box-shadow: 0 0 5px rgba(0,0,0,0.4); }
+.nav_search > div { max-width: 650px; margin: 0 auto; }
+.nav_search .navinp_box { position: relative; }
+.nav_search .navinp_box input { 
+    width: 100%; 
+    border: none; 
+    border-bottom: 3px solid #333; 
+    padding: 0 40px 0 20px;
+    height: 55px;
+    line-height: 55px;
+    letter-spacing: -0.5px;
+    font-size: 20px;
+    color: #333;
+    border-bottom: 3px solid #333;
+    background-color: #fff;
+    transition: all 0.5s;
+    box-sizing: border-box;
+    vertical-align: middle;
+    outline: none;
+}
+.nav_search .navinp_box button { position: absolute; right: 0; bottom: 10px; width: 30px; height: 29px; background: url('/assets/images/icon/icon_navsearch.png') no-repeat center / 30px 29px; }
+.nav_search .nav_searchlist { display: none; margin-bottom: 20px; padding: 20px 0; border-bottom: 1px solid #e1e1e1; max-height: 257px; box-sizing: border-box; }
+.nav_search .nav_searchlist li a { 
+    display: block; 
+    font-size: 17px;
+    line-height: 1.47;
+    letter-spacing: -0.43px;
+    color: #333;
+    padding-left: 20px; height: 40px; line-height: 40px; 
+}
+.nav_search .nav_searchlist li a:focus,
+.nav_search .nav_searchlist li a:hover { background-color: #f3f3f3; }
+.nav_search .nav_searchtxt { 
+    margin-bottom: 20px;
+    padding: 15px 0 40px; border-bottom: 1px solid #e1e1e1; line-height: 29px; 
+    font-size: 15px;
+    line-height: 1.67;
+    letter-spacing: -0.38px;
+    color: #999;
+}
+.nav_search .autocomplete {
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.38px;
+    color: #333;
+}
+.nav_search .btn-autocomplete {
+    @include bgWH($url: '/assets/images/icon/icon-autocomplete-off.png', $w: 50px, $h: 29px);
+}
+.nav_search .btn-autocomplete.active { 
+    background-image: url('/assets/images/icon/icon-autocomplete-on.png');
+ }
+.nav_search .nav_search_x { 
+    @include position($top:0, $right:0);
+    width: 24px; height: 24px; background: url('/assets/images/icon/icon-search-close.png') no-repeat center / contain; 
+}
+
+/* 반응형 ======================================================================== */
+// tablet 이하
+@media (max-width: 1399px) {
+    .notice-on{
+        .nav_search {
+            top: 110px;
+        }
+    }
+    .nav_search {
+        top: 60px;
+        padding: 20px 15px;
+        .nav_searchtxt {
+            padding: 15px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+    .nav_search .nav_searchlist {
+        padding: 10px 0;
+    }
+    .nav_search .nav_searchlist li a {
+        padding-left: 10px;
+    }
+}
+// mobile
+@media (max-width: 767px) {
+    .nav_search .navinp_box input {
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+    }
+    .nav_search .navinp_box button {
+        bottom: 5px;
+        background-size: 20px;
+    }
+    .nav_search .nav_searchlist {
+        max-height: 162px;
+    }
+    .nav_search .nav_searchlist li a {
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px;
+    }
+    .nav_search .autocomplete_btn {
+        font-size: 13px;
+    }
+    .nav_search .nav_search_x {
+        top: 2px;
+        background-size: 20px;
+    }
+}

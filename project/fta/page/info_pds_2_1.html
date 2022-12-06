@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FTA 통합 플랫폼</title>
+    <link rel="icon" href="/assets/images/bi_portal.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+  </head>
+  <body class="notice-on">
+    <div id="skip-nav"><a href="#content">본문 바로가기</a></div>
+    <!-- header -->
+    <div id="header"></div>
+
+    <!-- 본문 -->
+    <div id="content" class="sub info">
+      <div class="sub-visual">
+        <div class="container">
+          <h2>FTA 정보</h2>
+        </div>
+      </div>
+      <div class="sub-container">
+        <div class="container">
+          <!-- sub-nav -->
+          <!-- [pub] 
+              활성화 메뉴 <a href="#" class="active" aria-current="page">공지사항</a>
+          -->
+          <nav class="sub-nav" aria-label="sub navigation">
+            <ul class="depth1">
+              <li><a href="#">FTA 뉴스</a></li>
+              <li><a href="#">FTA 뉴스레터</a></li>
+              <li class="drop-down" aria-expanded="true">
+                <a href="#" class="arrow active">FTA 자료실</a>
+                <ul class="depth2">
+                  <li><a href="#">발간물 자료실</a></li>
+                  <li><a href="#" class="active" aria-current="page">영상 자료실</a></li>
+                </ul>
+              </li>
+              <li><a href="#">FTA 체결현황</a></li>
+              <li><a href="#">용어집</a></li>
+              <li><a href="#">서식/법령</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </nav>
+          <div class="sub-body">
+            <!-- title -->
+            <div class="title-area">
+              <!-- breadcrumb -->
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item home" aria-label="home"></li>
+                <li class="breadcrumb-item">FTA 정보</li>
+                <li class="breadcrumb-item">FTA 자료실</li>
+                <li class="breadcrumb-item active" aria-current="page">영상 자료실</li>
+              </ul>
+              <h3 class="title">영상 자료실</h3>
+            </div>
+
+            <!-- search -->
+            <form>
+              <div class="search-area">
+                <div class="search-form">
+                  <div class="row">
+                    <div class="form-group">
+                      <label for="">영상구분</label>
+                      <select class="select-box w130">
+                        <option value="">전체</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="">검색어</label>
+                      <input type="text" class="input-text w280" placeholder="검색어를 입력해주세요." />
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <button type="reset" class="btn-refresh mr5" area-label="새로고침"></button>
+                  <button type="button" class="btn-search">검색</button>
+                </div>
+              </div>
+            </form>
+
+            <!-- control : 총 건수, 정렬 -->
+            <div class="control-area">
+              <div class="total">총 <span class="num">4</span>건</div>
+            </div>
+
+            <div class="video-area">
+              <ul class="list">
+                <li>
+                  <div class="video-box">
+                    <img src="https://img.youtube.com/vi/LLWDFqaCOzQ/mqdefault.jpg" alt="" />
+                    <button type="button" class="btn-play" aria-lable="영상 재생" onclick="fnShowVideo('LLWDFqaCOzQ', event);"></button>
+                  </div>
+                  <div class="text-box">
+                    <p>[홍보영상] 워싱턴 현지에서 바라본 미중 패권전쟁 전망</p>
+                    <div class="row">
+                      <span class="text">등록일: <span class="data">2022-11-15</span></span>
+                      <span class="text">조회수: <span class="data">1,777</span></span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="video-box">
+                    <img src="https://img.youtube.com/vi/J7tiDBxFhwc/mqdefault.jpg" alt="" />
+                    <button type="button" class="btn-play" aria-lable="영상 재생" onclick="fnShowVideo('J7tiDBxFhwc', event);"></button>
+                  </div>
+                  <div class="text-box">
+                    <p>[홍보영상] 워싱턴 현지에서 바라본 미중 패권전쟁 전망</p>
+                    <div class="row">
+                      <span class="text">등록일: <span class="data">2022-11-15</span></span>
+                      <span class="text">조회수: <span class="data">1,777</span></span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="video-box">
+                    <img src="https://img.youtube.com/vi/HnDJ53eHtsg/mqdefault.jpg" alt="" />
+                    <button type="button" class="btn-play" aria-lable="영상 재생" onclick="fnShowVideo('HnDJ53eHtsg', event);"></button>
+                  </div>
+                  <div class="text-box">
+                    <p>[홍보영상] 워싱턴 현지에서 바라본 미중 패권전쟁 전망</p>
+                    <div class="row">
+                      <span class="text">등록일: <span class="data">2022-11-15</span></span>
+                      <span class="text">조회수: <span class="data">1,777</span></span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="video-box">
+                    <img src="https://img.youtube.com/vi/dnrBlRWorjc/mqdefault.jpg" alt="" />
+                    <button type="button" class="btn-play" aria-lable="영상 재생" onclick="fnShowVideo('dnrBlRWorjc', event);"></button>
+                  </div>
+                  <div class="text-box">
+                    <p>[홍보영상] 워싱턴 현지에서 바라본 미중 패권전쟁 전망</p>
+                    <div class="row">
+                      <span class="text">등록일: <span class="data">2022-11-15</span></span>
+                      <span class="text">조회수: <span class="data">1,777</span></span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pagination">
+              <!-- [pub] 
+                    disabled class="disabled" tabindex="-1" 
+                    현재 페이지 class="active" aria-current="page"
+              -->
+              <a href="#" class="first disabled" tabindex="-1" aria-label="첫 페이지"></a>
+              <a href="#" class="prev disabled" tabindex="-1" aria-label="이전"></a>
+              <a href="#" class="active" aria-current="page">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#" class="next" aria-label="다음"></a>
+              <a href="#" class="last" aria-label="마지막 페이지"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/sub.js"></script>
+    <script>
+      $('#header').load('/layout/header.html')
+      $('#footer').load('/layout/footer.html')
+    </script>
+  </body>
+</html>
