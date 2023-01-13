@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/lms_style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+    <style>
+      body {
+        max-width: 1200px;
+        margin: 50px auto;
+      }
+      th,
+      td {
+        padding: 5px 10px;
+        border: 1px solid black;
+        font-size: 14px;
+      }
+      .bg {
+        background: #ffc107;
+      }
+      button {
+        word-break: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="mb20">페이지 목록 - <span class="count"></span>개</h1>
+    <table>
+      <colgroup>
+        <col style="width: 30%" />
+        <col style="width: 30%" />
+        <col style="width: 10%" />
+        <col style="width: 30%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>화면경로</th>
+          <th>화면명</th>
+          <th>타입</th>
+          <th>파일경로</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+      var pages = [
+        {
+          path: '홈>공통',
+          page: '서비스 이용안내',
+          type: 'page',
+          file: 'html/FO_PC_LMS_01_012.html',
+        },
+        {
+          path: '홈>내정보>쪽지함',
+          page: '받은 쪽지함 목록',
+          type: 'page',
+          file: 'html/FO_PC_LMS_01_013.html',
+        },
+        {
+          path: '홈>내정보>쪽지함',
+          page: '쪽지 상세 팝업',
+          type: 'popup',
+          file: 'popup/FO_PC_LMS_01_014.html',
+        },
+        {
+          path: '홈>내정보>쪽지함',
+          page: '쪽지보내기 팝업 답장',
+          type: 'popup',
+          file: 'popup/FO_PC_LMS_01_015_1.html',
+        },
+        {
+          path: '홈>내정보>쪽지함',
+          page: '쪽지보내기 팝업 일반',
+          type: 'popup',
+          file: 'popup/FO_PC_LMS_01_015_2.html',
+        },
+        {
+          path: '홈>내정보>쪽지함',
+          page: '받는사람 검색',
+          type: 'popup',
+          file: 'popup/FO_PC_LMS_01_016.html',
+        },
+        {
+          path: '홈>강의실>내정보 설정',
+          page: '개인정보 설정',
+          type: 'page',
+          file: 'html/FO_PC_LMS_01_017.html',
+        },
+        {
+          path: '홈>강의실>내정보 등록',
+          page: '개인정보 등록',
+          type: 'page',
+          file: 'html/FO_PC_LMS_01_018.html',
+        },
+        {
+          path: '홈>강의실>내정보 수정',
+          page: '개인정보 수정',
+          type: 'page',
+          file: 'html/FO_PC_LMS_01_019.html',
+        },
+        {
+          path: '홈>강의실>학습안내',
+          page: '학습안내',
+          type: 'page',
+          file: 'html/FO_PC_LMS_01_021.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '내 수강과목(강의 홈)',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_001.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '전체 공지사항',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_027.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '전체 공지사항 상세',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_028.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '지난 수강과목',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_002.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '수업공지사항 목록',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_003.html',
+        },
+        {
+          path: '홈>내정보>쪽지보내기',
+          page: '쪽지 보내기 팝업_강의실',
+          type: 'popup',
+          file: 'popup/FO_PC_LMS_01_015_3.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '수업공지사항 상세',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_004.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '자료실 목록',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_005.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '자료실 상세',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_029.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '동영상 강의 목록',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_006.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '동영상 강의 목록(청강하기로 진입시 노출되는 화면)',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_006_1.html',
+        },
+        {
+          path: '홈>강의실>교육과정>동영상 강의 상세',
+          page: '동영상 강의 상세',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_007.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '오프라인 수업',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_008.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '수업안내 팝업',
+          type: 'popup',
+          file: 'popup/FO_PC_LMS_02_009.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '시차표 팝업',
+          type: 'popup',
+          file: 'popup/FO_PC_LMS_02_010.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '화상 Q&A',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_011.html',
+        },
+        {
+          path: '홈>공통',
+          page: '비밀번호 입력',
+          type: 'popup',
+          file: 'popup/popup1.html',
+        },
+        {
+          path: '홈>공통',
+          page: '알림1',
+          type: 'popup',
+          file: 'popup/popup2.html',
+        },
+        {
+          path: '홈>공통',
+          page: '알림2',
+          type: 'popup',
+          file: 'popup/popup3.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '과제 목록(개인/그룹)',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_012.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '과제 상세(개인/그룹)',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_013.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '과제 등록/수정',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_014.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '시험 목록',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_015.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '시험 상세',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_016.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '시험 문제',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_017.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '멤버 목록(내그룹/멤버)',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_018.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '맴버 정보 팝업',
+          type: 'popup',
+          file: 'popup/FO_PC_LMS_02_018_3.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '문의게시판 목록',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_019.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '문의게시판 상세(본인작성, 타인작성, 답변)',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_020.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '문의게시판 등록/수정',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_021.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '1:1 문의 목록',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_022.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '1:1 문의 상세(본인작성, 타인작성, 답변)',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_023.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '1:1 문의 등록/수정',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_024.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '설문 목록',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_025.html',
+        },
+        {
+          path: '홈>강의실>내강의',
+          page: '설문 상세',
+          type: 'page',
+          file: 'html/FO_PC_LMS_02_026.html',
+        },
+      ]
+      var count = pages.length
+      $('.count').text(count)
+      pages.forEach((item, i) => {
+        if (item.type === 'page') {
+          $('tbody').append(
+            `<tr>
+                <td>${i + 1}. ${item.path}</td>
+                <td>${item.page}</td>
+                <td>${item.type}</td>
+                <td><a href="${item.file}" target="_blank">${item.file}</a></td>
+              </tr>`
+          )
+        } else {
+          $('tbody').append(
+            `<tr>
+                <td>${i + 1}. ${item.path}</td>
+                <td>${item.page}</td>
+                <td class="bg">${item.type}</td>
+                <td><button data-html="${item.file}">${item.file}</button></td>
+              </tr>`
+          )
+        }
+      })
+
+      $('button').on('click', function (e) {
+        var url = $(this).data('html')
+        $('body').append('<div id="popup"></div>')
+        $('#popup').load(url, function () {
+          popupOpen(e.currentTarget, $('.popup'))
+        })
+      })
+    </script>
+  </body>
+</html>

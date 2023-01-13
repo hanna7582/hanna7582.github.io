@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/*--------------------------------------------------------------------------
+| Fonts
+|--------------------------------------------------------------------------*/
+
+/* Inter */
+@font-face {
+  font-family: "Inter";
+  font-weight: 100;
+  src: url("../fonts/Inter/Inter-Thin.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-Thin.woff") format("woff"),
+    url("../fonts/Inter/Inter-Thin-BETA.otf") format("opentype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 200;
+  src: url("../fonts/Inter/Inter-ExtraLight.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-ExtraLight.woff") format("woff"),
+    url("../fonts/Inter/Inter-ExtraLight-BETA.otf") format("opentype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 300;
+  src: url("../fonts/Inter/Inter-Light.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-Light.woff") format("woff"),
+    url("../fonts/Inter/Inter-Light-BETA.otf") format("opentype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("../fonts/Inter/Inter-Regular.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-Regular.woff") format("woff"),
+    url("../fonts/Inter/Inter-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  src: url("../fonts/Inter/Inter-Medium.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-Medium.woff") format("woff"),
+    url("../fonts/Inter/Inter-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  src: url("../fonts/Inter/Inter-SemiBold.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-SemiBold.woff") format("woff"),
+    url("../fonts/Inter/Inter-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  src: url("../fonts/Inter/Inter-Bold.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-Bold.woff") format("woff"),
+    url("../fonts/Inter/Inter-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 800;
+  src: url("../fonts/Inter/Inter-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-ExtraBold.woff") format("woff"),
+    url("../fonts/Inter/Inter-ExtraBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 900;
+  src: url("../fonts/Inter/Inter-Black.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-Black.woff") format("woff"),
+    url("../fonts/Inter/Inter-Black.otf") format("opentype");
+}
+
+/* NotoKR */
+/* @font-face{
+	font-family:'notokr';
+	font-weight:300;
+	src:url('../fonts/NotoKR/notokr-light.eot');
+	src:url('../fonts/NotoKR/notokr-light.eot?#iefix') format('embedded-opentype'),
+	    url('../fonts/NotoKR/notokr-light.woff2') format('woff2'),
+	    url('../fonts/NotoKR/notokr-light.woff') format('woff'),
+	    url('../fonts/NotoKR/notokr-light.ttf') format('truetype');
+} */
+/* @font-face{
+	font-family:'notokr';
+	font-weight:100;
+	src:url('../fonts/NotoKR/NotoSansKR-Thin.woff2') format('woff2'),
+		url('../fonts/NotoKR/NotoSansKR-Thin.woff') format('woff'),
+		url('../fonts/NotoKR/NotoSansKR-Thin.otf') format('opentype'),
+} */
+@font-face {
+  font-family: "notokr";
+  font-weight: 300;
+  src: url("../fonts/NotoKR/NotoSansKR-Light.woff2") format("woff2"),
+    url("../fonts/NotoKR/NotoSansKR-Light.woff") format("woff"),
+    url("../fonts/NotoKR/NotoSansKR-Light.otf") format("opentype"),
+    url("../fonts/NotoKR/NotoSansKR-Light.eot") format("eot");
+}
+@font-face {
+  font-family: "notokr";
+  font-weight: 400;
+  src: url("../fonts/NotoKR/NotoSansKR-Regular.woff2") format("woff2"),
+    url("../fonts/NotoKR/NotoSansKR-Regular.woff") format("woff"),
+    url("../fonts/NotoKR/NotoSansKR-Regular.otf") format("opentype"),
+    url("../fonts/NotoKR/NotoSansKR-Regular.eot") format("eot");
+}
+@font-face {
+  font-family: "notokr";
+  font-weight: 500;
+  src: url("../fonts/NotoKR/NotoSansKR-Medium.woff2") format("woff2"),
+    url("../fonts/NotoKR/NotoSansKR-Medium.woff") format("woff"),
+    url("../fonts/NotoKR/NotoSansKR-Medium.otf") format("opentype"),
+    url("../fonts/NotoKR/NotoSansKR-Medium.eot") format("eot");
+}
+@font-face {
+  font-family: "notokr";
+  font-weight: 700;
+  src: url("../fonts/NotoKR/NotoSansKR-Bold.woff2") format("woff2"),
+    url("../fonts/NotoKR/NotoSansKR-Bold.woff") format("woff"),
+    url("../fonts/NotoKR/NotoSansKR-Bold.otf") format("opentype"),
+    url("../fonts/NotoKR/NotoSansKR-Bold.eot") format("eot");
+}
+/* @font-face{
+	font-family:'notokr';
+	font-weight:900;
+	src:url('../fonts/NotoKR/NotoSansKR-Black.woff2') format('woff2'),
+		url('../fonts/NotoKR/NotoSansKR-Black.woff') format('woff'),
+		url('../fonts/NotoKR/NotoSansKR-Black.otf') format('opentype'),
+		url('../fonts/NotoKR/NotoSansKR-Black.eot') format('eot'),
+} */
