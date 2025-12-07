@@ -119,6 +119,7 @@ article{position: relative; padding: 0 15px;margin: 0 -15px;}
 #works h3{margin: 50px 0 20px; color:#333;}
 #works .nav{margin-bottom: 20px;}
 #works > .row{min-height: 300px;}
+#works .panel-heading .panel-title {overflow: hidden;}
 #works .panel-body{padding: 0;position: relative;overflow: hidden;}
 #works .panel-body img{transition: 0.5s;}
 #works .panel-body:hover img{transform: scale(1.1);}
